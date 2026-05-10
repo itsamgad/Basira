@@ -25,3 +25,7 @@ __pycache__/
 # Scraper runtime artifacts (per-job exports + history log)
 basira-scraper/scrape_outputs/
 basira-scraper/scrape_history.json
+
+# Engine runtime artifacts (uploaded files + per-run outputs)
+basira-engine/outputs/
+basira-engine/uploads/
