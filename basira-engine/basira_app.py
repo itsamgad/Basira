@@ -57,6 +57,20 @@ INCIDENT_KEYWORDS = {
     "fault", "bug", "problem", "escalation",
 }
 
+# Bilingual missing-value tokens — CLAUDE.md spec: "Replace 20+ missing
+# tokens (English + Arabic, e.g. N/A, لا يوجد) → NaN".
+# Compared after .strip().lower(); Arabic case-folding is a no-op.
+MISSING_TOKENS = {
+    # English / sentinel
+    "", "?", "-", ".", "empty",
+    "n/a", "n.a.", "n\\a", "na", "null", "none", "nan",
+    "missing", "unknown", "tbd", "tba",
+    # Arabic
+    "لا يوجد", "لا شيء", "لا شي", "لاشيء", "لا توجد",
+    "غير محدد", "غير معروف", "غير متوفر",
+    "بدون", "مجهول", "فارغ",
+}
+
 
 # ─────────────────────────────────────────────────────────────
 # COLUMN TYPE DETECTION
@@ -466,6 +480,31 @@ def _is_incident_like(df: pd.DataFrame) -> bool:
     return any(k in col_str for k in INCIDENT_KEYWORDS)
 
 
+def _standardize_missing_tokens(df: pd.DataFrame) -> dict:
+    """Replace cells matching MISSING_TOKENS (case-insensitive, stripped) with NaN.
+
+    Must run before _detect_type — otherwise tokens like "?", "بدون", "missing"
+    keep numeric columns below the 95% coerce threshold and they get
+    misclassified as categorical (then mode-imputed with the dirty token itself).
+
+    Returns {"cells": int, "cols": int, "by_col": {col: count, ...}}.
+    """
+    by_col: dict = {}
+    n_cells = 0
+    for col in df.columns:
+        s = df[col]
+        if s.dtype != object:
+            continue
+        norm = s.astype(str).str.strip().str.lower()
+        mask = norm.isin(MISSING_TOKENS) & s.notna()
+        n = int(mask.sum())
+        if n:
+            df.loc[mask, col] = pd.NA
+            by_col[col] = n
+            n_cells += n
+    return {"cells": n_cells, "cols": len(by_col), "by_col": by_col}
+
+
 # ─────────────────────────────────────────────────────────────
 # CORE PREPROCESSING ENGINE
 # ─────────────────────────────────────────────────────────────
@@ -473,6 +512,32 @@ def _is_incident_like(df: pd.DataFrame) -> bool:
 def preprocess(df: pd.DataFrame, file_name: str) -> dict:
     audit = []
     original_shape = df.shape
+
+    # ── 0. STANDARDIZE MISSING-VALUE TOKENS → NaN ───────────
+    # MUST run before readiness check and _detect_type. Otherwise "?",
+    # "بدون", "missing" etc. keep numeric columns below the 95% numeric-
+    # coerce threshold and they get classified as categorical, then later
+    # mode-imputed with the dirty token itself (BUG #1, CLAUDE.md spec).
+    token_stats = _standardize_missing_tokens(df)
+    if token_stats["cells"]:
+        top = sorted(token_stats["by_col"].items(), key=lambda kv: -kv[1])[:5]
+        top_str = ", ".join(f'"{c}" ({n})' for c, n in top)
+        detail = (
+            f"Standardized {token_stats['cells']} cell(s) across "
+            f"{token_stats['cols']} column(s) → NaN. "
+            f"Top columns: {top_str}. "
+            f"Matched against {len(MISSING_TOKENS)}-token bilingual list "
+            f"(English: N/A, ?, -, ., missing, null, none, …; "
+            f"Arabic: بدون, لا يوجد, غير معروف, غير محدد, …). "
+            f"Runs before column type detection so dirty tokens do not "
+            f"misclassify numeric columns as categorical."
+        )
+    else:
+        detail = (
+            f"No cells matched the {len(MISSING_TOKENS)}-token bilingual "
+            f"missing list — dataset already clean of sentinel values."
+        )
+    audit.append({"step": "Missing Token Standardization", "detail": detail})
 
     # ── READINESS CHECK (BEFORE) ────────────────────────────
     rb = _readiness_check(df, "before_preprocessing")
