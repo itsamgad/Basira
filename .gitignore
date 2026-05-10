@@ -11,3 +11,8 @@ _archive/scraper/**/node_modules/
 _archive/scraper/**/*.zip
 _archive/scraper/**/out/
 _archive/scraper/**/.next/
+
+# Redundant duplicate of basira-engine/ contents — already tracked there and
+# in the init-commit zip. Kept on-disk for reversibility, not in git.
+_archive/redundant-final-model/Basira Final model/
+_archive/redundant-final-model/_staging-emptied/
