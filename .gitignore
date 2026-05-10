@@ -1,0 +1,6 @@
+# Transient working space — contents are moved into basira-engine/ and _archive/ during cleanup phases.
+_staging/
+
+# macOS / zip junk
+.DS_Store
+__MACOSX/
