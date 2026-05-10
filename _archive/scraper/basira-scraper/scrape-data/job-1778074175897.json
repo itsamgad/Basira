@@ -1,0 +1,48 @@
+{
+  "fields": [
+    {
+      "name": "field_1",
+      "selector": ".b-product-tile__body .b-product-tile__body-inner .b-product-tile__name .b-product-tile__name-link .b-product-tile__name-link span",
+      "sample": "Air Jordan 1 Mid SE Edge",
+      "type": "text"
+    },
+    {
+      "name": "field_2",
+      "selector": ".b-product-tile__body-inner .b-product-tile__price .price .price__regular .sales .value",
+      "sample": "SAR 899.00",
+      "type": "text"
+    }
+  ],
+  "data": [
+    {
+      "item_index": 0,
+      "field_name": "field_1",
+      "value": "Air Jordan 1 Low"
+    },
+    {
+      "item_index": 0,
+      "field_name": "field_2",
+      "value": "SAR 349.00"
+    },
+    {
+      "item_index": 1,
+      "field_name": "field_1",
+      "value": "Air Jordan 4 Retro 'Pale Ivory and Tough Red'"
+    },
+    {
+      "item_index": 1,
+      "field_name": "field_2",
+      "value": "SAR 1,299.00"
+    },
+    {
+      "item_index": 2,
+      "field_name": "field_1",
+      "value": "Air Jordan 1 Mid"
+    },
+    {
+      "item_index": 2,
+      "field_name": "field_2",
+      "value": "SAR 825.00"
+    }
+  ]
+}

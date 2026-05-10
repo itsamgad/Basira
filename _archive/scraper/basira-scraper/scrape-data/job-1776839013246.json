@@ -1,0 +1,2054 @@
+{
+  "fields": [
+    {
+      "name": "link",
+      "selector": ".tile-anchor .main-content .hackathon-thumbnail",
+      "sample": "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/004/516/528/datas/medium_square.png",
+      "type": "link"
+    },
+    {
+      "name": "title",
+      "selector": ".tile-anchor .main-content .content .mb-4",
+      "sample": "Build with MeDo Hackathon",
+      "type": "text"
+    },
+    {
+      "name": "place",
+      "selector": ".justify-content-start div:nth-of-type(2) div .info-with-icon .info span",
+      "sample": "Online",
+      "type": "text"
+    },
+    {
+      "name": "prize",
+      "selector": ".main-content .content .prizes-and-participants .prize .prize-amount span",
+      "sample": "50,000",
+      "type": "text"
+    },
+    {
+      "name": "number of participants ",
+      "selector": ".tile-anchor .main-content .content .prizes-and-participants .participants strong",
+      "sample": "2565",
+      "type": "text"
+    },
+    {
+      "name": "Organizer",
+      "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .host-label",
+      "sample": "Baidu",
+      "type": "text"
+    },
+    {
+      "name": "start and end date ",
+      "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .submission-period",
+      "sample": "Apr 09 - May 20, 2026",
+      "type": "text"
+    },
+    {
+      "name": "Description ",
+      "selector": ".tile-anchor .side-info .themes .info-with-icon",
+      "sample": "Beginner Friendly Low/No Code Machine Learning/AI",
+      "type": "text"
+    }
+  ],
+  "data": [
+    {
+      "item_index": 0,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 0,
+      "field_name": "title",
+      "value": "Build with MeDo Hackathon"
+    },
+    {
+      "item_index": 0,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 0,
+      "field_name": "prize",
+      "value": "50,000"
+    },
+    {
+      "item_index": 0,
+      "field_name": "number of participants ",
+      "value": "2565"
+    },
+    {
+      "item_index": 0,
+      "field_name": "Organizer",
+      "value": "Baidu"
+    },
+    {
+      "item_index": 0,
+      "field_name": "start and end date ",
+      "value": "Apr 09 - May 20, 2026"
+    },
+    {
+      "item_index": 0,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Low/No Code Machine Learning/AI"
+    },
+    {
+      "item_index": 1,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 1,
+      "field_name": "title",
+      "value": "ZerveHack"
+    },
+    {
+      "item_index": 1,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 1,
+      "field_name": "prize",
+      "value": "10,000"
+    },
+    {
+      "item_index": 1,
+      "field_name": "number of participants ",
+      "value": "2076"
+    },
+    {
+      "item_index": 1,
+      "field_name": "Organizer",
+      "value": "Zerve AI"
+    },
+    {
+      "item_index": 1,
+      "field_name": "start and end date ",
+      "value": "Feb 26 - Apr 29, 2026"
+    },
+    {
+      "item_index": 1,
+      "field_name": "Description ",
+      "value": "Machine Learning/AI"
+    },
+    {
+      "item_index": 2,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 2,
+      "field_name": "title",
+      "value": "Agents Assemble - The Healthcare AI Endgame"
+    },
+    {
+      "item_index": 2,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 2,
+      "field_name": "prize",
+      "value": "25,000"
+    },
+    {
+      "item_index": 2,
+      "field_name": "number of participants ",
+      "value": "3256"
+    },
+    {
+      "item_index": 2,
+      "field_name": "Organizer",
+      "value": "Prompt Opinion (Darena Health)"
+    },
+    {
+      "item_index": 2,
+      "field_name": "start and end date ",
+      "value": "Mar 04 - May 11, 2026"
+    },
+    {
+      "item_index": 2,
+      "field_name": "Description ",
+      "value": "Health Machine Learning/AI Beginner Friendly"
+    },
+    {
+      "item_index": 3,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 3,
+      "field_name": "title",
+      "value": "FIND EVIL!"
+    },
+    {
+      "item_index": 3,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 3,
+      "field_name": "prize",
+      "value": "22,000"
+    },
+    {
+      "item_index": 3,
+      "field_name": "number of participants ",
+      "value": "2034"
+    },
+    {
+      "item_index": 3,
+      "field_name": "Organizer",
+      "value": "sans"
+    },
+    {
+      "item_index": 3,
+      "field_name": "start and end date ",
+      "value": "Apr 15 - Jun 15, 2026"
+    },
+    {
+      "item_index": 3,
+      "field_name": "Description ",
+      "value": "Cybersecurity Machine Learning/AI Beginner Friendly"
+    },
+    {
+      "item_index": 4,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 4,
+      "field_name": "title",
+      "value": "Learning Hackathon: Spec Driven Development"
+    },
+    {
+      "item_index": 4,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 4,
+      "field_name": "prize",
+      "value": "0"
+    },
+    {
+      "item_index": 4,
+      "field_name": "number of participants ",
+      "value": "1108"
+    },
+    {
+      "item_index": 4,
+      "field_name": "Organizer",
+      "value": "Devpost, Inc."
+    },
+    {
+      "item_index": 4,
+      "field_name": "start and end date ",
+      "value": "Mar 31 - Apr 29, 2026"
+    },
+    {
+      "item_index": 4,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Machine Learning/AI Open Ended"
+    },
+    {
+      "item_index": 5,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 5,
+      "field_name": "title",
+      "value": "GNEC Hackathon 2026 Spring - Compete For UN-Affiliated/NGO Internships & Prizes"
+    },
+    {
+      "item_index": 5,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 5,
+      "field_name": "prize",
+      "value": "700"
+    },
+    {
+      "item_index": 5,
+      "field_name": "number of participants ",
+      "value": "538"
+    },
+    {
+      "item_index": 5,
+      "field_name": "Organizer",
+      "value": "Global NGO Executive Committee"
+    },
+    {
+      "item_index": 5,
+      "field_name": "start and end date ",
+      "value": "Mar 12 - May 03, 2026"
+    },
+    {
+      "item_index": 5,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Health Social Good"
+    },
+    {
+      "item_index": 6,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 6,
+      "field_name": "title",
+      "value": "EnviroCast Global Engineering Outlook: From Insight to Impact Hackathon"
+    },
+    {
+      "item_index": 6,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 6,
+      "field_name": "prize",
+      "value": "625"
+    },
+    {
+      "item_index": 6,
+      "field_name": "number of participants ",
+      "value": "423"
+    },
+    {
+      "item_index": 6,
+      "field_name": "Organizer",
+      "value": "EnviroCast"
+    },
+    {
+      "item_index": 6,
+      "field_name": "start and end date ",
+      "value": "Mar 26 - May 21, 2026"
+    },
+    {
+      "item_index": 6,
+      "field_name": "Description ",
+      "value": "Open Ended Productivity Social Good"
+    },
+    {
+      "item_index": 7,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 7,
+      "field_name": "title",
+      "value": "HackAmerica"
+    },
+    {
+      "item_index": 7,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 7,
+      "field_name": "prize",
+      "value": "575"
+    },
+    {
+      "item_index": 7,
+      "field_name": "number of participants ",
+      "value": "381"
+    },
+    {
+      "item_index": 7,
+      "field_name": "Organizer",
+      "value": "HackAmerica"
+    },
+    {
+      "item_index": 7,
+      "field_name": "start and end date ",
+      "value": "Apr 11 - May 23, 2026"
+    },
+    {
+      "item_index": 7,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Design Social Good"
+    },
+    {
+      "item_index": 8,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 8,
+      "field_name": "title",
+      "value": "DSH Hacks V1"
+    },
+    {
+      "item_index": 8,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 8,
+      "field_name": "prize",
+      "value": "5,096"
+    },
+    {
+      "item_index": 8,
+      "field_name": "number of participants ",
+      "value": "378"
+    },
+    {
+      "item_index": 8,
+      "field_name": "Organizer",
+      "value": "DreamWeave"
+    },
+    {
+      "item_index": 8,
+      "field_name": "start and end date ",
+      "value": "Mar 02 - Jun 02, 2026"
+    },
+    {
+      "item_index": 8,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Social Good Machine Learning/AI"
+    },
+    {
+      "item_index": 9,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 9,
+      "field_name": "title",
+      "value": "UWB Hacks: The Future!"
+    },
+    {
+      "item_index": 9,
+      "field_name": "place",
+      "value": "University of Washington Bothell - ARC"
+    },
+    {
+      "item_index": 9,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 9,
+      "field_name": "number of participants ",
+      "value": "355"
+    },
+    {
+      "item_index": 9,
+      "field_name": "Organizer",
+      "value": "UWB ACM"
+    },
+    {
+      "item_index": 9,
+      "field_name": "start and end date ",
+      "value": "Feb 24 - Apr 26, 2026"
+    },
+    {
+      "item_index": 9,
+      "field_name": "Description ",
+      "value": "Beginner Friendly"
+    },
+    {
+      "item_index": 10,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 10,
+      "field_name": "title",
+      "value": "UCI Design-a-thon 2026"
+    },
+    {
+      "item_index": 10,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 10,
+      "field_name": "prize",
+      "value": "5,048"
+    },
+    {
+      "item_index": 10,
+      "field_name": "number of participants ",
+      "value": "297"
+    },
+    {
+      "item_index": 10,
+      "field_name": "Organizer",
+      "value": "UC Irvine"
+    },
+    {
+      "item_index": 10,
+      "field_name": "start and end date ",
+      "value": "Mar 31 - Apr 26, 2026"
+    },
+    {
+      "item_index": 10,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Design Low/No Code"
+    },
+    {
+      "item_index": 11,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 11,
+      "field_name": "title",
+      "value": "LUMA Hackathon!"
+    },
+    {
+      "item_index": 11,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 11,
+      "field_name": "prize",
+      "value": "300"
+    },
+    {
+      "item_index": 11,
+      "field_name": "number of participants ",
+      "value": "292"
+    },
+    {
+      "item_index": 11,
+      "field_name": "Organizer",
+      "value": "joinluma"
+    },
+    {
+      "item_index": 11,
+      "field_name": "start and end date ",
+      "value": "Apr 05 - 26, 2026"
+    },
+    {
+      "item_index": 11,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Open Ended Machine Learning/AI"
+    },
+    {
+      "item_index": 12,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 12,
+      "field_name": "title",
+      "value": "EcoHack"
+    },
+    {
+      "item_index": 12,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 12,
+      "field_name": "prize",
+      "value": "4"
+    },
+    {
+      "item_index": 12,
+      "field_name": "number of participants ",
+      "value": "281"
+    },
+    {
+      "item_index": 12,
+      "field_name": "Organizer",
+      "value": "EcoHack"
+    },
+    {
+      "item_index": 12,
+      "field_name": "start and end date ",
+      "value": "Mar 11 - Apr 23, 2026"
+    },
+    {
+      "item_index": 12,
+      "field_name": "Description ",
+      "value": "Open Ended Social Good Beginner Friendly"
+    },
+    {
+      "item_index": 13,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 13,
+      "field_name": "title",
+      "value": "BluePrint 2026 - Hackthon for freshers and Students"
+    },
+    {
+      "item_index": 13,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 13,
+      "field_name": "prize",
+      "value": "18,000"
+    },
+    {
+      "item_index": 13,
+      "field_name": "number of participants ",
+      "value": "243"
+    },
+    {
+      "item_index": 13,
+      "field_name": "Organizer",
+      "value": "BluePms Software Solutions PVT"
+    },
+    {
+      "item_index": 13,
+      "field_name": "start and end date ",
+      "value": "Apr 13 - May 14, 2026"
+    },
+    {
+      "item_index": 13,
+      "field_name": "Description ",
+      "value": "Low/No Code Productivity Web"
+    },
+    {
+      "item_index": 14,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 14,
+      "field_name": "title",
+      "value": "Nira hackathon"
+    },
+    {
+      "item_index": 14,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 14,
+      "field_name": "prize",
+      "value": "500"
+    },
+    {
+      "item_index": 14,
+      "field_name": "number of participants ",
+      "value": "197"
+    },
+    {
+      "item_index": 14,
+      "field_name": "Organizer",
+      "value": "nira ai tech"
+    },
+    {
+      "item_index": 14,
+      "field_name": "start and end date ",
+      "value": "Apr 04 - May 02, 2026"
+    },
+    {
+      "item_index": 14,
+      "field_name": "Description ",
+      "value": "Design Education Machine Learning/AI"
+    },
+    {
+      "item_index": 15,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 15,
+      "field_name": "title",
+      "value": "Aurora Global Hackathon"
+    },
+    {
+      "item_index": 15,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 15,
+      "field_name": "prize",
+      "value": "6"
+    },
+    {
+      "item_index": 15,
+      "field_name": "number of participants ",
+      "value": "183"
+    },
+    {
+      "item_index": 15,
+      "field_name": "Organizer",
+      "value": "Project GRID"
+    },
+    {
+      "item_index": 15,
+      "field_name": "start and end date ",
+      "value": "Apr 11 - 30, 2026"
+    },
+    {
+      "item_index": 15,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Low/No Code Social Good"
+    },
+    {
+      "item_index": 16,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 16,
+      "field_name": "title",
+      "value": "The Future Innovators Hackathon: A Road to START Hack"
+    },
+    {
+      "item_index": 16,
+      "field_name": "place",
+      "value": "Unicorn Stage, Beato Innovation District"
+    },
+    {
+      "item_index": 16,
+      "field_name": "prize",
+      "value": "2,000"
+    },
+    {
+      "item_index": 16,
+      "field_name": "number of participants ",
+      "value": "181"
+    },
+    {
+      "item_index": 16,
+      "field_name": "Organizer",
+      "value": "Unicorn Factory Lisboa and START Lisbon"
+    },
+    {
+      "item_index": 16,
+      "field_name": "start and end date ",
+      "value": "Mar 31 - Apr 25, 2026"
+    },
+    {
+      "item_index": 16,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Low/No Code"
+    },
+    {
+      "item_index": 17,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 17,
+      "field_name": "title",
+      "value": "PhysTech 2026: Physical Activity and Technology Hack Day"
+    },
+    {
+      "item_index": 17,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 17,
+      "field_name": "prize",
+      "value": "10"
+    },
+    {
+      "item_index": 17,
+      "field_name": "number of participants ",
+      "value": "172"
+    },
+    {
+      "item_index": 17,
+      "field_name": "Organizer",
+      "value": "Binnovative"
+    },
+    {
+      "item_index": 17,
+      "field_name": "start and end date ",
+      "value": "Feb 08 - Jun 27, 2026"
+    },
+    {
+      "item_index": 17,
+      "field_name": "Description ",
+      "value": "Education Health IoT"
+    },
+    {
+      "item_index": 18,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 18,
+      "field_name": "title",
+      "value": "DesignXR Hackathon"
+    },
+    {
+      "item_index": 18,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 18,
+      "field_name": "prize",
+      "value": "4"
+    },
+    {
+      "item_index": 18,
+      "field_name": "number of participants ",
+      "value": "157"
+    },
+    {
+      "item_index": 18,
+      "field_name": "Organizer",
+      "value": "iTSikhwal"
+    },
+    {
+      "item_index": 18,
+      "field_name": "start and end date ",
+      "value": "Apr 01 - May 10, 2026"
+    },
+    {
+      "item_index": 18,
+      "field_name": "Description ",
+      "value": "AR/VR Productivity Education"
+    },
+    {
+      "item_index": 19,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 19,
+      "field_name": "title",
+      "value": "hatrek"
+    },
+    {
+      "item_index": 19,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 19,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 19,
+      "field_name": "number of participants ",
+      "value": "123"
+    },
+    {
+      "item_index": 19,
+      "field_name": "Organizer",
+      "value": "automata"
+    },
+    {
+      "item_index": 19,
+      "field_name": "start and end date ",
+      "value": "Feb 17 - Apr 30, 2026"
+    },
+    {
+      "item_index": 19,
+      "field_name": "Description ",
+      "value": "Machine Learning/AI Open Ended Web"
+    },
+    {
+      "item_index": 20,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 20,
+      "field_name": "title",
+      "value": "AI for Everyone"
+    },
+    {
+      "item_index": 20,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 20,
+      "field_name": "prize",
+      "value": "3"
+    },
+    {
+      "item_index": 20,
+      "field_name": "number of participants ",
+      "value": "115"
+    },
+    {
+      "item_index": 20,
+      "field_name": "Organizer",
+      "value": "Tech Z"
+    },
+    {
+      "item_index": 20,
+      "field_name": "start and end date ",
+      "value": "Mar 31 - Apr 30, 2026"
+    },
+    {
+      "item_index": 20,
+      "field_name": "Description ",
+      "value": "Education Health Open Ended"
+    },
+    {
+      "item_index": 21,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 21,
+      "field_name": "title",
+      "value": "2025-2026 Spring ESE Senior Design"
+    },
+    {
+      "item_index": 21,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 21,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 21,
+      "field_name": "number of participants ",
+      "value": "105"
+    },
+    {
+      "item_index": 21,
+      "field_name": "Organizer",
+      "value": "university of pennsylvania"
+    },
+    {
+      "item_index": 21,
+      "field_name": "start and end date ",
+      "value": "Jan 12 - Apr 30, 2026"
+    },
+    {
+      "item_index": 21,
+      "field_name": "Description ",
+      "value": "AR/VR Open Ended Robotic Process Automation"
+    },
+    {
+      "item_index": 22,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 22,
+      "field_name": "title",
+      "value": "HackFW"
+    },
+    {
+      "item_index": 22,
+      "field_name": "place",
+      "value": "Fort Worth"
+    },
+    {
+      "item_index": 22,
+      "field_name": "prize",
+      "value": "4,025"
+    },
+    {
+      "item_index": 22,
+      "field_name": "number of participants ",
+      "value": "95"
+    },
+    {
+      "item_index": 22,
+      "field_name": "Organizer",
+      "value": "Fort Worth DAO"
+    },
+    {
+      "item_index": 22,
+      "field_name": "start and end date ",
+      "value": "Apr 03 - May 02, 2026"
+    },
+    {
+      "item_index": 22,
+      "field_name": "Description ",
+      "value": "Blockchain Machine Learning/AI Robotic Process Automation"
+    },
+    {
+      "item_index": 23,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 23,
+      "field_name": "title",
+      "value": "AI Autonomous Smart City Hackathon 2026"
+    },
+    {
+      "item_index": 23,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 23,
+      "field_name": "prize",
+      "value": "3"
+    },
+    {
+      "item_index": 23,
+      "field_name": "number of participants ",
+      "value": "91"
+    },
+    {
+      "item_index": 23,
+      "field_name": "Organizer",
+      "value": "Innovation Hacks"
+    },
+    {
+      "item_index": 23,
+      "field_name": "start and end date ",
+      "value": "Apr 15 - 30, 2026"
+    },
+    {
+      "item_index": 23,
+      "field_name": "Description ",
+      "value": "IoT Machine Learning/AI Social Good"
+    },
+    {
+      "item_index": 24,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 24,
+      "field_name": "title",
+      "value": "NACOS X GDG AI Hackathon"
+    },
+    {
+      "item_index": 24,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 24,
+      "field_name": "prize",
+      "value": "3"
+    },
+    {
+      "item_index": 24,
+      "field_name": "number of participants ",
+      "value": "89"
+    },
+    {
+      "item_index": 24,
+      "field_name": "Organizer",
+      "value": "Google Developer Group LMU"
+    },
+    {
+      "item_index": 24,
+      "field_name": "start and end date ",
+      "value": "Apr 01 - May 29, 2026"
+    },
+    {
+      "item_index": 24,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Machine Learning/AI Web"
+    },
+    {
+      "item_index": 25,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 25,
+      "field_name": "title",
+      "value": "ML Empowerment Build Challenge"
+    },
+    {
+      "item_index": 25,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 25,
+      "field_name": "prize",
+      "value": "13"
+    },
+    {
+      "item_index": 25,
+      "field_name": "number of participants ",
+      "value": "78"
+    },
+    {
+      "item_index": 25,
+      "field_name": "Organizer",
+      "value": "ML Empowerment Foundation"
+    },
+    {
+      "item_index": 25,
+      "field_name": "start and end date ",
+      "value": "Apr 07 - May 13, 2026"
+    },
+    {
+      "item_index": 25,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Education Machine Learning/AI"
+    },
+    {
+      "item_index": 26,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 26,
+      "field_name": "title",
+      "value": "Code Innovation"
+    },
+    {
+      "item_index": 26,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 26,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 26,
+      "field_name": "number of participants ",
+      "value": "73"
+    },
+    {
+      "item_index": 26,
+      "field_name": "Organizer",
+      "value": "Arya Main"
+    },
+    {
+      "item_index": 26,
+      "field_name": "start and end date ",
+      "value": "Mar 29 - Apr 23, 2026"
+    },
+    {
+      "item_index": 26,
+      "field_name": "Description ",
+      "value": "Blockchain Machine Learning/AI Open Ended"
+    },
+    {
+      "item_index": 27,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 27,
+      "field_name": "title",
+      "value": "LUMA Hackathon: Pitch your idea, win up to $500"
+    },
+    {
+      "item_index": 27,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 27,
+      "field_name": "prize",
+      "value": "250"
+    },
+    {
+      "item_index": 27,
+      "field_name": "number of participants ",
+      "value": "72"
+    },
+    {
+      "item_index": 27,
+      "field_name": "Organizer",
+      "value": "LUMA"
+    },
+    {
+      "item_index": 27,
+      "field_name": "start and end date ",
+      "value": "Apr 11 - May 16, 2026"
+    },
+    {
+      "item_index": 27,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Machine Learning/AI Open Ended"
+    },
+    {
+      "item_index": 28,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 28,
+      "field_name": "title",
+      "value": "Code With Gemini"
+    },
+    {
+      "item_index": 28,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 28,
+      "field_name": "prize",
+      "value": "0"
+    },
+    {
+      "item_index": 28,
+      "field_name": "number of participants ",
+      "value": "71"
+    },
+    {
+      "item_index": 28,
+      "field_name": "Organizer",
+      "value": "MLH"
+    },
+    {
+      "item_index": 28,
+      "field_name": "start and end date ",
+      "value": "Apr 12 - Jun 03, 2026"
+    },
+    {
+      "item_index": 28,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Education Web"
+    },
+    {
+      "item_index": 29,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 29,
+      "field_name": "title",
+      "value": "Hoobit Hacks 2026"
+    },
+    {
+      "item_index": 29,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 29,
+      "field_name": "prize",
+      "value": "2"
+    },
+    {
+      "item_index": 29,
+      "field_name": "number of participants ",
+      "value": "63"
+    },
+    {
+      "item_index": 29,
+      "field_name": "Organizer",
+      "value": "Hoobit"
+    },
+    {
+      "item_index": 29,
+      "field_name": "start and end date ",
+      "value": "Mar 30 - Jul 01, 2026"
+    },
+    {
+      "item_index": 29,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Machine Learning/AI Social Good"
+    },
+    {
+      "item_index": 30,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 30,
+      "field_name": "title",
+      "value": "Girls in STEM: AI for Social Good Hackathon"
+    },
+    {
+      "item_index": 30,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 30,
+      "field_name": "prize",
+      "value": "9"
+    },
+    {
+      "item_index": 30,
+      "field_name": "number of participants ",
+      "value": "58"
+    },
+    {
+      "item_index": 30,
+      "field_name": "Organizer",
+      "value": "VidOpt LLC"
+    },
+    {
+      "item_index": 30,
+      "field_name": "start and end date ",
+      "value": "Apr 12 - May 14, 2026"
+    },
+    {
+      "item_index": 30,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Machine Learning/AI Social Good"
+    },
+    {
+      "item_index": 31,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 31,
+      "field_name": "title",
+      "value": "Rebuilding the OS: Core System Utilities Hackathon"
+    },
+    {
+      "item_index": 31,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 31,
+      "field_name": "prize",
+      "value": "4"
+    },
+    {
+      "item_index": 31,
+      "field_name": "number of participants ",
+      "value": "57"
+    },
+    {
+      "item_index": 31,
+      "field_name": "Organizer",
+      "value": "Saket Creations"
+    },
+    {
+      "item_index": 31,
+      "field_name": "start and end date ",
+      "value": "Mar 17 - Apr 30, 2026"
+    },
+    {
+      "item_index": 31,
+      "field_name": "Description ",
+      "value": "Design Beginner Friendly Low/No Code"
+    },
+    {
+      "item_index": 32,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 32,
+      "field_name": "title",
+      "value": "NO//CODE : BUILD CHAOS"
+    },
+    {
+      "item_index": 32,
+      "field_name": "place",
+      "value": "Bhagwan Parshuram Institute ofTechnology"
+    },
+    {
+      "item_index": 32,
+      "field_name": "prize",
+      "value": "7,000"
+    },
+    {
+      "item_index": 32,
+      "field_name": "number of participants ",
+      "value": "52"
+    },
+    {
+      "item_index": 32,
+      "field_name": "Organizer",
+      "value": "Department of IT, BPIT"
+    },
+    {
+      "item_index": 32,
+      "field_name": "start and end date ",
+      "value": "Apr 22, 2026"
+    },
+    {
+      "item_index": 32,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Low/No Code"
+    },
+    {
+      "item_index": 33,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 33,
+      "field_name": "title",
+      "value": "Synapse Sprint"
+    },
+    {
+      "item_index": 33,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 33,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 33,
+      "field_name": "number of participants ",
+      "value": "48"
+    },
+    {
+      "item_index": 33,
+      "field_name": "Organizer",
+      "value": "Shankara"
+    },
+    {
+      "item_index": 33,
+      "field_name": "start and end date ",
+      "value": "Mar 29 - Apr 23, 2026"
+    },
+    {
+      "item_index": 33,
+      "field_name": "Description ",
+      "value": "Blockchain Machine Learning/AI Open Ended"
+    },
+    {
+      "item_index": 34,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 34,
+      "field_name": "title",
+      "value": "ESE 1900, Silicon Garage, Spring 2026"
+    },
+    {
+      "item_index": 34,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 34,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 34,
+      "field_name": "number of participants ",
+      "value": "47"
+    },
+    {
+      "item_index": 34,
+      "field_name": "Organizer",
+      "value": "UPenn ESE"
+    },
+    {
+      "item_index": 34,
+      "field_name": "start and end date ",
+      "value": "Mar 30 - May 01, 2026"
+    },
+    {
+      "item_index": 34,
+      "field_name": "Description ",
+      "value": "Education"
+    },
+    {
+      "item_index": 35,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 35,
+      "field_name": "title",
+      "value": "AIVENTRA"
+    },
+    {
+      "item_index": 35,
+      "field_name": "place",
+      "value": "StartupTN,"
+    },
+    {
+      "item_index": 35,
+      "field_name": "prize",
+      "value": "45,000"
+    },
+    {
+      "item_index": 35,
+      "field_name": "number of participants ",
+      "value": "42"
+    },
+    {
+      "item_index": 35,
+      "field_name": "Organizer",
+      "value": "hackhere"
+    },
+    {
+      "item_index": 35,
+      "field_name": "start and end date ",
+      "value": "Apr 19 - 26, 2026"
+    },
+    {
+      "item_index": 35,
+      "field_name": "Description ",
+      "value": "Blockchain DevOps Machine Learning/AI"
+    },
+    {
+      "item_index": 36,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 36,
+      "field_name": "title",
+      "value": "GenZ Can Hack 2026"
+    },
+    {
+      "item_index": 36,
+      "field_name": "place",
+      "value": "Toronto"
+    },
+    {
+      "item_index": 36,
+      "field_name": "prize",
+      "value": "1,000"
+    },
+    {
+      "item_index": 36,
+      "field_name": "number of participants ",
+      "value": "41"
+    },
+    {
+      "item_index": 36,
+      "field_name": "Organizer",
+      "value": "Kids for Kids Toronto Coding Club"
+    },
+    {
+      "item_index": 36,
+      "field_name": "start and end date ",
+      "value": "Apr 01 - Aug 22, 2026"
+    },
+    {
+      "item_index": 36,
+      "field_name": "Description ",
+      "value": "Education Machine Learning/AI Robotic Process Automation"
+    },
+    {
+      "item_index": 37,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 37,
+      "field_name": "title",
+      "value": "Pixel Forge Jam 2026 ($4000+ Prizes)"
+    },
+    {
+      "item_index": 37,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 37,
+      "field_name": "prize",
+      "value": "7"
+    },
+    {
+      "item_index": 37,
+      "field_name": "number of participants ",
+      "value": "36"
+    },
+    {
+      "item_index": 37,
+      "field_name": "Organizer",
+      "value": "Pixel Forge"
+    },
+    {
+      "item_index": 37,
+      "field_name": "start and end date ",
+      "value": "Apr 18 - 25, 2026"
+    },
+    {
+      "item_index": 37,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Education Machine Learning/AI"
+    },
+    {
+      "item_index": 38,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 38,
+      "field_name": "title",
+      "value": "Kindly labs weekly hackathon"
+    },
+    {
+      "item_index": 38,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 38,
+      "field_name": "prize",
+      "value": "4"
+    },
+    {
+      "item_index": 38,
+      "field_name": "number of participants ",
+      "value": "35"
+    },
+    {
+      "item_index": 38,
+      "field_name": "Organizer",
+      "value": "Kindly labs"
+    },
+    {
+      "item_index": 38,
+      "field_name": "start and end date ",
+      "value": "Apr 19 - 25, 2026"
+    },
+    {
+      "item_index": 38,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Machine Learning/AI Web"
+    },
+    {
+      "item_index": 39,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 39,
+      "field_name": "title",
+      "value": "Zero to One Startup-a-thon"
+    },
+    {
+      "item_index": 39,
+      "field_name": "place",
+      "value": "Seattle, WA, USA"
+    },
+    {
+      "item_index": 39,
+      "field_name": "prize",
+      "value": "5,750"
+    },
+    {
+      "item_index": 39,
+      "field_name": "number of participants ",
+      "value": "33"
+    },
+    {
+      "item_index": 39,
+      "field_name": "Organizer",
+      "value": "Claude Builders Club @ UW, Lavin E, ESEC"
+    },
+    {
+      "item_index": 39,
+      "field_name": "start and end date ",
+      "value": "Apr 15 - 24, 2026"
+    },
+    {
+      "item_index": 39,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Enterprise Social Good"
+    },
+    {
+      "item_index": 40,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 40,
+      "field_name": "title",
+      "value": "NextGenHacks"
+    },
+    {
+      "item_index": 40,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 40,
+      "field_name": "prize",
+      "value": "1,000"
+    },
+    {
+      "item_index": 40,
+      "field_name": "number of participants ",
+      "value": "30"
+    },
+    {
+      "item_index": 40,
+      "field_name": "Organizer",
+      "value": "NextGenHacks"
+    },
+    {
+      "item_index": 40,
+      "field_name": "start and end date ",
+      "value": "Apr 21 - Jun 02, 2026"
+    },
+    {
+      "item_index": 40,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Open Ended Social Good"
+    },
+    {
+      "item_index": 41,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 41,
+      "field_name": "title",
+      "value": "Katz School CS & A.I Club Ideathon"
+    },
+    {
+      "item_index": 41,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 41,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 41,
+      "field_name": "number of participants ",
+      "value": "29"
+    },
+    {
+      "item_index": 41,
+      "field_name": "Organizer",
+      "value": "Katz School of Science and Technology"
+    },
+    {
+      "item_index": 41,
+      "field_name": "start and end date ",
+      "value": "Mar 17 - Apr 27, 2026"
+    },
+    {
+      "item_index": 41,
+      "field_name": "Description ",
+      "value": "Open Ended"
+    },
+    {
+      "item_index": 42,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 42,
+      "field_name": "title",
+      "value": "PiHacks Enhanced"
+    },
+    {
+      "item_index": 42,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 42,
+      "field_name": "prize",
+      "value": "201"
+    },
+    {
+      "item_index": 42,
+      "field_name": "number of participants ",
+      "value": "26"
+    },
+    {
+      "item_index": 42,
+      "field_name": "Organizer",
+      "value": "PiHi CompSci"
+    },
+    {
+      "item_index": 42,
+      "field_name": "start and end date ",
+      "value": "Apr 01 - May 01, 2026"
+    },
+    {
+      "item_index": 42,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Gaming Machine Learning/AI"
+    },
+    {
+      "item_index": 43,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 43,
+      "field_name": "title",
+      "value": "305 HackShells Edition April 2026"
+    },
+    {
+      "item_index": 43,
+      "field_name": "place",
+      "value": "Florida International University"
+    },
+    {
+      "item_index": 43,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 43,
+      "field_name": "number of participants ",
+      "value": "25"
+    },
+    {
+      "item_index": 43,
+      "field_name": "Organizer",
+      "value": "Swift at FIU"
+    },
+    {
+      "item_index": 43,
+      "field_name": "start and end date ",
+      "value": "Apr 10 - 24, 2026"
+    },
+    {
+      "item_index": 43,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Design Lifehacks"
+    },
+    {
+      "item_index": 44,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 44,
+      "field_name": "title",
+      "value": "Cloudathon@SJSU 2026"
+    },
+    {
+      "item_index": 44,
+      "field_name": "place",
+      "value": "San Jose State University -- Engineering"
+    },
+    {
+      "item_index": 44,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 44,
+      "field_name": "number of participants ",
+      "value": "23"
+    },
+    {
+      "item_index": 44,
+      "field_name": "Organizer",
+      "value": "Network Engineering Technology Society"
+    },
+    {
+      "item_index": 44,
+      "field_name": "start and end date ",
+      "value": "Apr 01 - May 01, 2026"
+    },
+    {
+      "item_index": 44,
+      "field_name": "Description ",
+      "value": "Communication Cybersecurity Productivity"
+    },
+    {
+      "item_index": 45,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 45,
+      "field_name": "title",
+      "value": "Your idea vs 1,000 other marketers. Let’s see where you actually stand."
+    },
+    {
+      "item_index": 45,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 45,
+      "field_name": "prize",
+      "value": "10,000"
+    },
+    {
+      "item_index": 45,
+      "field_name": "number of participants ",
+      "value": "23"
+    },
+    {
+      "item_index": 45,
+      "field_name": "Organizer",
+      "value": "BluePms Software Solutions PVT"
+    },
+    {
+      "item_index": 45,
+      "field_name": "start and end date ",
+      "value": "Apr 15 - Jun 14, 2026"
+    },
+    {
+      "item_index": 45,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Low/No Code Open Ended"
+    },
+    {
+      "item_index": 46,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 46,
+      "field_name": "title",
+      "value": "1st International Prosolve 2026"
+    },
+    {
+      "item_index": 46,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 46,
+      "field_name": "prize",
+      "value": "1,979"
+    },
+    {
+      "item_index": 46,
+      "field_name": "number of participants ",
+      "value": "21"
+    },
+    {
+      "item_index": 46,
+      "field_name": "Organizer",
+      "value": "Artificial Intelligence Society"
+    },
+    {
+      "item_index": 46,
+      "field_name": "start and end date ",
+      "value": "Apr 11 - May 22, 2026"
+    },
+    {
+      "item_index": 46,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Education Machine Learning/AI"
+    },
+    {
+      "item_index": 47,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 47,
+      "field_name": "title",
+      "value": "GLITCHED GAMES"
+    },
+    {
+      "item_index": 47,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 47,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 47,
+      "field_name": "number of participants ",
+      "value": "21"
+    },
+    {
+      "item_index": 47,
+      "field_name": "Organizer",
+      "value": "GB3-Productions"
+    },
+    {
+      "item_index": 47,
+      "field_name": "start and end date ",
+      "value": "Apr 16 - Jun 30, 2026"
+    },
+    {
+      "item_index": 47,
+      "field_name": "Description ",
+      "value": "Gaming Mobile Web"
+    },
+    {
+      "item_index": 48,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 48,
+      "field_name": "title",
+      "value": "VikingsHacks 25-26"
+    },
+    {
+      "item_index": 48,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 48,
+      "field_name": "prize",
+      "value": "1"
+    },
+    {
+      "item_index": 48,
+      "field_name": "number of participants ",
+      "value": "17"
+    },
+    {
+      "item_index": 48,
+      "field_name": "Organizer",
+      "value": "Fremd Coding Club"
+    },
+    {
+      "item_index": 48,
+      "field_name": "start and end date ",
+      "value": "Apr 13 - 25, 2026"
+    },
+    {
+      "item_index": 48,
+      "field_name": "Description ",
+      "value": "Beginner Friendly Education Social Good"
+    },
+    {
+      "item_index": 49,
+      "field_name": "link",
+      "value": "N/A"
+    },
+    {
+      "item_index": 49,
+      "field_name": "title",
+      "value": "day zero"
+    },
+    {
+      "item_index": 49,
+      "field_name": "place",
+      "value": "Online"
+    },
+    {
+      "item_index": 49,
+      "field_name": "prize",
+      "value": "4"
+    },
+    {
+      "item_index": 49,
+      "field_name": "number of participants ",
+      "value": "16"
+    },
+    {
+      "item_index": 49,
+      "field_name": "Organizer",
+      "value": "soulcloude"
+    },
+    {
+      "item_index": 49,
+      "field_name": "start and end date ",
+      "value": "Apr 16 - 26, 2026"
+    },
+    {
+      "item_index": 49,
+      "field_name": "Description ",
+      "value": "Open Ended"
+    }
+  ]
+}

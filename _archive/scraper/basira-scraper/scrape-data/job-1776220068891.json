@@ -1,0 +1,17 @@
+{
+  "fields": [
+    {
+      "name": "field_1",
+      "selector": ".price .price__regular .sales .value",
+      "sample": "849.00 ر.س",
+      "type": "text"
+    }
+  ],
+  "data": [
+    {
+      "item_index": 0,
+      "field_name": "field_1",
+      "value": "849.00 ر.س"
+    }
+  ]
+}

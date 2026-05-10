@@ -1,0 +1,182 @@
+[
+  {
+    "id": "job-1778074175897",
+    "url": "https://www.nike.sa/en/trends/jordan/womens",
+    "hostname": "www.nike.sa",
+    "timestamp": "2026-05-06T13:30:26.820Z",
+    "rows": 3,
+    "failedItems": 0,
+    "fields": [
+      {
+        "name": "field_1",
+        "selector": ".b-product-tile__body .b-product-tile__body-inner .b-product-tile__name .b-product-tile__name-link .b-product-tile__name-link span",
+        "sample": "Air Jordan 1 Mid SE Edge",
+        "type": "text"
+      },
+      {
+        "name": "field_2",
+        "selector": ".b-product-tile__body-inner .b-product-tile__price .price .price__regular .sales .value",
+        "sample": "SAR 899.00",
+        "type": "text"
+      }
+    ],
+    "loadingMethod": "auto-scroll",
+    "duration": 19
+  },
+  {
+    "id": "job-1776839013246",
+    "url": "https://devpost.com/hackathons",
+    "hostname": "devpost.com",
+    "timestamp": "2026-04-22T06:26:09.943Z",
+    "rows": 50,
+    "failedItems": 0,
+    "fields": [
+      {
+        "name": "link",
+        "selector": ".tile-anchor .main-content .hackathon-thumbnail",
+        "sample": "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_thumbnails/004/516/528/datas/medium_square.png",
+        "type": "link"
+      },
+      {
+        "name": "title",
+        "selector": ".tile-anchor .main-content .content .mb-4",
+        "sample": "Build with MeDo Hackathon",
+        "type": "text"
+      },
+      {
+        "name": "place",
+        "selector": ".justify-content-start div:nth-of-type(2) div .info-with-icon .info span",
+        "sample": "Online",
+        "type": "text"
+      },
+      {
+        "name": "prize",
+        "selector": ".main-content .content .prizes-and-participants .prize .prize-amount span",
+        "sample": "50,000",
+        "type": "text"
+      },
+      {
+        "name": "number of participants ",
+        "selector": ".tile-anchor .main-content .content .prizes-and-participants .participants strong",
+        "sample": "2565",
+        "type": "text"
+      },
+      {
+        "name": "Organizer",
+        "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .host-label",
+        "sample": "Baidu",
+        "type": "text"
+      },
+      {
+        "name": "start and end date ",
+        "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .submission-period",
+        "sample": "Apr 09 - May 20, 2026",
+        "type": "text"
+      },
+      {
+        "name": "Description ",
+        "selector": ".tile-anchor .side-info .themes .info-with-icon",
+        "sample": "Beginner Friendly Low/No Code Machine Learning/AI",
+        "type": "text"
+      }
+    ],
+    "loadingMethod": "auto-scroll",
+    "duration": 138
+  },
+  {
+    "id": "job-1776836359805",
+    "url": "https://devpost.com/hackathons",
+    "hostname": "devpost.com",
+    "timestamp": "2026-04-22T06:07:45.950Z",
+    "rows": 18,
+    "failedItems": 0,
+    "fields": [
+      {
+        "name": "title",
+        "selector": ".tile-anchor .main-content .content .mb-4",
+        "sample": "Build with MeDo Hackathon",
+        "type": "text"
+      },
+      {
+        "name": "place",
+        "selector": ".justify-content-start div:nth-of-type(2) div .info-with-icon .info span",
+        "sample": "Online",
+        "type": "text"
+      },
+      {
+        "name": "prize ",
+        "selector": ".main-content .content .prizes-and-participants .prize .prize-amount span",
+        "sample": "50,000",
+        "type": "text"
+      },
+      {
+        "name": "start and end date ",
+        "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .submission-period",
+        "sample": "Apr 09 - May 20, 2026",
+        "type": "text"
+      },
+      {
+        "name": "Organizer",
+        "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .host-label",
+        "sample": "Baidu",
+        "type": "text"
+      },
+      {
+        "name": "Participants",
+        "selector": ".tile-anchor .main-content .content .prizes-and-participants .participants",
+        "sample": "2558 participants",
+        "type": "text"
+      }
+    ],
+    "loadingMethod": "auto-scroll",
+    "duration": 787
+  },
+  {
+    "id": "job-1776836359805",
+    "url": "https://devpost.com/hackathons",
+    "hostname": "devpost.com",
+    "timestamp": "2026-04-22T06:07:45.948Z",
+    "rows": 18,
+    "failedItems": 0,
+    "fields": [
+      {
+        "name": "title",
+        "selector": ".tile-anchor .main-content .content .mb-4",
+        "sample": "Build with MeDo Hackathon",
+        "type": "text"
+      },
+      {
+        "name": "place",
+        "selector": ".justify-content-start div:nth-of-type(2) div .info-with-icon .info span",
+        "sample": "Online",
+        "type": "text"
+      },
+      {
+        "name": "prize ",
+        "selector": ".main-content .content .prizes-and-participants .prize .prize-amount span",
+        "sample": "50,000",
+        "type": "text"
+      },
+      {
+        "name": "start and end date ",
+        "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .submission-period",
+        "sample": "Apr 09 - May 20, 2026",
+        "type": "text"
+      },
+      {
+        "name": "Organizer",
+        "selector": ".tile-anchor .side-info .mb-4 .info-with-icon .info .host-label",
+        "sample": "Baidu",
+        "type": "text"
+      },
+      {
+        "name": "Participants",
+        "selector": ".tile-anchor .main-content .content .prizes-and-participants .participants",
+        "sample": "2558 participants",
+        "type": "text"
+      }
+    ],
+    "loadingMethod": "auto-scroll",
+    "duration": 787
+  }
+]

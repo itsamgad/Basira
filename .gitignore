@@ -4,3 +4,10 @@ _staging/
 # macOS / zip junk
 .DS_Store
 __MACOSX/
+
+# Large archive contents — moved into _archive/ but not worth tracking
+_archive/zips/
+_archive/scraper/**/node_modules/
+_archive/scraper/**/*.zip
+_archive/scraper/**/out/
+_archive/scraper/**/.next/
