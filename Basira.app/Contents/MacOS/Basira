@@ -1,24 +1,58 @@
 #!/bin/bash
 # Basira.app launcher shim
 # ─────────────────────────────────────────────────────────────────────
-# Delegates to Basira.command in the parent directory of the .app
-# bundle, opened in a visible Terminal window so the user sees the
-# ASCII branding, the live log tail, and can press Ctrl+C to stop.
+# Delegates to Basira.command in the Basira-Workspace folder, opened
+# in a visible Terminal window so the user sees the ASCII branding,
+# the live log tail, and can press Ctrl+C to stop.
 #
-# The .app must live in the same folder as Basira.command — typically
-# at the root of the Basira-Workspace folder.
+# The bundle searches for Basira-Workspace in priority order:
+#   1) Next to the .app   (sibling mode — .app inside the workspace)
+#   2) ~/Desktop/Basira-Workspace
+#   3) ~/Documents/Basira-Workspace
+#   4) ~/Basira-Workspace
+#
+# This lets the user drag Basira.app into /Applications and still have
+# Launchpad find the workspace under their home directory.
 # ─────────────────────────────────────────────────────────────────────
 
-# Resolve the .app's enclosing directory.
-# this script: <Workspace>/Basira.app/Contents/MacOS/Basira
+# Sibling candidate: the directory that contains the .app itself.
+# this script: <Parent>/Basira.app/Contents/MacOS/Basira
 APP_PATH="$(cd "$(dirname "$0")/../.." && pwd -P)"
-WORKSPACE="$(dirname "$APP_PATH")"
-COMMAND_PATH="$WORKSPACE/Basira.command"
+APP_PARENT="$(dirname "$APP_PATH")"
 
-if [ ! -x "$COMMAND_PATH" ]; then
-    osascript -e "display alert \"Basira launcher not found\" message \"Expected: $COMMAND_PATH\n\nPut Basira.app inside the Basira-Workspace folder, next to Basira.command.\""
+CANDIDATES=(
+    "$APP_PARENT"
+    "$HOME/Desktop/Basira-Workspace"
+    "$HOME/Documents/Basira-Workspace"
+    "$HOME/Basira-Workspace"
+)
+
+WORKSPACE=""
+for cand in "${CANDIDATES[@]}"; do
+    if [ -x "$cand/Basira.command" ]; then
+        WORKSPACE="$cand"
+        break
+    fi
+done
+
+if [ -z "$WORKSPACE" ]; then
+    # Build a bullet list of the searched paths for the alert dialog.
+    SEARCHED=""
+    for c in "${CANDIDATES[@]}"; do
+        SEARCHED+="• $c"$'\n'
+    done
+
+    osascript <<APPLESCRIPT
+display alert "Basira workspace not found" message "Could not locate Basira-Workspace folder.
+
+Searched in:
+${SEARCHED}
+Please move Basira-Workspace to one of these locations, or launch Basira.command directly from the workspace folder."
+APPLESCRIPT
     exit 1
 fi
+
+COMMAND_PATH="$WORKSPACE/Basira.command"
 
 # Ask Terminal.app to open Basira.command so the user sees the live
 # logs and can interact (Ctrl+C to shut down). Quote the path for the
