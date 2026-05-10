@@ -1,0 +1,7 @@
+# Basira Scraper — sibling project to basira-engine/
+# Runtime deps only; scraper-specific (no sklearn/scipy/etc. — those belong
+# to the analytics engine, not the scraper).
+flask>=3.0
+playwright>=1.40
+pandas>=2.0
+requests>=2.31
