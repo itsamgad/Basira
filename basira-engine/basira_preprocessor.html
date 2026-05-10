@@ -175,10 +175,63 @@ tbody td.tdn{color:var(--danger);font-style:italic;font-size:.7rem;}
   .cgrid{grid-template-columns:1fr 1fr;} .dlgrid{grid-template-columns:1fr;}
   .plog-box{width:300px;}
 }
+
+/* ── Scraper entry-point card (secondary action below the dropzone) ── */
+.scraper-card{display:flex;align-items:center;gap:14px;background:var(--s2);border:1.5px dashed var(--b2);border-radius:var(--rlg);padding:18px 22px;margin-top:14px;cursor:pointer;transition:var(--tr);user-select:none;}
+.scraper-card:hover{border-color:var(--accent);background:var(--adim);box-shadow:var(--sh);transform:translateY(-1px);}
+.scraper-card-icon{width:46px;height:46px;border-radius:12px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;transition:var(--tr);}
+.scraper-card:hover .scraper-card-icon{border-color:var(--accent);}
+.scraper-card-text{flex:1;min-width:0;}
+.scraper-card-title{font-size:.97rem;font-weight:800;color:var(--t2);margin-bottom:2px;letter-spacing:-.2px;transition:var(--tr);}
+.scraper-card:hover .scraper-card-title{color:var(--accent);}
+.scraper-card-sub{font-size:.78rem;color:var(--td);}
+.scraper-card-arrow{font-size:1.15rem;color:var(--tm);font-weight:700;transition:var(--tr);flex-shrink:0;}
+.scraper-card:hover .scraper-card-arrow{color:var(--accent);transform:translateX(3px);}
+
+/* ── Scraper URL modal ── */
+.smod{position:fixed;inset:0;background:rgba(15,23,42,.45);backdrop-filter:blur(4px);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px;}
+.smod-card{background:var(--surface);border-radius:var(--rxl);box-shadow:0 20px 60px rgba(0,0,0,.25);width:100%;max-width:480px;overflow:hidden;animation:smod-in .2s ease;}
+@keyframes smod-in{from{opacity:0;transform:translateY(-8px) scale(.97);}to{opacity:1;transform:translateY(0) scale(1);}}
+.smod-hdr{display:flex;align-items:center;gap:11px;padding:18px 22px 14px;border-bottom:1px solid var(--border);}
+.smod-title{font-size:1rem;font-weight:800;color:var(--text);flex:1;}
+.smod-x{background:transparent;border:0;font-size:1.6rem;line-height:1;color:var(--tm);cursor:pointer;padding:2px 9px;border-radius:6px;transition:var(--tr);}
+.smod-x:hover{color:var(--text);background:var(--s2);}
+.smod-body{padding:18px 22px;}
+.smod-lbl{font-size:.71rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:var(--tm);margin-bottom:7px;display:block;}
+.smod-input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:var(--r);font-size:.92rem;font-family:var(--mono);color:var(--text);background:var(--s2);transition:var(--tr);outline:none;}
+.smod-input:focus{border-color:var(--accent);background:var(--surface);box-shadow:0 0 0 3px var(--adim);}
+.smod-hint{font-size:.74rem;color:var(--td);margin-top:9px;line-height:1.55;}
+.smod-alert{margin-top:13px;padding:10px 13px;border-radius:var(--r);font-size:.78rem;line-height:1.55;white-space:pre-line;}
+.smod-alert.err{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.22);color:#991b1b;font-family:var(--mono);}
+.smod-alert.ok{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.22);color:#15803d;}
+.smod-ftr{display:flex;justify-content:flex-end;gap:9px;padding:14px 22px 18px;border-top:1px solid var(--border);background:var(--s2);}
 </style>
 </head>
 <body>
 <div id="toast"></div>
+
+<!-- Scraper URL modal -->
+<div id="smod" class="smod hidden" role="dialog" aria-modal="true" aria-labelledby="smodTitle">
+  <div class="smod-card">
+    <div class="smod-hdr">
+      <span style="font-size:1.4rem">🕷️</span>
+      <span class="smod-title" id="smodTitle">Launch Scraper</span>
+      <button class="smod-x" type="button" onclick="closeScraperModal()" aria-label="Close">×</button>
+    </div>
+    <div class="smod-body">
+      <label class="smod-lbl" for="smodUrl">Website URL to scrape</label>
+      <input type="url" id="smodUrl" class="smod-input" placeholder="https://example.com" autocomplete="off" spellcheck="false">
+      <div class="smod-hint">
+        Chromium will open with the Basira sidebar overlay. Click an item, then SHIFT-click each field you want to extract — the scraper will pipe the result back to this preprocessor.
+      </div>
+      <div id="smodAlert" class="smod-alert hidden"></div>
+    </div>
+    <div class="smod-ftr">
+      <button class="btn bs" type="button" onclick="closeScraperModal()">Cancel</button>
+      <button class="btn bp" type="button" id="smodLaunchBtn" onclick="launchScraper()">🚀 Launch Chromium</button>
+    </div>
+  </div>
+</div>
 
 <!-- Processing overlay -->
 <div id="ov">
@@ -217,6 +270,15 @@ tbody td.tdn{color:var(--danger);font-style:italic;font-size:.7rem;}
     <div class="uzone-title">Drop your dataset here or click to browse</div>
     <div class="uzone-sub">CSV and Excel files supported — Arabic and English data</div>
     <div class="ftags"><span class="ftag">.CSV</span><span class="ftag">.XLSX</span><span class="ftag">.XLS</span></div>
+  </div>
+  <!-- Scraper entry point: secondary action — launches the sibling scraper service on :5051 -->
+  <div class="scraper-card" id="scraperCard" role="button" tabindex="0" aria-label="Launch web scraper to collect your own data">
+    <div class="scraper-card-icon">🕷️</div>
+    <div class="scraper-card-text">
+      <div class="scraper-card-title">no data? no problem</div>
+      <div class="scraper-card-sub">start scraping your own data from the web</div>
+    </div>
+    <div class="scraper-card-arrow">→</div>
   </div>
   <!-- Backend info -->
   <div class="alert ai" style="margin-top:18px">
@@ -573,6 +635,87 @@ function resetAll(){
   document.getElementById('fi').value='';
   setPill(1); setProg(5);
 }
+
+/* ── Scraper entry point ── */
+var SCRAPER_API = 'http://localhost:5051';
+
+function openScraperModal(){
+  var m = document.getElementById('smod');
+  m.classList.remove('hidden');
+  document.getElementById('smodAlert').classList.add('hidden');
+  setTimeout(function(){ document.getElementById('smodUrl').focus(); }, 50);
+}
+function closeScraperModal(){
+  document.getElementById('smod').classList.add('hidden');
+  var btn = document.getElementById('smodLaunchBtn');
+  btn.disabled = false; btn.textContent = '🚀 Launch Chromium';
+}
+function showScraperAlert(kind, msg){
+  var a = document.getElementById('smodAlert');
+  a.className = 'smod-alert ' + (kind === 'err' ? 'err' : 'ok');
+  a.textContent = msg;
+  a.classList.remove('hidden');
+}
+function launchScraper(){
+  var input = document.getElementById('smodUrl');
+  var url = input.value.trim();
+  if(!url){ showScraperAlert('err', 'Please enter a URL.'); input.focus(); return; }
+  if(!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+  var btn = document.getElementById('smodLaunchBtn');
+  btn.disabled = true; btn.textContent = '⏳ Launching...';
+  document.getElementById('smodAlert').classList.add('hidden');
+
+  fetch(SCRAPER_API + '/open-browser', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: url })
+  })
+  .then(function(r){
+    return r.json().then(function(j){ return { ok: r.ok, status: r.status, body: j }; });
+  })
+  .then(function(res){
+    if(!res.ok) throw new Error(res.body && res.body.error ? res.body.error : ('Scraper returned HTTP ' + res.status));
+    showScraperAlert('ok',
+      '✅ Scraper launched — Chromium will open shortly with the Basira sidebar.\n' +
+      'Use the overlay to select your data, then click "Send to Preprocessor".'
+    );
+    btn.textContent = '✅ Launched';
+    setTimeout(closeScraperModal, 3500);
+  })
+  .catch(function(err){
+    var msg = err && err.message ? err.message : String(err);
+    btn.disabled = false; btn.textContent = '🚀 Launch Chromium';
+    if(msg === 'Failed to fetch' || msg.indexOf('NetworkError') >= 0 || msg.indexOf('Load failed') >= 0){
+      showScraperAlert('err',
+        'Scraper not running on port 5051. Start it with:\n' +
+        'cd ../basira-scraper && .venv/bin/python basira_scraper.py'
+      );
+    } else {
+      showScraperAlert('err', '❌ ' + msg);
+    }
+  });
+}
+
+(function wireScraperUI(){
+  var card = document.getElementById('scraperCard');
+  if(!card) return;
+  card.addEventListener('click', openScraperModal);
+  card.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openScraperModal(); }
+  });
+  // Click outside the modal card closes it
+  document.getElementById('smod').addEventListener('click', function(e){
+    if(e.target === this) closeScraperModal();
+  });
+  // Esc to close, Enter to submit while modal is open
+  document.addEventListener('keydown', function(e){
+    var m = document.getElementById('smod');
+    if(m.classList.contains('hidden')) return;
+    if(e.key === 'Escape') closeScraperModal();
+    else if(e.key === 'Enter' && document.activeElement && document.activeElement.id === 'smodUrl') launchScraper();
+  });
+})();
 </script>
 </body>
 </html>
