@@ -1,6 +1,109 @@
 # How to launch Basira
 
-## Two ways to launch Basira
+## Supported platforms
+
+| Platform | First-time setup | Daily launcher | Bundled app |
+|---|---|---|---|
+| **macOS** (11+) | manual venv setup (see "macOS — first-time install" below) | `Basira.command` | `Basira.app` (drag to /Applications) |
+| **Windows** (10+) | `setup.bat` (one-time, ~5 min) | `Basira.bat` | not bundled — `Basira.bat` is the daily entry point |
+
+Both platforms run the **same Python backend** (`basira-engine/`,
+`basira-scraper/`). Only the launcher scripts differ. Venvs and the
+Playwright browser binary are platform-specific, so a workspace
+copied between a Mac and a Windows machine needs `setup.bat` (or
+the macOS equivalent steps) to be run again on the new machine.
+
+---
+
+## Running on Windows
+
+### First-time setup (one-time, ~5 minutes)
+
+1. Make sure **Python 3.10+** is installed.
+   - Download from <https://www.python.org/downloads/>.
+   - **Check the box "Add Python to PATH"** during install.
+2. Open the `Basira-Workspace` folder in File Explorer.
+3. **Double-click `setup.bat`**.
+
+A console window opens and runs:
+
+```
++----------------------------------+
+|   Basira -- First-Time Setup     |
++----------------------------------+
+
+Using Python 3.13.x
+[1/4] Creating engine venv...
+[2/4] Installing engine dependencies (numpy, pandas, sklearn, ...)...
+[3/4] Creating scraper venv...
+[4/4] Installing scraper deps + Playwright Chromium (~150 MB)...
+====================================
+   [OK] Setup complete.
+====================================
+```
+
+When you see `Setup complete.`, close the window.
+
+### Daily use
+
+**Double-click `Basira.bat`** at the workspace root. The launcher will:
+
+- Verify Python and both venvs are present
+- Free ports 5050 / 5051 (asks before killing anything)
+- Start the engine and scraper in minimized console windows
+- Wait up to 30 s for `/health` on both
+- Open the preprocessor UI in your default browser
+- Stay open so you can see status
+
+When you're done, **press any key in the launcher window** to stop both
+servers. (Closing the window with the X button leaves the servers
+running — see "Windows shutdown notes" below.)
+
+### Windows shutdown notes
+
+CMD has no equivalent of macOS's `trap EXIT`, so closing the launcher
+with the X button bypasses cleanup. To recover:
+
+- Open **Task Manager** → **Details** tab → end the two `python.exe`
+  processes, **or**
+- Run this one-liner in any cmd prompt:
+  ```
+  for /f "tokens=5" %a in ('netstat -ano ^| findstr :5050 :5051 ^| findstr LISTENING') do taskkill /F /PID %a
+  ```
+
+### Windows troubleshooting
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| `'python' is not recognized` | Python not on PATH | Reinstall Python with the **Add Python to PATH** checkbox |
+| `Engine venv not found at basira-engine\.venv` | setup.bat hasn't run | Double-click `setup.bat` once |
+| `Servers did not become healthy within 30 seconds` | Inspect `logs\engine.log` and `logs\scraper.log` — last 10 lines are echoed automatically before the launcher exits | |
+| Browser didn't open | Default browser not set, or path has weird characters | Paste `file:///<workspace>/basira-engine/basira_preprocessor.html` (with forward slashes) into your browser bar manually |
+| Windows SmartScreen warning | First run of unsigned `.bat` | Click **More info** → **Run anyway** |
+
+---
+
+## macOS — first-time install
+
+If you've just copied Basira-Workspace fresh to a Mac and the venvs
+don't exist yet:
+
+```bash
+cd basira-engine
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+cd ../basira-scraper
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/playwright install chromium
+```
+
+(There's no `setup.command` equivalent yet — the venv setup is a
+one-liner per project, run once.)
+
+---
+
+## Two ways to launch Basira on macOS
 
 | | Option A — Basira.app (recommended) | Option B — Basira.command |
 |---|---|---|
