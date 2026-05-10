@@ -487,13 +487,16 @@ def _standardize_missing_tokens(df: pd.DataFrame) -> dict:
     keep numeric columns below the 95% coerce threshold and they get
     misclassified as categorical (then mode-imputed with the dirty token itself).
 
+    pandas 3.0 note: text columns default to dtype=str (not object) under
+    future.infer_string; is_string_dtype() handles both legacy and new dtypes.
+
     Returns {"cells": int, "cols": int, "by_col": {col: count, ...}}.
     """
     by_col: dict = {}
     n_cells = 0
     for col in df.columns:
         s = df[col]
-        if s.dtype != object:
+        if not pd.api.types.is_string_dtype(s):
             continue
         norm = s.astype(str).str.strip().str.lower()
         mask = norm.isin(MISSING_TOKENS) & s.notna()
