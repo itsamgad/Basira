@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basira — Intelligent Data Preprocessing for Bilingual Data</title>
+  <meta name="description" content="Auto-detect, clean, and prepare messy CSV/Excel data for ML — with native Arabic and English support. Free, open-source, built with Python.">
+
+  <!-- Open Graph / social cards -->
+  <!-- TODO: replace https://example.com with the deployed site URL after Vercel/Netlify/GH Pages deploy -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Basira — Intelligent Data Preprocessing for Bilingual Data">
+  <meta property="og:description" content="Auto-detect, clean, and prepare messy CSV/Excel data for ML — with native Arabic and English support.">
+  <meta property="og:image" content="https://example.com/assets/basira-logo.png">
+  <meta property="og:url" content="https://example.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Basira — Intelligent Data Preprocessing">
+  <meta name="twitter:description" content="Auto-detect, clean, and prepare messy CSV/Excel data for ML — with native Arabic and English support.">
+
+  <link rel="icon" type="image/png" href="assets/basira-logo.png">
+
+  <!-- Inter from Google Fonts (only external dep — keeps the site cache-light) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ─────────────── Top nav ─────────────── -->
+<nav class="nav">
+  <a href="#" class="nav-brand">
+    <img src="assets/basira-logo.png" alt="Basira logo">
+    <span>Basira</span>
+  </a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#how">How it works</a>
+    <a href="#docs">Docs</a>
+    <a href="#download" class="nav-cta">Download</a>
+  </div>
+</nav>
+
+<!-- ─────────────── Hero ─────────────── -->
+<section id="hero" class="hero">
+  <div class="wrap">
+    <img src="assets/basira-logo.png" alt="Basira" class="hero-logo">
+    <h1>Intelligent Data Preprocessing<br>for Bilingual Data</h1>
+    <p class="hero-sub">
+      Auto-detect, clean, and prepare messy CSV/Excel data for ML —
+      with native Arabic and English support.
+    </p>
+    <div class="cta-row">
+      <a href="#download" class="btn btn-primary">🍎 Download for Mac</a>
+      <a href="#download" class="btn btn-secondary">🪟 Download for Windows</a>
+    </div>
+    <p class="hero-meta">
+      <span>Free</span>  •  <span>Open Source</span>  •  Built with Python
+    </p>
+  </div>
+</section>
+
+<!-- ─────────────── Features ─────────────── -->
+<section id="features" class="features">
+  <div class="wrap">
+    <span class="section-eyebrow">Features</span>
+    <h2 class="section-h2">Why Basira?</h2>
+    <p class="section-lead">
+      Six load-bearing capabilities that turn messy spreadsheets into
+      ML-ready datasets — without you writing a single line of pandas.
+    </p>
+
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon">🌍</div>
+        <h3 class="feat-name">Bilingual Intelligence</h3>
+        <p class="feat-desc">
+          Native Arabic + English handling — diacritics, hamza unification,
+          tatweel removal, and 27 missing-token variants standardized to NaN.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🤖</div>
+        <h3 class="feat-name">Auto-Detect Everything</h3>
+        <p class="feat-desc">
+          Column types, target column, task (classification / regression /
+          clustering), and imputation strategy — all decided automatically.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🕷️</div>
+        <h3 class="feat-name">Built-in Web Scraper</h3>
+        <p class="feat-desc">
+          No data? Click a single item, SHIFT-click each field — Basira's
+          Chromium overlay extracts and pipes the result straight to the
+          preprocessor.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">📊</div>
+        <h3 class="feat-name">Full Audit Transparency</h3>
+        <p class="feat-desc">
+          Every transformation is logged with row, column, action, before,
+          and after — so you can defend every decision in your thesis or
+          paper.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🎯</div>
+        <h3 class="feat-name">ML-Ready Output</h3>
+        <p class="feat-desc">
+          Four files generated together: cleaned CSV, model-ready CSV (encoded
+          + flagged), HTML audit report, and a JSON config for downstream
+          engines.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">🔓</div>
+        <h3 class="feat-name">Open Source</h3>
+        <p class="feat-desc">
+          MIT-licensed, runs entirely on your laptop, no telemetry, no cloud
+          uploads. Inspect or modify any threshold listed in the audit report.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── How it works ─────────────── -->
+<section id="how" class="how">
+  <div class="wrap">
+    <span class="section-eyebrow">How it works</span>
+    <h2 class="section-h2">Three steps from data to model-ready</h2>
+    <p class="section-lead">
+      The same pipeline runs whether you upload a file or scrape one from
+      the web. No configuration screens to navigate — Basira makes the
+      decisions and shows its work.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">📥</div>
+        <h3 class="step-title">Upload your data — or scrape it</h3>
+        <p class="step-desc">
+          Drop a CSV, XLS, or XLSX onto the dropzone. Or click "no data?
+          no problem" to launch the built-in scraper and pull data from
+          any website.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">⚙️</div>
+        <h3 class="step-title">Basira preprocesses automatically</h3>
+        <p class="step-desc">
+          Type detection, missing-token standardization, datetime expansion,
+          imputation strategy selection, outlier flagging, and categorical
+          encoding — all in seconds.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">📦</div>
+        <h3 class="step-title">Download your ML-ready files</h3>
+        <p class="step-desc">
+          Four artifacts: cleaned dataset, fully-encoded model input, an
+          HTML audit report, and a JSON config that downstream Basira ML
+          engines can consume directly.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── Screenshots ─────────────── -->
+<section id="screenshots" class="shots">
+  <div class="wrap">
+    <span class="section-eyebrow">Screenshots</span>
+    <h2 class="section-h2">Take a peek</h2>
+    <p class="section-lead">
+      Three views of Basira in action — the upload screen, the audit log,
+      and the in-page web scraper.
+    </p>
+
+    <div class="shot-grid">
+      <!-- TODO: replace with real screenshot — assets/screenshots/upload.png -->
+      <figure>
+        <div class="shot">
+          <span class="shot-icon">🖼️</span>
+          <span>[ Screenshot: Upload &amp; Configure ]</span>
+        </div>
+        <figcaption class="shot-cap">Upload &amp; Configure</figcaption>
+      </figure>
+
+      <!-- TODO: replace with real screenshot — assets/screenshots/audit.png -->
+      <figure>
+        <div class="shot">
+          <span class="shot-icon">🖼️</span>
+          <span>[ Screenshot: Audit Report ]</span>
+        </div>
+        <figcaption class="shot-cap">Audit Report</figcaption>
+      </figure>
+
+      <!-- TODO: replace with real screenshot — assets/screenshots/scraper.png -->
+      <figure>
+        <div class="shot">
+          <span class="shot-icon">🖼️</span>
+          <span>[ Screenshot: Built-in Scraper ]</span>
+        </div>
+        <figcaption class="shot-cap">Built-in Scraper</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── Download ─────────────── -->
+<section id="download" class="download">
+  <div class="wrap">
+    <span class="section-eyebrow">Download</span>
+    <h2 class="section-h2">Get Basira running locally</h2>
+    <p class="section-lead">
+      Same Python backend on both platforms. Pick your OS, follow the
+      three-step install, you're done.
+    </p>
+
+    <div class="dl-grid">
+      <!-- ── macOS card ── -->
+      <article class="dl-card">
+        <div class="dl-os">
+          <span class="dl-os-icon">🍎</span>
+          <h3 class="dl-os-name">Download for macOS</h3>
+        </div>
+        <!-- TODO: Replace USERNAME with the real GitHub username before going live -->
+        <a href="https://github.com/USERNAME/basira/releases/latest/download/Basira-macOS.zip"
+           class="dl-btn">⬇️ Download .zip</a>
+
+        <ol class="dl-steps">
+          <li><span class="num">1</span><span>Unzip the file.</span></li>
+          <li><span class="num">2</span><span>Drag <strong>Basira.app</strong> to <code>/Applications/</code>.</span></li>
+          <li><span class="num">3</span><span>First launch: right-click <strong>Basira.app</strong> → <strong>Open</strong> (Gatekeeper bypass).</span></li>
+          <li><span class="num">4</span><span>Use Launchpad or Spotlight from then on.</span></li>
+        </ol>
+
+        <p class="dl-req"><strong>Requirements:</strong> macOS 11 (Big Sur) or newer · Python 3.10+ installed.</p>
+      </article>
+
+      <!-- ── Windows card ── -->
+      <article class="dl-card">
+        <div class="dl-os">
+          <span class="dl-os-icon">🪟</span>
+          <h3 class="dl-os-name">Download for Windows</h3>
+        </div>
+        <!-- TODO: Replace USERNAME with the real GitHub username before going live -->
+        <a href="https://github.com/USERNAME/basira/releases/latest/download/Basira-Windows.zip"
+           class="dl-btn">⬇️ Download .zip</a>
+
+        <ol class="dl-steps">
+          <li><span class="num">1</span><span>Unzip the file.</span></li>
+          <li><span class="num">2</span><span>Double-click <strong>setup.bat</strong> (one-time, ~5&nbsp;min).</span></li>
+          <li><span class="num">3</span><span>Double-click <strong>Basira.bat</strong> to launch.</span></li>
+        </ol>
+
+        <p class="dl-req"><strong>Requirements:</strong> Windows 10 or newer · Python 3.10+ with "Add to PATH" enabled.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── Documentation ─────────────── -->
+<section id="docs" class="docs">
+  <div class="wrap">
+    <span class="section-eyebrow">Documentation</span>
+    <h2 class="section-h2">Learn more</h2>
+
+    <div class="doc-grid">
+      <a class="doc-card" href="#download">
+        <span class="ic">📖</span>
+        <h3>Quick Start</h3>
+        <p>Install steps for macOS and Windows on the same page — jump to the download section.</p>
+        <span class="more">Read &rarr;</span>
+      </a>
+
+      <!-- TODO: Replace USERNAME with the real GitHub username -->
+      <a class="doc-card" href="https://github.com/USERNAME/basira#readme" target="_blank" rel="noopener">
+        <span class="ic">🛠️</span>
+        <h3>Technical Docs</h3>
+        <p>Architecture, pipeline thresholds, engine boundaries, and the audit-report contract.</p>
+        <span class="more">Open on GitHub &rarr;</span>
+      </a>
+
+      <!-- TODO: Replace USERNAME with the real GitHub username -->
+      <a class="doc-card" href="https://github.com/USERNAME/basira/issues" target="_blank" rel="noopener">
+        <span class="ic">❓</span>
+        <h3>Troubleshooting</h3>
+        <p>Common errors, port conflicts, missing venvs, and how to file a bug report.</p>
+        <span class="more">Open issues &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────── Stats bar ─────────────── -->
+<section id="stats" class="stats" aria-label="Project stats">
+  <div class="stats-row">
+    <div class="stat"><div class="stat-val">27</div><div class="stat-lbl">Missing Tokens</div></div>
+    <div class="stat"><div class="stat-val">4</div><div class="stat-lbl">Imputation Strategies</div></div>
+    <div class="stat"><div class="stat-val">2</div><div class="stat-lbl">Languages</div></div>
+    <div class="stat"><div class="stat-val">4</div><div class="stat-lbl">ML Engines</div></div>
+    <div class="stat"><div class="stat-val">8</div><div class="stat-lbl">Analysis Layers</div></div>
+  </div>
+</section>
+
+<!-- ─────────────── Footer ─────────────── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img src="assets/basira-logo.png" alt="">
+        <span>Basira</span>
+      </div>
+      <p class="meta" style="margin-top:8px;">Intelligent data preprocessing — built with Python.</p>
+    </div>
+    <div class="meta">
+      <!-- TODO: replace with your real name -->
+      Built by <strong>Your Name</strong>.<br>
+      <!-- TODO: replace with your university name -->
+      Final-year project at <strong>Your University</strong>.<br>
+      <!-- TODO: replace USERNAME with your real GitHub handle -->
+      <a href="https://github.com/USERNAME/basira" target="_blank" rel="noopener">View on GitHub</a> ·
+      <!-- TODO: confirm or change the license to whatever you ship under -->
+      Licensed under <strong>MIT</strong> · &copy; 2026
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
