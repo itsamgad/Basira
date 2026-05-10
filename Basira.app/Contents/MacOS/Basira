@@ -1,0 +1,31 @@
+#!/bin/bash
+# Basira.app launcher shim
+# ─────────────────────────────────────────────────────────────────────
+# Delegates to Basira.command in the parent directory of the .app
+# bundle, opened in a visible Terminal window so the user sees the
+# ASCII branding, the live log tail, and can press Ctrl+C to stop.
+#
+# The .app must live in the same folder as Basira.command — typically
+# at the root of the Basira-Workspace folder.
+# ─────────────────────────────────────────────────────────────────────
+
+# Resolve the .app's enclosing directory.
+# this script: <Workspace>/Basira.app/Contents/MacOS/Basira
+APP_PATH="$(cd "$(dirname "$0")/../.." && pwd -P)"
+WORKSPACE="$(dirname "$APP_PATH")"
+COMMAND_PATH="$WORKSPACE/Basira.command"
+
+if [ ! -x "$COMMAND_PATH" ]; then
+    osascript -e "display alert \"Basira launcher not found\" message \"Expected: $COMMAND_PATH\n\nPut Basira.app inside the Basira-Workspace folder, next to Basira.command.\""
+    exit 1
+fi
+
+# Ask Terminal.app to open Basira.command so the user sees the live
+# logs and can interact (Ctrl+C to shut down). Quote the path for the
+# AppleScript layer in case the workspace folder ever contains spaces.
+osascript <<EOF
+tell application "Terminal"
+    activate
+    do script "${COMMAND_PATH//\"/\\\"}"
+end tell
+EOF

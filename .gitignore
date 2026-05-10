@@ -25,6 +25,11 @@ __pycache__/
 # Launcher runtime logs (Basira.command writes engine.log + scraper.log here)
 logs/
 
+# Icon-build intermediates (basira-icon-source.png + Basira.icns are
+# produced during the .app bundle build via sips + iconutil; the final
+# icon is committed inside Basira.app/Contents/Resources/AppIcon.icns).
+build/
+
 # Scraper runtime artifacts (per-job exports + history log)
 basira-scraper/scrape_outputs/
 basira-scraper/scrape_history.json

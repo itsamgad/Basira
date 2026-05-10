@@ -1,19 +1,39 @@
 # How to launch Basira
 
+## Two ways to launch Basira
+
+| | Option A — Basira.app (recommended) | Option B — Basira.command |
+|---|---|---|
+| Where it lives | drag to `/Applications`, launch from Launchpad/Spotlight | stays in `Basira-Workspace/`, double-click in Finder |
+| What it looks like | a real Mac app with a custom spider icon | a Terminal window opens directly |
+| What it does under the hood | spawns the same Terminal window via AppleScript and runs Basira.command for you | runs the same shell script directly |
+| First-time Gatekeeper bypass | **right-click → Open** the first time (one-time per machine) | **right-click → Open** the first time (one-time per machine) |
+| Shutdown | close the Terminal window (or Ctrl+C inside it) | close the Terminal window (or Ctrl+C inside it) |
+| Pick this when | you want Basira to feel like any other Mac app | you'd rather not move anything; you live in Finder |
+
+Both paths boot the engine on `:5050`, the scraper on `:5051`, open the
+preprocessor UI in your default browser, and stream live logs from
+`logs/engine.log` + `logs/scraper.log` until you stop it.
+
+To install the app: drag **`Basira.app`** from `Basira-Workspace/` into
+`/Applications/`. From then on it shows up in Launchpad and Spotlight
+search like any Mac application.
+
 ## TL;DR
 
-Double-click **`Basira.command`** at the root of `Basira-Workspace/`.
-That's it. The launcher starts both servers, opens the UI in your
-browser, and shuts everything down cleanly when you close the
+Double-click **`Basira.app`** (after installing) — or **`Basira.command`**
+in the workspace folder. The launcher starts both servers, opens the UI
+in your browser, and shuts everything down cleanly when you close the
 Terminal window.
 
 ---
 
-## Where to find the launcher
+## Where to find the launchers
 
 ```
 ~/Desktop/Basira-Workspace/
-├── Basira.command          ← double-click to start
+├── Basira.app/             ← drag to /Applications, launch from Launchpad
+├── Basira.command          ← double-click directly (technical, shows logs faster)
 ├── basira-engine/
 ├── basira-scraper/
 ├── docs/
@@ -28,19 +48,19 @@ Terminal window.
 
 ## First launch — bypass macOS Gatekeeper
 
-The first time you double-click `Basira.command`, macOS may refuse
-with a dialog like:
+The first time you launch — whether via `Basira.app` or
+`Basira.command` — macOS may refuse with a dialog like:
 
-> **"Basira.command" cannot be opened because it is from an
+> **"Basira.app" cannot be opened because it is from an
 > unidentified developer.**
 
-Workaround (one-time, per machine):
+Workaround (one-time, per machine, per file):
 
-1. **Right-click** `Basira.command` in Finder.
+1. **Right-click** `Basira.app` (or `Basira.command`) in Finder.
 2. Choose **Open** from the context menu.
 3. Click **Open** in the confirmation dialog.
 
-After that, plain double-click works normally.
+After that, plain double-click works normally for that file.
 
 ---
 
