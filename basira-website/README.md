@@ -98,7 +98,7 @@ You can connect a custom domain later (Vercel → Settings → Domains).
 1. Push the project to GitHub.
 2. **Settings → Pages → Source**: *Deploy from a branch*.
 3. Choose `main` branch, `/basira-website` folder.
-4. Live at `https://USERNAME.github.io/basira/` after ~1 min.
+4. Live at `https://itsamgad.github.io/basira/` after ~1 min.
 
 > GitHub Pages serves at the repo's path — links inside `index.html`
 > all use relative URLs (`assets/...`, `downloads/...`), so no rewrite
@@ -117,7 +117,7 @@ on the host's apex:
 |---|---|---|
 | Vercel  | `basira-XXX.vercel.app`           | $0 |
 | Netlify | `basira-XXX.netlify.app`          | $0 |
-| GitHub Pages | `USERNAME.github.io/basira/` | $0 |
+| GitHub Pages | `itsamgad.github.io/basira/` | $0 |
 
 Vercel and Netlify both let you rename the random `XXX` suffix in
 their dashboard (Settings → Domains for Vercel, Domain management
@@ -157,19 +157,14 @@ vary by extension and any matching trademarks.
 
 ## Before you publish — placeholders to update
 
-The site currently has placeholder URLs and credit lines marked with
-`<!-- TODO: ... -->` comments. Search for the literal string `USERNAME`
-in `index.html` and replace each occurrence with your GitHub handle.
+Project metadata (name, university, GitHub handle, license) is already
+filled. What remains:
 
-Other one-off edits in `index.html`:
-
-| Where | What to replace |
+| Where in `index.html` | What to do |
 |---|---|
-| `<meta property="og:url">` and `og:image` | the deployed site URL once Vercel/Netlify gives you one |
-| Footer **"Built by Your Name"** | your name |
-| Footer **"Final-year project at Your University"** | your university |
-| License (footer) | confirm or change `MIT` |
-| `assets/screenshots/upload.png` etc. | drop real PNGs into `assets/screenshots/` and replace the placeholder `<div class="shot">` with `<img>` |
+| `<meta property="og:url">` and `og:image` (lines 10–15) | Currently `https://basira-app.vercel.app` — confirm this is the actual subdomain after Vercel deploys, or update if Vercel assigns a different one. |
+| `<div class="shot">` placeholders (lines ~200, 209, 218) | Drop real PNGs into `assets/screenshots/` (`upload.png`, `audit.png`, `scraper.png`) and replace the `<div class="shot">` blocks with `<img src="assets/screenshots/upload.png" alt="...">` etc. |
+| License (footer) | Currently `MIT` — confirm or change to whatever you ship under. |
 
 **For real download buttons:** the buttons in `index.html` already
 point at the relative paths `downloads/Basira-macOS.zip` and
