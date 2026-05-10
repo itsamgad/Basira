@@ -22,6 +22,9 @@ _archive/redundant-final-model/_staging-emptied/
 __pycache__/
 *.pyc
 
+# Launcher runtime logs (Basira.command writes engine.log + scraper.log here)
+logs/
+
 # Scraper runtime artifacts (per-job exports + history log)
 basira-scraper/scrape_outputs/
 basira-scraper/scrape_history.json
