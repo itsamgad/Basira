@@ -16,3 +16,8 @@ _archive/scraper/**/.next/
 # in the init-commit zip. Kept on-disk for reversibility, not in git.
 _archive/redundant-final-model/Basira Final model/
 _archive/redundant-final-model/_staging-emptied/
+
+# Python virtualenv + bytecode cache (created during local verification)
+.venv/
+__pycache__/
+*.pyc
