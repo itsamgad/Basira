@@ -205,12 +205,22 @@ tbody td.tdn{color:var(--danger);font-style:italic;font-size:.7rem;}
 .smod-alert.err{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.22);color:#991b1b;font-family:var(--mono);}
 .smod-alert.ok{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.22);color:#15803d;}
 .smod-ftr{display:flex;justify-content:flex-end;gap:9px;padding:14px 22px 18px;border-top:1px solid var(--border);background:var(--s2);}
+.smod-pane{animation:smod-pane-in .18s ease;}
+.smod-pane.hidden{display:none!important;}
+@keyframes smod-pane-in{from{opacity:0;}to{opacity:1;}}
+.smod-status{display:flex;flex-direction:column;align-items:center;text-align:center;padding:26px 22px 18px;gap:10px;}
+.smod-status-icon{font-size:2.4rem;line-height:1;}
+.smod-status-title{font-size:1.02rem;font-weight:800;color:var(--text);}
+.smod-status-msg{font-size:.84rem;color:var(--td);max-width:340px;line-height:1.55;}
+.smod-status-sub{font-size:.74rem;color:var(--tm);}
+.smod-spin{width:38px;height:38px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:sp .65s linear infinite;margin:6px 0;}
+.smod-input + .smod-lbl{margin-top:14px;}
 </style>
 </head>
 <body>
 <div id="toast"></div>
 
-<!-- Scraper URL modal -->
+<!-- Scraper URL modal — 4-state machine: A=inputs, B=waiting for selection, C=extracting, D=sending, Err=failure with retry -->
 <div id="smod" class="smod hidden" role="dialog" aria-modal="true" aria-labelledby="smodTitle">
   <div class="smod-card">
     <div class="smod-hdr">
@@ -218,18 +228,70 @@ tbody td.tdn{color:var(--danger);font-style:italic;font-size:.7rem;}
       <span class="smod-title" id="smodTitle">Launch Scraper</span>
       <button class="smod-x" type="button" onclick="closeScraperModal()" aria-label="Close">×</button>
     </div>
-    <div class="smod-body">
-      <label class="smod-lbl" for="smodUrl">Website URL to scrape</label>
-      <input type="url" id="smodUrl" class="smod-input" placeholder="https://example.com" autocomplete="off" spellcheck="false">
-      <div class="smod-hint">
-        Chromium will open with the Basira sidebar overlay. Click an item, then SHIFT-click each field you want to extract — the scraper will pipe the result back to this preprocessor.
+
+    <!-- STATE A — initial inputs -->
+    <div class="smod-pane" id="smodPaneA">
+      <div class="smod-body">
+        <label class="smod-lbl" for="smodUrl">Website URL to scrape</label>
+        <input type="url" id="smodUrl" class="smod-input" placeholder="https://example.com" autocomplete="off" spellcheck="false">
+        <label class="smod-lbl" for="smodRows">Max rows to scrape (optional)</label>
+        <input type="number" id="smodRows" class="smod-input" placeholder="All rows (leave empty)" min="1" autocomplete="off">
+        <div class="smod-hint">
+          Empty = scrape all available rows. Chromium will open with the Basira sidebar; click an item, SHIFT-click each field you want, then click "Extract" in the sidebar.
+        </div>
+        <div id="smodAlert" class="smod-alert hidden"></div>
       </div>
-      <div id="smodAlert" class="smod-alert hidden"></div>
+      <div class="smod-ftr">
+        <button class="btn bs" type="button" onclick="closeScraperModal()">Cancel</button>
+        <button class="btn bp" type="button" id="smodLaunchBtn" onclick="launchScraper()">🚀 Launch Chromium</button>
+      </div>
     </div>
-    <div class="smod-ftr">
-      <button class="btn bs" type="button" onclick="closeScraperModal()">Cancel</button>
-      <button class="btn bp" type="button" id="smodLaunchBtn" onclick="launchScraper()">🚀 Launch Chromium</button>
+
+    <!-- STATE B — Chromium opened, waiting for the user's overlay selection -->
+    <div class="smod-pane hidden" id="smodPaneB">
+      <div class="smod-body smod-status">
+        <div class="smod-status-icon">✅</div>
+        <div class="smod-status-title">Chromium opened</div>
+        <div class="smod-status-msg">Switch to the new Chromium window. Click an item, then SHIFT-click each field you want, then click "Extract" in the sidebar.</div>
+        <div class="smod-spin" aria-hidden="true"></div>
+        <div class="smod-status-sub">Waiting for your selection…</div>
+      </div>
+      <div class="smod-ftr">
+        <button class="btn bs" type="button" onclick="cancelPolling()">Cancel</button>
+      </div>
     </div>
+
+    <!-- STATE C — extracting -->
+    <div class="smod-pane hidden" id="smodPaneC">
+      <div class="smod-body smod-status">
+        <div class="smod-status-icon">⚙️</div>
+        <div class="smod-status-title">Extracting data from the page</div>
+        <div class="smod-status-msg">Running the scrape — this can take a moment for paginated sites.</div>
+        <div class="smod-spin" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- STATE D — sending CSV to engine preprocessor -->
+    <div class="smod-pane hidden" id="smodPaneD">
+      <div class="smod-body smod-status">
+        <div class="smod-status-icon">📤</div>
+        <div class="smod-status-title">Sending to Basira preprocessor</div>
+        <div class="smod-status-msg">Streaming the scraped CSV to the engine on :5050.</div>
+        <div class="smod-spin" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- STATE Err — any failure during B / C / D -->
+    <div class="smod-pane hidden" id="smodPaneErr">
+      <div class="smod-body">
+        <div class="smod-alert err" id="smodErrMsg" style="white-space:pre-line"></div>
+      </div>
+      <div class="smod-ftr">
+        <button class="btn bs" type="button" onclick="closeScraperModal()">Cancel</button>
+        <button class="btn bp" type="button" onclick="returnToStateA()">↺ Try again</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -636,31 +698,84 @@ function resetAll(){
   setPill(1); setProg(5);
 }
 
-/* ── Scraper entry point ── */
-var SCRAPER_API = 'http://localhost:5051';
+/* ── Scraper integration: full 3-step chain ── */
+/* /open-browser → poll /check-selection → /extract-data → /send-to-preprocessor → renderResults() */
 
-function openScraperModal(){
-  var m = document.getElementById('smod');
-  m.classList.remove('hidden');
-  document.getElementById('smodAlert').classList.add('hidden');
-  setTimeout(function(){ document.getElementById('smodUrl').focus(); }, 50);
+var SCRAPER_API        = 'http://localhost:5051';
+var currentJobId       = null;
+var pollTimer          = null;
+var pollCount          = 0;
+var POLL_INTERVAL_MS   = 1500;
+var POLL_MAX           = 200;   /* 200 × 1.5s = 5 min selection-wait timeout */
+
+function setScraperState(letter){  /* 'A' | 'B' | 'C' | 'D' | 'Err' */
+  ['A','B','C','D','Err'].forEach(function(L){
+    document.getElementById('smodPane'+L).classList.toggle('hidden', L !== letter);
+  });
 }
-function closeScraperModal(){
-  document.getElementById('smod').classList.add('hidden');
-  var btn = document.getElementById('smodLaunchBtn');
-  btn.disabled = false; btn.textContent = '🚀 Launch Chromium';
-}
-function showScraperAlert(kind, msg){
+
+/* Inline alert inside STATE A — used for input validation */
+function showInputAlert(kind, msg){
   var a = document.getElementById('smodAlert');
   a.className = 'smod-alert ' + (kind === 'err' ? 'err' : 'ok');
   a.textContent = msg;
   a.classList.remove('hidden');
 }
+
+/* Full-pane error during B / C / D — switches to STATE Err with Try-again */
+function showFlowError(msg){
+  document.getElementById('smodErrMsg').textContent = msg;
+  setScraperState('Err');
+}
+
+function openScraperModal(){
+  setScraperState('A');
+  document.getElementById('smodAlert').classList.add('hidden');
+  document.getElementById('smod').classList.remove('hidden');
+  setTimeout(function(){ document.getElementById('smodUrl').focus(); }, 50);
+  /* Inputs are intentionally NOT cleared — re-opening keeps the previous URL/rowLimit handy */
+}
+
+function returnToStateA(){
+  /* Inputs are preserved across state changes (separate DOM elements) */
+  document.getElementById('smodAlert').classList.add('hidden');
+  setScraperState('A');
+}
+
+function closeScraperModal(){
+  cancelPolling();
+  currentJobId = null;
+  var btn = document.getElementById('smodLaunchBtn');
+  if(btn){ btn.disabled = false; btn.textContent = '🚀 Launch Chromium'; }
+  document.getElementById('smod').classList.add('hidden');
+}
+
+/* Cancel during STATE B: stop the poll loop, return to STATE A — does NOT close Chromium */
+function cancelPolling(){
+  if(pollTimer){ clearTimeout(pollTimer); pollTimer = null; }
+  pollCount = 0;
+  /* If we were in B, drop back to A so the user can retry */
+  var paneB = document.getElementById('smodPaneB');
+  if(paneB && !paneB.classList.contains('hidden')) setScraperState('A');
+}
+
+/* Step 1 — POST /open-browser, then transition to STATE B and start polling */
 function launchScraper(){
   var input = document.getElementById('smodUrl');
   var url = input.value.trim();
-  if(!url){ showScraperAlert('err', 'Please enter a URL.'); input.focus(); return; }
+  if(!url){ showInputAlert('err', 'Please enter a URL.'); input.focus(); return; }
   if(!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+  /* Validate the optional row-limit field */
+  var rowsRaw = document.getElementById('smodRows').value.trim();
+  if(rowsRaw){
+    var n = parseInt(rowsRaw, 10);
+    if(isNaN(n) || n < 1 || String(n) !== rowsRaw){
+      showInputAlert('err', 'Max rows must be a positive integer (or empty for unlimited).');
+      document.getElementById('smodRows').focus();
+      return;
+    }
+  }
 
   var btn = document.getElementById('smodLaunchBtn');
   btn.disabled = true; btn.textContent = '⏳ Launching...';
@@ -671,28 +786,134 @@ function launchScraper(){
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ url: url })
   })
-  .then(function(r){
-    return r.json().then(function(j){ return { ok: r.ok, status: r.status, body: j }; });
-  })
+  .then(function(r){ return r.json().then(function(j){ return { ok:r.ok, status:r.status, body:j }; }); })
   .then(function(res){
+    btn.disabled = false; btn.textContent = '🚀 Launch Chromium';
     if(!res.ok) throw new Error(res.body && res.body.error ? res.body.error : ('Scraper returned HTTP ' + res.status));
-    showScraperAlert('ok',
-      '✅ Scraper launched — Chromium will open shortly with the Basira sidebar.\n' +
-      'Use the overlay to select your data, then click "Send to Preprocessor".'
-    );
-    btn.textContent = '✅ Launched';
-    setTimeout(closeScraperModal, 3500);
+    currentJobId = res.body && res.body.jobId;
+    if(!currentJobId) throw new Error('Scraper did not return a jobId.');
+    setScraperState('B');
+    pollCount = 0;
+    pollSelection();
   })
   .catch(function(err){
-    var msg = err && err.message ? err.message : String(err);
     btn.disabled = false; btn.textContent = '🚀 Launch Chromium';
+    var msg = err && err.message ? err.message : String(err);
     if(msg === 'Failed to fetch' || msg.indexOf('NetworkError') >= 0 || msg.indexOf('Load failed') >= 0){
-      showScraperAlert('err',
+      showInputAlert('err',
         'Scraper not running on port 5051. Start it with:\n' +
         'cd ../basira-scraper && .venv/bin/python basira_scraper.py'
       );
     } else {
-      showScraperAlert('err', '❌ ' + msg);
+      showInputAlert('err', '❌ ' + msg);
+    }
+  });
+}
+
+/* Step 2 — poll /check-selection until {completed:true} or {cancelled:true} or 5-min timeout */
+function pollSelection(){
+  if(!currentJobId) return;  /* user cancelled mid-flight */
+  pollCount += 1;
+  if(pollCount > POLL_MAX){
+    showFlowError(
+      'No selection received in 5 minutes — did you click "Extract" in the Chromium window?\n' +
+      'You can retry; the previous URL is preserved.'
+    );
+    return;
+  }
+  fetch(SCRAPER_API + '/check-selection?jobId=' + encodeURIComponent(currentJobId))
+    .then(function(r){ return r.json().then(function(j){ return { ok:r.ok, status:r.status, body:j }; }); })
+    .then(function(res){
+      if(!currentJobId) return;  /* cancelled while in flight */
+      if(!res.ok) throw new Error(res.body && res.body.error ? res.body.error : ('Scraper returned HTTP ' + res.status));
+      var b = res.body || {};
+      if(b.completed){ runExtract(); return; }
+      if(b.cancelled){
+        showFlowError('The Chromium window was closed before extraction. Try again to relaunch.');
+        return;
+      }
+      pollTimer = setTimeout(pollSelection, POLL_INTERVAL_MS);
+    })
+    .catch(function(err){
+      var msg = err && err.message ? err.message : String(err);
+      if(msg === 'Failed to fetch' || msg.indexOf('NetworkError') >= 0 || msg.indexOf('Load failed') >= 0){
+        showFlowError(
+          'Lost connection to the scraper at :5051.\n' +
+          'Make sure basira_scraper.py is still running, then retry.'
+        );
+      } else {
+        showFlowError('Polling failed: ' + msg);
+      }
+    });
+}
+
+/* Step 3 — POST /extract-data, then transition to STATE D */
+function runExtract(){
+  setScraperState('C');
+  var rowsRaw = document.getElementById('smodRows').value.trim();
+  var body = { jobId: currentJobId };
+  if(rowsRaw){
+    var n = parseInt(rowsRaw, 10);
+    if(!isNaN(n) && n > 0) body.rowLimit = n;
+  }
+  fetch(SCRAPER_API + '/extract-data', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  })
+  .then(function(r){ return r.json().then(function(j){ return { ok:r.ok, status:r.status, body:j }; }); })
+  .then(function(res){
+    if(!currentJobId) return;
+    if(!res.ok) throw new Error(res.body && res.body.error ? res.body.error : ('Scraper returned HTTP ' + res.status));
+    runSend();
+  })
+  .catch(function(err){
+    var msg = err && err.message ? err.message : String(err);
+    if(msg === 'Failed to fetch' || msg.indexOf('NetworkError') >= 0 || msg.indexOf('Load failed') >= 0){
+      showFlowError('Lost connection to the scraper during extraction.\nIs basira_scraper.py still running?');
+    } else {
+      showFlowError('Extraction failed: ' + msg);
+    }
+  });
+}
+
+/* Step 4 — POST /send-to-preprocessor, then hand result to renderResults() */
+function runSend(){
+  setScraperState('D');
+  fetch(SCRAPER_API + '/send-to-preprocessor', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ jobId: currentJobId })
+  })
+  .then(function(r){ return r.json().then(function(j){ return { ok:r.ok, status:r.status, body:j }; }); })
+  .then(function(res){
+    if(!currentJobId) return;
+    if(!res.ok){
+      /* /send-to-preprocessor returns 502/503 with descriptive error when engine is unreachable */
+      var serverErr = res.body && res.body.error ? res.body.error : ('Scraper returned HTTP ' + res.status);
+      throw new Error(serverErr);
+    }
+    var engineResult = res.body && res.body.result;
+    if(!engineResult || engineResult.status !== 'ok'){
+      throw new Error(
+        engineResult && engineResult.error
+          ? 'Engine error: ' + engineResult.error
+          : 'Engine returned an unexpected response.'
+      );
+    }
+    /* Mirror the dropzone success path */
+    R = engineResult;
+    closeScraperModal();
+    renderResults(engineResult);
+    setProg(90); setPill(2);
+    toast('✓ Scraped data processed successfully');
+  })
+  .catch(function(err){
+    var msg = err && err.message ? err.message : String(err);
+    if(msg === 'Failed to fetch' || msg.indexOf('NetworkError') >= 0 || msg.indexOf('Load failed') >= 0){
+      showFlowError('Lost connection while sending CSV to the preprocessor.');
+    } else {
+      showFlowError('Sending to preprocessor failed: ' + msg);
     }
   });
 }
@@ -704,16 +925,22 @@ function launchScraper(){
   card.addEventListener('keydown', function(e){
     if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openScraperModal(); }
   });
-  // Click outside the modal card closes it
+  /* Click on backdrop closes the modal (closeScraperModal handles cleanup) */
   document.getElementById('smod').addEventListener('click', function(e){
     if(e.target === this) closeScraperModal();
   });
-  // Esc to close, Enter to submit while modal is open
+  /* Esc closes; Enter on STATE A inputs submits */
   document.addEventListener('keydown', function(e){
     var m = document.getElementById('smod');
     if(m.classList.contains('hidden')) return;
-    if(e.key === 'Escape') closeScraperModal();
-    else if(e.key === 'Enter' && document.activeElement && document.activeElement.id === 'smodUrl') launchScraper();
+    if(e.key === 'Escape'){ closeScraperModal(); return; }
+    if(e.key === 'Enter'){
+      var id = document.activeElement && document.activeElement.id;
+      var paneA = document.getElementById('smodPaneA');
+      if(!paneA.classList.contains('hidden') && (id === 'smodUrl' || id === 'smodRows')){
+        e.preventDefault(); launchScraper();
+      }
+    }
   });
 })();
 </script>
