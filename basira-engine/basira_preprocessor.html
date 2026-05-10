@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basira — Smart Preprocessor</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f0f4f8;--surface:#fff;--s2:#f8fafc;
+  --accent:#0ea5e9;--a2:#6366f1;
+  --adim:rgba(14,165,233,0.09);
+  --ok:#22c55e;--warn:#f59e0b;--danger:#ef4444;--purple:#8b5cf6;
+  --text:#0f172a;--t2:#334155;--td:#64748b;--tm:#94a3b8;
+  --border:#e2e8f0;--b2:#cbd5e1;
+  --mono:'Courier New',monospace;
+  --r:12px;--rlg:18px;--rxl:24px;
+  --sh:0 1px 3px rgba(0,0,0,.06),0 2px 8px rgba(0,0,0,.04);
+  --shmd:0 4px 16px rgba(0,0,0,.09);
+  --tr:.15s ease;
+}
+html{font-size:15px;-webkit-font-smoothing:antialiased;}
+body{font-family:'Segoe UI',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;line-height:1.6;}
+.hdr{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 5%;height:62px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:var(--sh);}
+.brand{font-weight:800;color:var(--accent);font-size:1.3rem;letter-spacing:-0.5px;font-family:var(--mono);}
+.brand-sub{color:var(--t2);font-weight:400;font-size:.85rem;margin-left:8px;}
+.pills{display:flex;gap:5px;}
+.pill{padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:700;border:1.5px solid var(--border);color:var(--tm);transition:var(--tr);}
+.pill.active{background:var(--adim);border-color:var(--accent);color:var(--accent);}
+.pill.done{background:rgba(34,197,94,.08);border-color:var(--ok);color:var(--ok);}
+.prog{height:3px;background:var(--border);}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--a2));transition:width .5s ease;width:5%;}
+.main{max-width:1080px;margin:0 auto;padding:28px 20px 56px;}
+.uzone{border:2px dashed var(--b2);border-radius:var(--rxl);padding:52px 28px;text-align:center;background:var(--adim);transition:var(--tr);cursor:pointer;position:relative;}
+.uzone:hover,.uzone.drag{border-color:var(--accent);background:rgba(14,165,233,.13);}
+.uzone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.uzone-icon{width:58px;height:58px;margin:0 auto 16px;border-radius:16px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;box-shadow:var(--shmd);font-size:1.6rem;}
+.uzone-title{font-size:1.05rem;font-weight:800;margin-bottom:5px;}
+.uzone-sub{font-size:.84rem;color:var(--td);margin-bottom:14px;}
+.ftags{display:flex;gap:7px;justify-content:center;}
+.ftag{background:var(--surface);border:1px solid var(--border);padding:3px 11px;border-radius:7px;font-size:.72rem;font-family:var(--mono);font-weight:700;color:var(--td);}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:12px;margin-top:24px;}
+.feat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:20px 16px;text-align:center;box-shadow:var(--sh);}
+.feat-icon{font-size:1.5rem;margin-bottom:8px;}
+.feat-name{font-size:.87rem;font-weight:700;margin-bottom:3px;}
+.feat-desc{font-size:.74rem;color:var(--td);line-height:1.5;}
+.fi-bar{display:flex;flex-wrap:wrap;background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);overflow:hidden;box-shadow:var(--sh);margin-bottom:18px;}
+.fi-item{flex:1;min-width:100px;padding:13px 16px;border-right:1px solid var(--border);}
+.fi-item:last-child{border-right:none;}
+.fi-lbl{font-size:.6rem;font-weight:800;letter-spacing:.7px;text-transform:uppercase;color:var(--tm);margin-bottom:3px;}
+.fi-val{font-size:.93rem;font-weight:800;font-family:var(--mono);color:var(--accent);}
+.fi-val.n{color:var(--t2);font-size:.78rem;font-family:sans-serif;font-weight:600;}
+.slbl{font-size:.67rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--tm);margin:22px 0 11px;display:flex;align-items:center;gap:7px;}
+.slbl::after{content:'';flex:1;height:1px;background:var(--border);}
+.rec-banner{padding:14px 18px;border-radius:12px;margin-bottom:18px;display:flex;align-items:flex-start;gap:12px;font-size:.84rem;line-height:1.65;}
+.rec-banner.class{background:rgba(14,165,233,.07);border:1px solid rgba(14,165,233,.22);}
+.rec-banner.reg{background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.22);}
+.rec-banner.unsup{background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.22);}
+.rec-tag{display:inline-block;padding:3px 10px;border-radius:7px;font-size:.68rem;font-weight:800;letter-spacing:.4px;margin-bottom:4px;}
+.rec-tag.class{background:rgba(14,165,233,.15);color:#0369a1;}
+.rec-tag.reg{background:rgba(245,158,11,.15);color:#b45309;}
+.rec-tag.unsup{background:rgba(34,197,94,.15);color:#15803d;}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:9px;}
+.ccard{background:var(--s2);border:1.5px solid var(--border);border-radius:var(--r);padding:13px 15px;position:relative;transition:var(--tr);}
+.ccard:hover{border-color:var(--b2);transform:translateY(-1px);box-shadow:var(--sh);}
+.ccard.is-t{border-color:var(--accent);background:rgba(14,165,233,.04);}
+.ccard.is-f{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.03);}
+.ccard.is-dt{border-color:rgba(139,92,246,.3);background:rgba(139,92,246,.04);}
+.ccard.is-e{opacity:.38;}
+.cname{font-size:.77rem;font-weight:700;font-family:var(--mono);margin-bottom:5px;word-break:break-word;color:var(--text);}
+.cmeta{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:4px;}
+.ctag{font-size:.61rem;padding:2px 7px;border-radius:4px;font-weight:700;}
+.tn{background:rgba(14,165,233,.12);color:#0369a1;}
+.tc{background:rgba(245,158,11,.12);color:#b45309;}
+.tt{background:rgba(34,197,94,.12);color:#15803d;}
+.tdt{background:rgba(139,92,246,.12);color:#7c3aed;}
+.ti{background:rgba(239,68,68,.12);color:#b91c1c;}
+.tb{background:rgba(100,116,139,.12);color:#475569;}
+.cstat{font-size:.69rem;color:var(--td);margin-top:2px;line-height:1.4;}
+.cbadge{position:absolute;top:7px;right:7px;font-size:.58rem;font-weight:800;padding:2px 6px;border-radius:4px;}
+.cb-t{background:var(--accent);color:#fff;}
+.cb-f{background:rgba(34,197,94,.15);color:#15803d;}
+.cb-dt{background:rgba(139,92,246,.15);color:#7c3aed;}
+.cb-e{background:rgba(100,116,139,.1);color:var(--tm);}
+.legend{display:flex;gap:14px;font-size:.75rem;color:var(--td);margin-bottom:12px;flex-wrap:wrap;}
+.tabs{display:flex;gap:3px;border-bottom:1px solid var(--border);margin-bottom:18px;}
+.tab{padding:9px 16px;font-size:.82rem;font-weight:700;cursor:pointer;color:var(--tm);border-bottom:2px solid transparent;margin-bottom:-1px;transition:var(--tr);}
+.tab:hover{color:var(--text);}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:10px;margin-bottom:18px;}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:13px;text-align:center;box-shadow:var(--sh);}
+.snum{font-size:1.5rem;font-weight:800;font-family:var(--mono);}
+.slb2{font-size:.67rem;color:var(--tm);font-weight:600;margin-top:1px;letter-spacing:.3px;}
+.psteps{display:flex;flex-direction:column;gap:9px;}
+.pstep{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);transition:var(--tr);}
+.pstep:hover{border-color:var(--b2);}
+.pstep.pd{border-color:rgba(34,197,94,.25);background:rgba(34,197,94,.02);}
+.pstep.pw{border-color:rgba(245,158,11,.25);background:rgba(245,158,11,.02);}
+.pstep.pi{border-color:rgba(14,165,233,.2);background:rgba(14,165,233,.02);}
+.psico{width:34px;height:34px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:15px;}
+.psico.d{background:rgba(34,197,94,.1);}
+.psico.w{background:rgba(245,158,11,.1);}
+.psico.i{background:rgba(14,165,233,.1);}
+.psc{flex:1;min-width:0;}
+.pstop{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-bottom:3px;}
+.pstitle{font-size:.86rem;font-weight:700;color:var(--text);}
+.psbadge{font-size:.6rem;font-weight:800;padding:2px 8px;border-radius:7px;}
+.pbd{background:rgba(34,197,94,.12);color:#15803d;}
+.pbw{background:rgba(245,158,11,.12);color:#b45309;}
+.pbi{background:rgba(14,165,233,.12);color:#0369a1;}
+.psdesc{font-size:.78rem;color:var(--td);line-height:1.5;margin-bottom:5px;}
+.mrow{display:flex;align-items:center;gap:9px;margin-bottom:7px;}
+.mname{font-size:.76rem;font-family:var(--mono);color:var(--td);width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mtrack{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden;}
+.mfill{height:100%;border-radius:3px;}
+.mpct{font-size:.72rem;font-family:var(--mono);font-weight:700;width:36px;}
+.twrap{overflow-x:auto;border:1px solid var(--border);border-radius:var(--r);}
+table{width:100%;border-collapse:collapse;font-size:.76rem;}
+thead th{padding:9px 12px;background:var(--adim);text-align:left;font-weight:800;font-family:var(--mono);font-size:.66rem;letter-spacing:.3px;color:var(--accent);border-bottom:1px solid var(--border);white-space:nowrap;}
+thead th.tht{background:rgba(14,165,233,.15);}
+tbody tr{border-bottom:1px solid var(--border);}
+tbody tr:hover{background:var(--adim);}
+tbody td{padding:7px 12px;white-space:nowrap;max-width:170px;overflow:hidden;text-overflow:ellipsis;color:var(--t2);}
+tbody td.tdt{color:var(--accent);font-weight:700;}
+tbody td.tdn{color:var(--danger);font-style:italic;font-size:.7rem;}
+.alert{padding:9px 14px;border-radius:9px;font-size:.8rem;display:flex;align-items:flex-start;gap:7px;margin-bottom:9px;line-height:1.5;}
+.aw{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);color:#92400e;}
+.ad{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);color:#991b1b;}
+.ao{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);color:#15803d;}
+.ai{background:rgba(14,165,233,.08);border:1px solid rgba(14,165,233,.2);color:#0369a1;}
+#ov{position:fixed;inset:0;background:rgba(240,244,248,.94);backdrop-filter:blur(6px);z-index:500;display:none;flex-direction:column;align-items:center;justify-content:center;gap:18px;}
+.spin{width:52px;height:52px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:sp .65s linear infinite;}
+@keyframes sp{to{transform:rotate(360deg)}}
+.plbl{font-size:1rem;font-weight:700;color:var(--t2);}
+.psub{font-size:.82rem;color:var(--td);}
+.plog-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 16px;width:420px;max-height:160px;overflow-y:auto;font-family:var(--mono);font-size:.72rem;color:var(--td);line-height:1.9;}
+.dlgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:13px;margin-bottom:18px;}
+.dlcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:18px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:9px;transition:var(--tr);}
+.dlcard:hover{box-shadow:var(--shmd);transform:translateY(-2px);}
+.dlcard.pri{border-color:var(--accent);border-width:2px;}
+.dlic{font-size:1.5rem;}
+.dln{font-size:.9rem;font-weight:800;color:var(--text);}
+.dld{font-size:.75rem;color:var(--td);line-height:1.5;}
+.dlsz{font-size:.67rem;font-family:var(--mono);color:var(--tm);}
+.dlbtn{padding:9px 16px;border-radius:var(--r);border:1.5px solid var(--accent);background:var(--accent);color:#fff;font-size:.82rem;font-weight:700;cursor:pointer;transition:var(--tr);display:flex;align-items:center;justify-content:center;gap:7px;width:100%;}
+.dlbtn:hover{filter:brightness(1.08);}
+.dlbtn.sec{background:var(--s2);color:var(--accent);border-color:var(--accent);}
+.dlbtn.sec:hover{background:var(--adim);}
+.done-hero{text-align:center;padding:42px 20px 32px;background:linear-gradient(135deg,rgba(14,165,233,.06),rgba(99,102,241,.06));border:1px solid rgba(14,165,233,.15);border-radius:var(--rxl);margin-bottom:22px;}
+.done-check{font-size:2.8rem;margin-bottom:10px;}
+.done-title{font-size:1.35rem;font-weight:800;margin-bottom:5px;}
+.done-sub{font-size:.87rem;color:var(--td);}
+.rtable{width:100%;border-collapse:collapse;font-size:.79rem;}
+.rtable th{text-align:left;padding:9px 13px;background:var(--adim);color:var(--accent);font-size:.69rem;border-bottom:1px solid var(--border);font-weight:800;}
+.rtable td{padding:9px 13px;border-bottom:1px solid var(--border);color:var(--t2);line-height:1.5;vertical-align:top;}
+.rtable tr:hover td{background:var(--adim);}
+.rtable td:first-child{font-weight:700;white-space:nowrap;color:var(--accent);}
+.btn{padding:10px 22px;border-radius:var(--r);font-size:.86rem;font-weight:700;cursor:pointer;border:1.5px solid transparent;transition:var(--tr);display:inline-flex;align-items:center;gap:7px;}
+.bp{background:var(--accent);color:#fff;border-color:var(--accent);}
+.bp:hover{filter:brightness(1.08);}
+.bs{background:var(--s2);border-color:var(--b2);color:var(--td);}
+.bs:hover{border-color:var(--accent);color:var(--accent);background:var(--adim);}
+.act-row{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end;padding:16px 0 2px;border-top:1px solid var(--border);margin-top:6px;}
+#toast{position:fixed;bottom:22px;right:22px;padding:11px 18px;border-radius:var(--r);background:#fff;border-left:4px solid var(--accent);box-shadow:var(--shmd);font-size:.83rem;font-weight:700;display:none;z-index:9999;color:var(--text);max-width:340px;}
+.hidden{display:none!important;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rlg);padding:20px 24px;box-shadow:var(--sh);}
+.py-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);color:var(--a2);font-size:.68rem;font-weight:800;padding:3px 9px;border-radius:6px;letter-spacing:.4px;}
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:var(--b2);border-radius:10px;}
+::-webkit-scrollbar-thumb:hover{background:var(--accent);}
+@media(max-width:640px){
+  .hdr{padding:0 4%;} .pills{display:none;}
+  .main{padding:18px 14px 40px;} .fi-item{min-width:80px;}
+  .cgrid{grid-template-columns:1fr 1fr;} .dlgrid{grid-template-columns:1fr;}
+  .plog-box{width:300px;}
+}
+</style>
+</head>
+<body>
+<div id="toast"></div>
+
+<!-- Processing overlay -->
+<div id="ov">
+  <div class="spin"></div>
+  <div class="plbl" id="plbl">Sending to Python backend...</div>
+  <div class="psub" id="psub">Running preprocessing with pandas + scikit-learn</div>
+  <div class="plog-box" id="plog"></div>
+</div>
+
+<!-- Header -->
+<div class="hdr">
+  <div>
+    <span class="brand">Basira</span>
+    <span class="brand-sub">Smart Preprocessor</span>
+    <span class="py-badge" style="margin-left:10px">🐍 Python Backend</span>
+  </div>
+  <div class="pills">
+    <div class="pill active" id="p1">① Upload</div>
+    <div class="pill" id="p2">② Results</div>
+    <div class="pill" id="p3">③ Download</div>
+  </div>
+</div>
+<div class="prog"><div class="prog-fill" id="pf"></div></div>
+
+<div class="main">
+
+<!-- STEP 1: Upload -->
+<div id="s1">
+  <div style="text-align:center;margin-bottom:28px;">
+    <h1 style="font-size:1.65rem;font-weight:800;color:var(--text);margin-bottom:7px;">Intelligent Data Preprocessing</h1>
+    <p style="color:var(--td);font-size:.92rem;">Upload your file — all processing runs in Python with pandas, numpy &amp; scikit-learn</p>
+  </div>
+  <div class="uzone" id="uz">
+    <input type="file" id="fi" accept=".csv,.xlsx,.xls">
+    <div class="uzone-icon">📂</div>
+    <div class="uzone-title">Drop your dataset here or click to browse</div>
+    <div class="uzone-sub">CSV and Excel files supported — Arabic and English data</div>
+    <div class="ftags"><span class="ftag">.CSV</span><span class="ftag">.XLSX</span><span class="ftag">.XLS</span></div>
+  </div>
+  <!-- Backend info -->
+  <div class="alert ai" style="margin-top:18px">
+    <span>🐍</span>
+    <span><strong>Python backend required</strong> — This page talks to a Flask server on <code>localhost:5050</code>.
+    Run <code>python app.py</code> before uploading.
+    All preprocessing uses <strong>pandas + numpy + scikit-learn</strong>.</span>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-icon">🐍</div><div class="feat-name">Python Engine</div><div class="feat-desc">pandas, numpy, scipy, scikit-learn — real ML-grade preprocessing</div></div>
+    <div class="feat-card"><div class="feat-icon">📅</div><div class="feat-name">Datetime Features</div><div class="feat-desc">year, month, day, hour, weekday, is_weekend extracted automatically</div></div>
+    <div class="feat-card"><div class="feat-icon">🔢</div><div class="feat-name">Adaptive Encoding</div><div class="feat-desc">Binary / Label / Frequency based on cardinality — not one-size-fits-all</div></div>
+    <div class="feat-card"><div class="feat-icon">📍</div><div class="feat-name">Outlier Flags</div><div class="feat-desc">IQR-based flags added — outliers NOT deleted, patterns preserved</div></div>
+    <div class="feat-card"><div class="feat-icon">🎯</div><div class="feat-name">Auto Task Detection</div><div class="feat-desc">Classification / Regression / Clustering decided by Python automatically</div></div>
+    <div class="feat-card"><div class="feat-icon">⬇️</div><div class="feat-name">4 Real Files</div><div class="feat-desc">Cleaned CSV, model-ready CSV, HTML audit report, config JSON</div></div>
+  </div>
+</div>
+
+<!-- STEP 2: Results -->
+<div id="s2" class="hidden">
+  <div class="fi-bar" id="fib"></div>
+  <div id="rec-box"></div>
+
+  <div class="tabs">
+    <div class="tab active" id="tb-cols" onclick="showTab('cols')">Column Overview</div>
+    <div class="tab" id="tb-prev" onclick="showTab('prev')">Data Preview</div>
+    <div class="tab" id="tb-miss" onclick="showTab('miss')">Missing Values</div>
+    <div class="tab" id="tb-audit" onclick="showTab('audit')">Audit Log</div>
+  </div>
+
+  <div id="tab-cols">
+    <div class="legend">
+      <span>🔵 Target</span><span>🟢 Feature</span>
+      <span>🟣 Datetime → extracted</span><span>⚪ Excluded (ID)</span>
+    </div>
+    <div class="cgrid" id="cgrid"></div>
+  </div>
+  <div id="tab-prev" class="hidden"><div class="twrap"><table id="ptbl"></table></div></div>
+  <div id="tab-miss" class="hidden"><div id="mchart"></div></div>
+  <div id="tab-audit" class="hidden">
+    <div class="card"><table class="rtable" id="audit-tbl"></table></div>
+  </div>
+
+  <div id="abox" style="margin-top:16px;"></div>
+
+  <div class="slbl">Dataset Summary</div>
+  <div class="sgrid" id="sgrid"></div>
+
+  <div class="slbl">Python Preprocessing Plan (executed automatically)</div>
+  <div class="psteps" id="psteps"></div>
+
+  <div class="slbl">Download Files</div>
+  <div class="dlgrid" id="dlgrid"></div>
+
+  <div class="act-row">
+    <button class="btn bs" onclick="resetAll()">↺ Upload New File</button>
+    <button class="btn bp" onclick="dlAll()">⬇ Download All 4 Files</button>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+var API = 'http://localhost:5050';
+var R   = null; // last API response
+
+/* ── Upload ── */
+var uz = document.getElementById('uz');
+document.getElementById('fi').addEventListener('change', function(e){ hf(e.target.files[0]); });
+uz.addEventListener('dragover',  function(e){ e.preventDefault(); uz.classList.add('drag'); });
+uz.addEventListener('dragleave', function(){  uz.classList.remove('drag'); });
+uz.addEventListener('drop', function(e){
+  e.preventDefault(); uz.classList.remove('drag'); hf(e.dataTransfer.files[0]);
+});
+
+function hf(file){
+  if(!file) return;
+  var ext = file.name.split('.').pop().toLowerCase();
+  if(!['csv','xlsx','xls'].includes(ext)){ toast('Unsupported format. Use CSV or XLSX.'); return; }
+  sendToPython(file);
+}
+
+function sendToPython(file){
+  showOverlay('Uploading to Python backend...', 'Running pandas preprocessing...');
+  setPill(2); setProg(30);
+
+  var fd = new FormData();
+  fd.append('file', file);
+
+  var logs = ['📤 Sending file to Flask backend...'];
+  updateLog(logs);
+
+  fetch(API + '/upload-process', { method:'POST', body:fd })
+    .then(function(resp){
+      if(!resp.ok) return resp.json().then(function(e){ throw new Error(e.error || 'Server error'); });
+      logs.push('✅ Python preprocessing complete');
+      updateLog(logs);
+      return resp.json();
+    })
+    .then(function(data){
+      R = data;
+      logs.push('📊 Rendering results...');
+      updateLog(logs);
+      setTimeout(function(){
+        hideOverlay();
+        renderResults(data);
+        setProg(90); setPill(2);
+      }, 400);
+    })
+    .catch(function(err){
+      hideOverlay();
+      toast('Error: ' + err.message + ' — Is the Python backend running on port 5050?');
+      setPill(1); setProg(5);
+    });
+}
+
+/* ── Render results ── */
+function renderResults(d){
+  hide('s1'); show('s2');
+  renderFib(d); renderRec(d); renderCols(d);
+  renderPreview(d); renderMissing(d); renderAlerts(d);
+  renderSummary(d); renderPlan(d); renderDownloads(d);
+  renderAuditTab(d);
+}
+
+function renderFib(d){
+  var s = d.summary;
+  document.getElementById('fib').innerHTML =
+    fi('Original',  s.original_rows.toLocaleString()+'  ×  '+s.original_cols, true) +
+    fi('Cleaned',   s.cleaned_rows.toLocaleString()+'  ×  '+s.cleaned_cols) +
+    fi('Model-Ready', s.cleaned_rows.toLocaleString()+'  ×  '+s.model_cols) +
+    fi('Removed',   s.rows_removed+' rows, '+s.cols_excluded+' cols', false, s.rows_removed>0?'var(--warn)':'var(--ok)') +
+    fi('Task',      d.task_type, false,
+       d.task_type==='classification'?'var(--accent)':d.task_type==='regression'?'var(--warn)':'var(--ok)') +
+    fi('Target', d.target_col||'None', false, d.target_col?'var(--accent)':'var(--tm)');
+}
+function fi(l,v,plain,col){
+  return '<div class="fi-item"><div class="fi-lbl">'+l+'</div><div class="fi-val'+(plain?' n':'')+'"'+(col?' style="color:'+col+'"':'')+'>'+v+'</div></div>';
+}
+
+function renderRec(d){
+  var cls   = d.task_type;
+  var icons = {classification:'🏷️',regression:'📈',unsupervised:'🔵'};
+  var lbls  = {classification:'Classification',regression:'Regression',unsupervised:'Unsupervised / Clustering'};
+  document.getElementById('rec-box').innerHTML =
+    '<div class="rec-banner '+cls+'">'+
+    '<div style="font-size:1.5rem;flex-shrink:0">'+icons[cls]+'</div>'+
+    '<div><div class="rec-tag '+cls+'">🐍 PYTHON AUTO-DETECTED: '+lbls[cls].toUpperCase()+'</div>'+
+    '<div style="margin-top:4px;font-size:.85rem;color:var(--t2)">'+d.task_reason+'</div>'+
+    (d.target_col?'<div style="margin-top:4px;font-size:.8rem;color:var(--td)">Target column: <strong style="color:var(--accent)">'+d.target_col+'</strong></div>':'')+
+    '</div></div>';
+}
+
+function renderCols(d){
+  var tlMap = {float:'Float',int:'Integer',categorical:'Categorical',text:'Text',datetime:'Datetime',id:'ID',bool:'Boolean',unknown:'Unknown'};
+  var tcMap = {float:'tn',int:'tn',categorical:'tc',text:'tt',datetime:'tdt',id:'ti',bool:'tb',unknown:'tb'};
+  document.getElementById('cgrid').innerHTML = d.col_meta.map(function(c){
+    var cls = 'ccard ' + (c.is_target?'is-t':c.is_id?'is-e':c.is_datetime?'is-dt':'is-f');
+    var badge = c.is_target?'cb-t':c.is_id?'cb-e':c.is_datetime?'cb-dt':'cb-f';
+    var btxt  = c.is_target?'Target':c.is_id?'Excluded (ID)':c.is_datetime?'→ Extracted':'Feature';
+    var tc = tcMap[c.type]||'tb';
+    var arTag = c.has_arabic?'<span class="ctag tt">Arabic</span>':'';
+    var sl = c.stats && Object.keys(c.stats).length
+      ? 'min:'+c.stats.min+' max:'+c.stats.max
+      : (c.top_values?Object.keys(c.top_values).slice(0,3).map(function(v){return '"'+v.substring(0,10)+'"';}).join(', '):'—');
+    var mc = c.null_pct>30?'var(--danger)':c.null_pct>0?'var(--warn)':'var(--ok)';
+    var enc = c.encoding_strategy?'<div class="cstat" style="color:var(--a2)">enc: '+c.encoding_strategy+'</div>':'';
+    var outl = c.outlier_count>0?'<div class="cstat" style="color:var(--danger)">⚠ '+c.outlier_count+' outliers</div>':'';
+    return '<div class="'+cls+'"><div class="cbadge '+badge+'">'+btxt+'</div>'+
+      '<div class="cname">'+c.name+'</div>'+
+      '<div class="cmeta"><span class="ctag '+tc+'">'+tlMap[c.type]+'</span>'+arTag+'</div>'+
+      '<div class="cstat">'+sl+'</div>'+
+      '<div class="cstat" style="color:'+mc+'">'+(c.null_pct>0?'Missing: '+c.null_pct+'%':'Complete ✓')+'</div>'+
+      '<div class="cstat" style="color:var(--tm)">Unique: '+c.n_unique+'</div>'+
+      enc+outl+'</div>';
+  }).join('');
+}
+
+function renderPreview(d){
+  var p = d.preview;
+  var html = '<thead><tr>'+p.cols.map(function(h){
+    var isT = d.target_col && h===d.target_col;
+    return '<th class="'+(isT?'tht':'')+'">'+(isT?'🎯 ':'')+h+'</th>';
+  }).join('')+'</tr></thead><tbody>';
+  p.rows.forEach(function(row){
+    html += '<tr>'+p.cols.map(function(h){
+      var v=row[h]||''; var isN=v==='null'||v==='';
+      var isT=d.target_col&&h===d.target_col;
+      return '<td class="'+(isT?'tdt':'')+(isN?' tdn':'')+'">'+v.substring(0,22)+'</td>';
+    }).join('')+'</tr>';
+  });
+  document.getElementById('ptbl').innerHTML = html+'</tbody>';
+}
+
+function renderMissing(d){
+  var sorted = d.col_meta.slice().sort(function(a,b){return b.null_pct-a.null_pct;});
+  document.getElementById('mchart').innerHTML = sorted.map(function(c){
+    var p=c.null_pct, col=p===0?'var(--ok)':p>30?'var(--danger)':'var(--warn)';
+    return '<div class="mrow"><div class="mname" title="'+c.name+'">'+c.name+'</div>'+
+      '<div class="mtrack"><div class="mfill" style="width:'+Math.max(p,1)+'%;background:'+col+'"></div></div>'+
+      '<div class="mpct" style="color:'+col+'">'+p+'%</div></div>';
+  }).join('');
+}
+
+function renderAlerts(d){
+  var s=d.summary, als=[];
+  if(s.original_rows < 30) als.push({cls:'ad',i:'🚨',m:'Very few rows ('+s.original_rows+'). Models generally need ≥30.'});
+  if(s.n_missing_cols>0)   als.push({cls:'aw',i:'⚠️',m:s.n_missing_cols+' columns had missing values — handled by Python (median/mean/mode).'});
+  if(s.n_outlier_cols>0)   als.push({cls:'aw',i:'📍',m:s.n_outlier_cols+' numeric columns have outliers — IQR flags added, rows preserved.'});
+  if(s.n_datetime>0)       als.push({cls:'ai',i:'📅',m:s.n_datetime+' datetime column(s) extracted into 7 features each.'});
+  if(s.duplicates_removed>0) als.push({cls:'ai',i:'🔁',m:s.duplicates_removed+' exact duplicate rows removed by Python.'});
+  als.push({cls:'ao',i:'✅',m:'Python preprocessing complete — '+s.cleaned_rows.toLocaleString()+' rows × '+s.cleaned_cols+' cols ready for download.'});
+  document.getElementById('abox').innerHTML = als.map(function(a){
+    return '<div class="alert '+a.cls+'"><span>'+a.i+'</span><span>'+a.m+'</span></div>';
+  }).join('');
+}
+
+function renderSummary(d){
+  var s=d.summary;
+  document.getElementById('sgrid').innerHTML =
+    sc(s.original_rows.toLocaleString(),'var(--accent)','Original Rows')+
+    sc(s.cleaned_rows.toLocaleString(),'var(--ok)','Cleaned Rows')+
+    sc(s.cleaned_cols,'var(--accent)','Cleaned Cols')+
+    sc(s.model_cols,'var(--a2)','Model-Ready Cols')+
+    sc(s.n_numeric,'var(--accent)','Numeric')+
+    sc(s.n_cat,'var(--warn)','Categorical')+
+    sc(s.n_text,'var(--purple)','Text')+
+    sc(s.n_datetime,'#7c3aed','Datetime')+
+    sc(s.duplicates_removed,s.duplicates_removed>0?'var(--warn)':'var(--ok)','Duplicates Removed')+
+    sc(s.n_outlier_cols,s.n_outlier_cols>0?'var(--danger)':'var(--ok)','Outlier Cols Flagged');
+}
+function sc(v,c,l){return '<div class="scard"><div class="snum" style="color:'+c+'">'+v+'</div><div class="slb2">'+l+'</div></div>';}
+
+function renderPlan(d){
+  /* Translate audit steps into visual cards */
+  var stepIcons = {
+    'Column Type Detection':'🔍','Column Selection':'📌','Duplicate Removal':'🔁',
+    'Repeated ID Detection':'🔎','Datetime Feature Extraction':'📅',
+    'Missing Value Imputation':'🔧','Target Null Rows Dropped':'🗑️',
+    'Outlier Flagging (IQR, no deletion)':'📍','Text Normalization + Feature Engineering':'🌐',
+    'Categorical Encoding':'🔢','High-Missing Columns Dropped':'⚠️',
+  };
+  var stepWhy = {
+    'Column Type Detection':'Python uses pattern matching, value distribution, and column name heuristics to detect types (numeric, categorical, text, datetime, ID).',
+    'Column Selection':'ID columns have unique values per row and carry no predictive signal — excluded automatically.',
+    'Duplicate Removal':'Exact duplicate rows inflate model confidence and introduce data leakage into any train/test split.',
+    'Repeated ID Detection':'Repeated IDs are flagged in the config — rows kept, issue surfaced for downstream handling.',
+    'Datetime Feature Extraction':'Raw datetime strings are unreadable to ML models. Python extracts year/month/day/hour/weekday/is_weekend as numeric features.',
+    'Missing Value Imputation':'Skewed numeric columns use median (robust to outliers). Symmetric → mean. Categorical → mode. Text → missing_flag added instead of inventing values.',
+    'Target Null Rows Dropped':'Rows with no target value cannot be used for supervised learning — removed to avoid training on noise.',
+    'Outlier Flagging (IQR, no deletion)':'Outliers are NOT removed — a binary flag column is added so models can learn from anomalous patterns. Especially important for fraud/incident datasets.',
+    'Text Normalization + Feature Engineering':'Arabic diacritics and tatweel removed, hamza unified. text_length, word_count, and lang_label features added — often predictive without full NLP.',
+    'Categorical Encoding':'Binary (2 values)→0/1. Low cardinality (≤12)→label encoding. High cardinality (>12)→frequency encoding to avoid dimensionality explosion.',
+    'High-Missing Columns Dropped':'Columns with >60% missing values are too incomplete to impute reliably — dropped to prevent noisy features.',
+  };
+  document.getElementById('psteps').innerHTML = d.audit.map(function(a){
+    var ic  = stepIcons[a.step] || '⚙️';
+    var why = stepWhy[a.step]   || 'Automated decision by Basira Python engine.';
+    var pCls= a.step.indexOf('Drop')>=0||a.step.indexOf('Missing')>=0?'pw':'pi';
+    if(a.step.indexOf('Complete')>=0||a.step.indexOf('Success')>=0) pCls='pd';
+    var iCls= pCls==='pw'?'w':'i';
+    return '<div class="pstep '+pCls+'"><div class="psico '+iCls+'">'+ic+'</div>'+
+      '<div class="psc"><div class="pstop"><span class="pstitle">'+a.step+'</span>'+
+      '<span class="psbadge pbi">🐍 Python</span></div>'+
+      '<div class="psdesc">'+a.detail+'</div>'+
+      '<div style="font-size:.74rem;color:var(--td);background:var(--s2);border-left:3px solid var(--accent);padding:5px 9px;border-radius:0 5px 5px 0;line-height:1.5">💡 Why? '+why+'</div>'+
+      '</div></div>';
+  }).join('');
+}
+
+function renderDownloads(d){
+  var dl = d.downloads;
+  document.getElementById('dlgrid').innerHTML =
+    dlCard('pri','🧹','Cleaned Dataset',
+      'Human-readable — missing values filled, duplicates removed, text normalized, datetime features extracted. Arabic text with UTF-8 BOM.',
+      'CSV · '+dl.cleaned.size_kb+' KB · '+dl.cleaned.rows.toLocaleString()+' rows · '+dl.cleaned.cols+' cols',
+      dl.cleaned.file, 'cleaned_data.csv', 'Download Cleaned Dataset', '') +
+    dlCard('','🤖','Model-Ready Dataset',
+      'Fully encoded — binary/label/frequency encoding applied, outlier flags included. Ready for sklearn, XGBoost, etc.',
+      'CSV · '+dl.model.size_kb+' KB · '+dl.model.rows.toLocaleString()+' rows · '+dl.model.cols+' cols',
+      dl.model.file, 'model_ready.csv', 'Download Model-Ready Dataset', 'sec') +
+    dlCard('','📋','Audit Report (HTML)',
+      'Full Python preprocessing log — every decision documented with context. Ideal for academic submissions.',
+      'HTML · '+dl.audit.size_kb+' KB',
+      dl.audit.file, 'audit_report.html', 'Download Audit Report', 'sec') +
+    dlCard('','⚙️','Configuration JSON',
+      'Complete routing config for Basira ML engines — task type, column types, encoding map, language profile.',
+      'JSON · '+dl.config.size_kb+' KB',
+      dl.config.file, 'config.json', 'Download Config JSON', 'sec');
+}
+
+function dlCard(xCls,ic,n,desc,sz,fname,dlname,btxt,bCls){
+  return '<div class="dlcard '+xCls+'"><div class="dlic">'+ic+'</div><div class="dln">'+n+'</div>'+
+    '<div class="dld">'+desc+'</div><div class="dlsz">'+sz+'</div>'+
+    '<button class="dlbtn '+bCls+'" onclick="dlt(\''+fname+'\',\''+dlname+'\')">⬇ '+btxt+'</button></div>';
+}
+
+function dlt(serverFile, dlName){
+  var a = document.createElement('a');
+  a.href = API+'/download/'+encodeURIComponent(serverFile);
+  a.download = dlName; a.target='_blank';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+
+function dlAll(){
+  if(!R) return;
+  var dl = R.downloads;
+  var files = [
+    [dl.cleaned.file,'cleaned_data.csv'],
+    [dl.model.file,'model_ready.csv'],
+    [dl.audit.file,'audit_report.html'],
+    [dl.config.file,'config.json']
+  ];
+  files.forEach(function(f,i){ setTimeout(function(){ dlt(f[0],f[1]); }, i*500); });
+}
+
+function renderAuditTab(d){
+  document.getElementById('audit-tbl').innerHTML =
+    '<thead><tr><th>Step</th><th>Details (Python)</th></tr></thead><tbody>'+
+    d.audit.map(function(a){
+      return '<tr><td>'+a.step+'</td><td>'+a.detail+'</td></tr>';
+    }).join('')+'</tbody>';
+}
+
+/* ── Tabs ── */
+function showTab(name){
+  ['cols','prev','miss','audit'].forEach(function(t){
+    document.getElementById('tab-'+t).classList.toggle('hidden',t!==name);
+    document.getElementById('tb-'+t).classList.toggle('active',t===name);
+  });
+}
+
+/* ── Utils ── */
+function show(id){ document.getElementById(id).classList.remove('hidden'); }
+function hide(id){ document.getElementById(id).classList.add('hidden'); }
+function setPill(n){for(var i=1;i<=3;i++){var p=document.getElementById('p'+i);p.className='pill'+(i<n?' done':i===n?' active':'');}}
+function setProg(p){ document.getElementById('pf').style.width=p+'%'; }
+function showOverlay(lbl,sub){
+  document.getElementById('plbl').textContent=lbl;
+  document.getElementById('psub').textContent=sub;
+  document.getElementById('ov').style.display='flex';
+}
+function hideOverlay(){ document.getElementById('ov').style.display='none'; }
+function updateLog(lines){
+  document.getElementById('plog').innerHTML=lines.map(function(l){return '<div>'+l+'</div>';}).join('');
+}
+function toast(msg){
+  var t=document.getElementById('toast'); t.textContent=msg;
+  t.style.display='block'; setTimeout(function(){t.style.display='none';},5000);
+}
+function resetAll(){
+  R=null;
+  show('s1'); hide('s2');
+  document.getElementById('fi').value='';
+  setPill(1); setProg(5);
+}
+</script>
+</body>
+</html>

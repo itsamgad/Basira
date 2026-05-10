@@ -1,0 +1,38 @@
+[
+  {
+    "id": "model_reliability",
+    "title": "Model Reliability",
+    "value": "High",
+    "metric": "The model shows strong macro-level performance and balanced class recognition.",
+    "description": "The model shows strong macro-level performance and balanced class recognition.",
+    "action": "Use the dashboard outputs to support transparent decision-making.",
+    "severity": "success"
+  },
+  {
+    "id": "best_model_selection",
+    "title": "Best Model Selection",
+    "value": "LogisticRegression",
+    "metric": "Selected because it achieved the strongest macro F1 and balanced accuracy among successful candidates.",
+    "description": "Basira compared all suitable supervised models and selected the highest-ranked candidate.",
+    "action": "Review the model leaderboard for alternatives.",
+    "severity": "success"
+  },
+  {
+    "id": "primary_driver",
+    "title": "Primary Feature Driver",
+    "value": "x2",
+    "metric": "50.51% impact",
+    "description": "x2 contributes about 50.51% of the available model driver signal.",
+    "action": "Monitor x2 in the dashboard and RCA stage.",
+    "severity": "success"
+  },
+  {
+    "id": "weakest_class",
+    "title": "Weakest Class",
+    "value": "negative",
+    "metric": "F1 = 0.9655",
+    "description": "This class is the hardest for the selected model to recognize.",
+    "action": "Review examples from this class and consider adding more labeled records.",
+    "severity": "warning"
+  }
+]

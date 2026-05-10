@@ -1,0 +1,9 @@
+{
+  "headline": "Basira discovered hidden segments in the dataset.",
+  "summary": "The unsupervised engine evaluated multiple clustering algorithms and selected DBSCAN with 200 clusters. The result shows a strong and interpretable segmentation structure.",
+  "key_finding": "The strongest cluster-separating feature is 'Category_Food', contributing 3.0273% of the separation signal.",
+  "cluster_profile_summary": "200 cluster profiles were generated, each describing size, distinctive features, and sample records.",
+  "risk_alert": "Anomaly rate is low and unlikely to distort the overall clustering structure.",
+  "recommended_action": "Use the cluster profiles to understand repeated patterns, then investigate anomalies and small clusters as RCA candidates.",
+  "dashboard_note": "Display model leaderboard, cluster sizes, PCA scatter, top drivers, and anomaly tables together for a complete view."
+}

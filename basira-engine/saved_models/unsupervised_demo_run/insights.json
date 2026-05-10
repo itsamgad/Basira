@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cluster_quality",
+    "title": "Cluster Quality",
+    "value": "High",
+    "metric": "Silhouette = 0.664319",
+    "description": "Clusters are well separated according to Silhouette score.",
+    "action": "Use clusters confidently.",
+    "severity": "success"
+  },
+  {
+    "id": "best_algorithm",
+    "title": "Best Clustering Method",
+    "value": "DBSCAN",
+    "metric": "k = 200",
+    "description": "Selected because it achieved the strongest combined clustering score, prioritizing Silhouette, Davies-Bouldin, and Calinski-Harabasz metrics.",
+    "action": "Use this result as the primary segmentation output.",
+    "severity": "success"
+  },
+  {
+    "id": "primary_cluster_driver",
+    "title": "Primary Cluster Driver",
+    "value": "Category_Food",
+    "metric": "3.0273% separation impact",
+    "description": "'Category_Food' contributes 3.0273% of the observed separation between clusters.",
+    "action": "Use this feature first when explaining why clusters differ.",
+    "severity": "success"
+  },
+  {
+    "id": "cluster_size_pattern",
+    "title": "Cluster Size Pattern",
+    "value": "Largest: 0.66%",
+    "metric": "Smallest: 0.31%",
+    "description": "Cluster sizes indicate whether the data naturally forms balanced groups or rare segments.",
+    "action": "Review very small clusters as possible niche behavior or anomalies.",
+    "severity": "success"
+  },
+  {
+    "id": "anomaly_detection",
+    "title": "Anomaly Detection",
+    "value": "2.004%",
+    "metric": "252 flagged records",
+    "description": "Anomaly rate is low and unlikely to distort the overall clustering structure.",
+    "action": "Anomaly level is acceptable.",
+    "severity": "success"
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "project": "Basira",
+  "phase": "Phase 2 — Supervised Classification",
+  "task_type": "classification",
+  "vectorizer": {
+    "type": "TF-IDF",
+    "max_features": 5000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_df": 0.95,
+    "sublinear_tf": true
+  },
+  "candidate_models": [
+    "LogisticRegression",
+    "LinearSVC",
+    "MultinomialNB"
+  ],
+  "selected_model": "LogisticRegression",
+  "selection_criterion": "Highest CV F1-weighted",
+  "class_labels": [
+    "Account",
+    "Billing",
+    "Network",
+    "Shipping",
+    "Technical"
+  ],
+  "preparation_summary": {
+    "rows_before": 200,
+    "rows_after": 200,
+    "dropped_missing_or_empty": 0,
+    "dropped_rare_class": 0,
+    "dropped_classes": {},
+    "n_classes": 5,
+    "n_unique_texts": 5,
+    "class_distribution": {
+      "Technical": 46,
+      "Network": 45,
+      "Shipping": 41,
+      "Billing": 36,
+      "Account": 32
+    }
+  },
+  "modality": "text_heavy",
+  "language": "english",
+  "text_column": "description",
+  "split_strategy": "GroupShuffleSplit",
+  "group_leakage_control": true,
+  "min_df": 2
+}

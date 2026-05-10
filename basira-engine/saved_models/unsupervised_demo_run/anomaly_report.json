@@ -1,0 +1,613 @@
+{
+  "status": "success",
+  "method": "IsolationForest",
+  "contamination": 0.02,
+  "level": "Low",
+  "message": "Anomaly rate is low and unlikely to distort the overall clustering structure.",
+  "anomaly_count": 252,
+  "anomaly_pct": 2.004,
+  "top_anomalies": [
+    {
+      "row_position": 2879,
+      "source_row_index": 2879,
+      "cluster_id": 142,
+      "anomaly_score": 0.020159,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Food",
+          "abs_z_score": 2.630355
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.229657
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 11557,
+      "source_row_index": 11557,
+      "cluster_id": 142,
+      "anomaly_score": 0.020159,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Food",
+          "abs_z_score": 2.630355
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.553792
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 7066,
+      "source_row_index": 7066,
+      "cluster_id": 155,
+      "anomaly_score": 0.01629,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_03",
+          "abs_z_score": 5.103235
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.71586
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 2.627515
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 9490,
+      "source_row_index": 9490,
+      "cluster_id": 142,
+      "anomaly_score": 0.014945,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Food",
+          "abs_z_score": 2.630355
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.451149
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.233438
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 8037,
+      "source_row_index": 8037,
+      "cluster_id": 142,
+      "anomaly_score": 0.013051,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Food",
+          "abs_z_score": 2.630355
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.013566
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.233438
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 10970,
+      "source_row_index": 10970,
+      "cluster_id": 81,
+      "anomaly_score": 0.013028,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.229657
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 1732,
+      "source_row_index": 1732,
+      "cluster_id": 77,
+      "anomaly_score": 0.011764,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_18",
+          "abs_z_score": 4.878807
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 0.781852
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 0.380588
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 4497,
+      "source_row_index": 4497,
+      "cluster_id": 77,
+      "anomaly_score": 0.01142,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_18",
+          "abs_z_score": 4.878807
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 0.684611
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 0.380588
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 1983,
+      "source_row_index": 1983,
+      "cluster_id": 60,
+      "anomaly_score": 0.011266,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_21",
+          "abs_z_score": 4.924531
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 3.039995
+        },
+        {
+          "feature": "Category_Patisserie",
+          "abs_z_score": 2.688812
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 9167,
+      "source_row_index": 9167,
+      "cluster_id": 60,
+      "anomaly_score": 0.011266,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_21",
+          "abs_z_score": 4.924531
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.71586
+        },
+        {
+          "feature": "Category_Patisserie",
+          "abs_z_score": 2.688812
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 5619,
+      "source_row_index": 5619,
+      "cluster_id": 124,
+      "anomaly_score": 0.011044,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_21",
+          "abs_z_score": 4.924531
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.391724
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 7219,
+      "source_row_index": 7219,
+      "cluster_id": 77,
+      "anomaly_score": 0.010743,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_18",
+          "abs_z_score": 4.878807
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.305288
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.233438
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 9876,
+      "source_row_index": 9876,
+      "cluster_id": 142,
+      "anomaly_score": 0.010367,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Food",
+          "abs_z_score": 2.630355
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 1.095183
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 10526,
+      "source_row_index": 10526,
+      "cluster_id": 124,
+      "anomaly_score": 0.010358,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_21",
+          "abs_z_score": 4.924531
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.71586
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 12297,
+      "source_row_index": 12297,
+      "cluster_id": 81,
+      "anomaly_score": 0.009925,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 1.905521
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 4513,
+      "source_row_index": 4513,
+      "cluster_id": 81,
+      "anomaly_score": 0.009854,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.305288
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.233438
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 12337,
+      "source_row_index": 12337,
+      "cluster_id": 77,
+      "anomaly_score": 0.009544,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_18",
+          "abs_z_score": 4.878807
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 1.246446
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 0.875021
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 2216,
+      "source_row_index": 2216,
+      "cluster_id": 124,
+      "anomaly_score": 0.009415,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_21",
+          "abs_z_score": 4.924531
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.067589
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.591854
+        },
+        {
+          "feature": "Category_Furniture",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 4657,
+      "source_row_index": 4657,
+      "cluster_id": 77,
+      "anomaly_score": 0.009357,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_18",
+          "abs_z_score": 4.878807
+        },
+        {
+          "feature": "Category_Computers and electric accessories",
+          "abs_z_score": 2.659181
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 2.024371
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 0.875021
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    },
+    {
+      "row_position": 1745,
+      "source_row_index": 1745,
+      "cluster_id": 142,
+      "anomaly_score": 0.00915,
+      "top_deviation_features": [
+        {
+          "feature": "Customer ID_CUST_06",
+          "abs_z_score": 5.014325
+        },
+        {
+          "feature": "Category_Food",
+          "abs_z_score": 2.630355
+        },
+        {
+          "feature": "Quantity",
+          "abs_z_score": 1.633895
+        },
+        {
+          "feature": "Total Spent",
+          "abs_z_score": 0.995491
+        },
+        {
+          "feature": "Category_Electric household essentials",
+          "abs_z_score": 0.380588
+        }
+      ]
+    }
+  ],
+  "feature_drivers": [
+    {
+      "feature": "Customer ID_CUST_21",
+      "mean_abs_z_score": 2.170342
+    },
+    {
+      "feature": "Customer ID_CUST_06",
+      "mean_abs_z_score": 1.460473
+    },
+    {
+      "feature": "Customer ID_CUST_18",
+      "mean_abs_z_score": 1.354881
+    },
+    {
+      "feature": "Category_Computers and electric accessories",
+      "mean_abs_z_score": 1.191458
+    },
+    {
+      "feature": "Total Spent",
+      "mean_abs_z_score": 1.167192
+    },
+    {
+      "feature": "Quantity",
+      "mean_abs_z_score": 1.082862
+    },
+    {
+      "feature": "Category_Food",
+      "mean_abs_z_score": 0.942721
+    },
+    {
+      "feature": "Category_Patisserie",
+      "mean_abs_z_score": 0.831614
+    },
+    {
+      "feature": "Category_Milk Products",
+      "mean_abs_z_score": 0.53172
+    },
+    {
+      "feature": "Category_Electric household essentials",
+      "mean_abs_z_score": 0.505417
+    }
+  ]
+}

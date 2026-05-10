@@ -1,0 +1,9 @@
+{
+  "headline": "Basira has completed supervised model analysis.",
+  "summary": "Basira compared multiple supervised candidates and selected LogisticRegression as the best model for this dataset.",
+  "key_finding": "The strongest detected driver is x2 with 50.51% impact.",
+  "model_performance": "The selected model achieved F1 Macro = 0.9685 and Balanced Accuracy = 0.9667.",
+  "risk_alert": "The results are strong enough for confident decision-support use.",
+  "recommended_action": "Use the dashboard outputs to support transparent decision-making.",
+  "dashboard_note": "Full dashboard can be displayed without caution banner."
+}

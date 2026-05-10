@@ -1,0 +1,38 @@
+[
+  {
+    "feature": "x1",
+    "importance": 3.145313,
+    "impact_pct": 60.23,
+    "direction": "positive",
+    "importance_level": "Critical",
+    "rank": 1,
+    "explanation": "x1 contributes about 60.23% of the available model driver signal."
+  },
+  {
+    "feature": "x2",
+    "importance": 2.055452,
+    "impact_pct": 39.36,
+    "direction": "negative",
+    "importance_level": "Critical",
+    "rank": 2,
+    "explanation": "x2 contributes about 39.36% of the available model driver signal."
+  },
+  {
+    "feature": "group_A",
+    "importance": 0.010613,
+    "impact_pct": 0.2,
+    "direction": "positive",
+    "importance_level": "Low",
+    "rank": 3,
+    "explanation": "group_A contributes about 0.2% of the available model driver signal."
+  },
+  {
+    "feature": "group_B",
+    "importance": 0.010613,
+    "impact_pct": 0.2,
+    "direction": "negative",
+    "importance_level": "Low",
+    "rank": 4,
+    "explanation": "group_B contributes about 0.2% of the available model driver signal."
+  }
+]

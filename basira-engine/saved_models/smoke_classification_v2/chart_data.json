@@ -1,0 +1,142 @@
+{
+  "summary_cards": [
+    {
+      "title": "Best Model",
+      "value": "LogisticRegression"
+    },
+    {
+      "title": "Reliability Input",
+      "value": "metrics"
+    },
+    {
+      "title": "Accuracy",
+      "value": 0.9688
+    },
+    {
+      "title": "F1 Macro",
+      "value": 0.9685
+    },
+    {
+      "title": "Balanced Accuracy",
+      "value": 0.9667
+    },
+    {
+      "title": "Number of Classes",
+      "value": 2
+    }
+  ],
+  "feature_importance_bar": {
+    "chart_type": "horizontal_bar",
+    "labels": [
+      "x2",
+      "x1",
+      "category_C",
+      "category_A",
+      "category_B"
+    ],
+    "values": [
+      50.51,
+      44.95,
+      2.31,
+      1.79,
+      0.44
+    ]
+  },
+  "class_distribution_doughnut": {
+    "labels": [
+      "negative",
+      "positive"
+    ],
+    "values": [
+      15,
+      17
+    ],
+    "chart_type": "doughnut"
+  },
+  "predicted_distribution_doughnut": {
+    "labels": [
+      "negative",
+      "positive"
+    ],
+    "values": [
+      14,
+      18
+    ],
+    "chart_type": "doughnut"
+  },
+  "confusion_matrix_heatmap": {
+    "chart_type": "heatmap",
+    "matrix": [
+      [
+        14,
+        1
+      ],
+      [
+        0,
+        17
+      ]
+    ],
+    "x_labels": [
+      "negative",
+      "positive"
+    ],
+    "y_labels": [
+      "negative",
+      "positive"
+    ]
+  },
+  "metrics_bar": {
+    "chart_type": "bar",
+    "labels": [
+      "Accuracy",
+      "Balanced Accuracy",
+      "F1 Macro",
+      "F1 Weighted",
+      "Precision Weighted",
+      "Recall Weighted"
+    ],
+    "values": [
+      0.9688,
+      0.9667,
+      0.9685,
+      0.9687,
+      0.9705,
+      0.9688
+    ]
+  },
+  "confidence_distribution": {
+    "chart_type": "histogram",
+    "mean_confidence": 0.8451,
+    "labels": [
+      "0.54–0.58",
+      "0.58–0.63",
+      "0.63–0.68",
+      "0.68–0.72",
+      "0.72–0.77",
+      "0.77–0.82",
+      "0.82–0.86",
+      "0.86–0.91",
+      "0.91–0.95",
+      "0.95–1.00"
+    ],
+    "counts": [
+      3,
+      1,
+      1,
+      3,
+      2,
+      4,
+      1,
+      2,
+      2,
+      13
+    ]
+  },
+  "top_errors": [
+    {
+      "row_index": 31,
+      "actual": "negative",
+      "predicted": "positive"
+    }
+  ]
+}

@@ -1,0 +1,804 @@
+{
+  "status": "ready",
+  "task_type": "regression",
+  "target_column": "target",
+  "best_model": "Ridge",
+  "model_leaderboard": [
+    {
+      "model_name": "Ridge",
+      "task_type": "regression",
+      "status": "success",
+      "cv_metrics": {
+        "RMSE": 0.295,
+        "MAE": 0.2456,
+        "R2": 0.9942,
+        "MAPE_pct": 3.0787
+      },
+      "main_score": 0.9942,
+      "rank": 1,
+      "selection_reason": "Selected because it achieved the best validation balance: higher R2 with lower RMSE and MAE."
+    },
+    {
+      "model_name": "LinearRegression",
+      "task_type": "regression",
+      "status": "success",
+      "cv_metrics": {
+        "RMSE": 0.2967,
+        "MAE": 0.2482,
+        "R2": 0.9942,
+        "MAPE_pct": 3.1834
+      },
+      "main_score": 0.9942,
+      "rank": 2,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    },
+    {
+      "model_name": "GradientBoosting",
+      "task_type": "regression",
+      "status": "success",
+      "cv_metrics": {
+        "RMSE": 0.7797,
+        "MAE": 0.5354,
+        "R2": 0.9596,
+        "MAPE_pct": 10.6775
+      },
+      "main_score": 0.9596,
+      "rank": 3,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    },
+    {
+      "model_name": "ExtraTrees",
+      "task_type": "regression",
+      "status": "success",
+      "cv_metrics": {
+        "RMSE": 1.1909,
+        "MAE": 0.6845,
+        "R2": 0.9058,
+        "MAPE_pct": 15.3853
+      },
+      "main_score": 0.9058,
+      "rank": 4,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    },
+    {
+      "model_name": "RandomForest",
+      "task_type": "regression",
+      "status": "success",
+      "cv_metrics": {
+        "RMSE": 1.1948,
+        "MAE": 0.7587,
+        "R2": 0.9052,
+        "MAPE_pct": 15.4129
+      },
+      "main_score": 0.9052,
+      "rank": 5,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    }
+  ],
+  "reliability": {
+    "level": "High",
+    "confidence_score": 99,
+    "reason": "The model explains a strong share of target variation with acceptable relative error.",
+    "caution_notes": [],
+    "recommended_next_step": "Use the dashboard outputs to support transparent decision-making.",
+    "dashboard_confidence": "High",
+    "output_policy": {
+      "show_full_dashboard": true,
+      "allow_decision_language": true,
+      "caution_required": false,
+      "mark_outputs_as_exploratory": false
+    }
+  },
+  "summary_cards": [
+    {
+      "title": "Best Model",
+      "value": "Ridge"
+    },
+    {
+      "title": "Reliability Input",
+      "value": "metrics"
+    },
+    {
+      "title": "RMSE",
+      "value": 0.3331
+    },
+    {
+      "title": "MAE",
+      "value": 0.2676
+    },
+    {
+      "title": "R2",
+      "value": 0.9899
+    },
+    {
+      "title": "MAPE_pct",
+      "value": 3.2288
+    }
+  ],
+  "insights": [
+    {
+      "id": "model_reliability",
+      "title": "Model Reliability",
+      "value": "High",
+      "metric": "The model explains a strong share of target variation with acceptable relative error.",
+      "description": "The model explains a strong share of target variation with acceptable relative error.",
+      "action": "Use the dashboard outputs to support transparent decision-making.",
+      "severity": "success"
+    },
+    {
+      "id": "best_model_selection",
+      "title": "Best Model Selection",
+      "value": "Ridge",
+      "metric": "Selected because it achieved the best validation balance: higher R2 with lower RMSE and MAE.",
+      "description": "Basira compared all suitable supervised models and selected the highest-ranked candidate.",
+      "action": "Review the model leaderboard for alternatives.",
+      "severity": "success"
+    },
+    {
+      "id": "primary_driver",
+      "title": "Primary Feature Driver",
+      "value": "x1",
+      "metric": "60.23% impact",
+      "description": "x1 contributes about 60.23% of the available model driver signal.",
+      "action": "Monitor x1 in the dashboard and RCA stage.",
+      "severity": "success"
+    },
+    {
+      "id": "prediction_error",
+      "title": "Prediction Error",
+      "value": 0.3331,
+      "metric": "RMSE",
+      "description": "RMSE summarizes typical prediction error in the target unit.",
+      "action": "Inspect high residual records for RCA.",
+      "severity": "success"
+    }
+  ],
+  "narrative": {
+    "headline": "Basira has completed supervised model analysis.",
+    "summary": "Basira compared multiple supervised candidates and selected Ridge as the best model for this dataset.",
+    "key_finding": "The strongest detected driver is x1 with 60.23% impact.",
+    "model_performance": "The selected model achieved R2 = 0.9899, RMSE = 0.3331, and MAE = 0.2676.",
+    "risk_alert": "The results are strong enough for confident decision-support use.",
+    "recommended_action": "Use the dashboard outputs to support transparent decision-making.",
+    "dashboard_note": "Full dashboard can be displayed without caution banner."
+  },
+  "chart_recommendations": [
+    {
+      "chart_id": "summary_cards",
+      "chart_type": "kpi_cards",
+      "title": "Regression KPI Summary",
+      "priority": 1,
+      "reason": "Recommended to support overview in the Basira dashboard.",
+      "dashboard_section": "Overview",
+      "exploratory": false
+    },
+    {
+      "chart_id": "feature_importance_bar",
+      "chart_type": "horizontal_bar",
+      "title": "Top Feature Drivers",
+      "priority": 2,
+      "reason": "Recommended to support explainability in the Basira dashboard.",
+      "dashboard_section": "Explainability",
+      "exploratory": false
+    },
+    {
+      "chart_id": "actual_vs_predicted_scatter",
+      "chart_type": "scatter",
+      "title": "Actual vs Predicted",
+      "priority": 3,
+      "reason": "Recommended to support prediction behavior in the Basira dashboard.",
+      "dashboard_section": "Prediction Behavior",
+      "exploratory": false
+    },
+    {
+      "chart_id": "residuals_plot",
+      "chart_type": "scatter",
+      "title": "Residual Analysis",
+      "priority": 4,
+      "reason": "Recommended to support error analysis in the Basira dashboard.",
+      "dashboard_section": "Error Analysis",
+      "exploratory": false
+    },
+    {
+      "chart_id": "target_distribution_histogram",
+      "chart_type": "histogram",
+      "title": "Target Distribution",
+      "priority": 5,
+      "reason": "Recommended to support data profile in the Basira dashboard.",
+      "dashboard_section": "Data Profile",
+      "exploratory": false
+    },
+    {
+      "chart_id": "prediction_error_histogram",
+      "chart_type": "histogram",
+      "title": "Prediction Error Distribution",
+      "priority": 6,
+      "reason": "Recommended to support error analysis in the Basira dashboard.",
+      "dashboard_section": "Error Analysis",
+      "exploratory": false
+    },
+    {
+      "chart_id": "metrics_bar",
+      "chart_type": "bar",
+      "title": "Metrics Comparison",
+      "priority": 7,
+      "reason": "Recommended to support model evaluation in the Basira dashboard.",
+      "dashboard_section": "Model Evaluation",
+      "exploratory": false
+    }
+  ],
+  "chart_data": {
+    "summary_cards": [
+      {
+        "title": "Best Model",
+        "value": "Ridge"
+      },
+      {
+        "title": "Reliability Input",
+        "value": "metrics"
+      },
+      {
+        "title": "RMSE",
+        "value": 0.3331
+      },
+      {
+        "title": "MAE",
+        "value": 0.2676
+      },
+      {
+        "title": "R2",
+        "value": 0.9899
+      },
+      {
+        "title": "MAPE_pct",
+        "value": 3.2288
+      }
+    ],
+    "feature_importance_bar": {
+      "chart_type": "horizontal_bar",
+      "labels": [
+        "x1",
+        "x2",
+        "group_A",
+        "group_B"
+      ],
+      "values": [
+        60.23,
+        39.36,
+        0.2,
+        0.2
+      ]
+    },
+    "actual_vs_predicted_scatter": {
+      "chart_type": "scatter",
+      "points": [
+        {
+          "x": 10.445689,
+          "y": 10.274615
+        },
+        {
+          "x": 10.184344,
+          "y": 10.015912
+        },
+        {
+          "x": 7.504684,
+          "y": 7.513623
+        },
+        {
+          "x": 7.509208,
+          "y": 7.719014
+        },
+        {
+          "x": 10.64588,
+          "y": 11.655487
+        },
+        {
+          "x": 10.620087,
+          "y": 10.294695
+        },
+        {
+          "x": 16.560267,
+          "y": 16.315809
+        },
+        {
+          "x": 11.952431,
+          "y": 12.243547
+        },
+        {
+          "x": 8.00193,
+          "y": 8.437353
+        },
+        {
+          "x": 8.668557,
+          "y": 9.19329
+        },
+        {
+          "x": 12.287963,
+          "y": 11.881911
+        },
+        {
+          "x": 10.157046,
+          "y": 10.315555
+        },
+        {
+          "x": 4.417091,
+          "y": 4.581422
+        },
+        {
+          "x": 5.954635,
+          "y": 6.149731
+        },
+        {
+          "x": 13.42678,
+          "y": 13.450449
+        },
+        {
+          "x": 8.968812,
+          "y": 8.727258
+        },
+        {
+          "x": 12.343082,
+          "y": 11.867137
+        },
+        {
+          "x": 14.249646,
+          "y": 14.352916
+        },
+        {
+          "x": 6.468609,
+          "y": 6.077569
+        },
+        {
+          "x": 6.773357,
+          "y": 6.476656
+        },
+        {
+          "x": 4.154167,
+          "y": 4.363617
+        },
+        {
+          "x": 13.541951,
+          "y": 13.611785
+        },
+        {
+          "x": 13.707279,
+          "y": 13.321864
+        },
+        {
+          "x": 8.846771,
+          "y": 8.659534
+        },
+        {
+          "x": 8.703744,
+          "y": 8.591977
+        },
+        {
+          "x": 1.96163,
+          "y": 1.698718
+        },
+        {
+          "x": 10.778111,
+          "y": 10.712431
+        },
+        {
+          "x": 10.653597,
+          "y": 9.983244
+        },
+        {
+          "x": 12.245653,
+          "y": 12.345335
+        },
+        {
+          "x": 9.256198,
+          "y": 9.028459
+        },
+        {
+          "x": 15.985134,
+          "y": 15.800829
+        },
+        {
+          "x": 8.286583,
+          "y": 8.528758
+        }
+      ]
+    },
+    "residuals_plot": {
+      "chart_type": "scatter",
+      "points": [
+        {
+          "x": 10.274615,
+          "y": 0.171074
+        },
+        {
+          "x": 10.015912,
+          "y": 0.168432
+        },
+        {
+          "x": 7.513623,
+          "y": -0.008939
+        },
+        {
+          "x": 7.719014,
+          "y": -0.209806
+        },
+        {
+          "x": 11.655487,
+          "y": -1.009607
+        },
+        {
+          "x": 10.294695,
+          "y": 0.325393
+        },
+        {
+          "x": 16.315809,
+          "y": 0.244458
+        },
+        {
+          "x": 12.243547,
+          "y": -0.291117
+        },
+        {
+          "x": 8.437353,
+          "y": -0.435423
+        },
+        {
+          "x": 9.19329,
+          "y": -0.524733
+        },
+        {
+          "x": 11.881911,
+          "y": 0.406052
+        },
+        {
+          "x": 10.315555,
+          "y": -0.158509
+        },
+        {
+          "x": 4.581422,
+          "y": -0.164331
+        },
+        {
+          "x": 6.149731,
+          "y": -0.195095
+        },
+        {
+          "x": 13.450449,
+          "y": -0.023669
+        },
+        {
+          "x": 8.727258,
+          "y": 0.241554
+        },
+        {
+          "x": 11.867137,
+          "y": 0.475945
+        },
+        {
+          "x": 14.352916,
+          "y": -0.10327
+        },
+        {
+          "x": 6.077569,
+          "y": 0.39104
+        },
+        {
+          "x": 6.476656,
+          "y": 0.296701
+        },
+        {
+          "x": 4.363617,
+          "y": -0.20945
+        },
+        {
+          "x": 13.611785,
+          "y": -0.069835
+        },
+        {
+          "x": 13.321864,
+          "y": 0.385415
+        },
+        {
+          "x": 8.659534,
+          "y": 0.187237
+        },
+        {
+          "x": 8.591977,
+          "y": 0.111767
+        },
+        {
+          "x": 1.698718,
+          "y": 0.262912
+        },
+        {
+          "x": 10.712431,
+          "y": 0.065679
+        },
+        {
+          "x": 9.983244,
+          "y": 0.670353
+        },
+        {
+          "x": 12.345335,
+          "y": -0.099682
+        },
+        {
+          "x": 9.028459,
+          "y": 0.227739
+        },
+        {
+          "x": 15.800829,
+          "y": 0.184305
+        },
+        {
+          "x": 8.528758,
+          "y": -0.242175
+        }
+      ]
+    },
+    "target_distribution_histogram": {
+      "chart_type": "histogram",
+      "labels": [
+        "1.96–3.42",
+        "3.42–4.88",
+        "4.88–6.34",
+        "6.34–7.80",
+        "7.80–9.26",
+        "9.26–10.72",
+        "10.72–12.18",
+        "12.18–13.64",
+        "13.64–15.10",
+        "15.10–16.56"
+      ],
+      "counts": [
+        1,
+        2,
+        1,
+        4,
+        7,
+        6,
+        2,
+        5,
+        2,
+        2
+      ]
+    },
+    "prediction_error_histogram": {
+      "chart_type": "histogram",
+      "labels": [
+        "0.01–0.11",
+        "0.11–0.21",
+        "0.21–0.31",
+        "0.31–0.41",
+        "0.41–0.51",
+        "0.51–0.61",
+        "0.61–0.71",
+        "0.71–0.81",
+        "0.81–0.91",
+        "0.91–1.01"
+      ],
+      "counts": [
+        6,
+        8,
+        9,
+        4,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    "metrics_bar": {
+      "chart_type": "bar",
+      "labels": [
+        "R2",
+        "RMSE",
+        "MAE",
+        "MAPE_pct"
+      ],
+      "values": [
+        0.9899,
+        0.3331,
+        0.2676,
+        3.2288
+      ]
+    },
+    "top_high_error_records": [
+      {
+        "row_index": 4,
+        "actual": 10.64588,
+        "predicted": 11.655487,
+        "absolute_error": 1.009607
+      },
+      {
+        "row_index": 27,
+        "actual": 10.653597,
+        "predicted": 9.983244,
+        "absolute_error": 0.670353
+      },
+      {
+        "row_index": 9,
+        "actual": 8.668557,
+        "predicted": 9.19329,
+        "absolute_error": 0.524733
+      },
+      {
+        "row_index": 16,
+        "actual": 12.343082,
+        "predicted": 11.867137,
+        "absolute_error": 0.475945
+      },
+      {
+        "row_index": 8,
+        "actual": 8.00193,
+        "predicted": 8.437353,
+        "absolute_error": 0.435423
+      },
+      {
+        "row_index": 10,
+        "actual": 12.287963,
+        "predicted": 11.881911,
+        "absolute_error": 0.406052
+      },
+      {
+        "row_index": 18,
+        "actual": 6.468609,
+        "predicted": 6.077569,
+        "absolute_error": 0.39104
+      },
+      {
+        "row_index": 22,
+        "actual": 13.707279,
+        "predicted": 13.321864,
+        "absolute_error": 0.385415
+      },
+      {
+        "row_index": 5,
+        "actual": 10.620087,
+        "predicted": 10.294695,
+        "absolute_error": 0.325393
+      },
+      {
+        "row_index": 19,
+        "actual": 6.773357,
+        "predicted": 6.476656,
+        "absolute_error": 0.296701
+      }
+    ]
+  },
+  "rca_ready": {
+    "status": "ready",
+    "task_type": "regression",
+    "target_column": "target",
+    "primary_driver": {
+      "feature": "x1",
+      "importance": 3.145313,
+      "impact_pct": 60.23,
+      "direction": "positive",
+      "importance_level": "Critical",
+      "rank": 1,
+      "explanation": "x1 contributes about 60.23% of the available model driver signal."
+    },
+    "top_drivers": [
+      {
+        "feature": "x1",
+        "importance": 3.145313,
+        "impact_pct": 60.23,
+        "direction": "positive",
+        "importance_level": "Critical",
+        "rank": 1,
+        "explanation": "x1 contributes about 60.23% of the available model driver signal."
+      },
+      {
+        "feature": "x2",
+        "importance": 2.055452,
+        "impact_pct": 39.36,
+        "direction": "negative",
+        "importance_level": "Critical",
+        "rank": 2,
+        "explanation": "x2 contributes about 39.36% of the available model driver signal."
+      },
+      {
+        "feature": "group_A",
+        "importance": 0.010613,
+        "impact_pct": 0.2,
+        "direction": "positive",
+        "importance_level": "Low",
+        "rank": 3,
+        "explanation": "group_A contributes about 0.2% of the available model driver signal."
+      },
+      {
+        "feature": "group_B",
+        "importance": 0.010613,
+        "impact_pct": 0.2,
+        "direction": "negative",
+        "importance_level": "Low",
+        "rank": 4,
+        "explanation": "group_B contributes about 0.2% of the available model driver signal."
+      }
+    ],
+    "error_cases": [
+      {
+        "row_index": 4,
+        "actual": 10.64588,
+        "predicted": 11.655487,
+        "residual": -1.009607
+      },
+      {
+        "row_index": 27,
+        "actual": 10.653597,
+        "predicted": 9.983244,
+        "residual": 0.670353
+      },
+      {
+        "row_index": 9,
+        "actual": 8.668557,
+        "predicted": 9.19329,
+        "residual": -0.524733
+      },
+      {
+        "row_index": 16,
+        "actual": 12.343082,
+        "predicted": 11.867137,
+        "residual": 0.475945
+      },
+      {
+        "row_index": 8,
+        "actual": 8.00193,
+        "predicted": 8.437353,
+        "residual": -0.435423
+      },
+      {
+        "row_index": 10,
+        "actual": 12.287963,
+        "predicted": 11.881911,
+        "residual": 0.406052
+      },
+      {
+        "row_index": 18,
+        "actual": 6.468609,
+        "predicted": 6.077569,
+        "residual": 0.39104
+      },
+      {
+        "row_index": 22,
+        "actual": 13.707279,
+        "predicted": 13.321864,
+        "residual": 0.385415
+      },
+      {
+        "row_index": 5,
+        "actual": 10.620087,
+        "predicted": 10.294695,
+        "residual": 0.325393
+      },
+      {
+        "row_index": 19,
+        "actual": 6.773357,
+        "predicted": 6.476656,
+        "residual": 0.296701
+      }
+    ],
+    "residual_summary": {
+      "mean": 0.03345,
+      "std": 0.331415,
+      "max_abs_error": 1.009607
+    },
+    "class_error_summary": {},
+    "recommended_rca_focus": [
+      "Investigate records with the highest residuals and compare them against top feature drivers."
+    ]
+  },
+  "warnings": [],
+  "rendering_notes": {
+    "preferred_layout": "supervised_regression_dashboard",
+    "show_caution_banner": false,
+    "allow_export_report": true,
+    "supports_multiple_charts": true
+  }
+}

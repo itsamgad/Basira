@@ -1,0 +1,123 @@
+{
+  "status": "ready",
+  "task_type": "regression",
+  "target_column": "target",
+  "primary_driver": {
+    "feature": "x1",
+    "importance": 3.145313,
+    "impact_pct": 60.23,
+    "direction": "positive",
+    "importance_level": "Critical",
+    "rank": 1,
+    "explanation": "x1 contributes about 60.23% of the available model driver signal."
+  },
+  "top_drivers": [
+    {
+      "feature": "x1",
+      "importance": 3.145313,
+      "impact_pct": 60.23,
+      "direction": "positive",
+      "importance_level": "Critical",
+      "rank": 1,
+      "explanation": "x1 contributes about 60.23% of the available model driver signal."
+    },
+    {
+      "feature": "x2",
+      "importance": 2.055452,
+      "impact_pct": 39.36,
+      "direction": "negative",
+      "importance_level": "Critical",
+      "rank": 2,
+      "explanation": "x2 contributes about 39.36% of the available model driver signal."
+    },
+    {
+      "feature": "group_A",
+      "importance": 0.010613,
+      "impact_pct": 0.2,
+      "direction": "positive",
+      "importance_level": "Low",
+      "rank": 3,
+      "explanation": "group_A contributes about 0.2% of the available model driver signal."
+    },
+    {
+      "feature": "group_B",
+      "importance": 0.010613,
+      "impact_pct": 0.2,
+      "direction": "negative",
+      "importance_level": "Low",
+      "rank": 4,
+      "explanation": "group_B contributes about 0.2% of the available model driver signal."
+    }
+  ],
+  "error_cases": [
+    {
+      "row_index": 4,
+      "actual": 10.64588,
+      "predicted": 11.655487,
+      "residual": -1.009607
+    },
+    {
+      "row_index": 27,
+      "actual": 10.653597,
+      "predicted": 9.983244,
+      "residual": 0.670353
+    },
+    {
+      "row_index": 9,
+      "actual": 8.668557,
+      "predicted": 9.19329,
+      "residual": -0.524733
+    },
+    {
+      "row_index": 16,
+      "actual": 12.343082,
+      "predicted": 11.867137,
+      "residual": 0.475945
+    },
+    {
+      "row_index": 8,
+      "actual": 8.00193,
+      "predicted": 8.437353,
+      "residual": -0.435423
+    },
+    {
+      "row_index": 10,
+      "actual": 12.287963,
+      "predicted": 11.881911,
+      "residual": 0.406052
+    },
+    {
+      "row_index": 18,
+      "actual": 6.468609,
+      "predicted": 6.077569,
+      "residual": 0.39104
+    },
+    {
+      "row_index": 22,
+      "actual": 13.707279,
+      "predicted": 13.321864,
+      "residual": 0.385415
+    },
+    {
+      "row_index": 5,
+      "actual": 10.620087,
+      "predicted": 10.294695,
+      "residual": 0.325393
+    },
+    {
+      "row_index": 19,
+      "actual": 6.773357,
+      "predicted": 6.476656,
+      "residual": 0.296701
+    }
+  ],
+  "residual_summary": {
+    "mean": 0.03345,
+    "std": 0.331415,
+    "max_abs_error": 1.009607
+  },
+  "class_error_summary": {},
+  "recommended_rca_focus": [
+    "Investigate records with the highest residuals and compare them against top feature drivers."
+  ]
+}

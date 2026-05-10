@@ -1,0 +1,125 @@
+{
+  "project": "Basira",
+  "phase": "Phase 3 — Unsupervised",
+  "preparation_summary": {
+    "rows_used": 11971,
+    "feature_columns": [
+      "Category",
+      "Quantity",
+      "Total Spent"
+    ],
+    "encoded_categoricals": [
+      "Category"
+    ],
+    "dropped_id_like": [
+      "Transaction ID",
+      "Customer ID"
+    ],
+    "dropped_date_cols": [
+      "Transaction Date"
+    ]
+  },
+  "pca": {
+    "applied": true,
+    "n_components": 3,
+    "variance_ratio": [
+      0.5712,
+      0.3332,
+      0.0956
+    ]
+  },
+  "best_model": {
+    "algorithm": "KMeans",
+    "n_clusters": 3,
+    "silhouette": 0.3338,
+    "davies_bouldin": 1.0133
+  },
+  "all_models": [
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 2,
+      "silhouette": 0.2636,
+      "davies_bouldin": 1.5728
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 3,
+      "silhouette": 0.3338,
+      "davies_bouldin": 1.0133
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 4,
+      "silhouette": 0.323,
+      "davies_bouldin": 1.0364
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 5,
+      "silhouette": 0.3212,
+      "davies_bouldin": 0.9767
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 6,
+      "silhouette": 0.3194,
+      "davies_bouldin": 0.9846
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 7,
+      "silhouette": 0.308,
+      "davies_bouldin": 1.066
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 8,
+      "silhouette": 0.3101,
+      "davies_bouldin": 1.0539
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 9,
+      "silhouette": 0.2911,
+      "davies_bouldin": 1.1602
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 10,
+      "silhouette": 0.3036,
+      "davies_bouldin": 1.0412
+    }
+  ],
+  "cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "size": 3762,
+      "size_pct": 31.43,
+      "feature_means": {
+        "Quantity": 3.8551,
+        "Total Spent": 76.8359
+      },
+      "label": "High-Total Spent / Low-Quantity"
+    },
+    {
+      "cluster_id": 1,
+      "size": 3963,
+      "size_pct": 33.11,
+      "feature_means": {
+        "Quantity": 4.0606,
+        "Total Spent": 74.4058
+      },
+      "label": "High-Total Spent / Low-Quantity"
+    },
+    {
+      "cluster_id": 2,
+      "size": 4246,
+      "size_pct": 35.47,
+      "feature_means": {
+        "Quantity": 8.4034,
+        "Total Spent": 228.0133
+      },
+      "label": "High-Total Spent / Low-Quantity"
+    }
+  ]
+}

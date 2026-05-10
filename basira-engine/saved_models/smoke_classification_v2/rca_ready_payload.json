@@ -1,0 +1,77 @@
+{
+  "status": "ready",
+  "task_type": "classification",
+  "target_column": "label",
+  "primary_driver": {
+    "feature": "x2",
+    "importance": 3.082476,
+    "impact_pct": 50.51,
+    "direction": "positive",
+    "importance_level": "Critical",
+    "rank": 1,
+    "explanation": "x2 contributes about 50.51% of the available model driver signal."
+  },
+  "top_drivers": [
+    {
+      "feature": "x2",
+      "importance": 3.082476,
+      "impact_pct": 50.51,
+      "direction": "positive",
+      "importance_level": "Critical",
+      "rank": 1,
+      "explanation": "x2 contributes about 50.51% of the available model driver signal."
+    },
+    {
+      "feature": "x1",
+      "importance": 2.743724,
+      "impact_pct": 44.95,
+      "direction": "positive",
+      "importance_level": "Critical",
+      "rank": 2,
+      "explanation": "x1 contributes about 44.95% of the available model driver signal."
+    },
+    {
+      "feature": "category_C",
+      "importance": 0.141107,
+      "impact_pct": 2.31,
+      "direction": "negative",
+      "importance_level": "Low",
+      "rank": 3,
+      "explanation": "category_C contributes about 2.31% of the available model driver signal."
+    },
+    {
+      "feature": "category_A",
+      "importance": 0.108994,
+      "impact_pct": 1.79,
+      "direction": "positive",
+      "importance_level": "Low",
+      "rank": 4,
+      "explanation": "category_A contributes about 1.79% of the available model driver signal."
+    },
+    {
+      "feature": "category_B",
+      "importance": 0.026996,
+      "impact_pct": 0.44,
+      "direction": "positive",
+      "importance_level": "Low",
+      "rank": 5,
+      "explanation": "category_B contributes about 0.44% of the available model driver signal."
+    }
+  ],
+  "error_cases": [],
+  "residual_summary": {},
+  "class_error_summary": {
+    "most_confused_pairs": [
+      {
+        "count": 1,
+        "actual": "negative",
+        "predicted": "positive"
+      }
+    ],
+    "weakest_class": "negative"
+  },
+  "recommended_rca_focus": [
+    "Investigate why negative is confused with positive.",
+    "Review weak performance for class negative."
+  ]
+}

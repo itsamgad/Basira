@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basira Chart Management Studio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0e27;
+    --bg-secondary: #141b3a;
+    --bg-card: rgba(20, 27, 58, 0.9);
+    --accent: #00d4ff;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ff3366;
+    --text: #e8eaf0;
+    --text-dim: #8b92b5;
+    --border: rgba(139, 146, 181, 0.1);
+    --purple: #8b5cf6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container { max-width: 1600px; margin: 0 auto; }
+
+.header {
+    background: var(--bg-card);
+    padding: 25px 30px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title { font-size: 1.8rem; font-weight: 800; color: var(--accent); margin-bottom: 5px; }
+.header-subtitle { color: var(--text-dim); font-size: 0.9rem; }
+.header-actions { display: flex; gap: 12px; }
+
+.btn { padding: 12px 24px; border-radius: 12px; border: none; font-weight: 700; cursor: pointer; transition: all 0.3s; font-family: inherit; font-size: 0.9rem; }
+.btn-success { background: var(--success); color: white; box-shadow: 0 4px 15px rgba(34,197,94,0.3); }
+.btn-success:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(34,197,94,0.4); }
+.btn-secondary { background: rgba(255,255,255,0.05); border: 1px solid var(--border); color: var(--text); }
+.btn-secondary:hover { background: rgba(255,255,255,0.1); }
+.btn-warning { background: var(--warning); color: white; }
+.btn-danger { background: var(--danger); color: white; }
+
+/* Demo Mode Banner */
+.demo-banner {
+    background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(245,158,11,0.1));
+    border: 2px solid var(--warning);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: none;
+}
+.demo-banner.active { display: block; }
+.demo-banner-title { font-weight: 800; color: var(--warning); font-size: 1.1rem; margin-bottom: 8px; }
+.demo-banner-text { color: var(--text-dim); }
+
+/* Charts Grid */
+.charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 25px; }
+
+.chart-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 25px; transition: all 0.3s; }
+.chart-card:hover { border-color: var(--accent); box-shadow: 0 8px 30px rgba(0,212,255,0.15); }
+
+.chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+
+.chart-title-input { font-size: 1.2rem; font-weight: 700; color: var(--accent); background: transparent; border: none; border-bottom: 2px solid transparent; padding: 5px 0; flex: 1; transition: border-color 0.3s; font-family: inherit; }
+.chart-title-input:focus { outline: none; border-bottom-color: var(--accent); }
+
+.chart-actions { display: flex; gap: 8px; }
+
+.icon-btn { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 8px 12px; border-radius: 8px; cursor: pointer; color: var(--text); font-size: 0.85rem; transition: all 0.2s; font-family: inherit; }
+.icon-btn:hover { background: rgba(255,255,255,0.1); border-color: var(--accent); }
+.icon-btn-danger:hover { background: var(--danger); border-color: var(--danger); }
+
+.chart-preview { height: 300px; margin: 20px 0; position: relative; }
+
+.control-panel { background: rgba(0,0,0,0.3); padding: 20px; border-radius: 12px; margin-top: 20px; }
+.control-row { display: flex; gap: 15px; margin-bottom: 15px; align-items: center; }
+.control-row:last-child { margin-bottom: 0; }
+.control-label { min-width: 130px; font-weight: 600; font-size: 0.9rem; color: var(--text-dim); }
+.control-row select, .control-row input[type="text"] {
+    flex: 1; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px;
+    background: rgba(255,255,255,0.05); color: var(--text); font-family: inherit; font-size: 0.9rem; transition: border-color 0.3s;
+}
+.control-row select:focus, .control-row input[type="text"]:focus { outline: none; border-color: var(--accent); }
+
+/* Toggle Switch */
+.toggle-switch { position: relative; width: 50px; height: 26px; background: rgba(255,255,255,0.1); border-radius: 13px; cursor: pointer; transition: background 0.3s; }
+.toggle-switch.active { background: var(--accent); }
+.toggle-slider { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; background: white; border-radius: 50%; transition: transform 0.3s; }
+.toggle-switch.active .toggle-slider { transform: translateX(24px); }
+
+/* Toast */
+#toast {
+    position: fixed; top: 20px; right: 20px;
+    background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+    padding: 16px 24px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    display: none; z-index: 9999; font-weight: 600;
+}
+#toast.show { display: block; animation: slideIn 0.3s ease-out; }
+@keyframes slideIn { from { transform: translateX(400px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* Empty State */
+.empty-state { text-align: center; padding: 60px 20px; color: var(--text-dim); }
+.empty-state-icon { font-size: 4rem; margin-bottom: 20px; opacity: 0.5; }
+.empty-state-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+.empty-state-text { font-size: 1rem; line-height: 1.6; }
+
+/* Unsupported chart fallback */
+.fallback-msg { text-align: center; padding: 40px 20px; color: var(--text-dim); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+
+<div id="toast"></div>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <div class="header-title">Chart Management Studio</div>
+            <div class="header-subtitle">Customize and configure your analysis visualizations</div>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-secondary" onclick="resetChanges()">Reset</button>
+            <button class="btn btn-success" onclick="saveAndSync()">Save & Sync</button>
+            <button class="btn btn-secondary" onclick="window.close()">Close</button>
+        </div>
+    </div>
+
+    <!-- Demo Mode Banner -->
+    <div class="demo-banner" id="demo-banner">
+        <div class="demo-banner-title">DEMO MODE</div>
+        <div class="demo-banner-text">
+            No analysis data found. Using sample data for demonstration.
+            Run an analysis in the main application to edit real charts.
+        </div>
+    </div>
+
+    <!-- Charts Grid -->
+    <div id="charts-grid" class="charts-grid"></div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="empty-state" style="display:none;">
+        <div class="empty-state-icon">📊</div>
+        <div class="empty-state-title">No Charts Available</div>
+        <div class="empty-state-text">
+            Run an analysis in the main application first, then return here to customize your charts.
+        </div>
+    </div>
+</div>
+
+<script>
+// ============================================================
+// State
+// ============================================================
+let charts        = {};
+let chartConfigs  = {};
+let analysisData  = null;
+let isDemoMode    = false;
+let hasUnsavedChanges = false;
+
+// ============================================================
+// Constants
+// ============================================================
+
+const DEMO_DATA = {
+    xai_report: [
+        { feature: 'Unit_Cost',        impact: 35.2, impact_pct: 35.2 },
+        { feature: 'Sales_Amount',     impact: 28.5, impact_pct: 28.5 },
+        { feature: 'Quantity',         impact: 18.3, impact_pct: 18.3 },
+        { feature: 'Discount_Rate',    impact: 12.1, impact_pct: 12.1 },
+        { feature: 'Customer_Segment', impact: 5.9,  impact_pct: 5.9  },
+    ],
+    target_column: 'Profit',
+};
+
+const CHART_TYPES = ['bar', 'horizontalBar', 'line', 'radar', 'doughnut', 'polarArea', 'pie', 'scatter'];
+
+const COLOR_SCHEMES = {
+    'Basira Cyan': {
+        bg:     ['rgba(0,212,255,0.7)', 'rgba(0,212,255,0.6)', 'rgba(0,212,255,0.5)', 'rgba(0,212,255,0.4)', 'rgba(0,212,255,0.35)'],
+        border: 'rgba(0,212,255,1)',
+    },
+    'Basira Purple': {
+        bg:     ['rgba(139,92,246,0.7)', 'rgba(139,92,246,0.6)', 'rgba(139,92,246,0.5)', 'rgba(139,92,246,0.4)', 'rgba(139,92,246,0.35)'],
+        border: 'rgba(139,92,246,1)',
+    },
+    'Success Green': {
+        bg:     ['rgba(34,197,94,0.7)', 'rgba(34,197,94,0.6)', 'rgba(34,197,94,0.5)', 'rgba(34,197,94,0.4)', 'rgba(34,197,94,0.35)'],
+        border: 'rgba(34,197,94,1)',
+    },
+    'Warning Orange': {
+        bg:     ['rgba(245,158,11,0.7)', 'rgba(245,158,11,0.6)', 'rgba(245,158,11,0.5)', 'rgba(245,158,11,0.4)', 'rgba(245,158,11,0.35)'],
+        border: 'rgba(245,158,11,1)',
+    },
+    'Gradient Multi': {
+        bg: [
+            'rgba(0,212,255,0.75)',  'rgba(139,92,246,0.75)',
+            'rgba(34,197,94,0.75)', 'rgba(245,158,11,0.75)',
+            'rgba(255,51,102,0.75)', 'rgba(99,102,241,0.75)',
+        ],
+        border: 'rgba(0,212,255,1)',
+    },
+};
+
+// ============================================================
+// Feature importance normalisation (mirrors charts_engine.py)
+// ============================================================
+
+function normalizeFeatureImportance(raw) {
+    if (!Array.isArray(raw)) return [];
+    return raw.map(f => {
+        if (!f || typeof f !== 'object') return null;
+        const val = parseFloat(f.impact_pct ?? f.impact ?? f.importance ?? 0) || 0;
+        return {
+            feature:    String(f.feature || f.name || 'unknown'),
+            impact:     val,
+            impact_pct: val,
+            importance: val,
+        };
+    }).filter(Boolean);
+}
+
+/**
+ * Extract feature importance from any payload shape.
+ * Checks all known locations in priority order.
+ */
+function extractFeatureImportance(data) {
+    if (!data) return [];
+    // New: dashboard_payload.feature_importance
+    if (data.dashboard_payload && Array.isArray(data.dashboard_payload.feature_importance)) {
+        return normalizeFeatureImportance(data.dashboard_payload.feature_importance);
+    }
+    // New: top-level feature_importance
+    if (Array.isArray(data.feature_importance)) {
+        return normalizeFeatureImportance(data.feature_importance);
+    }
+    // Old: xai_report
+    if (Array.isArray(data.xai_report)) {
+        return normalizeFeatureImportance(data.xai_report);
+    }
+    return [];
+}
+
+/**
+ * Extract chart recommendations from any payload shape.
+ */
+function extractChartRecommendations(data) {
+    if (!data) return [];
+    // New: dashboard_payload.chart_recommendations
+    if (data.dashboard_payload && Array.isArray(data.dashboard_payload.chart_recommendations)) {
+        return data.dashboard_payload.chart_recommendations;
+    }
+    // New: top-level chart_recommendations
+    if (Array.isArray(data.chart_recommendations)) {
+        return data.chart_recommendations;
+    }
+    // New: dashboard_payload.chart_data (not a list, but check)
+    if (data.dashboard_payload && Array.isArray(data.dashboard_payload.chart_data)) {
+        return data.dashboard_payload.chart_data;
+    }
+    return [];
+}
+
+// ============================================================
+// Initialisation
+// ============================================================
+
+function init() {
+    console.log('[Chart Studio] Initialising...');
+
+    // Try all known localStorage keys in priority order
+    const keys = ['basiraCurrentData', 'basira_analysis_result'];
+    let loaded  = false;
+
+    for (const key of keys) {
+        const raw = localStorage.getItem(key);
+        if (!raw) continue;
+        try {
+            const parsed = JSON.parse(raw);
+            if (parsed && typeof parsed === 'object') {
+                analysisData = parsed;
+                isDemoMode   = false;
+                loaded       = true;
+                console.log(`[Chart Studio] Loaded data from localStorage key: ${key}`);
+                document.getElementById('demo-banner').classList.remove('active');
+                break;
+            }
+        } catch(e) {
+            console.warn(`[Chart Studio] Failed to parse key "${key}":`, e);
+        }
+    }
+
+    if (!loaded) {
+        console.log('[Chart Studio] No stored analysis data found — entering demo mode');
+        useDemoMode();
+    }
+
+    // Determine which charts to display
+    const recs = extractChartRecommendations(analysisData);
+
+    if (recs.length > 0) {
+        createChartsFromRecommendations(recs, analysisData);
+    } else {
+        // Fall back to building from feature importance
+        const featureImp = extractFeatureImportance(analysisData);
+        if (featureImp.length > 0) {
+            const syntheticRecs = buildSyntheticRecs(featureImp);
+            createChartsFromRecommendations(syntheticRecs, analysisData);
+        } else if (isDemoMode) {
+            createDemoCharts();
+        } else {
+            showEmptyState();
+        }
+    }
+}
+
+function useDemoMode() {
+    isDemoMode   = true;
+    analysisData = DEMO_DATA;
+    document.getElementById('demo-banner').classList.add('active');
+}
+
+function showEmptyState() {
+    document.getElementById('empty-state').style.display = 'block';
+}
+
+/**
+ * Synthesise basic chart recommendations from feature importance when no
+ * chart_recommendations are present in the payload.
+ */
+function buildSyntheticRecs(featureImp) {
+    const feats = featureImp.map(f => f.feature);
+    const vals  = featureImp.map(f => f.impact);
+    return [
+        {
+            id: 'impact_ranking', type: 'horizontalBar',
+            title: 'Feature Impact Ranking',
+            reason: 'Synthesised from feature importance data',
+            chartData: 'impact', data_source: 'impact',
+            labels: feats,
+            datasets: [{
+                label: 'Impact %', data: vals,
+                backgroundColor: vals.map((_, i) => `rgba(0,212,255,${Math.max(0.3, 0.9 - i * 0.08)})`),
+                borderColor: 'rgba(0,212,255,1)', borderWidth: 2,
+            }],
+        },
+        {
+            id: 'weight_allocation', type: 'doughnut',
+            title: 'Decision Weight Allocation',
+            reason: 'Shows signal concentration across top features',
+            chartData: 'impact', data_source: 'impact',
+            labels: feats.slice(0, 6),
+            datasets: [{
+                label: 'Weight', data: vals.slice(0, 6),
+                backgroundColor: [
+                    'rgba(0,212,255,0.85)', 'rgba(139,92,246,0.85)', 'rgba(34,197,94,0.85)',
+                    'rgba(245,158,11,0.85)', 'rgba(255,51,102,0.85)', 'rgba(99,102,241,0.85)',
+                ],
+                borderColor: '#0a0e27', borderWidth: 2,
+            }],
+        },
+    ];
+}
+
+// ============================================================
+// Chart card creation
+// ============================================================
+
+function createChartsFromRecommendations(recommendations, data) {
+    const grid = document.getElementById('charts-grid');
+    grid.innerHTML = '';
+    console.log(`[Chart Studio] Creating ${recommendations.length} chart cards`);
+    recommendations.forEach((rec, idx) => {
+        const chartId = `chart-${idx}`;
+        createChartCard(chartId, rec, data);
+    });
+}
+
+function createDemoCharts() {
+    const demoRecs = [
+        { id: 'demo-0', title: 'Feature Impact Ranking',    type: 'horizontalBar', chartData: 'impact', data_source: 'impact' },
+        { id: 'demo-1', title: 'Decision Weight Allocation', type: 'doughnut',      chartData: 'impact', data_source: 'impact' },
+        { id: 'demo-2', title: 'Impact Decay Curve',         type: 'line',          chartData: 'impact', data_source: 'impact' },
+    ];
+    createChartsFromRecommendations(demoRecs, DEMO_DATA);
+}
+
+function createChartCard(chartId, recommendation, data) {
+    const grid = document.getElementById('charts-grid');
+    const card = document.createElement('div');
+    card.className = 'chart-card';
+    card.id        = `card-${chartId}`;
+
+    card.innerHTML = `
+        <div class="chart-header">
+            <input type="text"
+                   class="chart-title-input"
+                   id="title-${chartId}"
+                   value="${escHtml(recommendation.title || 'Chart')}"
+                   onchange="markChanged(); updateChart('${chartId}')">
+            <div class="chart-actions">
+                <button class="icon-btn icon-btn-danger" onclick="removeChart('${chartId}')">Remove</button>
+            </div>
+        </div>
+
+        <div class="chart-preview">
+            <canvas id="${chartId}"></canvas>
+        </div>
+
+        <div class="control-panel">
+            <div class="control-row">
+                <span class="control-label">Chart Type</span>
+                <select id="type-${chartId}" onchange="markChanged(); updateChart('${chartId}')">
+                    ${CHART_TYPES.map(t =>
+                        `<option value="${t}" ${t === (recommendation.type || 'bar') ? 'selected' : ''}>${t}</option>`
+                    ).join('')}
+                </select>
+            </div>
+            <div class="control-row">
+                <span class="control-label">Color Scheme</span>
+                <select id="color-${chartId}" onchange="markChanged(); updateChart('${chartId}')">
+                    ${Object.keys(COLOR_SCHEMES).map(s =>
+                        `<option value="${s}" ${s === 'Basira Cyan' ? 'selected' : ''}>${s}</option>`
+                    ).join('')}
+                </select>
+            </div>
+            <div class="control-row">
+                <span class="control-label">Show Legend</span>
+                <div class="toggle-switch" id="legend-${chartId}"
+                     onclick="toggleSwitch('legend-${chartId}'); markChanged(); updateChart('${chartId}')">
+                    <div class="toggle-slider"></div>
+                </div>
+            </div>
+            <div class="control-row">
+                <span class="control-label">Animation</span>
+                <div class="toggle-switch active" id="animation-${chartId}"
+                     onclick="toggleSwitch('animation-${chartId}'); markChanged(); updateChart('${chartId}')">
+                    <div class="toggle-slider"></div>
+                </div>
+            </div>
+        </div>`;
+
+    grid.appendChild(card);
+
+    // Store config for this chart
+    chartConfigs[chartId] = { recommendation, data };
+
+    // Draw chart after a short delay (allows DOM to settle)
+    setTimeout(() => updateChart(chartId), 120);
+}
+
+// ============================================================
+// Chart update
+// ============================================================
+
+function updateChart(chartId) {
+    const titleEl     = document.getElementById(`title-${chartId}`);
+    const typeEl      = document.getElementById(`type-${chartId}`);
+    const colorEl     = document.getElementById(`color-${chartId}`);
+    const legendEl    = document.getElementById(`legend-${chartId}`);
+    const animationEl = document.getElementById(`animation-${chartId}`);
+    if (!titleEl || !typeEl || !colorEl || !legendEl || !animationEl) return;
+
+    const type        = typeEl.value;
+    const colorScheme = colorEl.value;
+    const showLegend  = legendEl.classList.contains('active');
+    const doAnimate   = animationEl.classList.contains('active');
+
+    const cfg = chartConfigs[chartId];
+    if (!cfg) return;
+
+    const rec         = cfg.recommendation;
+    const data        = cfg.data;
+    const dsrc        = rec.chartData || rec.data_source || 'impact';
+    const colors      = COLOR_SCHEMES[colorScheme] || COLOR_SCHEMES['Basira Cyan'];
+
+    // Resolve chart data
+    let chartData = null;
+
+    // 1. Prefer pre-embedded datasets from the engine recommendation
+    if (rec.labels && rec.datasets) {
+        const recoloured = recolourDatasets(rec.datasets, colors, type);
+        chartData = { labels: rec.labels, datasets: recoloured };
+    }
+    // 2. Fall back to feature importance from the payload
+    else {
+        const featureImp = extractFeatureImportance(data);
+        if (featureImp.length > 0) {
+            const feats = featureImp.map(f => f.feature);
+            const vals  = featureImp.map(f => f.impact);
+            if (dsrc === 'cumulative') {
+                let sum = 0;
+                const cum = vals.map(v => { sum += v; return parseFloat(sum.toFixed(2)); });
+                chartData = {
+                    labels: feats,
+                    datasets: [{
+                        label: 'Cumulative Impact %', data: cum,
+                        backgroundColor: Array.isArray(colors.bg) ? colors.bg[0] : colors.bg,
+                        borderColor: colors.border, borderWidth: 3, fill: type === 'line',
+                    }],
+                };
+            } else {
+                const bgColors = Array.isArray(colors.bg)
+                    ? feats.map((_, i) => colors.bg[i % colors.bg.length])
+                    : feats.map(() => colors.bg);
+                chartData = {
+                    labels: feats,
+                    datasets: [{
+                        label: 'Impact %', data: vals,
+                        backgroundColor: bgColors, borderColor: colors.border, borderWidth: 2,
+                    }],
+                };
+            }
+        }
+    }
+
+    // 3. Safe fallback if nothing resolved
+    if (!chartData || !chartData.datasets || chartData.datasets.length === 0) {
+        renderFallbackMessage(chartId);
+        return;
+    }
+
+    // Destroy previous instance
+    if (charts[chartId]) { try { charts[chartId].destroy(); } catch(e) {} }
+
+    const ctx = document.getElementById(chartId);
+    if (!ctx) return;
+
+    const chartType = type === 'horizontalBar' ? 'bar' : type;
+    const isHoriz   = type === 'horizontalBar';
+    const noScales  = ['pie','doughnut','radar','polarArea'].includes(chartType);
+
+    try {
+        charts[chartId] = new Chart(ctx, {
+            type: chartType,
+            data: chartData,
+            options: {
+                indexAxis: isHoriz ? 'y' : 'x',
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: { duration: doAnimate ? 800 : 0 },
+                plugins: {
+                    legend: {
+                        display: showLegend,
+                        labels: { color: '#e8eaf0' },
+                    },
+                    title: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(10,14,39,0.95)',
+                        titleColor: '#00d4ff',
+                        bodyColor: '#e8eaf0',
+                        borderColor: '#00d4ff',
+                        borderWidth: 1,
+                    },
+                },
+                scales: noScales ? {} : {
+                    x: { ticks: { color: '#8b92b5' }, grid: { color: 'rgba(139,146,181,0.1)' } },
+                    y: { ticks: { color: '#8b92b5' }, grid: { color: 'rgba(139,146,181,0.1)' } },
+                },
+            },
+        });
+    } catch(e) {
+        console.error(`[Chart Studio] Chart creation failed for ${chartId}:`, e);
+        renderFallbackMessage(chartId);
+    }
+}
+
+/**
+ * Apply the chosen colour scheme to pre-existing datasets without losing data.
+ */
+function recolourDatasets(datasets, colors, type) {
+    return datasets.map((ds, dsi) => {
+        const n         = (ds.data || []).length;
+        const bgArr     = Array.isArray(colors.bg) ? colors.bg : [colors.bg];
+        const bg        = n > 1
+            ? Array.from({ length: n }, (_, i) => bgArr[i % bgArr.length])
+            : bgArr[0];
+        return {
+            ...ds,
+            backgroundColor: bg,
+            borderColor: colors.border,
+        };
+    });
+}
+
+function renderFallbackMessage(chartId) {
+    // Destroy any existing chart first
+    if (charts[chartId]) { try { charts[chartId].destroy(); delete charts[chartId]; } catch(e) {} }
+    const canvas = document.getElementById(chartId);
+    if (canvas && canvas.parentElement) {
+        canvas.style.display = 'none';
+        // Only insert fallback if not already there
+        if (!canvas.parentElement.querySelector('.fallback-msg')) {
+            const msg = document.createElement('div');
+            msg.className = 'fallback-msg';
+            msg.innerHTML = '⚠️ This chart type requires data that is not present in the current analysis payload.';
+            canvas.parentElement.appendChild(msg);
+        }
+    }
+}
+
+// ============================================================
+// Controls
+// ============================================================
+
+function toggleSwitch(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active');
+}
+
+function removeChart(chartId) {
+    if (!confirm('Remove this chart? This action cannot be undone.')) return;
+    if (charts[chartId]) { try { charts[chartId].destroy(); } catch(e) {} delete charts[chartId]; }
+    const card = document.getElementById(`card-${chartId}`);
+    if (card) card.remove();
+    delete chartConfigs[chartId];
+    markChanged();
+    toast('Chart removed');
+}
+
+function markChanged() { hasUnsavedChanges = true; }
+
+function resetChanges() {
+    if (!confirm('Reset all changes? This will reload the original chart configurations.')) return;
+    hasUnsavedChanges = false;
+    // Destroy all existing charts cleanly before re-init
+    Object.values(charts).forEach(c => { try { c.destroy(); } catch(e) {} });
+    charts       = {};
+    chartConfigs = {};
+    init();
+    toast('Changes reset');
+}
+
+// ============================================================
+// Save & Sync
+// ============================================================
+
+function saveAndSync() {
+    if (isDemoMode) {
+        toast('Cannot save in demo mode. Run a real analysis first.');
+        return;
+    }
+
+    const updatedConfigs = {};
+
+    Object.keys(chartConfigs).forEach(chartId => {
+        const titleEl     = document.getElementById(`title-${chartId}`);
+        const typeEl      = document.getElementById(`type-${chartId}`);
+        const colorEl     = document.getElementById(`color-${chartId}`);
+        const legendEl    = document.getElementById(`legend-${chartId}`);
+        const animationEl = document.getElementById(`animation-${chartId}`);
+
+        if (titleEl && typeEl && colorEl && legendEl && animationEl) {
+            updatedConfigs[chartId] = {
+                title:                   titleEl.value,
+                type:                    typeEl.value,
+                colorScheme:             colorEl.value,
+                showLegend:              legendEl.classList.contains('active'),
+                animation:               animationEl.classList.contains('active'),
+                originalRecommendation:  chartConfigs[chartId].recommendation,
+            };
+        }
+    });
+
+    // Persist under BOTH keys so the main page can pick either
+    try {
+        localStorage.setItem('basiraChartConfigs',   JSON.stringify(updatedConfigs));
+        localStorage.setItem('basira_chart_configs', JSON.stringify(updatedConfigs));
+    } catch(e) { console.warn('[Chart Studio] localStorage write failed:', e); }
+
+    console.log('[Chart Studio] Saved configurations:', updatedConfigs);
+
+    // Notify opener window
+    if (window.opener && typeof window.opener.updateChartsFromManagement === 'function') {
+        try {
+            window.opener.updateChartsFromManagement(updatedConfigs);
+            console.log('[Chart Studio] Notified main window');
+        } catch(e) {
+            console.error('[Chart Studio] Could not notify main window:', e);
+        }
+    }
+
+    hasUnsavedChanges = false;
+    toast('Changes saved and synced to main page');
+}
+
+// ============================================================
+// Utilities
+// ============================================================
+
+function escHtml(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+function toast(message) {
+    const el = document.getElementById('toast');
+    el.textContent = message;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+// Warn before closing with unsaved changes
+window.addEventListener('beforeunload', e => {
+    if (hasUnsavedChanges && !isDemoMode) {
+        e.preventDefault();
+        e.returnValue = 'You have unsaved changes. Are you sure you want to close?';
+        return e.returnValue;
+    }
+});
+
+// Initialise on load
+window.addEventListener('load', init);
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "level": "High",
+  "confidence_score": 97,
+  "reason": "The model shows strong macro-level performance and balanced class recognition.",
+  "caution_notes": [],
+  "recommended_next_step": "Use the dashboard outputs to support transparent decision-making.",
+  "dashboard_confidence": "High",
+  "output_policy": {
+    "show_full_dashboard": true,
+    "allow_decision_language": true,
+    "caution_required": false,
+    "mark_outputs_as_exploratory": false
+  }
+}

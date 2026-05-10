@@ -1,0 +1,45 @@
+{
+  "project": "Basira",
+  "phase": "Phase 2 — Supervised Regression",
+  "task_type": "regression",
+  "candidate_models": [
+    "RandomForest",
+    "Ridge",
+    "LinearRegression",
+    "GradientBoosting"
+  ],
+  "selected_model": "RandomForest",
+  "selection_criterion": "Lowest CV RMSE",
+  "preparation_summary": {
+    "rows_before": 1194,
+    "rows_after": 1194,
+    "dropped_missing": 0,
+    "n_feature_columns": 8,
+    "feature_columns": [
+      "Amount",
+      "Quantity",
+      "Category",
+      "Sub-Category",
+      "City",
+      "_year",
+      "_month",
+      "_week"
+    ],
+    "target_stats": {
+      "nunique": 707,
+      "dtype": "int64"
+    }
+  },
+  "modality": "tabular",
+  "split_strategy": "ChronologicalSplit",
+  "feature_columns": [
+    "Amount",
+    "Quantity",
+    "Category",
+    "Sub-Category",
+    "City",
+    "_year",
+    "_month",
+    "_week"
+  ]
+}

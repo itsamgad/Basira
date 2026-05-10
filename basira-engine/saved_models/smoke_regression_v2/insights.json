@@ -1,0 +1,38 @@
+[
+  {
+    "id": "model_reliability",
+    "title": "Model Reliability",
+    "value": "High",
+    "metric": "The model explains a strong share of target variation with acceptable relative error.",
+    "description": "The model explains a strong share of target variation with acceptable relative error.",
+    "action": "Use the dashboard outputs to support transparent decision-making.",
+    "severity": "success"
+  },
+  {
+    "id": "best_model_selection",
+    "title": "Best Model Selection",
+    "value": "Ridge",
+    "metric": "Selected because it achieved the best validation balance: higher R2 with lower RMSE and MAE.",
+    "description": "Basira compared all suitable supervised models and selected the highest-ranked candidate.",
+    "action": "Review the model leaderboard for alternatives.",
+    "severity": "success"
+  },
+  {
+    "id": "primary_driver",
+    "title": "Primary Feature Driver",
+    "value": "x1",
+    "metric": "60.23% impact",
+    "description": "x1 contributes about 60.23% of the available model driver signal.",
+    "action": "Monitor x1 in the dashboard and RCA stage.",
+    "severity": "success"
+  },
+  {
+    "id": "prediction_error",
+    "title": "Prediction Error",
+    "value": 0.3331,
+    "metric": "RMSE",
+    "description": "RMSE summarizes typical prediction error in the target unit.",
+    "action": "Inspect high residual records for RCA.",
+    "severity": "success"
+  }
+]

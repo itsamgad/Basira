@@ -1,0 +1,47 @@
+{
+  "project": "Basira",
+  "phase": "Phase 2 — Supervised Regression",
+  "task_type": "regression",
+  "candidate_models": [
+    "Ridge",
+    "LinearRegression",
+    "RandomForest",
+    "GradientBoosting"
+  ],
+  "selected_model": "Ridge",
+  "selection_criterion": "Lowest CV RMSE",
+  "preparation_summary": {
+    "rows_before": 400,
+    "rows_after": 400,
+    "dropped_missing": 0,
+    "n_feature_columns": 9,
+    "feature_columns": [
+      "Store",
+      "Holiday_Flag",
+      "Temperature",
+      "Fuel_Price",
+      "CPI",
+      "Unemployment",
+      "_year",
+      "_month",
+      "_week"
+    ],
+    "target_stats": {
+      "nunique": 400,
+      "dtype": "float64"
+    }
+  },
+  "modality": "tabular",
+  "split_strategy": "ChronologicalSplit",
+  "feature_columns": [
+    "Store",
+    "Holiday_Flag",
+    "Temperature",
+    "Fuel_Price",
+    "CPI",
+    "Unemployment",
+    "_year",
+    "_month",
+    "_week"
+  ]
+}

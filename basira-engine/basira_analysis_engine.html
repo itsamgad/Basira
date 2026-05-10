@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basira Ultra Analysis | Advanced Intelligence Platform</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg-primary: #0a0e27;
+    --bg-secondary: #141b3a;
+    --bg-card: rgba(20, 27, 58, 0.8);
+    --accent: #00d4ff;
+    --accent-glow: rgba(0, 212, 255, 0.15);
+    --success: #00ff88;
+    --warning: #ffaa00;
+    --danger: #ff3366;
+    --text: #e8eaf0;
+    --text-dim: #8b92b5;
+    --border: rgba(139, 146, 181, 0.1);
+    --purple: #b794f6;
+    --indigo: #818cf8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(183, 148, 246, 0.03) 0%, transparent 50%);
+    animation: pulse 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.container { max-width: 1600px; margin: 0 auto; padding: 30px; position: relative; z-index: 1; }
+
+.header { display: flex; justify-content: space-between; align-items: center; padding: 25px 0; margin-bottom: 40px; border-bottom: 1px solid var(--border); }
+.logo { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
+.header-actions { display: flex; gap: 15px; }
+
+.btn { padding: 12px 24px; border-radius: 12px; border: none; font-weight: 700; cursor: pointer; transition: all 0.3s; font-family: inherit; font-size: 0.9rem; }
+.btn-primary { background: linear-gradient(135deg, var(--accent), var(--indigo)); color: #000; box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(0, 212, 255, 0.5); }
+.btn-glass { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); color: var(--text); backdrop-filter: blur(10px); }
+.btn-glass:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent); }
+
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 30px; backdrop-filter: blur(20px); transition: all 0.3s; }
+.card:hover { border-color: var(--accent); box-shadow: 0 8px 40px rgba(0, 212, 255, 0.15); }
+
+.upload-zone { border: 2px dashed var(--border); border-radius: 20px; padding: 60px; text-align: center; cursor: pointer; transition: all 0.3s; position: relative; overflow: hidden; }
+.upload-zone::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, var(--accent-glow), transparent); opacity: 0; transition: opacity 0.3s; }
+.upload-zone:hover::before { opacity: 1; }
+.upload-zone:hover { border-color: var(--accent); transform: translateY(-2px); }
+.upload-icon { font-size: 4rem; margin-bottom: 20px; display: inline-block; animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+.narrative-banner { background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(183, 148, 246, 0.1)); border: 1px solid var(--accent); border-radius: 24px; padding: 40px; margin-bottom: 40px; position: relative; overflow: hidden; }
+.narrative-banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--accent), var(--purple)); }
+.narrative-label { font-size: 0.75rem; font-weight: 800; letter-spacing: 2px; color: var(--accent); margin-bottom: 15px; }
+.narrative-headline { font-size: 2.2rem; font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+.narrative-summary { font-size: 1.1rem; line-height: 1.8; color: var(--text-dim); margin-bottom: 30px; }
+.narrative-box { background: rgba(0, 0, 0, 0.3); border-left: 4px solid var(--accent); padding: 25px; border-radius: 12px; margin-top: 20px; }
+.narrative-box-title { font-weight: 700; color: var(--accent); margin-bottom: 10px; font-size: 1rem; }
+
+.insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px; }
+.insight-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 30px; position: relative; overflow: hidden; transition: all 0.3s; }
+.insight-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--accent); }
+.insight-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); }
+.insight-icon { font-size: 2.5rem; margin-bottom: 15px; opacity: 0.9; }
+.insight-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 10px; text-transform: uppercase; }
+.insight-value { font-size: 3rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; margin-bottom: 10px; background: linear-gradient(135deg, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.insight-metric { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 15px; }
+.insight-desc { font-size: 0.9rem; line-height: 1.6; color: var(--text); margin-bottom: 15px; }
+.insight-action { background: rgba(0, 212, 255, 0.1); border-left: 3px solid var(--accent); padding: 12px 15px; border-radius: 8px; font-size: 0.85rem; color: var(--text-dim); }
+
+/* Severity accent strip per card */
+.insight-card.sev-critical::before { background: var(--danger); }
+.insight-card.sev-high::before     { background: var(--warning); }
+.insight-card.sev-medium::before   { background: var(--indigo); }
+.insight-card.sev-low::before      { background: var(--success); }
+.insight-card.sev-info::before     { background: var(--accent); }
+
+.section-header { display: flex; align-items: center; gap: 15px; margin: 40px 0 25px; font-size: 1.8rem; font-weight: 800; }
+.section-dot { width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--purple)); box-shadow: 0 0 20px var(--accent); }
+
+.tabs { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+.tab { padding: 12px 24px; border-radius: 12px 12px 0 0; background: transparent; border: none; color: var(--text-dim); cursor: pointer; font-weight: 700; transition: all 0.3s; position: relative; }
+.tab::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), var(--purple)); transform: scaleX(0); transition: transform 0.3s; }
+.tab.active { color: var(--accent); background: rgba(0, 212, 255, 0.1); }
+.tab.active::after { transform: scaleX(1); }
+.tab:hover { color: var(--accent); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px; }
+.chart-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 30px; transition: all 0.3s; }
+.chart-card:hover { border-color: var(--accent); box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3); }
+.chart-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.chart-title { font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+.chart-reason { font-size: 0.85rem; color: var(--text-dim); margin-top: 5px; }
+.chart-container { height: 400px; position: relative; }
+
+/* Predictions / Assignments table */
+.predictions-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.predictions-table thead { background: rgba(0, 212, 255, 0.1); border-bottom: 2px solid var(--accent); }
+.predictions-table th { padding: 15px; text-align: left; font-weight: 700; color: var(--accent); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
+.predictions-table td { padding: 15px; border-bottom: 1px solid var(--border); }
+.predictions-table tr:hover { background: rgba(0, 212, 255, 0.05); }
+.pred-index { font-family: 'JetBrains Mono', monospace; color: var(--text-dim); }
+.pred-value { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1.1rem; color: var(--accent); }
+.confidence-cell { min-width: 150px; }
+.confidence-bar-container { background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-top: 5px; }
+.confidence-bar { height: 100%; background: linear-gradient(90deg, var(--success), var(--accent)); border-radius: 4px; transition: width 0.6s ease; }
+.uncertainty-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 700; background: rgba(255,170,0,0.1); color: var(--warning); border: 1px solid var(--warning); }
+.shap-values { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-dim); }
+
+/* RCA Nodes */
+.rca-node { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 30px; margin-bottom: 25px; position: relative; overflow: hidden; transition: all 0.3s; }
+.rca-node::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; }
+.rca-node:hover { transform: translateX(5px); box-shadow: 0 8px 40px rgba(0,0,0,0.3); }
+.rca-critical::before { background: var(--danger); }
+.rca-high::before     { background: var(--warning); }
+.rca-medium::before   { background: var(--indigo); }
+.rca-low::before      { background: var(--success); }
+.rca-info::before     { background: var(--accent); }
+.rca-standard::before { background: var(--accent); }
+.rca-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.rca-title { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+.severity-badge { padding: 6px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.severity-critical { background: rgba(255,51,102,0.2); color: var(--danger); border: 1px solid var(--danger); }
+.severity-high { background: rgba(255,170,0,0.2); color: var(--warning); border: 1px solid var(--warning); }
+.severity-medium { background: rgba(129,140,248,0.2); color: var(--indigo); border: 1px solid var(--indigo); }
+.severity-low { background: rgba(0,255,136,0.2); color: var(--success); border: 1px solid var(--success); }
+.severity-info { background: rgba(0,212,255,0.2); color: var(--accent); border: 1px solid var(--accent); }
+.severity-standard { background: rgba(0,212,255,0.2); color: var(--accent); border: 1px solid var(--accent); }
+.rca-id { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: var(--text-dim); }
+.causes-section { margin: 20px 0; }
+.causes-label { font-weight: 700; margin-bottom: 12px; color: var(--text); }
+.cause-tag { display: inline-block; padding: 8px 14px; margin: 5px 5px 5px 0; border-radius: 20px; font-size: 0.8rem; background: rgba(255,51,102,0.1); border: 1px solid rgba(255,51,102,0.3); color: var(--danger); }
+.causal-chain { margin: 15px 0; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 10px; }
+.causal-step { display: flex; align-items: flex-start; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--text-dim); }
+.causal-step:last-child { border-bottom: none; }
+.causal-step-num { min-width: 24px; height: 24px; border-radius: 50%; background: rgba(0,212,255,0.15); color: var(--accent); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.rca-confidence { font-size: 0.78rem; color: var(--text-dim); margin-top: 8px; }
+.recommendation-box { background: rgba(0,212,255,0.05); border-left: 4px solid var(--accent); padding: 20px; border-radius: 12px; margin-top: 20px; }
+.recommendation-label { font-weight: 700; color: var(--accent); margin-bottom: 10px; font-size: 0.9rem; }
+.recommendation-text { line-height: 1.7; color: var(--text); }
+
+/* Priority actions (new RCA) */
+.priority-actions { background: rgba(245,158,11,0.05); border: 1px solid rgba(245,158,11,0.3); border-radius: 16px; padding: 25px; margin-bottom: 30px; }
+.priority-actions-title { font-weight: 700; color: var(--warning); margin-bottom: 15px; font-size: 1rem; }
+.priority-action-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-dim); }
+.priority-action-item:last-child { border-bottom: none; }
+.priority-action-num { min-width: 28px; height: 28px; border-radius: 50%; background: rgba(245,158,11,0.15); color: var(--warning); font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+
+/* Empty state */
+.empty-state { text-align: center; padding: 60px 20px; color: var(--text-dim); }
+.empty-state-icon { font-size: 3rem; margin-bottom: 15px; opacity: 0.4; }
+.empty-state-text { font-size: 1rem; }
+
+/* Export */
+.export-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 35px; margin-top: 40px; }
+.export-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px; }
+.checkbox-item { display: flex; align-items: center; gap: 12px; padding: 15px; border-radius: 12px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); cursor: pointer; transition: all 0.3s; }
+.checkbox-item:hover { background: rgba(0,212,255,0.05); border-color: var(--accent); }
+.checkbox-item input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; accent-color: var(--accent); }
+
+/* Loading */
+#loading-overlay { position: fixed; inset: 0; background: rgba(10,14,39,0.95); display: none; align-items: center; justify-content: center; z-index: 9999; backdrop-filter: blur(10px); }
+.loading-content { text-align: center; }
+.spinner { width: 80px; height: 80px; border: 4px solid rgba(0,212,255,0.1); border-top-color: var(--accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 30px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; }
+.loading-subtext { color: var(--text-dim); }
+
+/* Toast */
+#toast { position: fixed; top: 30px; right: 30px; padding: 20px 30px; border-radius: 16px; background: var(--bg-card); border: 1px solid var(--accent); border-left: 5px solid var(--accent); display: none; z-index: 9999; box-shadow: 0 8px 40px rgba(0,0,0,0.4); backdrop-filter: blur(20px); font-weight: 600; }
+
+@media (max-width: 768px) {
+    .container { padding: 15px; }
+    .insights-grid, .charts-grid, .export-grid { grid-template-columns: 1fr; }
+}
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div id="toast"></div>
+
+<div id="loading-overlay">
+    <div class="loading-content">
+        <div class="spinner"></div>
+        <div class="loading-text">Running Basira Analysis...</div>
+        <div class="loading-subtext">Processing insights, charts, and pipeline outputs</div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">⚡ BASIRA ULTRA</div>
+        <div class="header-actions">
+            <button class="btn btn-glass" onclick="window.location.reload()">🔄 Reset</button>
+        </div>
+    </div>
+
+    <!-- Upload Section -->
+    <div id="upload-section">
+        <div class="card">
+            <div class="upload-zone" onclick="document.getElementById('file-input').click()">
+                <input type="file" id="file-input" accept=".csv" style="display:none;" onchange="handleFileSelect(event)">
+                <div class="upload-icon">🚀</div>
+                <h2 style="margin-bottom:15px;font-size:1.8rem;">Upload Preprocessed Data</h2>
+                <p style="color:var(--text-dim);font-size:1.1rem;margin-bottom:20px;">Drop your CSV file here or click to browse</p>
+                <div style="display:flex;gap:20px;justify-content:center;font-size:0.9rem;color:var(--text-dim);">
+                    <span>✓ Auto-Target Detection</span>
+                    <span>✓ Multi-Model Comparison</span>
+                    <span>✓ RCA + Insights</span>
+                    <span>✓ Dashboard-Ready</span>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="analyze-btn" style="width:100%;margin-top:25px;display:none;font-size:1.1rem;padding:16px;" onclick="runAnalysis()">
+                🚀 RUN BASIRA ANALYSIS
+            </button>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results-area" class="hidden">
+
+        <!-- Narrative Banner -->
+        <div class="narrative-banner">
+            <div class="narrative-label">EXECUTIVE INTELLIGENCE SUMMARY</div>
+            <h1 class="narrative-headline" id="narrative-headline"></h1>
+            <p class="narrative-summary" id="narrative-summary"></p>
+            <div class="narrative-box">
+                <div class="narrative-box-title">🎯 KEY FINDING</div>
+                <p id="narrative-key"></p>
+            </div>
+            <div class="narrative-box">
+                <div class="narrative-box-title">💡 RECOMMENDED ACTION</div>
+                <p id="narrative-action"></p>
+            </div>
+            <div class="narrative-box">
+                <div class="narrative-box-title">⚠️ RISK ASSESSMENT</div>
+                <p id="narrative-risk"></p>
+            </div>
+        </div>
+
+        <!-- Insights Grid -->
+        <div class="section-header">
+            <div class="section-dot"></div>
+            <span>ANALYTICAL INSIGHTS</span>
+        </div>
+        <div id="insights-grid" class="insights-grid"></div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('charts', event)">📊 Smart Charts</button>
+            <button class="tab" onclick="switchTab('predictions', event)">🎯 Predictions / Assignments</button>
+            <button class="tab" onclick="switchTab('rca', event)">🔍 Root Cause Analysis</button>
+            <button class="tab" onclick="switchTab('data', event)">📋 Data Preview</button>
+        </div>
+
+        <!-- Charts Tab -->
+        <div id="charts-tab" class="tab-content active">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;">
+                <h3 style="font-size:1.5rem;font-weight:700;">Intelligent Visualizations</h3>
+                <button class="btn btn-glass" onclick="openChartManagement()">⚙️ Manage Charts</button>
+            </div>
+            <div id="charts-container" class="charts-grid"></div>
+        </div>
+
+        <!-- Predictions / Assignments Tab -->
+        <div id="predictions-tab" class="tab-content">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;">
+                <h3 style="font-size:1.5rem;font-weight:700;" id="predictions-tab-title">Predictions / Cluster Assignments</h3>
+                <div style="display:flex;gap:20px;font-size:0.9rem;">
+                    <span>Mode: <span id="pred-mode-status" style="color:var(--success);font-weight:700;">—</span></span>
+                </div>
+            </div>
+            <div style="overflow-x:auto;">
+                <table id="predictions-table" class="predictions-table"></table>
+            </div>
+            <div id="predictions-empty" class="empty-state hidden">
+                <div class="empty-state-icon">🎯</div>
+                <div class="empty-state-text">No prediction or cluster assignment data returned by the pipeline.</div>
+            </div>
+        </div>
+
+        <!-- RCA Tab -->
+        <div id="rca-tab" class="tab-content">
+            <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:30px;">Root Cause Analysis</h3>
+            <div id="rca-priority-actions"></div>
+            <div id="rca-container"></div>
+            <div id="rca-empty" class="empty-state hidden">
+                <div class="empty-state-icon">🔍</div>
+                <div class="empty-state-text">No RCA data returned by the pipeline.</div>
+            </div>
+        </div>
+
+        <!-- Data Tab -->
+        <div id="data-tab" class="tab-content">
+            <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:30px;">Data Preview</h3>
+            <div style="overflow-x:auto;">
+                <table id="preview-table" class="predictions-table"></table>
+            </div>
+        </div>
+
+        <!-- Export -->
+        <div class="export-section">
+            <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:25px;">💾 Save & Export Analysis</h3>
+            <div class="export-grid">
+                <label class="checkbox-item"><input type="checkbox" id="save-narrative" checked><span>Executive Narrative</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="save-insights" checked><span>Insights</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="save-charts" checked><span>Charts Config</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="save-predictions" checked><span>Predictions / Assignments</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="save-rca" checked><span>RCA Report</span></label>
+                <label class="checkbox-item"><input type="checkbox" id="save-data" checked><span>Data Preview</span></label>
+            </div>
+            <button class="btn btn-primary" style="width:100%;font-size:1.1rem;padding:16px;" onclick="exportSelected()">
+                ⬇️ DOWNLOAD COMPLETE ANALYSIS
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+// ============================================================
+// Global state
+// ============================================================
+let currentData   = null;   // { file, analysis }
+let charts        = {};     // chartId → Chart instance
+let chartConfigs  = {};     // chartId → { recommendation, data }
+window.currentAnalysisData = null;
+
+// ============================================================
+// PAYLOAD NORMALISATION ADAPTERS
+// These are the single source of truth for reading any field,
+// regardless of whether the backend returns the old format or
+// the new Basira pipeline format.
+// ============================================================
+
+/**
+ * Resolve the narrative object from any backend payload shape.
+ * Returns { headline, summary, key_finding, recommended_action, risk_alert }
+ */
+function normalizeNarrative(data) {
+    // New: insight_result.narrative_summary (plain string)
+    if (data.insight_result && data.insight_result.narrative_summary) {
+        const ns = data.insight_result.narrative_summary;
+        const dash = data.dashboard_payload || {};
+        const rel  = dash.reliability || {};
+        return {
+            headline:           dash.best_model || dash.best_algorithm || 'Basira Analysis Complete',
+            summary:            ns,
+            key_finding:        rel.reason || '',
+            recommended_action: rel.recommended_next_step || '',
+            risk_alert:         (rel.caution_notes || []).join(' ') || '',
+        };
+    }
+    // New: dashboard_payload.narrative (dict or string)
+    if (data.dashboard_payload && data.dashboard_payload.narrative) {
+        const n = data.dashboard_payload.narrative;
+        if (typeof n === 'string') {
+            return { headline: 'Basira Analysis Complete', summary: n, key_finding: '', recommended_action: '', risk_alert: '' };
+        }
+        return {
+            headline:           n.headline || 'Basira Analysis Complete',
+            summary:            n.summary || n.text || '',
+            key_finding:        n.key_finding || '',
+            recommended_action: n.recommended_action || '',
+            risk_alert:         n.risk_alert || '',
+        };
+    }
+    // Old format
+    if (data.decision_narrative) {
+        return {
+            headline:           data.decision_narrative.headline || '',
+            summary:            data.decision_narrative.summary  || '',
+            key_finding:        data.decision_narrative.key_finding || '',
+            recommended_action: data.decision_narrative.recommended_action || '',
+            risk_alert:         data.decision_narrative.risk_alert || '',
+        };
+    }
+    return null;
+}
+
+/**
+ * Resolve the insights array from any backend payload shape.
+ * Returns array of normalised insight objects ready for the card renderer.
+ */
+function normalizeInsights(data) {
+    let raw = [];
+
+    // New: insight_result.insights
+    if (data.insight_result && Array.isArray(data.insight_result.insights)) {
+        raw = data.insight_result.insights;
+    }
+    // New: dashboard_payload.insights
+    else if (data.dashboard_payload && Array.isArray(data.dashboard_payload.insights)) {
+        raw = data.dashboard_payload.insights;
+    }
+    // Old format
+    else if (Array.isArray(data.advanced_insights)) {
+        raw = data.advanced_insights;
+    }
+
+    return raw.map(ins => {
+        if (!ins || typeof ins !== 'object') return null;
+        // Detect new format by presence of 'narrative' field
+        if (ins.narrative !== undefined) {
+            // Extract a short numeric value for the card if possible
+            const metricVals = ins.metric_values || {};
+            const firstVal   = Object.values(metricVals)[0];
+            const displayVal = firstVal !== undefined ? String(firstVal) : (ins.severity || '—').toUpperCase();
+            return {
+                id:     ins.id     || 'insight',
+                title:  ins.title  || 'Insight',
+                value:  displayVal,
+                metric: ins.layer  || ins.source || '',
+                desc:   ins.narrative || '',
+                action: ins.recommended_action || '',
+                severity: ins.severity || 'info',
+                layer:  ins.layer || '',
+            };
+        }
+        // Old format — pass through
+        return {
+            id:       ins.id     || 'insight',
+            title:    ins.title  || '',
+            value:    ins.value  || '—',
+            metric:   ins.metric || '',
+            desc:     ins.desc   || '',
+            action:   ins.action || '',
+            severity: ins.severity || 'info',
+            layer:    ins.layer  || '',
+        };
+    }).filter(Boolean);
+}
+
+/**
+ * Resolve chart recommendations from any backend payload shape.
+ * Returns array of chart recommendation dicts (Chart.js-friendly).
+ */
+function normalizeCharts(data) {
+    // New: dashboard_payload.chart_recommendations
+    if (data.dashboard_payload && Array.isArray(data.dashboard_payload.chart_recommendations)) {
+        return data.dashboard_payload.chart_recommendations;
+    }
+    // New: top-level chart_recommendations
+    if (Array.isArray(data.chart_recommendations)) {
+        return data.chart_recommendations;
+    }
+    // Old format also used chart_recommendations — already covered above
+    return [];
+}
+
+/**
+ * Resolve feature importance in any format into a normalised list.
+ * Returns [{ feature, impact, impact_pct, importance }]
+ */
+function normalizeFeatureImportance(data) {
+    let raw = [];
+    // New supervised engine: dashboard_payload.feature_importance
+    if (data.dashboard_payload && Array.isArray(data.dashboard_payload.feature_importance)) {
+        raw = data.dashboard_payload.feature_importance;
+    } else if (Array.isArray(data.feature_importance)) {
+        raw = data.feature_importance;
+    } else if (Array.isArray(data.xai_report)) {
+        raw = data.xai_report;
+    }
+    return raw.map(f => {
+        if (!f || typeof f !== 'object') return null;
+        const val = parseFloat(f.impact_pct ?? f.impact ?? f.importance ?? 0) || 0;
+        return {
+            feature:    String(f.feature || f.name || 'unknown'),
+            impact:     val,
+            impact_pct: val,
+            importance: val,
+            direction:  f.direction || 'unknown',
+        };
+    }).filter(Boolean);
+}
+
+/**
+ * Resolve predictions or cluster assignments.
+ * Returns { mode: 'predictions'|'assignments'|'none', rows: [] }
+ */
+function normalizePredictionsOrAssignments(data) {
+    // New supervised: predictions array at root or inside display_payload
+    const predsRaw = data.predictions
+        || (data.display_payload && data.display_payload.predictions)
+        || null;
+
+    if (predsRaw && Array.isArray(predsRaw) && predsRaw.length > 0) {
+        return { mode: 'predictions', rows: predsRaw };
+    }
+
+    // New unsupervised: assigned_clusters or cluster_assignments
+    const assignRaw = data.assigned_clusters
+        || data.cluster_assignments
+        || (data.display_payload && data.display_payload.assignments)
+        || null;
+
+    if (assignRaw && Array.isArray(assignRaw) && assignRaw.length > 0) {
+        return { mode: 'assignments', rows: assignRaw };
+    }
+
+    return { mode: 'none', rows: [] };
+}
+
+/**
+ * Resolve RCA data from any backend payload shape.
+ * Returns { findings: [], priority_actions: [], executive_summary: '' }
+ */
+function normalizeRCA(data) {
+    // New: rca_result top-level object
+    const rcaObj = data.rca_result || data.rca_ready_payload || null;
+    if (rcaObj) {
+        return {
+            executive_summary: rcaObj.executive_summary || '',
+            findings:          Array.isArray(rcaObj.findings)        ? rcaObj.findings        : [],
+            priority_actions:  Array.isArray(rcaObj.priority_actions) ? rcaObj.priority_actions : [],
+        };
+    }
+    // Old: rca_report (array of old-style findings)
+    if (Array.isArray(data.rca_report)) {
+        return {
+            executive_summary: '',
+            findings:          data.rca_report,
+            priority_actions:  [],
+        };
+    }
+    return null;
+}
+
+/**
+ * Resolve data preview rows.
+ */
+function normalizePreview(data) {
+    const raw = data.preview || data.data_preview || [];
+    return Array.isArray(raw) ? raw : [];
+}
+
+// ============================================================
+// File handling & analysis call
+// ============================================================
+
+function handleFileSelect(event) {
+    const file = event.target.files[0];
+    if (file) {
+        currentData = { file };
+        document.getElementById('analyze-btn').style.display = 'block';
+        toast(`✓ File selected: ${file.name}`);
+    }
+}
+
+async function runAnalysis() {
+    if (!currentData) return;
+    showLoading(true);
+
+    const formData = new FormData();
+    formData.append('file', currentData.file);
+
+    try {
+        const response = await fetch('http://localhost:5001/analyze', {
+            method: 'POST',
+            body: formData,
+        });
+        if (!response.ok) throw new Error(`Server error: ${response.statusText}`);
+        const data = await response.json();
+        if (data.status === 'error') throw new Error(data.message || 'Unknown error');
+
+        currentData.analysis      = data;
+        window.currentAnalysisData = data;
+
+        // Persist for chart_management.html
+        try {
+            localStorage.setItem('basiraCurrentData',    JSON.stringify(data));
+            localStorage.setItem('basira_analysis_result', JSON.stringify(data));
+        } catch (e) { console.warn('localStorage write failed:', e); }
+
+        displayResults(data);
+
+        document.getElementById('upload-section').classList.add('hidden');
+        document.getElementById('results-area').classList.remove('hidden');
+        toast('✅ Basira Analysis Complete!');
+
+    } catch (error) {
+        console.error('Analysis error:', error);
+        toast(`❌ Error: ${error.message}`);
+    } finally {
+        showLoading(false);
+    }
+}
+
+// ============================================================
+// Master display dispatcher
+// ============================================================
+
+function displayResults(data) {
+    // 1. Narrative
+    const narrative = normalizeNarrative(data);
+    if (narrative) {
+        document.getElementById('narrative-headline').textContent = narrative.headline           || '';
+        document.getElementById('narrative-summary').textContent  = narrative.summary            || '';
+        document.getElementById('narrative-key').textContent      = narrative.key_finding        || '';
+        document.getElementById('narrative-action').textContent   = narrative.recommended_action || '';
+        document.getElementById('narrative-risk').textContent     = narrative.risk_alert         || '';
+    }
+
+    // 2. Insights
+    const insights = normalizeInsights(data);
+    if (insights.length > 0) displayInsightCards(insights);
+
+    // 3. Charts
+    const chartRecs  = normalizeCharts(data);
+    const featureImp = normalizeFeatureImportance(data);
+    if (chartRecs.length > 0) {
+        displayCharts(chartRecs, data, featureImp);
+    } else if (featureImp.length > 0) {
+        // Fallback: generate basic impact chart from feature importance
+        const fallbackRec = buildFallbackImpactChart(featureImp);
+        displayCharts([fallbackRec], data, featureImp);
+    }
+
+    // 4. Predictions / Assignments
+    const predResult = normalizePredictionsOrAssignments(data);
+    displayPredictionsOrAssignments(predResult);
+
+    // 5. RCA
+    const rcaData = normalizeRCA(data);
+    if (rcaData) displayRCA(rcaData);
+    else {
+        document.getElementById('rca-empty').classList.remove('hidden');
+    }
+
+    // 6. Preview
+    const preview = normalizePreview(data);
+    if (preview.length > 0) displayPreview(preview);
+}
+
+// ============================================================
+// Insight Cards
+// ============================================================
+
+const INSIGHT_ICONS = {
+    performance: '🎯', feature: '🔥', population: '📊',
+    pattern: '📈', segment: '🗂️', anomaly: '⚠️',
+    temporal: '📅', risk: '🚨', data_quality: '🔎',
+    model_performance: '🎯', top_driver: '🔥', feature_concentration: '📈',
+};
+
+function displayInsightCards(insights) {
+    const grid = document.getElementById('insights-grid');
+    grid.innerHTML = insights.map(ins => {
+        const icon = INSIGHT_ICONS[ins.layer] || INSIGHT_ICONS[ins.id] || '💡';
+        const sev  = (ins.severity || 'info').toLowerCase();
+        return `
+        <div class="insight-card sev-${sev}">
+            <div class="insight-icon">${icon}</div>
+            <div class="insight-label">${(ins.title || '').toUpperCase()}</div>
+            <div class="insight-value">${ins.value || '—'}</div>
+            <div class="insight-metric">${ins.metric || ''}</div>
+            <div class="insight-desc">${ins.desc || ''}</div>
+            ${ins.action ? `<div class="insight-action">💡 ${ins.action}</div>` : ''}
+        </div>`;
+    }).join('');
+}
+
+// ============================================================
+// Charts
+// ============================================================
+
+function buildFallbackImpactChart(featureImp) {
+    const feats = featureImp.map(f => f.feature);
+    const vals  = featureImp.map(f => f.impact);
+    return {
+        id: 'impact_ranking', type: 'horizontalBar',
+        title: 'Feature Impact Ranking',
+        reason: 'Generated from feature importance data',
+        chartData: 'impact', data_source: 'impact',
+        labels: feats,
+        datasets: [{
+            label: 'Impact %', data: vals,
+            backgroundColor: vals.map((_, i) => `rgba(0,212,255,${Math.max(0.3, 0.9 - i * 0.08)})`),
+            borderColor: 'rgba(0,212,255,1)', borderWidth: 2,
+        }],
+        config: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } },
+        editable: true,
+    };
+}
+
+function displayCharts(recommendations, data, featureImp) {
+    const container = document.getElementById('charts-container');
+    container.innerHTML = '';
+    // Destroy any existing charts
+    Object.values(charts).forEach(c => { try { c.destroy(); } catch(e){} });
+    charts       = {};
+    chartConfigs = {};
+
+    recommendations.forEach((rec, idx) => {
+        if (!rec || typeof rec !== 'object') return;
+        const chartDiv = document.createElement('div');
+        chartDiv.className = 'chart-card';
+        chartDiv.innerHTML = `
+            <div class="chart-header">
+                <div>
+                    <div class="chart-title">${rec.title || 'Chart'}</div>
+                    <div class="chart-reason">${rec.reason || ''}</div>
+                </div>
+            </div>
+            <div class="chart-container"><canvas id="chart-${idx}"></canvas></div>`;
+        container.appendChild(chartDiv);
+        setTimeout(() => createChart(idx, rec, data, featureImp), 120 * (idx + 1));
+    });
+}
+
+function createChart(idx, rec, data, featureImp) {
+    const ctx = document.getElementById(`chart-${idx}`);
+    if (!ctx) return;
+
+    // Resolve chart data: prefer inline datasets from engine, then rebuild from feature importance
+    let chartData = null;
+    const dsrc = rec.chartData || rec.data_source || 'impact';
+
+    if (rec.labels && rec.datasets) {
+        // Engine already embedded the data — use directly
+        chartData = { labels: rec.labels, datasets: rec.datasets };
+    } else if (dsrc === 'impact' && featureImp.length > 0) {
+        const feats = featureImp.map(f => f.feature);
+        const vals  = featureImp.map(f => f.impact);
+        chartData = {
+            labels: feats,
+            datasets: [{
+                label: 'Impact %', data: vals,
+                backgroundColor: vals.map((_, i) => `rgba(0,212,255,${Math.max(0.3, 0.9 - i * 0.08)})`),
+                borderColor: 'rgba(0,212,255,1)', borderWidth: 2,
+            }],
+        };
+    } else if (dsrc === 'impact' && Array.isArray(data.xai_report)) {
+        // Legacy fallback
+        const feats = data.xai_report.map(f => f.feature);
+        const vals  = data.xai_report.map(f => parseFloat(f.impact || f.impact_pct || 0));
+        chartData = {
+            labels: feats,
+            datasets: [{
+                label: 'Impact %', data: vals,
+                backgroundColor: vals.map((_, i) => `rgba(0,212,255,${Math.max(0.3, 0.8 - i * 0.1)})`),
+                borderColor: 'rgba(0,212,255,1)', borderWidth: 2,
+            }],
+        };
+    }
+
+    if (!chartData || !chartData.datasets || chartData.datasets.length === 0) return;
+
+    const recType   = rec.type === 'horizontalBar' ? 'bar' : (rec.type || 'bar');
+    const isHoriz   = rec.type === 'horizontalBar' || (rec.config && rec.config.indexAxis === 'y');
+    const noScales  = ['pie','doughnut','radar','polarArea'].includes(recType);
+    const baseOpts  = rec.config || {};
+
+    const options = {
+        ...baseOpts,
+        indexAxis: isHoriz ? 'y' : 'x',
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 700 },
+        plugins: {
+            ...(baseOpts.plugins || {}),
+            legend: { display: !!(baseOpts.plugins && baseOpts.plugins.legend && baseOpts.plugins.legend.display), labels: { color: '#e8eaf0' } },
+            tooltip: { backgroundColor: 'rgba(10,14,39,0.95)', titleColor: '#00d4ff', bodyColor: '#e8eaf0', borderColor: '#00d4ff', borderWidth: 1 },
+        },
+        scales: noScales ? {} : {
+            x: { ticks: { color: '#8b92b5' }, grid: { color: 'rgba(139,146,181,0.1)' }, ...(baseOpts.scales && baseOpts.scales.x ? baseOpts.scales.x : {}) },
+            y: { ticks: { color: '#8b92b5' }, grid: { color: 'rgba(139,146,181,0.1)' }, ...(baseOpts.scales && baseOpts.scales.y ? baseOpts.scales.y : {}) },
+        },
+    };
+
+    try {
+        charts[`chart-${idx}`]       = new Chart(ctx, { type: recType, data: chartData, options });
+        chartConfigs[`chart-${idx}`] = { recommendation: rec, data: data, featureImp: featureImp };
+    } catch(e) {
+        console.error(`Chart creation failed for chart-${idx}:`, e);
+    }
+}
+
+// ============================================================
+// Predictions / Assignments
+// ============================================================
+
+function displayPredictionsOrAssignments(predResult) {
+    const table   = document.getElementById('predictions-table');
+    const emptyEl = document.getElementById('predictions-empty');
+    const modeEl  = document.getElementById('pred-mode-status');
+    const titleEl = document.getElementById('predictions-tab-title');
+
+    if (predResult.mode === 'none' || predResult.rows.length === 0) {
+        table.innerHTML = '';
+        emptyEl.classList.remove('hidden');
+        modeEl.textContent = '—';
+        modeEl.style.color = 'var(--text-dim)';
+        return;
+    }
+
+    emptyEl.classList.add('hidden');
+
+    if (predResult.mode === 'predictions') {
+        titleEl.textContent    = 'Predictions';
+        modeEl.textContent     = '✓ Supervised';
+        modeEl.style.color     = 'var(--success)';
+        displaySupervisedPredictions(predResult.rows, table);
+    } else {
+        titleEl.textContent    = 'Cluster Assignments';
+        modeEl.textContent     = '✓ Unsupervised';
+        modeEl.style.color     = 'var(--accent)';
+        displayClusterAssignments(predResult.rows, table);
+    }
+}
+
+function displaySupervisedPredictions(predictions, table) {
+    // Detect columns dynamically from first row
+    const first = predictions[0] || {};
+    const hasConf       = 'confidence' in first || 'confidence_available' in first;
+    const hasLabel      = 'predicted_label' in first;
+    const hasValue      = 'predicted_value' in first;
+    const hasActual     = 'actual' in first;
+    const hasTopFeature = 'top_features' in first;
+    const hasShap       = 'shap_values' in first;
+    const hasAnomaly    = 'anomaly_score' in first;
+
+    let html = '<thead><tr>';
+    html += '<th>Index</th>';
+    if (hasLabel) html += '<th>Predicted Label</th>';
+    if (hasValue) html += '<th>Predicted Value</th>';
+    if (hasActual) html += '<th>Actual</th>';
+    if (hasConf) html += '<th>Confidence</th>';
+    if (hasAnomaly) html += '<th>Anomaly</th>';
+    if (hasTopFeature) html += '<th>Top Driver</th>';
+    if (hasShap) html += '<th>SHAP Impact</th>';
+    html += '</tr></thead><tbody>';
+
+    predictions.forEach(pred => {
+        const ri  = pred.row_index ?? pred.index ?? '?';
+        const lbl = pred.predicted_label ?? pred.prediction ?? '';
+        const val = pred.predicted_value !== undefined ? parseFloat(pred.predicted_value) : null;
+        const act = pred.actual !== undefined && pred.actual !== null ? parseFloat(pred.actual) : null;
+        const conf = parseFloat(pred.confidence || 0) * 100;
+        const confAvail = pred.confidence_available !== false && pred.confidence !== undefined;
+        const anomaly = parseFloat(pred.anomaly_score || 0);
+        const topFeat = (pred.top_features && pred.top_features[0]) ? pred.top_features[0].feature : 'N/A';
+        const shapVal = (pred.shap_values && Object.keys(pred.shap_values).length > 0)
+            ? Object.values(pred.shap_values)[0].toFixed(3) : 'N/A';
+
+        html += '<tr>';
+        html += `<td class="pred-index">#${ri}</td>`;
+        if (hasLabel) html += `<td class="pred-value">${lbl}</td>`;
+        if (hasValue) html += `<td class="pred-value">${val !== null ? val.toFixed(3) : '—'}</td>`;
+        if (hasActual) html += `<td style="color:var(--text-dim);">${act !== null ? act.toFixed(3) : '—'}</td>`;
+        if (hasConf) {
+            if (confAvail) {
+                html += `<td class="confidence-cell">
+                    <div style="display:flex;justify-content:space-between;margin-bottom:5px;">
+                        <span style="font-weight:700;">${conf.toFixed(1)}%</span>
+                        <span style="color:var(--text-dim);font-size:0.85rem;">${conf >= 90 ? 'Excellent' : conf >= 75 ? 'Good' : 'Fair'}</span>
+                    </div>
+                    <div class="confidence-bar-container"><div class="confidence-bar" style="width:${conf.toFixed(0)}%;"></div></div>
+                </td>`;
+            } else {
+                html += `<td><span style="color:var(--text-dim);font-size:0.85rem;">N/A</span></td>`;
+            }
+        }
+        if (hasAnomaly) html += `<td style="color:${anomaly > 0.5 ? 'var(--danger)' : 'var(--success)'};font-weight:700;">${anomaly > 0.5 ? '⚠️ ' + (anomaly * 100).toFixed(0) + '%' : '✓ Normal'}</td>`;
+        if (hasTopFeature) html += `<td class="shap-values">${topFeat}</td>`;
+        if (hasShap) html += `<td class="shap-values" style="color:${parseFloat(shapVal) > 0 ? 'var(--success)' : 'var(--danger)'};">${shapVal}</td>`;
+        html += '</tr>';
+    });
+
+    html += '</tbody>';
+    table.innerHTML = html;
+}
+
+function displayClusterAssignments(assignments, table) {
+    let html = '<thead><tr><th>Row Index</th><th>Assigned Cluster</th></tr></thead><tbody>';
+    assignments.forEach(a => {
+        html += `<tr>
+            <td class="pred-index">#${a.row_index ?? '?'}</td>
+            <td class="pred-value" style="color:var(--purple);">Cluster ${a.assigned_cluster ?? a.cluster_id ?? '?'}</td>
+        </tr>`;
+    });
+    html += '</tbody>';
+    table.innerHTML = html;
+}
+
+// ============================================================
+// RCA
+// ============================================================
+
+function displayRCA(rcaData) {
+    const container    = document.getElementById('rca-container');
+    const actionsEl    = document.getElementById('rca-priority-actions');
+    const emptyEl      = document.getElementById('rca-empty');
+
+    // Executive summary and priority actions (new format)
+    if (rcaData.executive_summary || rcaData.priority_actions.length > 0) {
+        let actionsHtml = '';
+        if (rcaData.executive_summary) {
+            actionsHtml += `<div class="narrative-box" style="margin-bottom:20px;">
+                <div class="narrative-box-title">📋 EXECUTIVE SUMMARY</div>
+                <p>${rcaData.executive_summary}</p>
+            </div>`;
+        }
+        if (rcaData.priority_actions.length > 0) {
+            actionsHtml += `<div class="priority-actions">
+                <div class="priority-actions-title">🎯 Priority Actions</div>
+                ${rcaData.priority_actions.map((a, i) => `
+                    <div class="priority-action-item">
+                        <div class="priority-action-num">${i + 1}</div>
+                        <span>${a}</span>
+                    </div>`).join('')}
+            </div>`;
+        }
+        actionsEl.innerHTML = actionsHtml;
+    }
+
+    if (!rcaData.findings || rcaData.findings.length === 0) {
+        emptyEl.classList.remove('hidden');
+        container.innerHTML = '';
+        return;
+    }
+
+    emptyEl.classList.add('hidden');
+    container.innerHTML = rcaData.findings.map(item => renderRCAFinding(item)).join('');
+}
+
+function renderRCAFinding(item) {
+    if (!item || typeof item !== 'object') return '';
+    const sev     = (item.severity || 'info').toLowerCase();
+    const sevClass = ['critical','high','medium','low','info'].includes(sev) ? sev : 'standard';
+
+    // Detect new vs old format
+    const isNew = item.explanation !== undefined || item.causal_chain !== undefined;
+
+    // Causes / causal chain section
+    let causesHtml = '';
+    if (isNew) {
+        const chain = Array.isArray(item.causal_chain) ? item.causal_chain : [];
+        if (chain.length > 0) {
+            causesHtml = `<div class="causal-chain">
+                <div class="causes-label" style="margin-bottom:10px;">🔗 Causal Chain:</div>
+                ${chain.map((step, i) => `
+                    <div class="causal-step">
+                        <div class="causal-step-num">${i + 1}</div>
+                        <span>${step}</span>
+                    </div>`).join('')}
+            </div>`;
+        }
+    } else {
+        const causes = Array.isArray(item.causes) ? item.causes : [];
+        if (causes.length > 0) {
+            causesHtml = `<div class="causes-section">
+                <div class="causes-label">🔍 Root Causes Identified:</div>
+                ${causes.map(c => `<span class="cause-tag">${c}</span>`).join('')}
+            </div>`;
+        }
+    }
+
+    // Explanation
+    const explanation = item.explanation || item.desc || '';
+
+    // Recommended action
+    const action = item.recommended_action || item.recommendation || '';
+
+    // Confidence (new format only)
+    const confHtml = item.confidence
+        ? `<div class="rca-confidence">Confidence: <strong>${item.confidence}</strong></div>` : '';
+
+    return `
+    <div class="rca-node rca-${sevClass}">
+        <div class="rca-header">
+            <div>
+                <div class="rca-title">${item.title || 'Finding'}</div>
+                <span class="severity-badge severity-${sevClass}">${(item.severity || 'info').toUpperCase()}</span>
+                ${confHtml}
+            </div>
+            <div class="rca-id">${item.id || ''}</div>
+        </div>
+        ${explanation ? `<p style="color:var(--text-dim);font-size:0.9rem;line-height:1.6;margin-bottom:15px;">${explanation}</p>` : ''}
+        ${causesHtml}
+        ${action ? `<div class="recommendation-box">
+            <div class="recommendation-label">💡 RECOMMENDED ACTION</div>
+            <div class="recommendation-text">${action}</div>
+        </div>` : ''}
+    </div>`;
+}
+
+// ============================================================
+// Data Preview
+// ============================================================
+
+function displayPreview(preview) {
+    const table = document.getElementById('preview-table');
+    if (!Array.isArray(preview) || preview.length === 0) {
+        table.innerHTML = '<tbody><tr><td style="color:var(--text-dim);">No preview data available.</td></tr></tbody>';
+        return;
+    }
+    const cols = Object.keys(preview[0]);
+    let html = '<thead><tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>';
+    preview.forEach(row => {
+        html += '<tr>' + cols.map(c => {
+            const v = row[c];
+            return `<td>${v === null || v === undefined ? '—' : v}</td>`;
+        }).join('') + '</tr>';
+    });
+    html += '</tbody>';
+    table.innerHTML = html;
+}
+
+// ============================================================
+// Tab switching
+// ============================================================
+
+function switchTab(tabName, event) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    const tabEl = document.getElementById(`${tabName}-tab`);
+    if (tabEl) tabEl.classList.add('active');
+    if (event && event.target) event.target.classList.add('active');
+}
+
+// ============================================================
+// Chart Management integration
+// ============================================================
+
+function openChartManagement() {
+    if (window.currentAnalysisData) {
+        try {
+            localStorage.setItem('basiraCurrentData',      JSON.stringify(window.currentAnalysisData));
+            localStorage.setItem('basira_analysis_result', JSON.stringify(window.currentAnalysisData));
+            localStorage.setItem('basiraChartConfigs',     JSON.stringify(chartConfigs));
+            localStorage.setItem('basira_chart_configs',   JSON.stringify(chartConfigs));
+        } catch(e) { console.warn('localStorage write failed:', e); }
+    }
+    const mgmt = window.open('chart_management.html', 'chartManagement', 'width=1400,height=900');
+    if (!mgmt) toast('⚠️ Please allow popups for chart management');
+}
+
+window.updateChartsFromManagement = function(updatedConfigs) {
+    if (!updatedConfigs || typeof updatedConfigs !== 'object') return;
+    Object.keys(updatedConfigs).forEach(chartId => {
+        const cfg      = updatedConfigs[chartId];
+        const original = chartConfigs[chartId];
+        if (!original || !charts[chartId]) return;
+        try { charts[chartId].destroy(); } catch(e) {}
+        const idx = parseInt(chartId.split('-')[1]);
+        const rec = { ...original.recommendation, type: cfg.type || original.recommendation.type, title: cfg.title || original.recommendation.title };
+        createChart(idx, rec, original.data, original.featureImp || []);
+    });
+    toast('✅ Charts updated from studio!');
+};
+
+// ============================================================
+// Export
+// ============================================================
+
+function exportSelected() {
+    const sel = {
+        narrative:   document.getElementById('save-narrative').checked,
+        insights:    document.getElementById('save-insights').checked,
+        charts:      document.getElementById('save-charts').checked,
+        predictions: document.getElementById('save-predictions').checked,
+        rca:         document.getElementById('save-rca').checked,
+        data:        document.getElementById('save-data').checked,
+    };
+
+    const exportData = { exported_at: new Date().toISOString(), basira_version: 'pipeline-v1' };
+    const d = (currentData && currentData.analysis) ? currentData.analysis : {};
+
+    if (sel.narrative)   exportData.narrative            = normalizeNarrative(d);
+    if (sel.insights)    exportData.insights             = normalizeInsights(d);
+    if (sel.charts)      exportData.chart_recommendations = normalizeCharts(d);
+    if (sel.predictions) exportData.predictions          = normalizePredictionsOrAssignments(d);
+    if (sel.rca)         exportData.rca                  = normalizeRCA(d);
+    if (sel.data)        exportData.preview              = normalizePreview(d);
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = `basira_analysis_${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    toast('✅ Analysis exported successfully!');
+}
+
+// ============================================================
+// Utilities
+// ============================================================
+
+function showLoading(show) {
+    document.getElementById('loading-overlay').style.display = show ? 'flex' : 'none';
+}
+
+function toast(message) {
+    const el = document.getElementById('toast');
+    el.textContent   = message;
+    el.style.display = 'block';
+    setTimeout(() => { el.style.display = 'none'; }, 4000);
+}
+</script>
+</body>
+</html>

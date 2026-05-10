@@ -1,0 +1,182 @@
+[
+  {
+    "rank": 1,
+    "feature": "Category_Food",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Category_Food' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 2,
+    "feature": "Customer ID_CUST_10",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_10' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 3,
+    "feature": "Customer ID_CUST_22",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_22' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 4,
+    "feature": "Customer ID_CUST_14",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_14' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 5,
+    "feature": "Customer ID_CUST_21",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_21' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 6,
+    "feature": "Customer ID_CUST_12",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_12' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 7,
+    "feature": "Customer ID_CUST_25",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_25' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 8,
+    "feature": "Customer ID_CUST_05",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_05' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 9,
+    "feature": "Category_Furniture",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Category_Furniture' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 10,
+    "feature": "Customer ID_CUST_15",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_15' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 11,
+    "feature": "Category_Electric household essentials",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Category_Electric household essentials' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 12,
+    "feature": "Category_Milk Products",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Category_Milk Products' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 13,
+    "feature": "Customer ID_CUST_09",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_09' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 14,
+    "feature": "Customer ID_CUST_02",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_02' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 15,
+    "feature": "Category_Butchers",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Category_Butchers' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 16,
+    "feature": "Customer ID_CUST_11",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_11' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 17,
+    "feature": "Customer ID_CUST_13",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_13' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 18,
+    "feature": "Customer ID_CUST_16",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_16' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 19,
+    "feature": "Customer ID_CUST_06",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Customer ID_CUST_06' contributes 3.0273% of the observed separation between clusters."
+  },
+  {
+    "rank": 20,
+    "feature": "Category_Computers and electric accessories",
+    "importance": 0.99992,
+    "impact_pct": 3.0273,
+    "direction": "cluster-separating",
+    "importance_level": "Low",
+    "explanation": "'Category_Computers and electric accessories' contributes 3.0273% of the observed separation between clusters."
+  }
+]

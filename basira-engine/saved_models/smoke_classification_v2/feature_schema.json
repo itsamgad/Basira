@@ -1,0 +1,44 @@
+{
+  "raw_feature_columns": [
+    "x1",
+    "x2",
+    "category"
+  ],
+  "feature_columns": [
+    "x1",
+    "x2",
+    "category_A",
+    "category_B",
+    "category_C"
+  ],
+  "numeric_columns": [
+    "x1",
+    "x2"
+  ],
+  "categorical_columns": [
+    "category"
+  ],
+  "datetime_columns": [],
+  "datetime_feature_columns": [],
+  "identifier_like_columns": [],
+  "target_column": "label",
+  "task_type": "classification",
+  "modality": "tabular",
+  "numeric_medians": {
+    "x1": -0.030613,
+    "x2": 0.115422
+  },
+  "datetime_medians": {},
+  "category_levels": {
+    "category": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "dummy_columns": [
+    "category_A",
+    "category_B",
+    "category_C"
+  ]
+}

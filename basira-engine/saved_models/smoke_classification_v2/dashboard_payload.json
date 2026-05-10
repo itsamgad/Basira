@@ -1,0 +1,470 @@
+{
+  "status": "ready",
+  "task_type": "classification",
+  "target_column": "label",
+  "best_model": "LogisticRegression",
+  "model_leaderboard": [
+    {
+      "model_name": "LogisticRegression",
+      "task_type": "classification",
+      "status": "success",
+      "cv_metrics": {
+        "accuracy": 0.9844,
+        "balanced_accuracy": 0.9833,
+        "precision_weighted": 0.9848,
+        "recall_weighted": 0.9844,
+        "f1_weighted": 0.9844,
+        "f1_macro": 0.9843
+      },
+      "main_score": 0.9843,
+      "rank": 1,
+      "selection_reason": "Selected because it achieved the strongest macro F1 and balanced accuracy among successful candidates."
+    },
+    {
+      "model_name": "LinearSVC",
+      "task_type": "classification",
+      "status": "success",
+      "cv_metrics": {
+        "accuracy": 0.9844,
+        "balanced_accuracy": 0.9833,
+        "precision_weighted": 0.9848,
+        "recall_weighted": 0.9844,
+        "f1_weighted": 0.9844,
+        "f1_macro": 0.9843
+      },
+      "main_score": 0.9843,
+      "rank": 2,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    },
+    {
+      "model_name": "ExtraTrees",
+      "task_type": "classification",
+      "status": "success",
+      "cv_metrics": {
+        "accuracy": 0.9219,
+        "balanced_accuracy": 0.9196,
+        "precision_weighted": 0.9232,
+        "recall_weighted": 0.9219,
+        "f1_weighted": 0.9216,
+        "f1_macro": 0.9212
+      },
+      "main_score": 0.9212,
+      "rank": 3,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    },
+    {
+      "model_name": "RandomForest",
+      "task_type": "classification",
+      "status": "success",
+      "cv_metrics": {
+        "accuracy": 0.9141,
+        "balanced_accuracy": 0.9132,
+        "precision_weighted": 0.9141,
+        "recall_weighted": 0.9141,
+        "f1_weighted": 0.914,
+        "f1_macro": 0.9136
+      },
+      "main_score": 0.9136,
+      "rank": 4,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    },
+    {
+      "model_name": "GradientBoosting",
+      "task_type": "classification",
+      "status": "success",
+      "cv_metrics": {
+        "accuracy": 0.9062,
+        "balanced_accuracy": 0.9088,
+        "precision_weighted": 0.9104,
+        "recall_weighted": 0.9062,
+        "f1_weighted": 0.9063,
+        "f1_macro": 0.9062
+      },
+      "main_score": 0.9062,
+      "rank": 5,
+      "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+      "rejected_reason": "Lower validation ranking than the selected model."
+    }
+  ],
+  "reliability": {
+    "level": "High",
+    "confidence_score": 97,
+    "reason": "The model shows strong macro-level performance and balanced class recognition.",
+    "caution_notes": [],
+    "recommended_next_step": "Use the dashboard outputs to support transparent decision-making.",
+    "dashboard_confidence": "High",
+    "output_policy": {
+      "show_full_dashboard": true,
+      "allow_decision_language": true,
+      "caution_required": false,
+      "mark_outputs_as_exploratory": false
+    }
+  },
+  "summary_cards": [
+    {
+      "title": "Best Model",
+      "value": "LogisticRegression"
+    },
+    {
+      "title": "Reliability Input",
+      "value": "metrics"
+    },
+    {
+      "title": "Accuracy",
+      "value": 0.9688
+    },
+    {
+      "title": "F1 Macro",
+      "value": 0.9685
+    },
+    {
+      "title": "Balanced Accuracy",
+      "value": 0.9667
+    },
+    {
+      "title": "Number of Classes",
+      "value": 2
+    }
+  ],
+  "insights": [
+    {
+      "id": "model_reliability",
+      "title": "Model Reliability",
+      "value": "High",
+      "metric": "The model shows strong macro-level performance and balanced class recognition.",
+      "description": "The model shows strong macro-level performance and balanced class recognition.",
+      "action": "Use the dashboard outputs to support transparent decision-making.",
+      "severity": "success"
+    },
+    {
+      "id": "best_model_selection",
+      "title": "Best Model Selection",
+      "value": "LogisticRegression",
+      "metric": "Selected because it achieved the strongest macro F1 and balanced accuracy among successful candidates.",
+      "description": "Basira compared all suitable supervised models and selected the highest-ranked candidate.",
+      "action": "Review the model leaderboard for alternatives.",
+      "severity": "success"
+    },
+    {
+      "id": "primary_driver",
+      "title": "Primary Feature Driver",
+      "value": "x2",
+      "metric": "50.51% impact",
+      "description": "x2 contributes about 50.51% of the available model driver signal.",
+      "action": "Monitor x2 in the dashboard and RCA stage.",
+      "severity": "success"
+    },
+    {
+      "id": "weakest_class",
+      "title": "Weakest Class",
+      "value": "negative",
+      "metric": "F1 = 0.9655",
+      "description": "This class is the hardest for the selected model to recognize.",
+      "action": "Review examples from this class and consider adding more labeled records.",
+      "severity": "warning"
+    }
+  ],
+  "narrative": {
+    "headline": "Basira has completed supervised model analysis.",
+    "summary": "Basira compared multiple supervised candidates and selected LogisticRegression as the best model for this dataset.",
+    "key_finding": "The strongest detected driver is x2 with 50.51% impact.",
+    "model_performance": "The selected model achieved F1 Macro = 0.9685 and Balanced Accuracy = 0.9667.",
+    "risk_alert": "The results are strong enough for confident decision-support use.",
+    "recommended_action": "Use the dashboard outputs to support transparent decision-making.",
+    "dashboard_note": "Full dashboard can be displayed without caution banner."
+  },
+  "chart_recommendations": [
+    {
+      "chart_id": "summary_cards",
+      "chart_type": "kpi_cards",
+      "title": "Classification KPI Summary",
+      "priority": 1,
+      "reason": "Recommended to support overview in the Basira dashboard.",
+      "dashboard_section": "Overview",
+      "exploratory": false
+    },
+    {
+      "chart_id": "feature_importance_bar",
+      "chart_type": "horizontal_bar",
+      "title": "Top Feature Drivers",
+      "priority": 2,
+      "reason": "Recommended to support explainability in the Basira dashboard.",
+      "dashboard_section": "Explainability",
+      "exploratory": false
+    },
+    {
+      "chart_id": "confusion_matrix_heatmap",
+      "chart_type": "heatmap",
+      "title": "Confusion Matrix",
+      "priority": 3,
+      "reason": "Recommended to support model evaluation in the Basira dashboard.",
+      "dashboard_section": "Model Evaluation",
+      "exploratory": false
+    },
+    {
+      "chart_id": "class_distribution_doughnut",
+      "chart_type": "doughnut",
+      "title": "Actual Class Distribution",
+      "priority": 4,
+      "reason": "Recommended to support data profile in the Basira dashboard.",
+      "dashboard_section": "Data Profile",
+      "exploratory": false
+    },
+    {
+      "chart_id": "predicted_distribution_doughnut",
+      "chart_type": "doughnut",
+      "title": "Predicted Class Distribution",
+      "priority": 5,
+      "reason": "Recommended to support prediction behavior in the Basira dashboard.",
+      "dashboard_section": "Prediction Behavior",
+      "exploratory": false
+    },
+    {
+      "chart_id": "metrics_bar",
+      "chart_type": "bar",
+      "title": "Metrics Comparison",
+      "priority": 6,
+      "reason": "Recommended to support model evaluation in the Basira dashboard.",
+      "dashboard_section": "Model Evaluation",
+      "exploratory": false
+    },
+    {
+      "chart_id": "confidence_distribution",
+      "chart_type": "histogram",
+      "title": "Prediction Confidence",
+      "priority": 7,
+      "reason": "Recommended to support prediction behavior in the Basira dashboard.",
+      "dashboard_section": "Prediction Behavior",
+      "exploratory": false
+    }
+  ],
+  "chart_data": {
+    "summary_cards": [
+      {
+        "title": "Best Model",
+        "value": "LogisticRegression"
+      },
+      {
+        "title": "Reliability Input",
+        "value": "metrics"
+      },
+      {
+        "title": "Accuracy",
+        "value": 0.9688
+      },
+      {
+        "title": "F1 Macro",
+        "value": 0.9685
+      },
+      {
+        "title": "Balanced Accuracy",
+        "value": 0.9667
+      },
+      {
+        "title": "Number of Classes",
+        "value": 2
+      }
+    ],
+    "feature_importance_bar": {
+      "chart_type": "horizontal_bar",
+      "labels": [
+        "x2",
+        "x1",
+        "category_C",
+        "category_A",
+        "category_B"
+      ],
+      "values": [
+        50.51,
+        44.95,
+        2.31,
+        1.79,
+        0.44
+      ]
+    },
+    "class_distribution_doughnut": {
+      "labels": [
+        "negative",
+        "positive"
+      ],
+      "values": [
+        15,
+        17
+      ],
+      "chart_type": "doughnut"
+    },
+    "predicted_distribution_doughnut": {
+      "labels": [
+        "negative",
+        "positive"
+      ],
+      "values": [
+        14,
+        18
+      ],
+      "chart_type": "doughnut"
+    },
+    "confusion_matrix_heatmap": {
+      "chart_type": "heatmap",
+      "matrix": [
+        [
+          14,
+          1
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "x_labels": [
+        "negative",
+        "positive"
+      ],
+      "y_labels": [
+        "negative",
+        "positive"
+      ]
+    },
+    "metrics_bar": {
+      "chart_type": "bar",
+      "labels": [
+        "Accuracy",
+        "Balanced Accuracy",
+        "F1 Macro",
+        "F1 Weighted",
+        "Precision Weighted",
+        "Recall Weighted"
+      ],
+      "values": [
+        0.9688,
+        0.9667,
+        0.9685,
+        0.9687,
+        0.9705,
+        0.9688
+      ]
+    },
+    "confidence_distribution": {
+      "chart_type": "histogram",
+      "mean_confidence": 0.8451,
+      "labels": [
+        "0.54–0.58",
+        "0.58–0.63",
+        "0.63–0.68",
+        "0.68–0.72",
+        "0.72–0.77",
+        "0.77–0.82",
+        "0.82–0.86",
+        "0.86–0.91",
+        "0.91–0.95",
+        "0.95–1.00"
+      ],
+      "counts": [
+        3,
+        1,
+        1,
+        3,
+        2,
+        4,
+        1,
+        2,
+        2,
+        13
+      ]
+    },
+    "top_errors": [
+      {
+        "row_index": 31,
+        "actual": "negative",
+        "predicted": "positive"
+      }
+    ]
+  },
+  "rca_ready": {
+    "status": "ready",
+    "task_type": "classification",
+    "target_column": "label",
+    "primary_driver": {
+      "feature": "x2",
+      "importance": 3.082476,
+      "impact_pct": 50.51,
+      "direction": "positive",
+      "importance_level": "Critical",
+      "rank": 1,
+      "explanation": "x2 contributes about 50.51% of the available model driver signal."
+    },
+    "top_drivers": [
+      {
+        "feature": "x2",
+        "importance": 3.082476,
+        "impact_pct": 50.51,
+        "direction": "positive",
+        "importance_level": "Critical",
+        "rank": 1,
+        "explanation": "x2 contributes about 50.51% of the available model driver signal."
+      },
+      {
+        "feature": "x1",
+        "importance": 2.743724,
+        "impact_pct": 44.95,
+        "direction": "positive",
+        "importance_level": "Critical",
+        "rank": 2,
+        "explanation": "x1 contributes about 44.95% of the available model driver signal."
+      },
+      {
+        "feature": "category_C",
+        "importance": 0.141107,
+        "impact_pct": 2.31,
+        "direction": "negative",
+        "importance_level": "Low",
+        "rank": 3,
+        "explanation": "category_C contributes about 2.31% of the available model driver signal."
+      },
+      {
+        "feature": "category_A",
+        "importance": 0.108994,
+        "impact_pct": 1.79,
+        "direction": "positive",
+        "importance_level": "Low",
+        "rank": 4,
+        "explanation": "category_A contributes about 1.79% of the available model driver signal."
+      },
+      {
+        "feature": "category_B",
+        "importance": 0.026996,
+        "impact_pct": 0.44,
+        "direction": "positive",
+        "importance_level": "Low",
+        "rank": 5,
+        "explanation": "category_B contributes about 0.44% of the available model driver signal."
+      }
+    ],
+    "error_cases": [],
+    "residual_summary": {},
+    "class_error_summary": {
+      "most_confused_pairs": [
+        {
+          "count": 1,
+          "actual": "negative",
+          "predicted": "positive"
+        }
+      ],
+      "weakest_class": "negative"
+    },
+    "recommended_rca_focus": [
+      "Investigate why negative is confused with positive.",
+      "Review weak performance for class negative."
+    ]
+  },
+  "warnings": [],
+  "rendering_notes": {
+    "preferred_layout": "supervised_classification_dashboard",
+    "show_caution_banner": false,
+    "allow_export_report": true,
+    "supports_multiple_charts": true
+  }
+}

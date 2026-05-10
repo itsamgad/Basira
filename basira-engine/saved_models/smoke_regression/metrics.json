@@ -1,0 +1,58 @@
+{
+  "cross_validation_results": [
+    {
+      "model_name": "Ridge",
+      "cv_metrics": {
+        "RMSE": 397483.0635,
+        "MAE": 314776.963,
+        "R2": -0.0545,
+        "MAPE_pct": 24.2044
+      }
+    },
+    {
+      "model_name": "LinearRegression",
+      "cv_metrics": {
+        "RMSE": 397579.8254,
+        "MAE": 314877.6301,
+        "R2": -0.055,
+        "MAPE_pct": 24.21
+      }
+    },
+    {
+      "model_name": "RandomForest",
+      "cv_metrics": {
+        "RMSE": 412483.9743,
+        "MAE": 328706.0539,
+        "R2": -0.1356,
+        "MAPE_pct": 25.171
+      }
+    },
+    {
+      "model_name": "GradientBoosting",
+      "cv_metrics": {
+        "RMSE": 443673.4059,
+        "MAE": 351084.1335,
+        "R2": -0.3138,
+        "MAPE_pct": 26.6444
+      }
+    }
+  ],
+  "selected_model": "Ridge",
+  "test_metrics": {
+    "RMSE": 367609.8759,
+    "MAE": 298620.5025,
+    "R2": 0.0229,
+    "MAPE_pct": 20.9361
+  },
+  "feature_importance": {
+    "Store": -25815.9308238126,
+    "Holiday_Flag": -33513.72255043762,
+    "Temperature": 1322.7048561970917,
+    "Fuel_Price": 18384.452992025013,
+    "CPI": -11586.489865663272,
+    "Unemployment": 2340.160932663198,
+    "_year": 8525.59380457858,
+    "_month": 400.35311777647127,
+    "_week": 28562.335687561466
+  }
+}

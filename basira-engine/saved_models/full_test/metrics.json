@@ -1,0 +1,53 @@
+{
+  "cross_validation_results": [
+    {
+      "model_name": "Ridge",
+      "cv_metrics": {
+        "RMSE": 415095.2478,
+        "MAE": 335716.5748,
+        "R2": -0.0478,
+        "MAPE_pct": 25.699
+      }
+    },
+    {
+      "model_name": "LinearRegression",
+      "cv_metrics": {
+        "RMSE": 415152.0785,
+        "MAE": 335757.7753,
+        "R2": -0.0481,
+        "MAPE_pct": 25.7014
+      }
+    },
+    {
+      "model_name": "RandomForest",
+      "cv_metrics": {
+        "RMSE": 435944.682,
+        "MAE": 353935.1093,
+        "R2": -0.1557,
+        "MAPE_pct": 26.6919
+      }
+    },
+    {
+      "model_name": "GradientBoosting",
+      "cv_metrics": {
+        "RMSE": 502096.5137,
+        "MAE": 407030.456,
+        "R2": -0.533,
+        "MAPE_pct": 30.2693
+      }
+    }
+  ],
+  "selected_model": "Ridge",
+  "test_metrics": {
+    "RMSE": 422236.2839,
+    "MAE": 330665.0993,
+    "R2": 0.0184,
+    "MAPE_pct": 25.0907
+  },
+  "feature_importance": {
+    "quantity": -31256.510572224495,
+    "discount": 25464.405600625196,
+    "fuel_price": -7677.871761132654,
+    "temperature": 13613.432950397108
+  }
+}

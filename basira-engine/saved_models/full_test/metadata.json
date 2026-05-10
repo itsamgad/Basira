@@ -1,0 +1,37 @@
+{
+  "project": "Basira",
+  "phase": "Phase 2 — Supervised Regression",
+  "task_type": "regression",
+  "candidate_models": [
+    "Ridge",
+    "LinearRegression",
+    "RandomForest",
+    "GradientBoosting"
+  ],
+  "selected_model": "Ridge",
+  "selection_criterion": "Lowest CV RMSE",
+  "preparation_summary": {
+    "rows_before": 300,
+    "rows_after": 300,
+    "dropped_missing": 0,
+    "n_feature_columns": 4,
+    "feature_columns": [
+      "quantity",
+      "discount",
+      "fuel_price",
+      "temperature"
+    ],
+    "target_stats": {
+      "nunique": 300,
+      "dtype": "float64"
+    }
+  },
+  "modality": "tabular",
+  "split_strategy": "ShuffleSplit",
+  "feature_columns": [
+    "quantity",
+    "discount",
+    "fuel_price",
+    "temperature"
+  ]
+}

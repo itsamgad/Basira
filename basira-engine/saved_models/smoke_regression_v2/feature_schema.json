@@ -1,0 +1,41 @@
+{
+  "raw_feature_columns": [
+    "x1",
+    "x2",
+    "group"
+  ],
+  "feature_columns": [
+    "x1",
+    "x2",
+    "group_A",
+    "group_B"
+  ],
+  "numeric_columns": [
+    "x1",
+    "x2"
+  ],
+  "categorical_columns": [
+    "group"
+  ],
+  "datetime_columns": [],
+  "datetime_feature_columns": [],
+  "identifier_like_columns": [],
+  "target_column": "target",
+  "task_type": "regression",
+  "modality": "tabular",
+  "numeric_medians": {
+    "x1": -0.085661,
+    "x2": -0.038122
+  },
+  "datetime_medians": {},
+  "category_levels": {
+    "group": [
+      "A",
+      "B"
+    ]
+  },
+  "dummy_columns": [
+    "group_A",
+    "group_B"
+  ]
+}

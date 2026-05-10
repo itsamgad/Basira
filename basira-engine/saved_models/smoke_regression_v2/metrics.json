@@ -1,0 +1,16 @@
+{
+  "test_metrics": {
+    "RMSE": 0.3331,
+    "MAE": 0.2676,
+    "R2": 0.9899,
+    "MAPE_pct": 3.2288
+  },
+  "classification_report": null,
+  "confusion_matrix": null,
+  "regression_metrics": {
+    "RMSE": 0.3331,
+    "MAE": 0.2676,
+    "R2": 0.9899,
+    "MAPE_pct": 3.2288
+  }
+}

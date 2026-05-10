@@ -1,0 +1,76 @@
+[
+  {
+    "model_name": "Ridge",
+    "task_type": "regression",
+    "status": "success",
+    "cv_metrics": {
+      "RMSE": 0.295,
+      "MAE": 0.2456,
+      "R2": 0.9942,
+      "MAPE_pct": 3.0787
+    },
+    "main_score": 0.9942,
+    "rank": 1,
+    "selection_reason": "Selected because it achieved the best validation balance: higher R2 with lower RMSE and MAE."
+  },
+  {
+    "model_name": "LinearRegression",
+    "task_type": "regression",
+    "status": "success",
+    "cv_metrics": {
+      "RMSE": 0.2967,
+      "MAE": 0.2482,
+      "R2": 0.9942,
+      "MAPE_pct": 3.1834
+    },
+    "main_score": 0.9942,
+    "rank": 2,
+    "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+    "rejected_reason": "Lower validation ranking than the selected model."
+  },
+  {
+    "model_name": "GradientBoosting",
+    "task_type": "regression",
+    "status": "success",
+    "cv_metrics": {
+      "RMSE": 0.7797,
+      "MAE": 0.5354,
+      "R2": 0.9596,
+      "MAPE_pct": 10.6775
+    },
+    "main_score": 0.9596,
+    "rank": 3,
+    "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+    "rejected_reason": "Lower validation ranking than the selected model."
+  },
+  {
+    "model_name": "ExtraTrees",
+    "task_type": "regression",
+    "status": "success",
+    "cv_metrics": {
+      "RMSE": 1.1909,
+      "MAE": 0.6845,
+      "R2": 0.9058,
+      "MAPE_pct": 15.3853
+    },
+    "main_score": 0.9058,
+    "rank": 4,
+    "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+    "rejected_reason": "Lower validation ranking than the selected model."
+  },
+  {
+    "model_name": "RandomForest",
+    "task_type": "regression",
+    "status": "success",
+    "cv_metrics": {
+      "RMSE": 1.1948,
+      "MAE": 0.7587,
+      "R2": 0.9052,
+      "MAPE_pct": 15.4129
+    },
+    "main_score": 0.9052,
+    "rank": 5,
+    "selection_reason": "Not selected because a higher-ranked model achieved stronger validation performance.",
+    "rejected_reason": "Lower validation ranking than the selected model."
+  }
+]

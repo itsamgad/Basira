@@ -1,0 +1,74 @@
+[
+  {
+    "chart_id": "summary_cards",
+    "chart_type": "kpi_cards",
+    "title": "Unsupervised Summary",
+    "priority": 1,
+    "reason": "Best for showing clustering quality and anomaly status.",
+    "dashboard_section": "Overview",
+    "exploratory": false
+  },
+  {
+    "chart_id": "model_leaderboard_bar",
+    "chart_type": "bar",
+    "title": "Clustering Model Leaderboard",
+    "priority": 2,
+    "reason": "Compares all successful clustering candidates.",
+    "dashboard_section": "Model Selection",
+    "exploratory": false
+  },
+  {
+    "chart_id": "cluster_size_doughnut",
+    "chart_type": "doughnut",
+    "title": "Cluster Size Distribution",
+    "priority": 3,
+    "reason": "Shows the relative size of each discovered segment.",
+    "dashboard_section": "Cluster Profiles",
+    "exploratory": false
+  },
+  {
+    "chart_id": "feature_importance_bar",
+    "chart_type": "horizontal_bar",
+    "title": "Top Cluster-Separating Features",
+    "priority": 4,
+    "reason": "Ranks the variables that separate clusters most strongly.",
+    "dashboard_section": "Explainability",
+    "exploratory": false
+  },
+  {
+    "chart_id": "pca_cluster_scatter",
+    "chart_type": "scatter",
+    "title": "2D Cluster Map",
+    "priority": 5,
+    "reason": "Displays cluster separation in reduced dimensional space.",
+    "dashboard_section": "Pattern Exploration",
+    "exploratory": false
+  },
+  {
+    "chart_id": "cluster_profile_table",
+    "chart_type": "table",
+    "title": "Cluster Profiles",
+    "priority": 6,
+    "reason": "Summarizes each cluster's distinctive characteristics.",
+    "dashboard_section": "Cluster Profiles",
+    "exploratory": false
+  },
+  {
+    "chart_id": "anomaly_score_histogram",
+    "chart_type": "histogram",
+    "title": "Anomaly Score Distribution",
+    "priority": 7,
+    "reason": "Shows unusual-record intensity among flagged records.",
+    "dashboard_section": "Anomaly Detection",
+    "exploratory": false
+  },
+  {
+    "chart_id": "top_anomalies_table",
+    "chart_type": "table",
+    "title": "Top Anomalous Records",
+    "priority": 8,
+    "reason": "Lists records requiring further investigation.",
+    "dashboard_section": "Anomaly Detection",
+    "exploratory": false
+  }
+]

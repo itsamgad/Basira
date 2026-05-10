@@ -1,0 +1,57 @@
+{
+  "cross_validation_results": [
+    {
+      "model_name": "RandomForest",
+      "cv_metrics": {
+        "RMSE": 822.9786,
+        "MAE": 606.1693,
+        "R2": 0.4576,
+        "MAPE_pct": 115.1322
+      }
+    },
+    {
+      "model_name": "Ridge",
+      "cv_metrics": {
+        "RMSE": 825.9561,
+        "MAE": 632.4876,
+        "R2": 0.4537,
+        "MAPE_pct": 121.5154
+      }
+    },
+    {
+      "model_name": "LinearRegression",
+      "cv_metrics": {
+        "RMSE": 825.9963,
+        "MAE": 632.6687,
+        "R2": 0.4537,
+        "MAPE_pct": 121.5042
+      }
+    },
+    {
+      "model_name": "GradientBoosting",
+      "cv_metrics": {
+        "RMSE": 829.0464,
+        "MAE": 598.1496,
+        "R2": 0.4496,
+        "MAPE_pct": 113.1581
+      }
+    }
+  ],
+  "selected_model": "RandomForest",
+  "test_metrics": {
+    "RMSE": 810.2892,
+    "MAE": 613.8,
+    "R2": 0.4732,
+    "MAPE_pct": 103.2919
+  },
+  "feature_importance": {
+    "Amount": 0.7271836117065289,
+    "Quantity": 0.06815492316827508,
+    "Category": 0.01894296602008421,
+    "Sub-Category": 0.0489077947350365,
+    "City": 0.0493629784635864,
+    "_year": 0.024097752443084597,
+    "_month": 0.013950100124867302,
+    "_week": 0.049399873338537056
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "level": "High",
+  "confidence_score": 83,
+  "reason": "Clusters are well separated according to Silhouette score.",
+  "best_algorithm": "DBSCAN",
+  "n_clusters": 200,
+  "silhouette": 0.664319,
+  "davies_bouldin": 0.538207,
+  "calinski_harabasz": 1182.933155,
+  "cluster_size_imbalance_ratio": 2.1282,
+  "warnings": [],
+  "output_policy": {
+    "show_full_dashboard": true,
+    "allow_decision_language": true,
+    "caution_required": false,
+    "mark_outputs_as_exploratory": false
+  },
+  "leaderboard_size": 51
+}

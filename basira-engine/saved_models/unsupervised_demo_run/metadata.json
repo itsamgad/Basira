@@ -1,0 +1,12 @@
+{
+  "basira_engine_version": "unsupervised-enhanced-v1.0",
+  "strategy": "unsupervised",
+  "best_algorithm": "DBSCAN",
+  "best_n_clusters": 200,
+  "created_at": "2026-05-06T17:39:43.395446",
+  "random_state": 42,
+  "number_of_rows_used": 12575,
+  "number_of_features_used": 35,
+  "assignment_ready": false,
+  "model_selection_metric": "combined_score = 0.60*silhouette + 0.25*(1/(1+DB)) + 0.15*normalized_CH"
+}

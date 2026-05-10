@@ -1,0 +1,175 @@
+{
+  "project": "Basira",
+  "phase": "Phase 3 — Unsupervised",
+  "preparation_summary": {
+    "rows_used": 300,
+    "feature_columns": [
+      "age",
+      "purchases",
+      "tenure"
+    ],
+    "encoded_categoricals": [],
+    "dropped_id_like": [
+      "income",
+      "score"
+    ],
+    "dropped_date_cols": []
+  },
+  "pca": {
+    "applied": true,
+    "n_components": 3,
+    "variance_ratio": [
+      0.3541,
+      0.3362,
+      0.3097
+    ]
+  },
+  "best_model": {
+    "algorithm": "KMeans",
+    "n_clusters": 6,
+    "silhouette": 0.2981,
+    "davies_bouldin": 1.0033
+  },
+  "all_models": [
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 2,
+      "silhouette": 0.242,
+      "davies_bouldin": 1.6309
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 3,
+      "silhouette": 0.2452,
+      "davies_bouldin": 1.3071
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 4,
+      "silhouette": 0.2545,
+      "davies_bouldin": 1.1701
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 5,
+      "silhouette": 0.2792,
+      "davies_bouldin": 1.0797
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 6,
+      "silhouette": 0.2981,
+      "davies_bouldin": 1.0033
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 7,
+      "silhouette": 0.2732,
+      "davies_bouldin": 1.0811
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 8,
+      "silhouette": 0.2825,
+      "davies_bouldin": 1.0288
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 9,
+      "silhouette": 0.2767,
+      "davies_bouldin": 1.0455
+    },
+    {
+      "algorithm": "KMeans",
+      "n_clusters": 10,
+      "silhouette": 0.268,
+      "davies_bouldin": 1.1023
+    },
+    {
+      "algorithm": "Hierarchical",
+      "n_clusters": 3,
+      "silhouette": 0.2227,
+      "davies_bouldin": 1.3705
+    },
+    {
+      "algorithm": "Hierarchical",
+      "n_clusters": 4,
+      "silhouette": 0.2477,
+      "davies_bouldin": 1.1497
+    },
+    {
+      "algorithm": "Hierarchical",
+      "n_clusters": 5,
+      "silhouette": 0.2489,
+      "davies_bouldin": 1.2223
+    }
+  ],
+  "cluster_profiles": [
+    {
+      "cluster_id": 0,
+      "size": 47,
+      "size_pct": 15.67,
+      "feature_means": {
+        "age": 51.4894,
+        "purchases": 70.0,
+        "tenure": 5.8936
+      },
+      "label": "High-purchases / Low-tenure"
+    },
+    {
+      "cluster_id": 1,
+      "size": 59,
+      "size_pct": 19.67,
+      "feature_means": {
+        "age": 26.8644,
+        "purchases": 26.0678,
+        "tenure": 12.6102
+      },
+      "label": "High-age / Low-tenure"
+    },
+    {
+      "cluster_id": 2,
+      "size": 53,
+      "size_pct": 17.67,
+      "feature_means": {
+        "age": 51.4151,
+        "purchases": 26.2453,
+        "tenure": 15.0189
+      },
+      "label": "High-age / Low-tenure"
+    },
+    {
+      "cluster_id": 3,
+      "size": 50,
+      "size_pct": 16.67,
+      "feature_means": {
+        "age": 42.26,
+        "purchases": 79.44,
+        "tenure": 14.86
+      },
+      "label": "High-purchases / Low-tenure"
+    },
+    {
+      "cluster_id": 4,
+      "size": 43,
+      "size_pct": 14.33,
+      "feature_means": {
+        "age": 25.0698,
+        "purchases": 70.186,
+        "tenure": 6.5581
+      },
+      "label": "High-purchases / Low-tenure"
+    },
+    {
+      "cluster_id": 5,
+      "size": 48,
+      "size_pct": 16.0,
+      "feature_means": {
+        "age": 48.375,
+        "purchases": 19.7292,
+        "tenure": 4.3542
+      },
+      "label": "High-age / Low-tenure"
+    }
+  ]
+}

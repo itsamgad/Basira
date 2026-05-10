@@ -1,0 +1,128 @@
+{
+  "cross_validation_results": [
+    {
+      "model_name": "LogisticRegression",
+      "cv_metrics": {
+        "accuracy": 0.1384,
+        "balanced_accuracy": 0.1393,
+        "precision_weighted": 0.0914,
+        "recall_weighted": 0.1384,
+        "f1_weighted": 0.1065,
+        "f1_macro": 0.1047
+      }
+    },
+    {
+      "model_name": "LinearSVC",
+      "cv_metrics": {
+        "accuracy": 0.1132,
+        "balanced_accuracy": 0.1155,
+        "precision_weighted": 0.0714,
+        "recall_weighted": 0.1132,
+        "f1_weighted": 0.0842,
+        "f1_macro": 0.0835
+      }
+    },
+    {
+      "model_name": "MultinomialNB",
+      "cv_metrics": {
+        "accuracy": 0.1132,
+        "balanced_accuracy": 0.1155,
+        "precision_weighted": 0.0714,
+        "recall_weighted": 0.1132,
+        "f1_weighted": 0.0842,
+        "f1_macro": 0.0835
+      }
+    }
+  ],
+  "selected_model": "LogisticRegression",
+  "test_metrics": {
+    "accuracy": 0.2439,
+    "balanced_accuracy": 0.2,
+    "precision_weighted": 0.0595,
+    "recall_weighted": 0.2439,
+    "f1_weighted": 0.0956,
+    "f1_macro": 0.0784
+  },
+  "classification_report": {
+    "Account": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 4.0
+    },
+    "Billing": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 8.0
+    },
+    "Network": {
+      "precision": 0.24390243902439024,
+      "recall": 1.0,
+      "f1-score": 0.39215686274509803,
+      "support": 10.0
+    },
+    "Shipping": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 9.0
+    },
+    "Technical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 10.0
+    },
+    "accuracy": 0.24390243902439024,
+    "macro avg": {
+      "precision": 0.04878048780487805,
+      "recall": 0.2,
+      "f1-score": 0.0784313725490196,
+      "support": 41.0
+    },
+    "weighted avg": {
+      "precision": 0.0594883997620464,
+      "recall": 0.24390243902439024,
+      "f1-score": 0.09564801530368244,
+      "support": 41.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      4,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      8,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      10,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      9,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      10,
+      0,
+      0
+    ]
+  ]
+}

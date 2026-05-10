@@ -1,0 +1,9 @@
+{
+  "headline": "Basira has completed supervised model analysis.",
+  "summary": "Basira compared multiple supervised candidates and selected Ridge as the best model for this dataset.",
+  "key_finding": "The strongest detected driver is x1 with 60.23% impact.",
+  "model_performance": "The selected model achieved R2 = 0.9899, RMSE = 0.3331, and MAE = 0.2676.",
+  "risk_alert": "The results are strong enough for confident decision-support use.",
+  "recommended_action": "Use the dashboard outputs to support transparent decision-making.",
+  "dashboard_note": "Full dashboard can be displayed without caution banner."
+}

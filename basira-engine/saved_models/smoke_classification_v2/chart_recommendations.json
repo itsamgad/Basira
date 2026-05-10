@@ -1,0 +1,65 @@
+[
+  {
+    "chart_id": "summary_cards",
+    "chart_type": "kpi_cards",
+    "title": "Classification KPI Summary",
+    "priority": 1,
+    "reason": "Recommended to support overview in the Basira dashboard.",
+    "dashboard_section": "Overview",
+    "exploratory": false
+  },
+  {
+    "chart_id": "feature_importance_bar",
+    "chart_type": "horizontal_bar",
+    "title": "Top Feature Drivers",
+    "priority": 2,
+    "reason": "Recommended to support explainability in the Basira dashboard.",
+    "dashboard_section": "Explainability",
+    "exploratory": false
+  },
+  {
+    "chart_id": "confusion_matrix_heatmap",
+    "chart_type": "heatmap",
+    "title": "Confusion Matrix",
+    "priority": 3,
+    "reason": "Recommended to support model evaluation in the Basira dashboard.",
+    "dashboard_section": "Model Evaluation",
+    "exploratory": false
+  },
+  {
+    "chart_id": "class_distribution_doughnut",
+    "chart_type": "doughnut",
+    "title": "Actual Class Distribution",
+    "priority": 4,
+    "reason": "Recommended to support data profile in the Basira dashboard.",
+    "dashboard_section": "Data Profile",
+    "exploratory": false
+  },
+  {
+    "chart_id": "predicted_distribution_doughnut",
+    "chart_type": "doughnut",
+    "title": "Predicted Class Distribution",
+    "priority": 5,
+    "reason": "Recommended to support prediction behavior in the Basira dashboard.",
+    "dashboard_section": "Prediction Behavior",
+    "exploratory": false
+  },
+  {
+    "chart_id": "metrics_bar",
+    "chart_type": "bar",
+    "title": "Metrics Comparison",
+    "priority": 6,
+    "reason": "Recommended to support model evaluation in the Basira dashboard.",
+    "dashboard_section": "Model Evaluation",
+    "exploratory": false
+  },
+  {
+    "chart_id": "confidence_distribution",
+    "chart_type": "histogram",
+    "title": "Prediction Confidence",
+    "priority": 7,
+    "reason": "Recommended to support prediction behavior in the Basira dashboard.",
+    "dashboard_section": "Prediction Behavior",
+    "exploratory": false
+  }
+]

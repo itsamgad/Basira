@@ -1,0 +1,1195 @@
+Order ID,Amount,Profit,Quantity,Category,Sub-Category,Order Date,CustomerName,City
+B-26776,9726,1275,5,Electronics,Electronic Games,27/06/2023,David Padilla,Miami
+B-26776,9726,1275,5,Electronics,Electronic Games,27/12/2024,Connor Morgan,Chicago
+B-26776,9726,1275,5,Electronics,Electronic Games,25/07/2021,Robert Stone,Buffalo
+B-26776,4975,1330,14,Electronics,Printers,27/06/2023,David Padilla,Miami
+B-26776,4975,1330,14,Electronics,Printers,27/12/2024,Connor Morgan,Chicago
+B-26776,4975,1330,14,Electronics,Printers,25/07/2021,Robert Stone,Buffalo
+B-26942,1525,185,12,Office Supplies,Pens,11/05/2024,John Fields,Orlando
+B-26942,1525,185,12,Office Supplies,Pens,09/10/2021,Clayton Smith,Miami
+B-26640,883,117,10,Electronics,Laptops,18/11/2022,Richard Kelley,Los Angeles
+B-26640,8127,3551,16,Furniture,Tables,18/11/2022,Richard Kelley,Los Angeles
+B-25890,2516,734,19,Furniture,Chairs,12/11/2023,Jacqueline Hubbard,New York City
+B-25102,2975,462,14,Office Supplies,Pens,23/03/2020,Jessica Anderson,New York City
+B-25426,6851,2812,1,Office Supplies,Markers,04/05/2020,Mary Taylor,Orlando
+B-25426,7626,1046,15,Furniture,Sofas,04/05/2020,Mary Taylor,Orlando
+B-25426,1023,78,9,Furniture,Tables,04/05/2020,Mary Taylor,Orlando
+B-25238,7600,1098,10,Office Supplies,Pens,09/11/2023,Walter Crawford,Springfield
+B-25238,7501,262,18,Office Supplies,Paper,09/11/2023,Walter Crawford,Springfield
+B-25051,725,133,6,Office Supplies,Paper,30/12/2024,Lawrence Robinson,Rochester
+B-25051,7201,2685,2,Furniture,Tables,30/12/2024,Lawrence Robinson,Rochester
+B-26510,1629,265,1,Office Supplies,Paper,11/02/2025,Douglas Pennington,Dallas
+B-26510,1629,265,1,Office Supplies,Paper,23/01/2024,Ricardo Andrews,San Diego
+B-25104,8971,2971,19,Office Supplies,Binders,28/11/2020,Paul Raymond,San Diego
+B-25104,2939,894,20,Office Supplies,Binders,28/11/2020,Paul Raymond,San Diego
+B-25553,9380,414,11,Electronics,Phones,30/05/2024,Karen Johnson,Rochester
+B-25553,8558,1644,18,Office Supplies,Binders,30/05/2024,Karen Johnson,Rochester
+B-25553,4080,72,17,Office Supplies,Paper,30/05/2024,Karen Johnson,Rochester
+B-26703,4206,1821,17,Electronics,Electronic Games,23/01/2022,Juan Erickson,Austin
+B-26232,5219,1180,20,Office Supplies,Binders,17/12/2021,Alexander Reed,New York City
+B-26232,5219,1180,20,Office Supplies,Binders,03/02/2023,Jacqueline Harris,San Francisco
+B-25394,3686,760,20,Office Supplies,Pens,30/10/2022,Tyler Park,San Francisco
+B-25394,3686,760,20,Office Supplies,Pens,15/01/2022,Richard Wolfe,Columbus
+B-26157,6045,1606,4,Office Supplies,Paper,14/12/2023,Sierra Rios,Orlando
+B-26157,9337,554,11,Office Supplies,Pens,14/12/2023,Sierra Rios,Orlando
+B-25555,4051,1848,12,Electronics,Phones,03/07/2023,Jessica Richardson,San Diego
+B-25555,4051,1848,12,Electronics,Phones,08/05/2021,Kimberly Warren,Cincinnati
+B-25555,5011,866,11,Furniture,Bookcases,03/07/2023,Jessica Richardson,San Diego
+B-25555,5011,866,11,Furniture,Bookcases,08/05/2021,Kimberly Warren,Cincinnati
+B-26139,3958,630,15,Furniture,Sofas,07/10/2022,Casey Garcia,Orlando
+B-26139,3132,963,1,Furniture,Tables,07/10/2022,Casey Garcia,Orlando
+B-25032,7784,2937,12,Office Supplies,Markers,06/08/2024,Denise Hampton,San Francisco
+B-25032,5591,1696,3,Office Supplies,Pens,06/08/2024,Denise Hampton,San Francisco
+B-25032,5122,2413,12,Electronics,Electronic Games,06/08/2024,Denise Hampton,San Francisco
+B-25730,8293,2632,8,Office Supplies,Binders,05/01/2022,Justin Rodriguez,Cleveland
+B-25730,8293,2632,8,Office Supplies,Binders,17/10/2020,Ms. Emily Baxter,Rochester
+B-25730,8293,2632,8,Office Supplies,Binders,21/08/2023,Austin White,Los Angeles
+B-25730,2863,205,17,Electronics,Phones,05/01/2022,Justin Rodriguez,Cleveland
+B-25730,2863,205,17,Electronics,Phones,17/10/2020,Ms. Emily Baxter,Rochester
+B-25730,2863,205,17,Electronics,Phones,21/08/2023,Austin White,Los Angeles
+B-26470,3090,573,6,Furniture,Tables,27/12/2024,Morgan Montes,San Diego
+B-26470,3090,573,6,Furniture,Tables,18/06/2021,Christine Mosley,Cincinnati
+B-26470,3090,573,6,Furniture,Tables,27/05/2023,Ashley Rodriguez,Austin
+B-26470,3090,573,6,Furniture,Tables,12/10/2021,Elizabeth King,Dallas
+B-26470,9683,1014,5,Electronics,Printers,27/12/2024,Morgan Montes,San Diego
+B-26470,9683,1014,5,Electronics,Printers,18/06/2021,Christine Mosley,Cincinnati
+B-26470,9683,1014,5,Electronics,Printers,27/05/2023,Ashley Rodriguez,Austin
+B-26470,9683,1014,5,Electronics,Printers,12/10/2021,Elizabeth King,Dallas
+B-25988,2463,648,18,Furniture,Tables,19/09/2022,Connie Holmes,Cincinnati
+B-25568,7811,1538,12,Furniture,Sofas,25/03/2022,Melissa Peck,Miami
+B-26730,6139,451,10,Furniture,Tables,26/02/2022,David Smith,Orlando
+B-26730,6139,451,10,Furniture,Tables,05/04/2021,Jacqueline Harris,Houston
+B-26730,8636,3192,3,Furniture,Chairs,26/02/2022,David Smith,Orlando
+B-26730,8636,3192,3,Furniture,Chairs,05/04/2021,Jacqueline Harris,Houston
+B-26730,4439,1712,19,Furniture,Sofas,26/02/2022,David Smith,Orlando
+B-26730,4439,1712,19,Furniture,Sofas,05/04/2021,Jacqueline Harris,Houston
+B-25372,1016,172,20,Furniture,Tables,16/11/2020,Heather Jenkins,Buffalo
+B-25372,5768,2059,14,Furniture,Tables,16/11/2020,Heather Jenkins,Buffalo
+B-25372,1217,151,3,Furniture,Tables,16/11/2020,Heather Jenkins,Buffalo
+B-26026,953,93,2,Office Supplies,Paper,12/12/2024,Kelsey Castaneda,Cleveland
+B-26026,953,93,2,Office Supplies,Paper,06/04/2023,Katherine Harris,Los Angeles
+B-26026,7355,1034,3,Furniture,Sofas,12/12/2024,Kelsey Castaneda,Cleveland
+B-26026,7355,1034,3,Furniture,Sofas,06/04/2023,Katherine Harris,Los Angeles
+B-26026,1843,248,3,Electronics,Phones,12/12/2024,Kelsey Castaneda,Cleveland
+B-26026,1843,248,3,Electronics,Phones,06/04/2023,Katherine Harris,Los Angeles
+B-26026,1603,361,10,Office Supplies,Pens,12/12/2024,Kelsey Castaneda,Cleveland
+B-26026,1603,361,10,Office Supplies,Pens,06/04/2023,Katherine Harris,Los Angeles
+B-25295,2025,528,1,Office Supplies,Pens,28/01/2024,Paul Rogers,Miami
+B-25295,6800,167,16,Office Supplies,Binders,28/01/2024,Paul Rogers,Miami
+B-26121,1126,55,1,Furniture,Bookcases,16/01/2022,Jon Banks,Tampa
+B-26121,1126,55,1,Furniture,Bookcases,16/12/2022,Michelle Williams,Buffalo
+B-25560,7533,3508,12,Furniture,Tables,13/07/2023,Andrew Allen,San Diego
+B-25560,4734,1178,16,Office Supplies,Binders,13/07/2023,Andrew Allen,San Diego
+B-25560,4074,1175,6,Electronics,Electronic Games,13/07/2023,Andrew Allen,San Diego
+B-25560,2334,484,3,Furniture,Sofas,13/07/2023,Andrew Allen,San Diego
+B-26076,2750,1239,11,Electronics,Phones,10/03/2025,Vanessa Bauer,Buffalo
+B-26076,2750,1239,11,Electronics,Phones,24/09/2024,Sean Smith,Cleveland
+B-26076,8639,3104,19,Office Supplies,Pens,10/03/2025,Vanessa Bauer,Buffalo
+B-26076,8639,3104,19,Office Supplies,Pens,24/09/2024,Sean Smith,Cleveland
+B-25872,3808,1192,4,Office Supplies,Markers,13/04/2020,Shelly Sweeney,New York City
+B-25872,2588,705,16,Office Supplies,Pens,13/04/2020,Shelly Sweeney,New York City
+B-26185,1591,727,5,Electronics,Electronic Games,27/06/2022,Emily Gill,Springfield
+B-26185,1591,727,5,Electronics,Electronic Games,14/03/2021,Brian Patrick,Tampa
+B-26185,1591,727,5,Electronics,Electronic Games,23/02/2022,Dr. Sarah Booth,Cincinnati
+B-26259,1757,622,10,Furniture,Chairs,29/03/2022,Douglas Mcfarland,Cleveland
+B-26259,1757,622,10,Furniture,Chairs,20/11/2022,Kayla Ross,Peoria
+B-25142,6940,253,15,Furniture,Bookcases,12/11/2021,Marc Strickland,Orlando
+B-25142,5105,465,5,Electronics,Printers,12/11/2021,Marc Strickland,Orlando
+B-25326,5578,277,16,Furniture,Tables,17/08/2021,Charlene Brown,Miami
+B-25326,5578,277,16,Furniture,Tables,16/05/2022,Charles Smith,Columbus
+B-26795,5224,1958,16,Furniture,Chairs,16/07/2023,Karen Townsend,Houston
+B-26795,5002,1801,11,Office Supplies,Markers,16/07/2023,Karen Townsend,Houston
+B-26795,7380,1673,18,Office Supplies,Markers,16/07/2023,Karen Townsend,Houston
+B-25660,7595,2873,4,Furniture,Chairs,18/08/2020,Steven Cox,Los Angeles
+B-25660,7595,2873,4,Furniture,Chairs,19/04/2022,Cynthia Rodriguez,Rochester
+B-25410,1954,294,7,Furniture,Sofas,23/12/2022,Jessica Baker,Austin
+B-25690,523,95,20,Electronics,Printers,07/12/2024,Mark Blackburn,Dallas
+B-26464,5704,714,13,Electronics,Laptops,03/02/2022,Zachary Perez,Austin
+B-26464,5704,714,13,Electronics,Laptops,12/12/2021,Brian Green,San Diego
+B-26464,8797,1010,8,Furniture,Tables,03/02/2022,Zachary Perez,Austin
+B-26464,8797,1010,8,Furniture,Tables,12/12/2021,Brian Green,San Diego
+B-26464,9236,2899,5,Electronics,Laptops,03/02/2022,Zachary Perez,Austin
+B-26464,9236,2899,5,Electronics,Laptops,12/12/2021,Brian Green,San Diego
+B-26454,9109,586,17,Furniture,Sofas,17/05/2020,Becky Leach,Miami
+B-26742,4358,526,19,Electronics,Phones,05/12/2022,Bryan Russell,Dallas
+B-26742,4358,526,19,Electronics,Phones,17/09/2024,Tony Maddox,San Francisco
+B-26742,6459,825,8,Electronics,Phones,05/12/2022,Bryan Russell,Dallas
+B-26742,6459,825,8,Electronics,Phones,17/09/2024,Tony Maddox,San Francisco
+B-25510,2478,92,12,Furniture,Bookcases,08/05/2023,Jason Randolph,San Francisco
+B-25510,2478,92,12,Furniture,Bookcases,03/03/2021,Laura Andrews,New York City
+B-25510,2478,92,12,Furniture,Bookcases,18/03/2021,Mrs. Stephanie Hooper,San Francisco
+B-25510,2478,92,12,Furniture,Bookcases,24/04/2023,Anthony Evans,Cleveland
+B-25936,9992,3696,20,Office Supplies,Pens,09/10/2021,Patrick Williams,Rochester
+B-25936,9992,3696,20,Office Supplies,Pens,15/04/2022,Susan Burke,Austin
+B-25936,9992,3696,20,Office Supplies,Pens,29/08/2022,Brent Hernandez,Rochester
+B-25936,9619,3420,7,Office Supplies,Binders,09/10/2021,Patrick Williams,Rochester
+B-25936,9619,3420,7,Office Supplies,Binders,15/04/2022,Susan Burke,Austin
+B-25936,9619,3420,7,Office Supplies,Binders,29/08/2022,Brent Hernandez,Rochester
+B-25884,9538,3158,20,Electronics,Printers,04/09/2024,Sean Elliott,San Francisco
+B-25884,9538,3158,20,Electronics,Printers,18/05/2021,Wanda West,Cleveland
+B-25884,9035,1227,14,Furniture,Chairs,04/09/2024,Sean Elliott,San Francisco
+B-25884,9035,1227,14,Furniture,Chairs,18/05/2021,Wanda West,Cleveland
+B-26287,2684,670,2,Office Supplies,Paper,02/07/2024,Renee Solomon,Tampa
+B-26287,822,147,5,Furniture,Sofas,02/07/2024,Renee Solomon,Tampa
+B-26287,9730,2341,2,Furniture,Chairs,02/07/2024,Renee Solomon,Tampa
+B-26287,2483,236,2,Electronics,Electronic Games,02/07/2024,Renee Solomon,Tampa
+B-26564,1297,600,7,Office Supplies,Binders,16/02/2024,Daryl Miles,Orlando
+B-26564,7909,1942,19,Electronics,Phones,16/02/2024,Daryl Miles,Orlando
+B-26293,9768,4518,8,Furniture,Tables,26/11/2021,Michael Hunt,Dallas
+B-26293,4968,934,5,Furniture,Sofas,26/11/2021,Michael Hunt,Dallas
+B-26293,1731,149,4,Electronics,Laptops,26/11/2021,Michael Hunt,Dallas
+B-25915,3433,1169,10,Office Supplies,Binders,01/02/2024,Adam Clark,San Francisco
+B-25915,3433,1169,10,Office Supplies,Binders,09/09/2021,Amy Olsen,Springfield
+B-25915,3433,1169,10,Office Supplies,Binders,08/09/2021,Stacey Miller,San Diego
+B-25915,3887,1490,1,Office Supplies,Binders,01/02/2024,Adam Clark,San Francisco
+B-25915,3887,1490,1,Office Supplies,Binders,09/09/2021,Amy Olsen,Springfield
+B-25915,3887,1490,1,Office Supplies,Binders,08/09/2021,Stacey Miller,San Diego
+B-26496,1801,641,20,Office Supplies,Markers,09/07/2024,Daniel Mosley,Los Angeles
+B-26496,5301,817,10,Furniture,Tables,09/07/2024,Daniel Mosley,Los Angeles
+B-26496,1166,520,12,Office Supplies,Paper,09/07/2024,Daniel Mosley,Los Angeles
+B-26496,3196,1411,15,Office Supplies,Paper,09/07/2024,Daniel Mosley,Los Angeles
+B-25856,3428,350,1,Furniture,Chairs,28/02/2023,Monica Gibson,Springfield
+B-25856,7223,2433,12,Office Supplies,Binders,28/02/2023,Monica Gibson,Springfield
+B-25856,3731,647,1,Office Supplies,Pens,28/02/2023,Monica Gibson,Springfield
+B-26899,8903,4401,18,Office Supplies,Pens,08/08/2022,Christopher Jordan,Columbus
+B-25916,6009,2107,7,Electronics,Phones,07/12/2022,Christina Davis,Chicago
+B-25916,6009,2107,7,Electronics,Phones,29/04/2024,Claudia Curry,Austin
+B-25916,2858,230,3,Furniture,Tables,07/12/2022,Christina Davis,Chicago
+B-25916,2858,230,3,Furniture,Tables,29/04/2024,Claudia Curry,Austin
+B-25916,8175,525,7,Furniture,Sofas,07/12/2022,Christina Davis,Chicago
+B-25916,8175,525,7,Furniture,Sofas,29/04/2024,Claudia Curry,Austin
+B-25916,5846,586,18,Furniture,Sofas,07/12/2022,Christina Davis,Chicago
+B-25916,5846,586,18,Furniture,Sofas,29/04/2024,Claudia Curry,Austin
+B-26428,706,197,11,Electronics,Laptops,02/01/2022,Brandon Anderson,Austin
+B-26332,9835,2571,16,Furniture,Tables,10/06/2022,George Foster,Dallas
+B-26332,9835,2571,16,Furniture,Tables,16/11/2021,Nicholas Anderson,Orlando
+B-26332,9835,2571,16,Furniture,Tables,17/08/2022,Emily Ellison,Los Angeles
+B-26332,9691,3056,13,Office Supplies,Markers,10/06/2022,George Foster,Dallas
+B-26332,9691,3056,13,Office Supplies,Markers,16/11/2021,Nicholas Anderson,Orlando
+B-26332,9691,3056,13,Office Supplies,Markers,17/08/2022,Emily Ellison,Los Angeles
+B-26332,7826,1221,14,Furniture,Bookcases,10/06/2022,George Foster,Dallas
+B-26332,7826,1221,14,Furniture,Bookcases,16/11/2021,Nicholas Anderson,Orlando
+B-26332,7826,1221,14,Furniture,Bookcases,17/08/2022,Emily Ellison,Los Angeles
+B-25303,770,241,11,Furniture,Sofas,23/11/2021,Darren Perez,Austin
+B-25303,770,241,11,Furniture,Sofas,04/03/2023,Michelle Hunter,Cincinnati
+B-26507,9895,1598,20,Furniture,Bookcases,16/12/2023,Janet Guerrero,Rochester
+B-25983,6517,1581,10,Office Supplies,Paper,19/05/2024,Jeffrey Kline,Miami
+B-25983,6517,1581,10,Office Supplies,Paper,14/05/2020,Ryan Bullock,Tampa
+B-25983,1166,349,11,Furniture,Tables,19/05/2024,Jeffrey Kline,Miami
+B-25983,1166,349,11,Furniture,Tables,14/05/2020,Ryan Bullock,Tampa
+B-25156,9820,793,16,Furniture,Chairs,29/08/2021,Tom Lawson,Buffalo
+B-26759,8563,2624,8,Office Supplies,Binders,10/11/2024,Rebecca Smith,Dallas
+B-26759,4441,281,20,Electronics,Printers,10/11/2024,Rebecca Smith,Dallas
+B-26244,7340,2271,8,Office Supplies,Paper,05/12/2021,William Welch,Orlando
+B-26244,5442,1610,1,Electronics,Phones,05/12/2021,William Welch,Orlando
+B-26365,1895,391,14,Furniture,Tables,05/07/2024,Mr. Curtis Bailey,Tampa
+B-26365,5323,322,13,Office Supplies,Binders,05/07/2024,Mr. Curtis Bailey,Tampa
+B-26212,8850,279,13,Office Supplies,Markers,25/06/2024,Janet Carlson,Miami
+B-26212,8667,1266,6,Office Supplies,Paper,25/06/2024,Janet Carlson,Miami
+B-25042,6903,105,1,Furniture,Tables,31/05/2024,Spencer Spears,Chicago
+B-25042,8793,3010,7,Office Supplies,Pens,31/05/2024,Spencer Spears,Chicago
+B-25901,9883,4812,16,Office Supplies,Paper,20/10/2020,Jeffrey Middleton,Buffalo
+B-25901,9883,4812,16,Office Supplies,Paper,11/08/2022,Veronica Kelley,Orlando
+B-25901,9883,4812,16,Office Supplies,Paper,17/10/2021,Leslie Bean,Springfield
+B-25901,5210,1185,7,Office Supplies,Paper,20/10/2020,Jeffrey Middleton,Buffalo
+B-25901,5210,1185,7,Office Supplies,Paper,11/08/2022,Veronica Kelley,Orlando
+B-25901,5210,1185,7,Office Supplies,Paper,17/10/2021,Leslie Bean,Springfield
+B-26747,3574,851,4,Electronics,Printers,23/02/2022,Amy Wilson,Los Angeles
+B-26747,576,76,13,Furniture,Sofas,23/02/2022,Amy Wilson,Los Angeles
+B-26698,1860,457,13,Electronics,Printers,20/09/2023,Susan Ramirez,Cleveland
+B-25841,782,374,8,Office Supplies,Pens,19/01/2021,Jacob Meyer,Peoria
+B-25841,4371,1852,1,Electronics,Laptops,19/01/2021,Jacob Meyer,Peoria
+B-26032,8346,1176,1,Electronics,Phones,21/08/2020,Scott Lewis,Houston
+B-26032,8346,1176,1,Electronics,Phones,17/04/2023,Eric Griffith,Chicago
+B-26032,8346,1176,1,Electronics,Phones,24/12/2023,Anna Ferguson,San Francisco
+B-26032,6218,1125,5,Furniture,Tables,21/08/2020,Scott Lewis,Houston
+B-26032,6218,1125,5,Furniture,Tables,17/04/2023,Eric Griffith,Chicago
+B-26032,6218,1125,5,Furniture,Tables,24/12/2023,Anna Ferguson,San Francisco
+B-26032,5167,253,14,Electronics,Printers,21/08/2020,Scott Lewis,Houston
+B-26032,5167,253,14,Electronics,Printers,17/04/2023,Eric Griffith,Chicago
+B-26032,5167,253,14,Electronics,Printers,24/12/2023,Anna Ferguson,San Francisco
+B-26032,2799,1239,5,Furniture,Sofas,21/08/2020,Scott Lewis,Houston
+B-26032,2799,1239,5,Furniture,Sofas,17/04/2023,Eric Griffith,Chicago
+B-26032,2799,1239,5,Furniture,Sofas,24/12/2023,Anna Ferguson,San Francisco
+B-25171,3234,1029,20,Office Supplies,Markers,20/03/2022,David Figueroa,Miami
+B-26939,4920,775,12,Furniture,Tables,12/08/2021,Theresa Medina,Springfield
+B-26939,9078,2213,15,Furniture,Bookcases,12/08/2021,Theresa Medina,Springfield
+B-26347,8586,3826,7,Furniture,Bookcases,21/12/2020,Mary Smith,Miami
+B-26347,8586,3826,7,Furniture,Bookcases,07/07/2023,Lance Cain,Tampa
+B-25388,5047,2211,13,Furniture,Sofas,13/08/2023,Alexandra Moran,San Francisco
+B-25388,5047,2211,13,Furniture,Sofas,04/02/2021,Sara Castro,Chicago
+B-25388,5047,2211,13,Furniture,Sofas,16/09/2022,Shawn Leach,Peoria
+B-25388,5047,2211,13,Furniture,Sofas,06/05/2022,Mark Boyle,Buffalo
+B-26419,3657,163,1,Furniture,Sofas,28/05/2021,John Stevens,San Francisco
+B-25157,6471,2842,18,Electronics,Electronic Games,18/07/2024,Lisa Graham,Peoria
+B-25342,949,301,9,Office Supplies,Binders,06/12/2024,Nancy Jones,Cleveland
+B-25342,6823,771,6,Office Supplies,Binders,06/12/2024,Nancy Jones,Cleveland
+B-25342,4364,831,2,Furniture,Tables,06/12/2024,Nancy Jones,Cleveland
+B-26165,6671,2797,10,Electronics,Phones,12/12/2022,Darryl Robbins,Peoria
+B-26571,7472,1037,3,Office Supplies,Paper,20/10/2022,Kimberly Smith,Springfield
+B-26571,9548,1806,9,Electronics,Printers,20/10/2022,Kimberly Smith,Springfield
+B-25400,7759,3741,17,Electronics,Printers,24/03/2021,Maria Thomas,Miami
+B-25400,7759,3741,17,Electronics,Printers,06/01/2025,Nicholas Johnson,Dallas
+B-25400,7521,3457,16,Office Supplies,Markers,24/03/2021,Maria Thomas,Miami
+B-25400,7521,3457,16,Office Supplies,Markers,06/01/2025,Nicholas Johnson,Dallas
+B-25885,9704,4339,12,Office Supplies,Pens,06/03/2021,Dawn Howard,Houston
+B-25885,4948,2356,18,Electronics,Printers,06/03/2021,Dawn Howard,Houston
+B-25885,6435,334,10,Electronics,Electronic Games,06/03/2021,Dawn Howard,Houston
+B-25004,9965,3033,16,Office Supplies,Markers,17/06/2020,Jennifer Marshall,San Francisco
+B-25004,9965,3033,16,Office Supplies,Markers,01/09/2023,Frank Garcia,Buffalo
+B-26213,1523,234,3,Furniture,Sofas,08/06/2023,Terri Madden,Rochester
+B-26213,9073,424,7,Electronics,Electronic Games,08/06/2023,Terri Madden,Rochester
+B-25025,6447,3079,20,Electronics,Laptops,25/03/2021,James Gutierrez,Rochester
+B-25025,8947,2807,6,Electronics,Electronic Games,25/03/2021,James Gutierrez,Rochester
+B-26804,914,400,8,Office Supplies,Pens,03/01/2021,Morgan Sellers,Los Angeles
+B-26804,1548,666,3,Office Supplies,Paper,03/01/2021,Morgan Sellers,Los Angeles
+B-26797,2759,1149,6,Furniture,Tables,27/12/2024,Caitlin Thomas,New York City
+B-26556,1341,615,4,Electronics,Laptops,12/08/2022,Kimberly Greene,Orlando
+B-25861,9851,2669,19,Electronics,Electronic Games,28/03/2022,Tammy Anthony,Cleveland
+B-25861,9851,2669,19,Electronics,Electronic Games,15/07/2023,Jennifer Chase,Buffalo
+B-25861,9851,2669,19,Electronics,Electronic Games,22/09/2022,Cassandra Farley,Orlando
+B-25861,9989,3930,14,Furniture,Tables,28/03/2022,Tammy Anthony,Cleveland
+B-25861,9989,3930,14,Furniture,Tables,15/07/2023,Jennifer Chase,Buffalo
+B-25861,9989,3930,14,Furniture,Tables,22/09/2022,Cassandra Farley,Orlando
+B-25112,7421,958,10,Furniture,Tables,20/12/2022,Justin Vasquez,Houston
+B-25112,7421,958,10,Furniture,Tables,16/01/2022,Melissa Morales,Houston
+B-25112,7421,958,10,Furniture,Tables,29/01/2023,Tyler Thompson,Dallas
+B-25223,3099,479,1,Office Supplies,Paper,15/01/2022,Heidi Davis,Buffalo
+B-25223,2521,906,7,Electronics,Phones,15/01/2022,Heidi Davis,Buffalo
+B-25714,6962,3429,12,Electronics,Electronic Games,24/03/2024,Charles Lane,Dallas
+B-25714,6962,3429,12,Electronics,Electronic Games,19/02/2025,Joyce Good MD,Miami
+B-26607,1085,301,20,Furniture,Bookcases,13/07/2024,Maria Miller,Buffalo
+B-25038,738,342,2,Furniture,Chairs,28/04/2023,Terry Mcdaniel,Cincinnati
+B-25038,738,342,2,Furniture,Chairs,05/12/2020,Lisa Jacobs,Buffalo
+B-25038,738,342,2,Furniture,Chairs,14/05/2024,Jeff Duncan,Cincinnati
+B-25038,738,342,2,Furniture,Chairs,18/01/2022,Pamela Jones,New York City
+B-26672,1366,242,17,Electronics,Electronic Games,18/09/2023,Renee Robinson,Columbus
+B-26672,1518,155,13,Office Supplies,Markers,18/09/2023,Renee Robinson,Columbus
+B-25747,2962,1470,1,Electronics,Phones,12/05/2021,Jessica Kidd,Buffalo
+B-25747,2962,1470,1,Electronics,Phones,17/09/2023,Nicholas Martin,Tampa
+B-25747,7131,718,12,Electronics,Printers,12/05/2021,Jessica Kidd,Buffalo
+B-25747,7131,718,12,Electronics,Printers,17/09/2023,Nicholas Martin,Tampa
+B-25747,4200,855,10,Office Supplies,Markers,12/05/2021,Jessica Kidd,Buffalo
+B-25747,4200,855,10,Office Supplies,Markers,17/09/2023,Nicholas Martin,Tampa
+B-26322,5934,1563,2,Office Supplies,Markers,06/09/2024,David Brown,Peoria
+B-26613,2701,322,11,Electronics,Printers,18/06/2022,Amber Moore,New York City
+B-26613,7273,2702,18,Office Supplies,Paper,18/06/2022,Amber Moore,New York City
+B-25413,2465,699,18,Office Supplies,Markers,22/05/2020,James Williams,San Francisco
+B-26466,3479,1087,2,Office Supplies,Markers,17/10/2024,Karina Barr,Dallas
+B-26466,5457,1765,7,Electronics,Printers,17/10/2024,Karina Barr,Dallas
+B-26610,4957,1152,8,Office Supplies,Markers,22/03/2022,Meghan Rush,Cleveland
+B-26209,4404,858,17,Office Supplies,Pens,17/03/2024,Bianca Brown,Columbus
+B-26209,8776,2529,15,Furniture,Sofas,17/03/2024,Bianca Brown,Columbus
+B-26622,9536,1437,9,Electronics,Phones,02/04/2020,Timothy Jensen,Orlando
+B-26622,2225,589,7,Furniture,Sofas,02/04/2020,Timothy Jensen,Orlando
+B-26601,9574,4045,19,Furniture,Bookcases,13/03/2024,Melinda Montoya,San Francisco
+B-26601,4382,482,17,Electronics,Electronic Games,13/03/2024,Melinda Montoya,San Francisco
+B-25894,8200,257,19,Electronics,Laptops,21/03/2023,Tammy Bell,Cincinnati
+B-25894,9316,3003,13,Furniture,Sofas,21/03/2023,Tammy Bell,Cincinnati
+B-25894,6379,3128,15,Electronics,Electronic Games,21/03/2023,Tammy Bell,Cincinnati
+B-26969,3348,568,5,Office Supplies,Markers,02/03/2024,Connie Richards,Cleveland
+B-26969,3348,568,5,Office Supplies,Markers,30/04/2021,Peter Ward,Rochester
+B-26969,8856,2020,9,Office Supplies,Pens,02/03/2024,Connie Richards,Cleveland
+B-26969,8856,2020,9,Office Supplies,Pens,30/04/2021,Peter Ward,Rochester
+B-26312,1760,619,16,Furniture,Sofas,15/09/2021,Jonathan Alvarez,Columbus
+B-26312,1760,619,16,Furniture,Sofas,28/01/2023,Becky Hodges,Houston
+B-26312,6351,986,15,Electronics,Printers,15/09/2021,Jonathan Alvarez,Columbus
+B-26312,6351,986,15,Electronics,Printers,28/01/2023,Becky Hodges,Houston
+B-26837,869,373,14,Office Supplies,Paper,08/07/2021,Larry Hill,New York City
+B-26837,869,373,14,Office Supplies,Paper,08/04/2020,Amber Moon,Cleveland
+B-26837,1486,114,7,Furniture,Bookcases,08/07/2021,Larry Hill,New York City
+B-26837,1486,114,7,Furniture,Bookcases,08/04/2020,Amber Moon,Cleveland
+B-26166,2999,145,13,Office Supplies,Binders,23/08/2022,Cynthia Wilcox,Chicago
+B-26166,5142,1916,20,Office Supplies,Paper,23/08/2022,Cynthia Wilcox,Chicago
+B-25695,1239,575,17,Electronics,Laptops,17/12/2022,Rebecca Wright,Rochester
+B-25695,1239,575,17,Electronics,Laptops,08/06/2022,Sarah Flores,Springfield
+B-25695,1262,515,16,Electronics,Electronic Games,17/12/2022,Rebecca Wright,Rochester
+B-25695,1262,515,16,Electronics,Electronic Games,08/06/2022,Sarah Flores,Springfield
+B-26068,1033,254,5,Furniture,Bookcases,28/08/2020,Carol Norman,Rochester
+B-26023,1518,159,19,Electronics,Printers,26/09/2020,Stephanie Gardner,San Diego
+B-26677,8581,2444,2,Office Supplies,Paper,13/12/2020,Philip Baker,Peoria
+B-26677,8581,2444,2,Office Supplies,Paper,19/11/2020,Randall Dennis,Orlando
+B-25701,1167,463,5,Office Supplies,Pens,13/09/2023,Suzanne Cross,Austin
+B-25701,2841,803,20,Electronics,Laptops,13/09/2023,Suzanne Cross,Austin
+B-25701,5680,2159,19,Furniture,Tables,13/09/2023,Suzanne Cross,Austin
+B-26523,8204,2382,6,Office Supplies,Pens,31/03/2020,Jasmine Delgado,Chicago
+B-26523,8204,2382,6,Office Supplies,Pens,20/10/2020,Kristen Harper,Buffalo
+B-26523,2850,904,6,Electronics,Phones,31/03/2020,Jasmine Delgado,Chicago
+B-26523,2850,904,6,Electronics,Phones,20/10/2020,Kristen Harper,Buffalo
+B-25880,907,391,9,Office Supplies,Pens,04/08/2023,Kaitlyn Graham MD,New York City
+B-26898,2174,265,19,Office Supplies,Pens,11/04/2022,Dean Avila,Cincinnati
+B-26898,8541,2029,12,Electronics,Electronic Games,11/04/2022,Dean Avila,Cincinnati
+B-26898,1931,551,3,Furniture,Bookcases,11/04/2022,Dean Avila,Cincinnati
+B-26035,1281,340,3,Electronics,Electronic Games,31/12/2021,Megan Mack,Austin
+B-26035,2404,253,15,Electronics,Laptops,31/12/2021,Megan Mack,Austin
+B-25573,2119,196,1,Furniture,Sofas,16/08/2020,Heather Johnson,Los Angeles
+B-25463,3137,571,9,Office Supplies,Pens,02/02/2025,Tina Davies,Chicago
+B-26277,2323,727,7,Furniture,Tables,24/02/2022,Matthew Harris,Dallas
+B-26277,1368,406,9,Furniture,Bookcases,24/02/2022,Matthew Harris,Dallas
+B-26508,9204,3289,16,Electronics,Laptops,25/02/2024,Christopher Kirk,Miami
+B-26508,9204,3289,16,Electronics,Laptops,15/06/2021,Eric Stevens,Miami
+B-26508,9894,3698,20,Office Supplies,Paper,25/02/2024,Christopher Kirk,Miami
+B-26508,9894,3698,20,Office Supplies,Paper,15/06/2021,Eric Stevens,Miami
+B-26723,5322,1423,18,Furniture,Sofas,08/12/2022,James Dickerson,Houston
+B-26723,5322,1423,18,Furniture,Sofas,09/12/2023,James Jones,Dallas
+B-25526,2666,559,14,Furniture,Chairs,16/07/2022,Hannah Hendricks,Cleveland
+B-25645,8383,937,4,Furniture,Sofas,05/05/2024,Brett Mullins,Orlando
+B-25757,7560,821,4,Office Supplies,Paper,04/10/2021,Ms. Kim Jordan,Chicago
+B-26716,1314,490,16,Furniture,Sofas,20/11/2021,Marcus Santiago,Buffalo
+B-26716,4390,179,1,Furniture,Tables,20/11/2021,Marcus Santiago,Buffalo
+B-26716,1150,58,7,Office Supplies,Binders,20/11/2021,Marcus Santiago,Buffalo
+B-25424,1574,258,17,Office Supplies,Pens,15/09/2020,Jill Perez,San Diego
+B-25424,5635,318,17,Office Supplies,Binders,15/09/2020,Jill Perez,San Diego
+B-25424,6515,961,11,Furniture,Sofas,15/09/2020,Jill Perez,San Diego
+B-26453,1231,214,20,Electronics,Laptops,17/01/2023,Courtney Williams,Columbus
+B-26453,1231,214,20,Electronics,Laptops,16/06/2020,Jordan Hahn,Rochester
+B-26425,6891,2529,3,Office Supplies,Binders,01/05/2024,William Cook,Cleveland
+B-25843,7524,2308,15,Electronics,Laptops,07/12/2023,Stephanie Hayes,Austin
+B-25843,6864,1824,14,Electronics,Printers,07/12/2023,Stephanie Hayes,Austin
+B-25486,4215,432,14,Furniture,Chairs,02/02/2024,Melissa Wise,Columbus
+B-26975,622,218,19,Furniture,Bookcases,23/06/2024,Elizabeth Gonzalez,San Diego
+B-26975,1755,495,18,Office Supplies,Pens,23/06/2024,Elizabeth Gonzalez,San Diego
+B-26975,8020,3898,20,Electronics,Electronic Games,23/06/2024,Elizabeth Gonzalez,San Diego
+B-26890,7333,1576,4,Electronics,Laptops,07/06/2024,Mr. Eric Lopez,Buffalo
+B-26125,7690,1134,4,Electronics,Electronic Games,13/10/2023,Benjamin Higgins,Rochester
+B-26125,912,246,2,Furniture,Sofas,13/10/2023,Benjamin Higgins,Rochester
+B-26489,2791,894,14,Electronics,Laptops,08/10/2022,Brett Sutton,Austin
+B-26489,2791,894,14,Electronics,Laptops,27/10/2023,Anna Blackburn,Cincinnati
+B-26489,2791,894,14,Electronics,Laptops,09/02/2021,Michelle Bailey,Dallas
+B-26489,6223,1478,3,Furniture,Sofas,08/10/2022,Brett Sutton,Austin
+B-26489,6223,1478,3,Furniture,Sofas,27/10/2023,Anna Blackburn,Cincinnati
+B-26489,6223,1478,3,Furniture,Sofas,09/02/2021,Michelle Bailey,Dallas
+B-26489,8943,3121,17,Furniture,Chairs,08/10/2022,Brett Sutton,Austin
+B-26489,8943,3121,17,Furniture,Chairs,27/10/2023,Anna Blackburn,Cincinnati
+B-26489,8943,3121,17,Furniture,Chairs,09/02/2021,Michelle Bailey,Dallas
+B-26489,3297,102,12,Electronics,Phones,08/10/2022,Brett Sutton,Austin
+B-26489,3297,102,12,Electronics,Phones,27/10/2023,Anna Blackburn,Cincinnati
+B-26489,3297,102,12,Electronics,Phones,09/02/2021,Michelle Bailey,Dallas
+B-26043,8769,1989,20,Office Supplies,Paper,03/11/2020,Sara Peterson,Chicago
+B-26557,9057,1888,19,Electronics,Printers,30/05/2022,Katherine Williams,Orlando
+B-26557,6864,3275,11,Furniture,Tables,30/05/2022,Katherine Williams,Orlando
+B-26557,9200,809,13,Electronics,Laptops,30/05/2022,Katherine Williams,Orlando
+B-25243,6113,2508,6,Electronics,Laptops,16/06/2024,Cory Evans,Orlando
+B-25243,7733,2784,15,Furniture,Tables,16/06/2024,Cory Evans,Orlando
+B-25243,8524,154,14,Furniture,Tables,16/06/2024,Cory Evans,Orlando
+B-25243,6187,2344,15,Furniture,Bookcases,16/06/2024,Cory Evans,Orlando
+B-26932,4364,148,18,Furniture,Tables,15/07/2022,Michael Rodriguez,Cincinnati
+B-26932,736,286,12,Office Supplies,Pens,15/07/2022,Michael Rodriguez,Cincinnati
+B-25241,9905,633,17,Office Supplies,Pens,18/07/2021,John Munoz,Dallas
+B-25241,9905,633,17,Office Supplies,Pens,02/10/2021,David Clark,Tampa
+B-25044,2493,1221,9,Office Supplies,Paper,16/04/2024,April Welch,Springfield
+B-25044,9849,963,1,Office Supplies,Pens,16/04/2024,April Welch,Springfield
+B-26137,3423,804,4,Electronics,Printers,09/07/2020,Alan Livingston,Peoria
+B-26137,3423,804,4,Electronics,Printers,25/07/2020,Angela Jackson,Dallas
+B-26137,3423,804,4,Electronics,Printers,24/01/2024,Amy Williams,Austin
+B-26137,3423,804,4,Electronics,Printers,04/05/2020,Laura Jordan,Dallas
+B-26137,3423,804,4,Electronics,Printers,13/11/2021,Richard Maynard,Cincinnati
+B-25545,3900,115,9,Furniture,Chairs,07/10/2023,Lawrence Oliver,Springfield
+B-26800,8568,2419,11,Electronics,Electronic Games,23/10/2021,Anthony Williams,Rochester
+B-26800,3283,71,6,Office Supplies,Pens,23/10/2021,Anthony Williams,Rochester
+B-26987,7643,3720,19,Electronics,Electronic Games,18/07/2022,Lynn Matthews,Dallas
+B-26144,3461,1537,15,Furniture,Sofas,23/08/2024,Andrew Griffin,Chicago
+B-26144,5714,1438,6,Electronics,Electronic Games,23/08/2024,Andrew Griffin,Chicago
+B-26144,3853,1457,10,Office Supplies,Binders,23/08/2024,Andrew Griffin,Chicago
+B-25406,6016,431,20,Office Supplies,Pens,28/10/2020,Megan Williams,Chicago
+B-25658,1290,204,12,Office Supplies,Markers,15/06/2024,Alison Martin,Buffalo
+B-25658,1290,204,12,Office Supplies,Markers,19/12/2024,Samuel Wallace,San Francisco
+B-25733,4569,1693,10,Electronics,Printers,04/09/2020,Manuel Stark,Springfield
+B-26993,3083,1151,16,Furniture,Bookcases,16/04/2022,William Villarreal,Orlando
+B-26964,3522,898,15,Office Supplies,Pens,29/08/2024,Brandon Kirk,Cleveland
+B-26964,3522,898,15,Office Supplies,Pens,14/01/2022,Abigail Brown,Los Angeles
+B-26955,7301,3602,3,Office Supplies,Binders,07/04/2024,Kristine Carter,Houston
+B-26059,4462,121,8,Electronics,Laptops,24/04/2022,Wesley Deleon,Springfield
+B-26059,6212,1881,17,Electronics,Phones,24/04/2022,Wesley Deleon,Springfield
+B-26806,4027,1386,3,Furniture,Bookcases,27/08/2020,Laura Cole,Tampa
+B-26299,1676,330,14,Electronics,Laptops,01/03/2023,Lauren Harris,Cleveland
+B-26299,3927,1133,12,Furniture,Bookcases,01/03/2023,Lauren Harris,Cleveland
+B-26299,2776,887,9,Electronics,Phones,01/03/2023,Lauren Harris,Cleveland
+B-26743,7684,1157,12,Furniture,Sofas,02/10/2020,Cameron Miller,Chicago
+B-26743,7684,1157,12,Furniture,Sofas,23/06/2020,Jacob Carpenter,Buffalo
+B-26743,7684,1157,12,Furniture,Sofas,21/08/2023,Pamela Callahan DVM,Columbus
+B-26757,6008,2498,17,Electronics,Phones,16/07/2022,William Ruiz,Miami
+B-26772,7344,2598,20,Furniture,Bookcases,01/08/2022,Paula Marshall,Dallas
+B-26088,6932,3218,20,Office Supplies,Pens,16/07/2020,Natalie Cox,Orlando
+B-26319,7748,1706,16,Electronics,Electronic Games,02/05/2020,Andrew Fernandez,Cincinnati
+B-26319,6381,2763,20,Office Supplies,Markers,02/05/2020,Andrew Fernandez,Cincinnati
+B-26319,992,64,6,Electronics,Phones,02/05/2020,Andrew Fernandez,Cincinnati
+B-25364,8649,2631,13,Electronics,Laptops,10/01/2024,Alisha Saunders,San Francisco
+B-25364,8649,2631,13,Electronics,Laptops,30/09/2020,Travis Chandler DDS,Rochester
+B-25655,4099,52,18,Electronics,Laptops,28/03/2022,Russell Austin,New York City
+B-26864,2539,324,5,Electronics,Electronic Games,30/01/2021,Collin Cameron,San Francisco
+B-26019,9845,3062,9,Office Supplies,Paper,14/03/2025,Elizabeth Hernandez,Orlando
+B-25849,2901,1411,2,Office Supplies,Paper,26/10/2021,William Russell,Austin
+B-25849,2901,1411,2,Office Supplies,Paper,11/01/2023,Sheri Berg,Los Angeles
+B-25849,6934,1152,6,Office Supplies,Pens,26/10/2021,William Russell,Austin
+B-25849,6934,1152,6,Office Supplies,Pens,11/01/2023,Sheri Berg,Los Angeles
+B-25829,9640,2606,2,Furniture,Bookcases,31/10/2021,Anthony Barnett,Peoria
+B-26065,7930,1981,13,Furniture,Chairs,04/05/2023,Kaitlyn Flores,Cleveland
+B-26065,7930,1981,13,Furniture,Chairs,09/08/2024,Rebecca Owen,Springfield
+B-25267,9894,829,1,Office Supplies,Binders,21/08/2022,Michael Bell,San Diego
+B-25267,4534,2235,4,Furniture,Tables,21/08/2022,Michael Bell,San Diego
+B-25972,4911,186,20,Electronics,Phones,19/06/2022,Willie Huynh,Buffalo
+B-25972,531,189,20,Furniture,Bookcases,19/06/2022,Willie Huynh,Buffalo
+B-25511,9707,3483,10,Electronics,Electronic Games,29/01/2025,Samuel Hayes,Peoria
+B-25511,8521,2584,7,Office Supplies,Paper,29/01/2025,Samuel Hayes,Peoria
+B-25744,8438,3427,12,Office Supplies,Binders,14/01/2022,Sherry Tran,Buffalo
+B-25744,1689,109,9,Electronics,Electronic Games,14/01/2022,Sherry Tran,Buffalo
+B-25744,3936,1626,14,Office Supplies,Paper,14/01/2022,Sherry Tran,Buffalo
+B-26805,7664,1753,19,Electronics,Phones,15/06/2023,Heather Gray,Cincinnati
+B-25620,721,258,13,Electronics,Laptops,18/10/2023,Benjamin Meadows,Peoria
+B-25620,721,258,13,Electronics,Laptops,13/06/2022,Micheal Graham,Buffalo
+B-25620,8364,3055,17,Electronics,Laptops,18/10/2023,Benjamin Meadows,Peoria
+B-25620,8364,3055,17,Electronics,Laptops,13/06/2022,Micheal Graham,Buffalo
+B-25620,5234,2021,15,Furniture,Bookcases,18/10/2023,Benjamin Meadows,Peoria
+B-25620,5234,2021,15,Furniture,Bookcases,13/06/2022,Micheal Graham,Buffalo
+B-25325,3944,1559,18,Electronics,Phones,12/06/2024,Jean Jackson,San Francisco
+B-25325,6711,1045,12,Office Supplies,Pens,12/06/2024,Jean Jackson,San Francisco
+B-25325,5031,714,4,Furniture,Tables,12/06/2024,Jean Jackson,San Francisco
+B-25325,6295,2469,14,Office Supplies,Binders,12/06/2024,Jean Jackson,San Francisco
+B-25131,9654,4111,1,Office Supplies,Paper,27/06/2022,Timothy Murphy,San Francisco
+B-25131,3112,1065,20,Office Supplies,Binders,27/06/2022,Timothy Murphy,San Francisco
+B-26654,7838,1142,13,Electronics,Phones,18/02/2021,Mrs. Jennifer Lewis,San Francisco
+B-26654,9300,3146,6,Electronics,Phones,18/02/2021,Mrs. Jennifer Lewis,San Francisco
+B-26654,1733,133,17,Office Supplies,Paper,18/02/2021,Mrs. Jennifer Lewis,San Francisco
+B-26195,874,235,15,Office Supplies,Binders,29/05/2023,Bryan Brown,Rochester
+B-26195,874,235,15,Office Supplies,Binders,04/06/2021,Christopher Johnson,Miami
+B-25842,1248,584,13,Office Supplies,Pens,22/01/2024,Christina Conner,Columbus
+B-25842,1248,584,13,Office Supplies,Pens,27/12/2022,Luis Luna,San Francisco
+B-25842,3669,154,14,Office Supplies,Markers,22/01/2024,Christina Conner,Columbus
+B-25842,3669,154,14,Office Supplies,Markers,27/12/2022,Luis Luna,San Francisco
+B-25842,514,109,15,Office Supplies,Paper,22/01/2024,Christina Conner,Columbus
+B-25842,514,109,15,Office Supplies,Paper,27/12/2022,Luis Luna,San Francisco
+B-25851,3273,85,16,Electronics,Phones,30/03/2024,Julie Chavez,Cincinnati
+B-25427,5035,2008,2,Furniture,Chairs,04/04/2020,Richard Blair,Miami
+B-25427,7702,60,19,Electronics,Printers,04/04/2020,Richard Blair,Miami
+B-25427,9884,4446,7,Electronics,Printers,04/04/2020,Richard Blair,Miami
+B-26224,5564,175,11,Electronics,Laptops,22/01/2023,Mitchell Lester,Chicago
+B-26224,5564,175,11,Electronics,Laptops,12/04/2022,Mr. John Tyler PhD,Houston
+B-26224,5564,175,11,Electronics,Laptops,13/12/2023,Juan Kelly,Miami
+B-26224,3953,1776,15,Electronics,Electronic Games,22/01/2023,Mitchell Lester,Chicago
+B-26224,3953,1776,15,Electronics,Electronic Games,12/04/2022,Mr. John Tyler PhD,Houston
+B-26224,3953,1776,15,Electronics,Electronic Games,13/12/2023,Juan Kelly,Miami
+B-26896,6488,1591,18,Electronics,Printers,24/05/2023,Morgan Mccarthy,Dallas
+B-26896,6488,1591,18,Electronics,Printers,29/11/2020,Morgan Sullivan,Houston
+B-26469,7856,3699,17,Electronics,Electronic Games,24/03/2021,Eric Clark,Orlando
+B-26469,1165,51,3,Office Supplies,Pens,24/03/2021,Eric Clark,Orlando
+B-26219,9386,2555,20,Office Supplies,Markers,19/08/2020,Mark Padilla,San Diego
+B-26219,9386,2555,20,Office Supplies,Markers,20/10/2022,Anthony Lane,Cleveland
+B-26119,3956,142,12,Office Supplies,Pens,20/09/2023,Jeffrey Henderson,Tampa
+B-26119,3956,142,12,Office Supplies,Pens,26/12/2024,Michelle Hardy,Dallas
+B-26119,6449,2628,11,Furniture,Bookcases,20/09/2023,Jeffrey Henderson,Tampa
+B-26119,6449,2628,11,Furniture,Bookcases,26/12/2024,Michelle Hardy,Dallas
+B-26988,6255,437,18,Office Supplies,Markers,03/12/2021,Ms. Barbara Cervantes,Rochester
+B-26988,2109,681,20,Electronics,Electronic Games,03/12/2021,Ms. Barbara Cervantes,Rochester
+B-25596,6707,1041,20,Electronics,Phones,14/09/2021,Steven Proctor,Austin
+B-26845,7633,184,13,Office Supplies,Pens,30/09/2021,Shannon Patterson,Springfield
+B-25099,975,224,18,Office Supplies,Pens,22/12/2021,William Valdez,San Diego
+B-25099,4492,1450,7,Furniture,Tables,22/12/2021,William Valdez,San Diego
+B-25099,7957,2834,12,Furniture,Chairs,22/12/2021,William Valdez,San Diego
+B-26153,4906,975,7,Furniture,Tables,18/05/2022,Laura Yu,Houston
+B-25060,1379,250,3,Office Supplies,Pens,08/10/2020,Jonathan Mcmillan,Buffalo
+B-25060,4244,340,10,Electronics,Laptops,08/10/2020,Jonathan Mcmillan,Buffalo
+B-26572,5911,2333,14,Furniture,Bookcases,20/08/2022,Austin Davis,San Diego
+B-26572,5911,2333,14,Furniture,Bookcases,25/11/2024,Mark Roy,San Francisco
+B-26572,1818,738,11,Office Supplies,Markers,20/08/2022,Austin Davis,San Diego
+B-26572,1818,738,11,Office Supplies,Markers,25/11/2024,Mark Roy,San Francisco
+B-25919,2140,970,4,Office Supplies,Paper,30/09/2020,Jillian Williams,San Diego
+B-25919,2140,970,4,Office Supplies,Paper,20/02/2025,Rebekah Carter,Orlando
+B-25919,2140,970,4,Office Supplies,Paper,20/03/2022,Jonathan Reed,San Francisco
+B-25919,2670,1026,1,Electronics,Laptops,30/09/2020,Jillian Williams,San Diego
+B-25919,2670,1026,1,Electronics,Laptops,20/02/2025,Rebekah Carter,Orlando
+B-25919,2670,1026,1,Electronics,Laptops,20/03/2022,Jonathan Reed,San Francisco
+B-26978,1108,167,18,Electronics,Laptops,07/03/2025,Roger Harris,Springfield
+B-26978,9776,3750,9,Office Supplies,Binders,07/03/2025,Roger Harris,Springfield
+B-26978,535,72,6,Furniture,Bookcases,07/03/2025,Roger Harris,Springfield
+B-26554,7564,3463,5,Office Supplies,Paper,16/06/2024,Louis Jimenez,Tampa
+B-26554,7564,3463,5,Office Supplies,Paper,21/11/2020,Jessica Jones,Peoria
+B-26554,7564,3463,5,Office Supplies,Paper,01/10/2024,Renee Gomez,Miami
+B-26554,7564,3463,5,Office Supplies,Paper,01/07/2024,Connie Olson,Houston
+B-26554,3409,1605,20,Electronics,Electronic Games,16/06/2024,Louis Jimenez,Tampa
+B-26554,3409,1605,20,Electronics,Electronic Games,21/11/2020,Jessica Jones,Peoria
+B-26554,3409,1605,20,Electronics,Electronic Games,01/10/2024,Renee Gomez,Miami
+B-26554,3409,1605,20,Electronics,Electronic Games,01/07/2024,Connie Olson,Houston
+B-26883,9751,2459,13,Office Supplies,Pens,23/11/2020,Christian Jones,Buffalo
+B-25423,6385,2656,11,Electronics,Printers,18/03/2023,Matthew Kelley,Orlando
+B-25423,6385,2656,11,Electronics,Printers,19/10/2022,Candace Martinez,Tampa
+B-26324,6355,1335,15,Electronics,Electronic Games,31/08/2023,Jacob Mann,Austin
+B-26324,6355,1335,15,Electronics,Electronic Games,06/06/2021,Keith Reese,Austin
+B-26945,7377,320,15,Electronics,Printers,21/12/2022,Aaron Jones,Austin
+B-26945,2054,371,12,Office Supplies,Markers,21/12/2022,Aaron Jones,Austin
+B-26405,7497,319,18,Furniture,Chairs,12/02/2024,Christopher Brooks,Peoria
+B-26046,2565,983,20,Electronics,Electronic Games,05/12/2022,Charles Moore,Miami
+B-26046,5024,1544,19,Office Supplies,Pens,05/12/2022,Charles Moore,Miami
+B-25746,8243,1346,15,Office Supplies,Binders,04/04/2021,Manuel Walls,Houston
+B-25232,7792,1403,13,Office Supplies,Paper,12/02/2021,Darren Moore,Peoria
+B-25232,7792,1403,13,Office Supplies,Paper,27/12/2022,Stephanie Thomas,Rochester
+B-25232,7792,1403,13,Office Supplies,Paper,19/01/2024,Kristy Hernandez,San Diego
+B-25232,2346,388,14,Furniture,Chairs,12/02/2021,Darren Moore,Peoria
+B-25232,2346,388,14,Furniture,Chairs,27/12/2022,Stephanie Thomas,Rochester
+B-25232,2346,388,14,Furniture,Chairs,19/01/2024,Kristy Hernandez,San Diego
+B-25591,7346,1043,10,Furniture,Sofas,25/12/2022,Randy Johnson,Columbus
+B-25591,9770,4132,7,Electronics,Electronic Games,25/12/2022,Randy Johnson,Columbus
+B-25591,7179,683,13,Electronics,Laptops,25/12/2022,Randy Johnson,Columbus
+B-26325,5449,2389,2,Electronics,Phones,06/10/2022,James Benitez,Miami
+B-25251,2895,104,6,Furniture,Chairs,27/04/2020,Donald York,Buffalo
+B-25251,2895,104,6,Furniture,Chairs,13/05/2024,Tiffany Parker,Houston
+B-25251,697,116,1,Furniture,Chairs,27/04/2020,Donald York,Buffalo
+B-25251,697,116,1,Furniture,Chairs,13/05/2024,Tiffany Parker,Houston
+B-25464,6145,1414,4,Furniture,Chairs,23/10/2020,Melissa Mcknight,Los Angeles
+B-25464,2504,440,18,Electronics,Printers,23/10/2020,Melissa Mcknight,Los Angeles
+B-25464,3124,138,16,Electronics,Phones,23/10/2020,Melissa Mcknight,Los Angeles
+B-26678,6934,1226,1,Electronics,Electronic Games,11/06/2021,Mr. Jack Mercado,Cincinnati
+B-26678,6934,1226,1,Electronics,Electronic Games,08/09/2021,Christian Jones,Rochester
+B-25962,4202,1171,3,Office Supplies,Markers,23/11/2022,Rachel Fisher,Peoria
+B-25962,4202,1171,3,Office Supplies,Markers,31/10/2022,Donald Moore,Rochester
+B-25962,4202,1171,3,Office Supplies,Markers,06/11/2023,William Wu,Tampa
+B-25962,4202,1171,3,Office Supplies,Markers,12/11/2023,Jesus Zuniga,Houston
+B-26586,2239,828,1,Electronics,Printers,26/06/2023,Michael Gallegos,Los Angeles
+B-26586,2239,828,1,Electronics,Printers,30/09/2023,Robert Daniels,Chicago
+B-26586,2450,1002,4,Electronics,Phones,26/06/2023,Michael Gallegos,Los Angeles
+B-26586,2450,1002,4,Electronics,Phones,30/09/2023,Robert Daniels,Chicago
+B-26841,9827,4208,13,Furniture,Chairs,12/09/2020,Jill Jones,New York City
+B-26841,8077,240,15,Furniture,Sofas,12/09/2020,Jill Jones,New York City
+B-26284,5152,2045,14,Electronics,Phones,27/11/2020,Elizabeth Miller,Springfield
+B-26284,5152,2045,14,Electronics,Phones,25/08/2022,Sabrina Clark,Los Angeles
+B-26284,5152,2045,14,Electronics,Phones,23/08/2023,Larry Casey,Chicago
+B-26284,5152,2045,14,Electronics,Phones,11/10/2023,Daniel Burns,Rochester
+B-26478,2542,190,1,Office Supplies,Markers,21/04/2022,James Tanner,Houston
+B-26679,8102,1800,5,Office Supplies,Markers,14/09/2023,Leonard Gonzalez,San Francisco
+B-26679,8102,1800,5,Office Supplies,Markers,29/04/2020,Richard Lee,Buffalo
+B-26679,8102,1800,5,Office Supplies,Markers,15/12/2020,Matthew Schroeder,Cleveland
+B-26679,3234,1274,10,Furniture,Tables,14/09/2023,Leonard Gonzalez,San Francisco
+B-26679,3234,1274,10,Furniture,Tables,29/04/2020,Richard Lee,Buffalo
+B-26679,3234,1274,10,Furniture,Tables,15/12/2020,Matthew Schroeder,Cleveland
+B-26397,6200,2321,18,Furniture,Tables,11/07/2024,Marcus Flores,Los Angeles
+B-26397,6200,2321,18,Furniture,Tables,21/09/2024,Tonya Long,Miami
+B-25957,4470,413,13,Electronics,Laptops,02/02/2025,Michael Chambers,Los Angeles
+B-26916,916,362,7,Office Supplies,Pens,21/10/2022,Kaylee Glover,Springfield
+B-26916,916,362,7,Office Supplies,Pens,21/10/2020,Pamela Patterson,San Francisco
+B-26916,1165,302,20,Furniture,Sofas,21/10/2022,Kaylee Glover,Springfield
+B-26916,1165,302,20,Furniture,Sofas,21/10/2020,Pamela Patterson,San Francisco
+B-26916,7846,677,12,Furniture,Chairs,21/10/2022,Kaylee Glover,Springfield
+B-26916,7846,677,12,Furniture,Chairs,21/10/2020,Pamela Patterson,San Francisco
+B-25925,3022,384,1,Office Supplies,Pens,11/01/2022,Ronald Mckinney,Austin
+B-25925,3022,384,1,Office Supplies,Pens,17/02/2021,James Hart,Chicago
+B-25925,5266,1111,13,Electronics,Electronic Games,11/01/2022,Ronald Mckinney,Austin
+B-25925,5266,1111,13,Electronics,Electronic Games,17/02/2021,James Hart,Chicago
+B-25602,4853,1764,9,Office Supplies,Pens,06/11/2021,Rhonda Harris,Orlando
+B-25602,4853,1764,9,Office Supplies,Pens,30/08/2022,Randy Fisher,Houston
+B-26592,9832,1270,1,Office Supplies,Pens,07/10/2022,James Hernandez,San Francisco
+B-26592,796,153,15,Office Supplies,Pens,07/10/2022,James Hernandez,San Francisco
+B-26251,883,127,7,Furniture,Chairs,04/06/2023,Brenda Murphy,San Francisco
+B-26251,4539,1155,8,Furniture,Bookcases,04/06/2023,Brenda Murphy,San Francisco
+B-26251,9659,2226,16,Office Supplies,Binders,04/06/2023,Brenda Murphy,San Francisco
+B-25979,9562,325,2,Electronics,Printers,13/05/2022,Andrew Kirby,San Diego
+B-25437,4688,1841,3,Electronics,Laptops,23/01/2023,Justin Thomas,San Francisco
+B-25437,4688,1841,3,Electronics,Laptops,25/07/2021,Jillian Johnson MD,San Diego
+B-26986,7900,482,4,Electronics,Phones,08/03/2025,William Martin,Columbus
+B-25990,6967,3257,17,Furniture,Bookcases,25/12/2022,Mark Dixon,Cincinnati
+B-25990,1091,277,6,Office Supplies,Paper,25/12/2022,Mark Dixon,Cincinnati
+B-25990,6027,1530,2,Office Supplies,Binders,25/12/2022,Mark Dixon,Cincinnati
+B-25222,4852,218,2,Furniture,Tables,24/04/2024,Alicia Allen,Dallas
+B-25222,4852,218,2,Furniture,Tables,24/12/2021,Cynthia Meyer,Tampa
+B-25222,4852,218,2,Furniture,Tables,07/09/2023,Brandon Norton,Springfield
+B-26402,4314,1453,6,Furniture,Sofas,10/08/2021,Christina Scott,Tampa
+B-26792,3288,1477,3,Office Supplies,Pens,26/05/2024,Andrew Macias,Austin
+B-26792,3288,1477,3,Office Supplies,Pens,19/02/2022,Alejandro Williams,Springfield
+B-25154,3977,813,5,Office Supplies,Binders,09/12/2024,Mark Rodriguez,New York City
+B-26114,6252,1377,2,Electronics,Printers,01/06/2023,Sarah Montgomery,Chicago
+B-26485,9084,3253,12,Office Supplies,Pens,05/11/2023,Marisa Prince,Buffalo
+B-26191,8994,1481,15,Electronics,Phones,21/06/2020,James Bonilla,San Diego
+B-26754,1089,176,16,Office Supplies,Markers,26/10/2020,Robin Myers,Dallas
+B-25953,6690,1001,19,Office Supplies,Binders,06/06/2022,Nancy Sanchez,Springfield
+B-25953,6690,1001,19,Office Supplies,Binders,13/11/2021,Sydney Walls,Chicago
+B-25953,4985,1920,10,Furniture,Bookcases,06/06/2022,Nancy Sanchez,Springfield
+B-25953,4985,1920,10,Furniture,Bookcases,13/11/2021,Sydney Walls,Chicago
+B-26516,8590,3565,15,Electronics,Electronic Games,11/11/2021,Deborah Hoffman,Miami
+B-26516,6973,3038,10,Furniture,Tables,11/11/2021,Deborah Hoffman,Miami
+B-26843,4591,1941,19,Electronics,Printers,31/07/2021,Megan Williams,Dallas
+B-26843,9612,2572,17,Office Supplies,Pens,31/07/2021,Megan Williams,Dallas
+B-26167,5343,655,1,Furniture,Chairs,13/04/2024,Shane Clark,San Diego
+B-26972,6956,318,20,Office Supplies,Markers,19/04/2022,Steven Haynes,Springfield
+B-25673,5306,2405,17,Furniture,Tables,23/03/2024,Kimberly Fuller,Buffalo
+B-26587,8982,448,17,Furniture,Sofas,07/05/2021,Angela Lyons,New York City
+B-26587,4826,562,5,Office Supplies,Paper,07/05/2021,Angela Lyons,New York City
+B-26668,972,106,15,Office Supplies,Pens,06/05/2022,Betty Tucker,Cincinnati
+B-26906,3665,802,4,Office Supplies,Markers,09/08/2021,Brianna Hunt,Miami
+B-26906,3665,802,4,Office Supplies,Markers,09/02/2025,Cathy Clark,Tampa
+B-25226,9808,2117,2,Office Supplies,Pens,23/04/2024,Nicole Warren,Los Angeles
+B-25166,1133,73,17,Furniture,Chairs,23/02/2023,Richard Castaneda,Cleveland
+B-25166,1133,73,17,Furniture,Chairs,06/06/2024,Sarah Torres,San Diego
+B-25166,6248,1168,19,Furniture,Bookcases,23/02/2023,Richard Castaneda,Cleveland
+B-25166,6248,1168,19,Furniture,Bookcases,06/06/2024,Sarah Torres,San Diego
+B-25454,5666,2733,17,Electronics,Electronic Games,27/01/2025,Vanessa Deleon,Tampa
+B-26215,4171,1450,18,Office Supplies,Markers,07/04/2023,Richard Lyons,Dallas
+B-25777,6236,2839,7,Electronics,Printers,20/01/2022,Eric Adams,Springfield
+B-25777,6236,2839,7,Electronics,Printers,10/05/2022,Chad Brown,Orlando
+B-25383,5410,2456,8,Furniture,Chairs,29/05/2024,Kayla Becker,Los Angeles
+B-25383,5410,2456,8,Furniture,Chairs,04/01/2022,Ashley Freeman,Tampa
+B-26409,3024,1353,1,Furniture,Sofas,02/05/2024,Scott Harris,Los Angeles
+B-26409,3024,1353,1,Furniture,Sofas,28/12/2021,John James,Columbus
+B-26684,7434,2851,5,Office Supplies,Markers,12/12/2022,Jesse Bond,Springfield
+B-26726,7213,508,19,Electronics,Electronic Games,17/08/2023,Brandon Hughes,Dallas
+B-26726,7213,508,19,Electronics,Electronic Games,29/11/2021,Lynn Reynolds,Cincinnati
+B-26726,3176,586,9,Furniture,Tables,17/08/2023,Brandon Hughes,Dallas
+B-26726,3176,586,9,Furniture,Tables,29/11/2021,Lynn Reynolds,Cincinnati
+B-26136,9144,2220,18,Office Supplies,Binders,13/06/2021,Ronald Good,Miami
+B-26098,4146,865,19,Furniture,Tables,04/07/2022,Kyle Baker,Houston
+B-26098,3793,875,7,Furniture,Tables,04/07/2022,Kyle Baker,Houston
+B-25430,7169,2385,11,Furniture,Sofas,27/06/2021,Michael Rivera,Los Angeles
+B-25430,4046,417,18,Furniture,Chairs,27/06/2021,Michael Rivera,Los Angeles
+B-25266,4164,905,11,Electronics,Phones,04/12/2023,Lori Adkins,San Diego
+B-25266,5389,2196,5,Furniture,Tables,04/12/2023,Lori Adkins,San Diego
+B-25283,5448,2204,5,Furniture,Sofas,09/08/2022,Luis Warner,New York City
+B-25227,4115,1285,1,Furniture,Sofas,08/04/2020,Donald Perry,Orlando
+B-25227,4761,2231,12,Furniture,Tables,08/04/2020,Donald Perry,Orlando
+B-25669,5899,2264,6,Office Supplies,Binders,20/10/2023,Adam Stevens,Buffalo
+B-25064,6109,3040,9,Furniture,Chairs,10/02/2022,Kimberly Johnson,Buffalo
+B-25064,6109,3040,9,Furniture,Chairs,05/10/2023,Kelly Jones,Rochester
+B-25064,4628,1491,17,Electronics,Electronic Games,10/02/2022,Kimberly Johnson,Buffalo
+B-25064,4628,1491,17,Electronics,Electronic Games,05/10/2023,Kelly Jones,Rochester
+B-26268,4369,584,13,Office Supplies,Pens,22/09/2022,Ashley Petty,Peoria
+B-26268,4369,584,13,Office Supplies,Pens,03/04/2021,Crystal Ross,Austin
+B-25456,5632,2358,20,Furniture,Sofas,03/05/2021,Alexis Duffy,Los Angeles
+B-25456,5632,2358,20,Furniture,Sofas,11/02/2024,Stephanie Sanchez,Miami
+B-25456,5632,2358,20,Furniture,Sofas,04/02/2025,Reginald Espinoza,Cleveland
+B-25495,7519,402,14,Office Supplies,Paper,12/10/2022,Sandra Hicks,San Diego
+B-25495,1564,674,13,Electronics,Electronic Games,12/10/2022,Sandra Hicks,San Diego
+B-26552,2804,936,10,Electronics,Electronic Games,06/02/2022,Olivia Orozco,Austin
+B-26552,2804,936,10,Electronics,Electronic Games,09/11/2020,Larry Moore,Tampa
+B-26552,2804,936,10,Electronics,Electronic Games,03/05/2023,Mrs. Rachel Cannon DDS,Tampa
+B-25203,2321,505,6,Furniture,Chairs,04/10/2022,Daniel Flowers,Springfield
+B-25462,5730,482,6,Electronics,Laptops,21/08/2024,Randy Acosta,Tampa
+B-26145,7441,867,12,Furniture,Sofas,20/11/2021,Deborah Williams,Chicago
+B-26145,7441,867,12,Furniture,Sofas,13/05/2020,Robert Michael,Austin
+B-25552,1732,766,7,Office Supplies,Binders,28/02/2023,Danny Ramirez,New York City
+B-25552,8788,3944,19,Office Supplies,Paper,28/02/2023,Danny Ramirez,New York City
+B-26069,838,271,11,Office Supplies,Markers,21/01/2021,Stephen Baker,Columbus
+B-26069,838,271,11,Office Supplies,Markers,28/02/2022,Jeffrey Wilcox,Peoria
+B-26069,3577,699,2,Furniture,Tables,21/01/2021,Stephen Baker,Columbus
+B-26069,3577,699,2,Furniture,Tables,28/02/2022,Jeffrey Wilcox,Peoria
+B-25120,7122,1836,6,Electronics,Phones,25/04/2024,James Clarke,Dallas
+B-25120,7122,1836,6,Electronics,Phones,10/03/2023,Julia Gallagher,Houston
+B-25120,7122,1836,6,Electronics,Phones,10/07/2023,Ronald Frey Jr.,New York City
+B-25120,7327,2596,15,Office Supplies,Markers,25/04/2024,James Clarke,Dallas
+B-25120,7327,2596,15,Office Supplies,Markers,10/03/2023,Julia Gallagher,Houston
+B-25120,7327,2596,15,Office Supplies,Markers,10/07/2023,Ronald Frey Jr.,New York City
+B-26146,2239,1094,18,Electronics,Printers,28/07/2024,Megan Charles,Tampa
+B-26146,4932,1153,1,Office Supplies,Markers,28/07/2024,Megan Charles,Tampa
+B-25549,4609,1084,8,Electronics,Printers,30/07/2023,Amy Duran MD,Orlando
+B-25549,2328,788,4,Office Supplies,Paper,30/07/2023,Amy Duran MD,Orlando
+B-25549,4734,958,7,Electronics,Printers,30/07/2023,Amy Duran MD,Orlando
+B-25488,1388,345,5,Furniture,Sofas,05/10/2024,Christopher Thomas,New York City
+B-25488,8555,1638,8,Electronics,Laptops,05/10/2024,Christopher Thomas,New York City
+B-26885,9024,730,4,Furniture,Tables,20/02/2024,Peter Castro,Dallas
+B-26885,2468,418,4,Electronics,Laptops,20/02/2024,Peter Castro,Dallas
+B-25703,9438,1801,4,Electronics,Electronic Games,19/04/2023,Steven Acosta,Orlando
+B-25703,9438,1801,4,Electronics,Electronic Games,29/10/2023,Lindsay Jackson,Austin
+B-25809,2685,379,18,Electronics,Phones,08/03/2022,Kelly Smith,Cleveland
+B-25809,2685,379,18,Electronics,Phones,08/12/2022,Sabrina Hartman,Tampa
+B-25809,9916,4602,14,Furniture,Chairs,08/03/2022,Kelly Smith,Cleveland
+B-25809,9916,4602,14,Furniture,Chairs,08/12/2022,Sabrina Hartman,Tampa
+B-25809,6184,50,14,Electronics,Electronic Games,08/03/2022,Kelly Smith,Cleveland
+B-25809,6184,50,14,Electronics,Electronic Games,08/12/2022,Sabrina Hartman,Tampa
+B-25809,4548,2135,8,Office Supplies,Markers,08/03/2022,Kelly Smith,Cleveland
+B-25809,4548,2135,8,Office Supplies,Markers,08/12/2022,Sabrina Hartman,Tampa
+B-25477,7195,1665,7,Office Supplies,Markers,27/07/2024,Cynthia Smith,Rochester
+B-25477,7195,1665,7,Office Supplies,Markers,05/07/2022,Olivia Dickerson,Buffalo
+B-26018,3098,957,18,Furniture,Bookcases,04/07/2024,Whitney Stout,Austin
+B-25329,5412,1192,18,Furniture,Tables,28/02/2024,Stephanie Flores,San Diego
+B-25329,5412,1192,18,Furniture,Tables,03/01/2025,Gregory English,Los Angeles
+B-25182,1397,686,11,Furniture,Chairs,07/12/2021,Natalie Maxwell,New York City
+B-25492,9279,552,14,Furniture,Chairs,14/12/2021,Tina Blake,Buffalo
+B-25492,9279,552,14,Furniture,Chairs,30/11/2020,Clarence Cooke,San Francisco
+B-25492,2596,1003,19,Office Supplies,Paper,14/12/2021,Tina Blake,Buffalo
+B-25492,2596,1003,19,Office Supplies,Paper,30/11/2020,Clarence Cooke,San Francisco
+B-25517,6732,911,19,Furniture,Bookcases,29/12/2021,Tamara Guzman,Buffalo
+B-25517,4495,1408,14,Office Supplies,Pens,29/12/2021,Tamara Guzman,Buffalo
+B-25200,9653,2471,6,Office Supplies,Paper,08/07/2024,Marissa Hartman,Buffalo
+B-26009,8945,1728,10,Furniture,Tables,10/02/2021,Sara Garcia,Peoria
+B-26580,4007,201,13,Furniture,Bookcases,21/10/2020,Kathryn Rogers,Columbus
+B-26580,4007,201,13,Furniture,Bookcases,17/04/2023,Kyle Dickson,Dallas
+B-25679,810,231,18,Furniture,Bookcases,21/10/2020,Jacob Decker,Tampa
+B-26034,9789,2071,18,Furniture,Bookcases,28/12/2023,Aaron Johnson,Rochester
+B-26034,9229,4090,8,Electronics,Electronic Games,28/12/2023,Aaron Johnson,Rochester
+B-25148,8141,3968,18,Office Supplies,Markers,23/12/2022,William Morse,Rochester
+B-25148,8141,3968,18,Office Supplies,Markers,10/08/2022,Carrie Smith,Peoria
+B-25148,1067,251,14,Furniture,Sofas,23/12/2022,William Morse,Rochester
+B-25148,1067,251,14,Furniture,Sofas,10/08/2022,Carrie Smith,Peoria
+B-25830,3839,1415,10,Office Supplies,Binders,17/10/2023,Vincent Roth,Los Angeles
+B-25830,3839,1415,10,Office Supplies,Binders,28/02/2022,Andrew Benson,Orlando
+B-25762,2858,482,13,Electronics,Electronic Games,24/05/2024,Jason Wilson,Austin
+B-26794,2137,638,12,Furniture,Bookcases,02/10/2020,Colin Patterson,New York City
+B-26794,2831,1289,12,Furniture,Chairs,02/10/2020,Colin Patterson,New York City
+B-25011,3913,961,15,Furniture,Sofas,10/02/2024,Eric Bates,Columbus
+B-25011,3913,961,15,Furniture,Sofas,06/02/2021,Steven Keith,San Francisco
+B-25515,4468,1940,9,Office Supplies,Paper,16/03/2022,Seth Rodriguez,Tampa
+B-25369,1579,602,9,Electronics,Laptops,24/05/2020,Lauren Jones,Cincinnati
+B-25369,1579,602,9,Electronics,Laptops,16/02/2025,Thomas Wallace,Dallas
+B-25369,1579,602,9,Electronics,Laptops,16/11/2021,Mr. Daniel Wilson,Cincinnati
+B-25369,1579,602,9,Electronics,Laptops,08/09/2024,Julie Smith MD,Rochester
+B-25369,3760,1849,19,Furniture,Chairs,24/05/2020,Lauren Jones,Cincinnati
+B-25369,3760,1849,19,Furniture,Chairs,16/02/2025,Thomas Wallace,Dallas
+B-25369,3760,1849,19,Furniture,Chairs,16/11/2021,Mr. Daniel Wilson,Cincinnati
+B-25369,3760,1849,19,Furniture,Chairs,08/09/2024,Julie Smith MD,Rochester
+B-26222,8706,3099,14,Office Supplies,Pens,29/06/2022,Carol Mitchell,Chicago
+B-26222,4708,696,14,Electronics,Electronic Games,29/06/2022,Carol Mitchell,Chicago
+B-26222,8089,3132,17,Furniture,Chairs,29/06/2022,Carol Mitchell,Chicago
+B-25316,5462,673,12,Electronics,Printers,03/11/2022,John Thompson,Austin
+B-25507,6392,444,18,Electronics,Electronic Games,28/11/2023,Debra Rodriguez,Tampa
+B-25846,8706,1724,3,Electronics,Electronic Games,25/04/2020,Erin Vasquez,Orlando
+B-25763,2349,319,4,Office Supplies,Pens,18/01/2022,Clayton Lara,Miami
+B-25763,8220,3882,14,Furniture,Chairs,18/01/2022,Clayton Lara,Miami
+B-25763,2379,279,7,Furniture,Chairs,18/01/2022,Clayton Lara,Miami
+B-25763,7377,2049,4,Office Supplies,Markers,18/01/2022,Clayton Lara,Miami
+B-25465,717,158,16,Furniture,Tables,23/03/2022,Tony Ray,Cleveland
+B-25465,717,158,16,Furniture,Tables,24/06/2020,Steven Frey,Miami
+B-25465,717,158,16,Furniture,Tables,23/12/2022,Stephanie Leonard,Buffalo
+B-25465,717,158,16,Furniture,Tables,24/11/2024,Crystal Chambers,New York City
+B-25465,717,158,16,Furniture,Tables,06/11/2020,Robert White,Orlando
+B-25465,717,158,16,Furniture,Tables,24/10/2023,Sylvia Barron,Rochester
+B-25465,508,177,17,Furniture,Sofas,23/03/2022,Tony Ray,Cleveland
+B-25465,508,177,17,Furniture,Sofas,24/06/2020,Steven Frey,Miami
+B-25465,508,177,17,Furniture,Sofas,23/12/2022,Stephanie Leonard,Buffalo
+B-25465,508,177,17,Furniture,Sofas,24/11/2024,Crystal Chambers,New York City
+B-25465,508,177,17,Furniture,Sofas,06/11/2020,Robert White,Orlando
+B-25465,508,177,17,Furniture,Sofas,24/10/2023,Sylvia Barron,Rochester
+B-26352,9382,1085,3,Electronics,Printers,18/07/2023,Marcus Brown,Chicago
+B-26352,9382,1085,3,Electronics,Printers,16/05/2022,Annette Pierce,Rochester
+B-26352,4936,576,19,Furniture,Tables,18/07/2023,Marcus Brown,Chicago
+B-26352,4936,576,19,Furniture,Tables,16/05/2022,Annette Pierce,Rochester
+B-26528,2663,64,19,Furniture,Sofas,16/06/2024,Donald Hernandez,San Francisco
+B-26528,2663,64,19,Furniture,Sofas,23/10/2021,Megan Davis,Cleveland
+B-26670,5151,1680,5,Electronics,Printers,22/10/2022,Robert Brooks,Houston
+B-25331,2514,95,8,Office Supplies,Pens,17/07/2023,Miguel Alvarez,Rochester
+B-25832,6129,2976,2,Electronics,Laptops,24/02/2025,Jennifer Arnold,New York City
+B-25832,4395,1663,3,Furniture,Bookcases,24/02/2025,Jennifer Arnold,New York City
+B-25897,5393,2642,8,Furniture,Chairs,07/03/2021,Jessica Blankenship,Cincinnati
+B-25713,2280,509,8,Electronics,Phones,03/01/2021,Peggy Campos,Buffalo
+B-25065,6596,1439,9,Office Supplies,Paper,03/05/2023,Craig Ortega,Cincinnati
+B-25949,4510,1896,5,Office Supplies,Paper,25/10/2023,Johnny Simon,Los Angeles
+B-26033,6077,2378,18,Electronics,Phones,21/08/2022,Keith Brooks,New York City
+B-26017,5379,2510,17,Electronics,Printers,16/04/2022,Jason Martinez,Columbus
+B-26926,4629,1660,16,Office Supplies,Markers,02/04/2023,Steven Herrera,San Diego
+B-26258,2710,555,20,Electronics,Laptops,21/10/2024,Beverly Lamb,Chicago
+B-26258,3224,1018,14,Office Supplies,Binders,21/10/2024,Beverly Lamb,Chicago
+B-26240,8042,936,15,Office Supplies,Markers,09/07/2021,Michael Williams,Springfield
+B-26240,8042,936,15,Office Supplies,Markers,08/04/2022,Zachary Carpenter,Los Angeles
+B-26922,3957,151,10,Office Supplies,Binders,30/04/2022,Timothy Baker,Austin
+B-26894,8769,3178,16,Office Supplies,Markers,20/01/2023,Adam James,Chicago
+B-25330,2957,917,16,Office Supplies,Pens,17/11/2024,Katrina Wood,Chicago
+B-26288,5344,2607,6,Office Supplies,Paper,23/04/2022,James Murray,Dallas
+B-26288,5344,2607,6,Office Supplies,Paper,18/02/2025,Mr. Nathaniel Reeves,Rochester
+B-25228,6061,2121,19,Electronics,Laptops,27/05/2021,Jodi Wood,Cleveland
+B-25228,6061,2121,19,Electronics,Laptops,17/01/2022,Dr. Thomas Peterson,San Diego
+B-26457,5376,1928,7,Furniture,Tables,15/01/2025,Mario Hall,New York City
+B-25790,2792,1008,8,Electronics,Printers,14/02/2021,Justin Rosales,Miami
+B-25868,2944,249,5,Office Supplies,Binders,31/08/2024,Autumn Lee,Columbus
+B-25868,2944,249,5,Office Supplies,Binders,26/12/2022,Victoria Duran,Dallas
+B-25381,4220,945,13,Office Supplies,Markers,21/03/2024,Barry Garcia,Springfield
+B-25381,4220,945,13,Office Supplies,Markers,15/12/2020,Dawn Webb,Peoria
+B-25153,8526,1704,4,Office Supplies,Binders,21/03/2023,Patricia Sanford,Austin
+B-26576,8218,1430,19,Furniture,Bookcases,08/06/2023,William Walters,San Francisco
+B-26526,599,265,4,Electronics,Phones,17/07/2022,Emma Scott,Buffalo
+B-26526,599,265,4,Electronics,Phones,05/12/2024,Sabrina Buckley,Rochester
+B-26526,2727,543,10,Furniture,Bookcases,17/07/2022,Emma Scott,Buffalo
+B-26526,2727,543,10,Furniture,Bookcases,05/12/2024,Sabrina Buckley,Rochester
+B-25819,2589,605,11,Office Supplies,Pens,02/11/2023,Robert Rojas,San Francisco
+B-25819,2589,605,11,Office Supplies,Pens,05/10/2024,Eric Johnson,Cleveland
+B-25698,3776,1100,9,Electronics,Electronic Games,13/11/2022,Heather Parker,Austin
+B-25698,3776,1100,9,Electronics,Electronic Games,28/12/2022,Thomas Matthews,Peoria
+B-26820,5402,1666,12,Furniture,Bookcases,26/02/2025,Kimberly Beard,Cleveland
+B-25396,5165,885,16,Office Supplies,Pens,12/11/2022,Lydia Donovan,Peoria
+B-25396,4863,2394,4,Furniture,Bookcases,12/11/2022,Lydia Donovan,Peoria
+B-25529,1626,258,15,Office Supplies,Pens,07/06/2021,Edward Johnson,Orlando
+B-26501,8851,3962,7,Furniture,Tables,26/09/2020,Ricky Smith,Miami
+B-26910,9680,3295,9,Furniture,Tables,29/04/2024,Mr. Ralph Garcia Jr.,Rochester
+B-26910,8468,3666,8,Office Supplies,Pens,29/04/2024,Mr. Ralph Garcia Jr.,Rochester
+B-26910,4441,314,14,Furniture,Chairs,29/04/2024,Mr. Ralph Garcia Jr.,Rochester
+B-25978,6622,2673,8,Furniture,Sofas,10/04/2024,Malik Walker,New York City
+B-26537,3260,207,17,Furniture,Tables,21/12/2023,Tanya Walker,San Diego
+B-25881,8709,2322,8,Furniture,Tables,02/05/2024,Sherri Ferguson DVM,Austin
+B-25881,8709,2322,8,Furniture,Tables,21/11/2024,Kristin Hart,San Francisco
+B-25237,5250,187,1,Office Supplies,Binders,17/03/2022,Jim Johnson,Cincinnati
+B-25237,5250,187,1,Office Supplies,Binders,14/05/2023,David Hamilton,Houston
+B-26122,4116,921,20,Office Supplies,Paper,07/10/2024,Michael Jimenez,Los Angeles
+B-26122,4116,921,20,Office Supplies,Paper,08/09/2020,Angela Norman,Springfield
+B-25709,1109,418,15,Office Supplies,Paper,19/08/2021,Denise Mcdaniel,Los Angeles
+B-26656,3573,562,7,Office Supplies,Pens,12/10/2022,Michael Rodriguez,Rochester
+B-26656,3573,562,7,Office Supplies,Pens,23/05/2020,Matthew Huff,San Diego
+B-26656,3573,562,7,Office Supplies,Pens,18/04/2020,Linda Little,Tampa
+B-26656,8055,661,10,Electronics,Phones,12/10/2022,Michael Rodriguez,Rochester
+B-26656,8055,661,10,Electronics,Phones,23/05/2020,Matthew Huff,San Diego
+B-26656,8055,661,10,Electronics,Phones,18/04/2020,Linda Little,Tampa
+B-25801,6829,2609,2,Electronics,Laptops,04/06/2022,Kerri Andrews,San Francisco
+B-25801,6390,3089,12,Office Supplies,Paper,04/06/2022,Kerri Andrews,San Francisco
+B-25006,5831,1574,17,Office Supplies,Pens,16/11/2022,Jeffrey Johnson III,San Francisco
+B-25006,5831,1574,17,Office Supplies,Pens,18/07/2024,Daniel Dixon,San Diego
+B-25006,5831,1574,17,Office Supplies,Pens,16/07/2023,Tiffany Robinson,Miami
+B-26106,7952,3865,8,Furniture,Sofas,10/08/2020,Mr. Gregg Sawyer,Peoria
+B-25789,3659,379,5,Furniture,Bookcases,22/06/2024,John Silva,Los Angeles
+B-26292,4183,1159,4,Office Supplies,Pens,13/07/2020,Nathan Moss,Springfield
+B-25895,7478,1381,11,Electronics,Phones,16/04/2024,Donald Medina,Houston
+B-25813,702,238,9,Electronics,Phones,13/03/2021,Charles Henderson,Tampa
+B-26863,4037,1494,15,Furniture,Chairs,01/04/2023,Brenda Davis,San Francisco
+B-25759,5014,2332,2,Furniture,Chairs,10/11/2020,Leah Calderon,Chicago
+B-26357,9879,4930,15,Electronics,Laptops,08/06/2023,Brandi Vasquez,Rochester
+B-26819,8762,3502,1,Electronics,Phones,17/08/2021,Debra Richards,Tampa
+B-25502,8490,800,1,Office Supplies,Pens,24/05/2020,Tammy Day,New York City
+B-25258,6951,164,10,Furniture,Sofas,12/08/2021,Sheila Clay,Buffalo
+B-26878,1078,309,3,Electronics,Phones,03/09/2022,Nicholas Flores,Cleveland
+B-26878,1078,309,3,Electronics,Phones,01/10/2020,Jasmin Jones,Chicago
+B-25170,8560,2166,19,Office Supplies,Binders,27/05/2022,Matthew Gardner,Tampa
+B-25170,1031,318,20,Electronics,Electronic Games,27/05/2022,Matthew Gardner,Tampa
+B-26842,6402,2770,19,Office Supplies,Markers,10/03/2024,Joseph Perkins,Orlando
+B-26842,6402,2770,19,Office Supplies,Markers,05/10/2023,Ashley Adams MD,Orlando
+B-26842,5916,1594,19,Electronics,Printers,10/03/2024,Joseph Perkins,Orlando
+B-26842,5916,1594,19,Electronics,Printers,05/10/2023,Ashley Adams MD,Orlando
+B-26599,4015,1751,15,Furniture,Chairs,28/08/2022,Cheryl Stevens,San Francisco
+B-26599,4015,1751,15,Furniture,Chairs,08/09/2020,Jorge George,New York City
+B-25705,9335,557,11,Electronics,Electronic Games,27/04/2021,Ann Mooney,Los Angeles
+B-26366,4706,594,11,Office Supplies,Binders,21/08/2021,James Mendoza,Cleveland
+B-26366,4706,594,11,Office Supplies,Binders,16/05/2021,Kaitlin Garrison,Columbus
+B-26366,6584,371,6,Office Supplies,Markers,21/08/2021,James Mendoza,Cleveland
+B-26366,6584,371,6,Office Supplies,Markers,16/05/2021,Kaitlin Garrison,Columbus
+B-26116,6389,734,1,Furniture,Sofas,15/01/2022,Jeremy Jackson,Dallas
+B-26443,9869,4299,12,Electronics,Printers,21/03/2023,Dale Craig,San Diego
+B-26443,9869,4299,12,Electronics,Printers,28/12/2023,Joseph Hooper,Buffalo
+B-25955,655,297,4,Office Supplies,Markers,15/02/2022,Alexander Adams,Buffalo
+B-25955,655,297,4,Office Supplies,Markers,30/11/2023,Ashlee Mills,Orlando
+B-26383,798,308,10,Electronics,Phones,12/01/2023,Brittany Jenkins,Buffalo
+B-26383,798,308,10,Electronics,Phones,19/05/2023,Eddie Gonzales,Cleveland
+B-26383,7967,2504,13,Electronics,Printers,12/01/2023,Brittany Jenkins,Buffalo
+B-26383,7967,2504,13,Electronics,Printers,19/05/2023,Eddie Gonzales,Cleveland
+B-26999,3756,1318,5,Furniture,Tables,19/02/2024,Edward Valencia,Miami
+B-26712,5196,2477,1,Office Supplies,Markers,01/12/2021,Emma Bruce,Austin
+B-26712,6586,1794,19,Furniture,Bookcases,01/12/2021,Emma Bruce,Austin
+B-26066,6673,950,19,Office Supplies,Markers,19/12/2024,Carl Wade DDS,Buffalo
+B-25996,714,232,14,Furniture,Tables,18/01/2023,Brandon Alvarado,Columbus
+B-25996,714,232,14,Furniture,Tables,23/12/2020,Jennifer Clark,Austin
+B-26924,1083,501,6,Office Supplies,Pens,28/02/2021,David Johnson,Austin
+B-25541,2401,1163,10,Furniture,Bookcases,04/05/2023,April Marquez,Cleveland
+B-25541,2401,1163,10,Furniture,Bookcases,22/04/2020,Joseph Guerrero,Los Angeles
+B-25541,2401,1163,10,Furniture,Bookcases,13/08/2021,Michael Hanson,Rochester
+B-25541,1045,267,11,Electronics,Phones,04/05/2023,April Marquez,Cleveland
+B-25541,1045,267,11,Electronics,Phones,22/04/2020,Joseph Guerrero,Los Angeles
+B-25541,1045,267,11,Electronics,Phones,13/08/2021,Michael Hanson,Rochester
+B-25196,7806,1127,1,Office Supplies,Markers,20/07/2023,William Hill,Dallas
+B-25855,5263,1743,19,Furniture,Sofas,28/08/2022,Kelsey Huber,Miami
+B-25071,6147,2526,6,Office Supplies,Pens,14/03/2023,Hailey Chandler,Dallas
+B-26159,7484,2871,15,Electronics,Phones,07/11/2023,Cheyenne Rose,Orlando
+B-26159,7484,2871,15,Electronics,Phones,16/04/2024,Richard Petersen,Chicago
+B-26159,7700,2712,1,Furniture,Sofas,07/11/2023,Cheyenne Rose,Orlando
+B-26159,7700,2712,1,Furniture,Sofas,16/04/2024,Richard Petersen,Chicago
+B-26228,8537,3586,13,Office Supplies,Markers,16/09/2022,Kathryn Gray,Rochester
+B-25888,8858,3394,6,Furniture,Chairs,31/10/2024,Victor Collins,San Diego
+B-25574,5313,2037,7,Electronics,Printers,25/11/2024,Jason Hernandez,San Francisco
+B-25574,5313,2037,7,Electronics,Printers,29/10/2021,Jacob Torres,Houston
+B-26938,3281,471,7,Furniture,Sofas,27/12/2023,Erin Hernandez,Los Angeles
+B-26938,3281,471,7,Furniture,Sofas,25/06/2023,Jacob Guzman,Peoria
+B-26379,8681,2458,9,Office Supplies,Pens,01/09/2020,Mike Armstrong,New York City
+B-26623,6195,1556,18,Furniture,Sofas,01/02/2025,Cindy Rowland,Springfield
+B-25566,3877,481,16,Furniture,Chairs,22/07/2023,Kenneth Matthews,Rochester
+B-25566,3877,481,16,Furniture,Chairs,04/02/2022,Susan Valdez,New York City
+B-26740,9369,3297,6,Electronics,Printers,27/09/2023,Stephanie Manning,Orlando
+B-26740,9369,3297,6,Electronics,Printers,30/01/2025,Logan Galloway,New York City
+B-26740,8680,4068,20,Electronics,Printers,27/09/2023,Stephanie Manning,Orlando
+B-26740,8680,4068,20,Electronics,Printers,30/01/2025,Logan Galloway,New York City
+B-26740,3067,1475,8,Electronics,Laptops,27/09/2023,Stephanie Manning,Orlando
+B-26740,3067,1475,8,Electronics,Laptops,30/01/2025,Logan Galloway,New York City
+B-25024,9002,4197,2,Office Supplies,Markers,15/01/2025,Christopher Stone,Cincinnati
+B-25024,9002,4197,2,Office Supplies,Markers,28/03/2021,Megan Pitts,Columbus
+B-26367,7105,2782,19,Office Supplies,Pens,25/12/2021,Richard Gardner,Columbus
+B-26353,5317,1345,18,Furniture,Chairs,03/02/2023,Samuel Moore,Columbus
+B-26353,5317,1345,18,Furniture,Chairs,28/04/2023,Robert Stokes,Orlando
+B-26353,5317,1345,18,Furniture,Chairs,22/11/2024,Danielle Ramirez,San Francisco
+B-26353,6304,766,14,Furniture,Tables,03/02/2023,Samuel Moore,Columbus
+B-26353,6304,766,14,Furniture,Tables,28/04/2023,Robert Stokes,Orlando
+B-26353,6304,766,14,Furniture,Tables,22/11/2024,Danielle Ramirez,San Francisco
+B-25742,9565,1691,3,Office Supplies,Paper,02/07/2024,Taylor White,Springfield
+B-25742,8245,324,11,Office Supplies,Paper,02/07/2024,Taylor White,Springfield
+B-26965,1592,480,13,Electronics,Laptops,18/01/2022,Jordan Krause,Cleveland
+B-26038,8400,267,5,Electronics,Phones,08/10/2024,Kimberly King,Columbus
+B-26038,4963,1254,15,Office Supplies,Paper,08/10/2024,Kimberly King,Columbus
+B-25317,2472,211,5,Electronics,Printers,21/06/2020,Sharon Russell,San Diego
+B-25970,9132,3096,14,Furniture,Chairs,14/12/2023,Kevin Cooper,Tampa
+B-25590,8305,1577,6,Office Supplies,Binders,16/12/2020,Darrell Ramos,Rochester
+B-25580,1010,58,19,Electronics,Electronic Games,15/03/2025,Dr. Terry Alvarado,Tampa
+B-25443,4544,1726,9,Electronics,Phones,21/08/2024,Kathy Wilson,Dallas
+B-25443,5900,1738,20,Electronics,Phones,21/08/2024,Kathy Wilson,Dallas
+B-25774,8861,3381,19,Office Supplies,Markers,27/05/2021,Brandon Le,San Diego
+B-26505,8158,2052,13,Electronics,Phones,21/09/2020,Mary Wright,Cincinnati
+B-25163,3411,1704,14,Office Supplies,Pens,11/01/2025,Douglas Reynolds,Los Angeles
+B-26095,9406,1137,16,Office Supplies,Markers,20/10/2021,Leroy Harris,Houston
+B-26095,1156,74,15,Electronics,Printers,20/10/2021,Leroy Harris,Houston
+B-25768,5354,743,10,Furniture,Bookcases,19/10/2021,Ricardo Dixon,Springfield
+B-25328,8780,3430,4,Electronics,Electronic Games,07/07/2024,Debra Smith,Austin
+B-25328,8780,3430,4,Electronics,Electronic Games,25/07/2023,Jasmine James,Austin
+B-26573,6783,3306,8,Furniture,Sofas,16/04/2020,Felicia Morton,Columbus
+B-25138,1778,285,4,Office Supplies,Pens,04/07/2020,Sylvia Jenkins,New York City
+B-26803,9399,1949,12,Electronics,Printers,16/05/2022,Elizabeth White,Rochester
+B-26803,7957,965,4,Furniture,Sofas,16/05/2022,Elizabeth White,Rochester
+B-25101,1638,661,13,Furniture,Chairs,25/11/2023,Steven Steele,Springfield
+B-25827,1786,224,4,Furniture,Tables,17/08/2021,Amanda Ramirez,Dallas
+B-25792,4751,781,9,Office Supplies,Paper,02/07/2023,Kyle Jackson,Buffalo
+B-25646,8979,4477,4,Office Supplies,Paper,24/08/2020,Sharon Wilkins,Chicago
+B-25043,2727,663,8,Electronics,Phones,07/11/2022,Austin Hammond,Miami
+B-26598,1093,397,17,Electronics,Printers,27/03/2024,Jessica Barajas,Peoria
+B-26598,1093,397,17,Electronics,Printers,01/09/2024,Jamie Jimenez,Buffalo
+B-26598,1093,397,17,Electronics,Printers,22/02/2022,James Carter,Columbus
+B-26598,2636,88,11,Office Supplies,Paper,27/03/2024,Jessica Barajas,Peoria
+B-26598,2636,88,11,Office Supplies,Paper,01/09/2024,Jamie Jimenez,Buffalo
+B-26598,2636,88,11,Office Supplies,Paper,22/02/2022,James Carter,Columbus
+B-26643,7344,2251,7,Electronics,Electronic Games,11/02/2022,John Williams,Miami
+B-26643,7306,1547,3,Office Supplies,Paper,11/02/2022,John Williams,Miami
+B-26643,5832,2588,10,Electronics,Printers,11/02/2022,John Williams,Miami
+B-25992,8572,2041,8,Furniture,Tables,27/05/2021,Alicia Oneill,Springfield
+B-25992,8572,2041,8,Furniture,Tables,05/07/2023,Rebecca Huff,Springfield
+B-25992,8572,2041,8,Furniture,Tables,27/10/2020,Diana Scott,San Diego
+B-25992,8059,1834,10,Electronics,Printers,27/05/2021,Alicia Oneill,Springfield
+B-25992,8059,1834,10,Electronics,Printers,05/07/2023,Rebecca Huff,Springfield
+B-25992,8059,1834,10,Electronics,Printers,27/10/2020,Diana Scott,San Diego
+B-25532,3661,436,13,Furniture,Sofas,26/01/2023,Brian Young,Austin
+B-25564,2451,342,8,Office Supplies,Paper,06/09/2021,Susan Wright,Los Angeles
+B-25564,2451,342,8,Office Supplies,Paper,12/11/2021,Kayla Banks,Cincinnati
+B-25564,2451,342,8,Office Supplies,Paper,30/07/2024,Zachary Pierce,Houston
+B-26543,7067,1943,16,Furniture,Tables,15/03/2022,Nicolas Owen,San Francisco
+B-25976,4307,615,3,Electronics,Electronic Games,15/03/2024,Martha Carney,New York City
+B-25976,4307,615,3,Electronics,Electronic Games,10/11/2020,Francisco Hicks,Springfield
+B-25976,5694,1134,5,Furniture,Chairs,15/03/2024,Martha Carney,New York City
+B-25976,5694,1134,5,Furniture,Chairs,10/11/2020,Francisco Hicks,Springfield
+B-25929,962,298,18,Office Supplies,Binders,23/07/2022,Matthew Parker,Springfield
+B-25497,2995,220,14,Furniture,Bookcases,13/09/2024,Paul Bryant,Buffalo
+B-25497,2047,914,5,Office Supplies,Markers,13/09/2024,Paul Bryant,Buffalo
+B-26735,2078,612,6,Electronics,Laptops,25/01/2022,Bruce Dennis,Austin
+B-25036,2737,1253,3,Electronics,Printers,19/04/2021,Joseph Bates,New York City
+B-25971,8194,2881,6,Office Supplies,Paper,18/07/2021,Kelly Pacheco,Houston
+B-25441,9914,3858,16,Furniture,Sofas,24/06/2022,Jeffrey Weber,Buffalo
+B-25441,9914,3858,16,Furniture,Sofas,08/06/2024,Andrew Krueger,Rochester
+B-25441,5470,292,7,Office Supplies,Pens,24/06/2022,Jeffrey Weber,Buffalo
+B-25441,5470,292,7,Office Supplies,Pens,08/06/2024,Andrew Krueger,Rochester
+B-25441,1496,662,17,Furniture,Bookcases,24/06/2022,Jeffrey Weber,Buffalo
+B-25441,1496,662,17,Furniture,Bookcases,08/06/2024,Andrew Krueger,Rochester
+B-25823,3228,476,9,Office Supplies,Paper,29/09/2022,Kathleen Cox,New York City
+B-25363,3918,749,8,Electronics,Laptops,10/05/2023,Jamie Bradley,San Diego
+B-25363,3918,749,8,Electronics,Laptops,02/05/2020,Robert Martinez,Houston
+B-26445,9921,1451,15,Furniture,Sofas,12/04/2021,Christopher Rogers,Chicago
+B-26724,9694,4361,1,Furniture,Chairs,04/11/2023,Roberto Parrish,Springfield
+B-25447,5028,1553,13,Office Supplies,Paper,04/05/2020,Amber Kennedy,Tampa
+B-26904,594,67,19,Office Supplies,Paper,10/09/2023,Maria Davis,Buffalo
+B-26904,594,67,19,Office Supplies,Paper,05/01/2024,Terry Gilbert,Miami
+B-26904,594,67,19,Office Supplies,Paper,08/05/2024,Devon Schmitt,Austin
+B-26456,5954,2618,11,Furniture,Tables,30/03/2024,Robert Mosley,Cincinnati
+B-25435,3518,1051,3,Furniture,Bookcases,10/09/2020,Paul Scott,San Francisco
+B-25435,4157,1874,8,Electronics,Laptops,10/09/2020,Paul Scott,San Francisco
+B-26279,3747,410,5,Office Supplies,Markers,12/07/2020,Kristin Alvarez,Springfield
+B-26279,3747,410,5,Office Supplies,Markers,08/12/2022,Kevin Jackson,Buffalo
+B-26279,3747,410,5,Office Supplies,Markers,27/03/2024,Mrs. Lauren Potter DDS,Columbus
+B-26279,3747,410,5,Office Supplies,Markers,17/02/2023,Jason Brown,Chicago
+B-26279,3747,410,5,Office Supplies,Markers,21/07/2021,Jamie Santos,Los Angeles
+B-26279,3194,534,4,Office Supplies,Binders,12/07/2020,Kristin Alvarez,Springfield
+B-26279,3194,534,4,Office Supplies,Binders,08/12/2022,Kevin Jackson,Buffalo
+B-26279,3194,534,4,Office Supplies,Binders,27/03/2024,Mrs. Lauren Potter DDS,Columbus
+B-26279,3194,534,4,Office Supplies,Binders,17/02/2023,Jason Brown,Chicago
+B-26279,3194,534,4,Office Supplies,Binders,21/07/2021,Jamie Santos,Los Angeles
+B-25770,8548,2305,1,Office Supplies,Binders,30/10/2022,James Taylor,Tampa
+B-25715,6089,139,19,Furniture,Tables,31/12/2020,Alicia Vincent,Cincinnati
+B-25715,6089,139,19,Furniture,Tables,15/04/2022,Kenneth Adams,Cleveland
+B-25715,6089,139,19,Furniture,Tables,05/04/2023,Shelby Browning,Chicago
+B-25715,2586,800,16,Furniture,Tables,31/12/2020,Alicia Vincent,Cincinnati
+B-25715,2586,800,16,Furniture,Tables,15/04/2022,Kenneth Adams,Cleveland
+B-25715,2586,800,16,Furniture,Tables,05/04/2023,Shelby Browning,Chicago
+B-25715,3757,1626,9,Office Supplies,Paper,31/12/2020,Alicia Vincent,Cincinnati
+B-25715,3757,1626,9,Office Supplies,Paper,15/04/2022,Kenneth Adams,Cleveland
+B-25715,3757,1626,9,Office Supplies,Paper,05/04/2023,Shelby Browning,Chicago
+B-26961,5193,2530,5,Furniture,Sofas,29/10/2021,Johnny Hill,San Diego
+B-26961,5193,2530,5,Furniture,Sofas,29/12/2024,Nicholas Tucker,Miami
+B-25902,7493,96,3,Electronics,Electronic Games,11/08/2020,Theresa Cline,Cleveland
+B-26321,2062,848,6,Office Supplies,Markers,04/03/2024,Christine Wheeler,Tampa
+B-25612,7163,1536,1,Electronics,Phones,17/10/2023,Carlos Wells,San Diego
+B-25605,4026,163,6,Electronics,Phones,28/07/2023,Randall Bell,New York City
+B-25810,1894,275,5,Furniture,Chairs,27/11/2021,Kendra Mckinney,Miami
+B-25810,7144,192,13,Electronics,Electronic Games,27/11/2021,Kendra Mckinney,Miami
+B-25935,3482,1554,15,Electronics,Laptops,09/09/2020,Amanda Kim,Columbus
+B-26245,4172,235,5,Office Supplies,Paper,02/06/2021,Megan Morgan,Cleveland
+B-26245,4172,235,5,Office Supplies,Paper,22/08/2022,Vincent Kramer,Orlando
+B-26245,4172,235,5,Office Supplies,Paper,16/04/2024,Raymond Bean,Springfield
+B-25346,6265,155,8,Furniture,Sofas,23/08/2022,Reginald Hebert,Cincinnati
+B-25346,6265,155,8,Furniture,Sofas,12/03/2021,Jeremy Vazquez,Cleveland
+B-25594,2931,212,7,Electronics,Electronic Games,26/06/2024,Michael Stewart,Peoria
+B-25594,2931,212,7,Electronics,Electronic Games,08/12/2023,Kevin Johnson,Tampa
+B-25471,1146,188,9,Furniture,Chairs,27/11/2024,Tara Hughes,Tampa
+B-25398,9215,767,13,Electronics,Printers,10/01/2022,Sandra Perkins,Tampa
+B-25398,9215,767,13,Electronics,Printers,01/11/2021,Heather Bell,San Francisco
+B-25999,7895,1005,1,Furniture,Chairs,28/10/2023,Nancy Boyd,Cincinnati
+B-25999,7895,1005,1,Furniture,Chairs,01/03/2025,Raymond Reyes,San Diego
+B-25999,2740,558,8,Office Supplies,Pens,28/10/2023,Nancy Boyd,Cincinnati
+B-25999,2740,558,8,Office Supplies,Pens,01/03/2025,Raymond Reyes,San Diego
+B-25159,5338,1354,16,Office Supplies,Markers,01/08/2024,Cassandra Jordan,Peoria
+B-25159,5338,1354,16,Office Supplies,Markers,07/06/2023,Evelyn Harris,Buffalo
+B-25159,5338,1354,16,Office Supplies,Markers,21/10/2024,Shannon Maynard,Orlando
+B-25159,5338,1354,16,Office Supplies,Markers,04/01/2021,Marie James,Buffalo
+B-25496,3095,941,2,Office Supplies,Pens,19/04/2022,Maria Carroll,Cleveland
+B-25496,3095,941,2,Office Supplies,Pens,11/08/2022,Jessica Sloan,Austin
+B-25401,6017,2230,13,Electronics,Printers,04/08/2023,Scott Craig,Peoria
+B-25707,4904,469,2,Office Supplies,Pens,25/04/2020,Kaitlin Brown,Dallas
+B-25707,3080,737,6,Office Supplies,Binders,25/04/2020,Kaitlin Brown,Dallas
+B-26225,1992,355,2,Electronics,Phones,14/12/2024,William Beck,Tampa
+B-25662,5346,1246,17,Furniture,Sofas,25/07/2022,Eric Mason,Orlando
+B-25662,5346,1246,17,Furniture,Sofas,07/05/2022,Lisa Lowe,Miami
+B-26752,8422,893,18,Electronics,Printers,11/08/2022,Roy Miller,San Francisco
+B-26752,8422,893,18,Electronics,Printers,12/08/2022,Christopher Espinoza,Columbus
+B-26752,6105,1447,8,Furniture,Bookcases,11/08/2022,Roy Miller,San Francisco
+B-26752,6105,1447,8,Furniture,Bookcases,12/08/2022,Christopher Espinoza,Columbus
+B-25640,670,85,9,Office Supplies,Pens,21/08/2023,Claire Cole,Houston
+B-25030,4057,1012,6,Electronics,Laptops,12/09/2022,Eric Nunez,San Diego
+B-25504,8178,2462,10,Office Supplies,Pens,20/08/2023,David Bell,Los Angeles
+B-26912,8752,1686,9,Furniture,Tables,27/12/2020,Patrick Hensley MD,Cincinnati
+B-26912,8752,1686,9,Furniture,Tables,04/09/2023,John Cox,Peoria
+B-26912,8752,1686,9,Furniture,Tables,08/01/2022,Michelle Sullivan,Chicago
+B-25193,8974,4441,16,Electronics,Printers,05/06/2023,Angela Todd,New York City
+B-25106,9090,3098,16,Electronics,Phones,01/04/2021,Luke Saunders,Dallas
+B-25106,9090,3098,16,Electronics,Phones,28/05/2024,Dr. Jennifer Benton DVM,Springfield
+B-25106,851,356,11,Electronics,Electronic Games,01/04/2021,Luke Saunders,Dallas
+B-25106,851,356,11,Electronics,Electronic Games,28/05/2024,Dr. Jennifer Benton DVM,Springfield
+B-26835,5427,728,3,Electronics,Phones,09/03/2023,Keith Smith,Miami
+B-25836,2695,914,15,Furniture,Bookcases,28/07/2022,Danielle Mitchell,Peoria
+B-25836,2695,914,15,Furniture,Bookcases,17/06/2021,Jesus Hernandez,Los Angeles
+B-26661,2386,999,3,Office Supplies,Pens,13/02/2024,Jason Norman,Miami
+B-26317,2284,149,20,Office Supplies,Pens,06/08/2021,Laura Poole,Rochester
+B-26839,6034,608,8,Electronics,Phones,01/05/2022,Sarah Wagner,Houston
+B-26839,8956,3359,13,Furniture,Bookcases,01/05/2022,Sarah Wagner,Houston
+B-25735,7122,1982,7,Office Supplies,Markers,11/03/2024,Bryan Baird,Peoria
+B-25387,9775,4507,5,Office Supplies,Markers,06/07/2020,Amy Thompson,Cincinnati
+B-25192,3309,177,13,Furniture,Bookcases,17/12/2020,Ashley Wright,Cleveland
+B-26844,4163,897,14,Electronics,Electronic Games,30/08/2022,Michelle Lynch,Springfield
+B-26844,4163,897,14,Electronics,Electronic Games,27/02/2025,Ryan Hale,Cleveland
+B-26844,4163,897,14,Electronics,Electronic Games,05/06/2021,Marie Jefferson,Orlando
+B-25236,5518,867,7,Furniture,Sofas,22/12/2022,Vanessa Smith,Houston
+B-25940,7566,606,6,Electronics,Phones,25/01/2025,Ryan Foster,Columbus
+B-25940,7566,606,6,Electronics,Phones,14/02/2025,David Lara,San Diego
+B-26765,762,92,11,Electronics,Printers,06/01/2023,Jonathan Young,Springfield
+B-26817,3316,126,6,Electronics,Laptops,11/10/2020,Debra Townsend,Cincinnati
+B-26522,5994,2826,9,Furniture,Bookcases,24/05/2023,John Thomas,San Francisco
+B-26522,5994,2826,9,Furniture,Bookcases,12/03/2024,Bryan Anderson,Los Angeles
+B-26522,5994,2826,9,Furniture,Bookcases,17/03/2024,Sarah Miller,New York City
+B-25681,3854,245,19,Electronics,Laptops,17/05/2022,Robert Hill,Columbus
+B-25382,7019,2677,15,Office Supplies,Markers,21/12/2020,Joshua Rojas,Miami
+B-25944,5954,2640,14,Electronics,Laptops,24/08/2021,Angelica Lewis,New York City
+B-25944,5954,2640,14,Electronics,Laptops,22/10/2022,Jessica Russell,Dallas
+B-26980,9752,3618,5,Furniture,Bookcases,21/02/2024,Mary Johnson,Rochester
+B-26980,9752,3618,5,Furniture,Bookcases,31/10/2022,Joseph Knight,Peoria
+B-25780,5335,322,15,Electronics,Electronic Games,15/05/2022,Jessica Greene,New York City
+B-25964,1454,80,20,Electronics,Electronic Games,22/07/2022,Vincent Perez,Rochester
+B-26767,6724,1539,19,Furniture,Bookcases,13/12/2021,Dennis Rivera,San Francisco
+B-26767,6724,1539,19,Furniture,Bookcases,03/06/2021,Nancy Keller,Dallas
+B-25501,9874,3895,4,Office Supplies,Binders,24/02/2025,Michelle Anderson,Cleveland
+B-26029,4918,1485,7,Electronics,Phones,02/02/2023,Anthony May,Tampa
+B-25292,3189,1180,19,Office Supplies,Paper,31/12/2021,Michelle Guerra,New York City
+B-25873,2684,713,2,Electronics,Electronic Games,15/06/2024,Meghan Ballard,New York City
+B-25873,2684,713,2,Electronics,Electronic Games,05/06/2022,Brian Wheeler,Buffalo
+B-25873,2684,713,2,Electronics,Electronic Games,11/05/2020,William Rosario,Dallas
+B-25444,7626,229,5,Office Supplies,Pens,11/02/2024,Jessica Hunt,Springfield
+B-25444,7626,229,5,Office Supplies,Pens,25/11/2020,Tony Chavez,Columbus
+B-26796,6669,3063,19,Electronics,Printers,12/08/2023,Mary Crawford,Cincinnati
+B-25537,6123,1686,3,Office Supplies,Markers,06/05/2022,Roger Morrison,Cincinnati
+B-26083,3265,1390,16,Office Supplies,Paper,17/01/2024,Bethany Harrison,Los Angeles
+B-25298,8104,1039,6,Office Supplies,Markers,24/11/2021,Lisa Mcintyre,Orlando
+B-25298,8104,1039,6,Office Supplies,Markers,06/10/2021,Carolyn Gonzalez,Miami
+B-25298,8104,1039,6,Office Supplies,Markers,27/01/2025,Christina Oconnell,San Francisco
+B-26734,847,355,17,Furniture,Tables,23/05/2022,James Garcia,Buffalo
+B-26734,847,355,17,Furniture,Tables,28/11/2023,Emily Frederick,Austin
+B-26734,847,355,17,Furniture,Tables,18/01/2023,Shawn Wise,San Francisco
+B-25483,3129,55,9,Furniture,Bookcases,06/09/2021,Carrie Alvarez,Peoria
+B-25483,7821,3821,13,Electronics,Laptops,06/09/2021,Carrie Alvarez,Peoria
+B-26041,9498,256,12,Electronics,Phones,22/02/2021,Matthew James,Peoria
+B-26041,9498,256,12,Electronics,Phones,06/10/2021,Jerry Alvarado,New York City
+B-26750,5461,1214,7,Furniture,Sofas,07/06/2020,Paul Zimmerman,Rochester
+B-26138,3084,611,19,Furniture,Bookcases,21/05/2024,Carl Ryan,Dallas
+B-26929,6087,3043,1,Furniture,Sofas,05/08/2020,Kelly Roberts,Buffalo
+B-25359,611,300,3,Furniture,Bookcases,15/10/2020,Jack Woods,Peoria
+B-25738,9909,2999,18,Office Supplies,Markers,15/05/2021,Albert Alexander Jr.,Cleveland
+B-25738,9909,2999,18,Office Supplies,Markers,13/01/2022,Teresa Perez,Austin
+B-25931,6485,3178,18,Furniture,Sofas,18/07/2023,Amanda Williams,Columbus
+B-25706,7259,1969,10,Electronics,Laptops,08/12/2022,Kristen Lawson,Springfield
+B-25352,3333,700,18,Electronics,Printers,17/04/2023,Jacob Stewart,Miami
+B-26909,7786,1202,4,Furniture,Sofas,23/06/2020,Daniel Brooks,Peoria
+B-26296,7644,2428,6,Electronics,Phones,20/01/2022,Aaron Dunn,Springfield
+B-26112,1476,247,5,Furniture,Bookcases,18/11/2023,Jacob Martinez,Los Angeles
+B-26112,1476,247,5,Furniture,Bookcases,19/01/2022,Raymond Burgess,San Diego
+B-26790,3445,1405,16,Furniture,Sofas,21/09/2020,Jennifer Cooke,San Francisco
+B-26790,9837,384,1,Electronics,Laptops,21/09/2020,Jennifer Cooke,San Francisco
+B-25986,1314,457,8,Furniture,Sofas,11/06/2021,Tyrone White,San Diego
+B-25630,5951,936,6,Electronics,Laptops,07/08/2024,Charles Williams,Dallas
+B-25630,5951,936,6,Electronics,Laptops,26/07/2022,Amy Page,Columbus
+B-26872,992,177,6,Electronics,Phones,13/01/2024,Scott Gibbs,Los Angeles
+B-26872,4699,625,18,Office Supplies,Markers,13/01/2024,Scott Gibbs,Los Angeles
+B-25870,5557,2114,17,Electronics,Laptops,28/05/2021,Angela Roberts,Cleveland
+B-25991,3436,933,3,Electronics,Electronic Games,13/06/2021,Kyle Hernandez,Dallas
+B-25198,9840,3870,11,Electronics,Printers,25/04/2023,Cynthia Ferguson,Austin
+B-25189,7620,125,4,Office Supplies,Paper,05/07/2021,Brandi Garcia,San Francisco
+B-25189,7620,125,4,Office Supplies,Paper,12/10/2024,Matthew Blake,San Francisco
+B-26563,4314,1591,5,Furniture,Tables,04/10/2021,Lauren Howell,Buffalo
+B-25548,8851,999,12,Electronics,Laptops,07/02/2024,Joseph Wilson,Cincinnati
+B-25965,544,272,2,Electronics,Laptops,05/03/2021,Tanner Vance,Houston
+B-25965,544,272,2,Electronics,Laptops,25/06/2023,Michael Nash,Buffalo
+B-26545,537,142,20,Office Supplies,Markers,02/08/2021,Brent Thomas,Peoria
+B-26603,5944,2661,7,Electronics,Laptops,17/03/2022,Harold Mitchell,Austin
+B-26393,2258,135,18,Electronics,Printers,07/02/2024,Ashley Palmer,Miami
+B-26393,2258,135,18,Electronics,Printers,19/08/2022,Stephen Hogan,San Diego
+B-26628,9609,4339,3,Furniture,Sofas,19/09/2024,George Ashley,Houston
+B-26628,9609,4339,3,Furniture,Sofas,05/04/2020,Sara Bailey,Cincinnati
+B-25945,9952,3301,15,Electronics,Electronic Games,10/03/2023,Tanya Thomas MD,Dallas
+B-26565,9873,4585,7,Office Supplies,Paper,10/08/2020,Maria Galvan,Columbus
+B-25684,3560,1335,15,Electronics,Electronic Games,29/04/2020,Duane Kelly,New York City
+B-25684,3560,1335,15,Electronics,Electronic Games,16/03/2023,Frank Reynolds,Springfield
+B-26612,6528,76,9,Electronics,Phones,04/05/2020,Aaron Kim,Buffalo
+B-26612,8930,3374,12,Furniture,Sofas,04/05/2020,Aaron Kim,Buffalo
+B-25839,4521,1778,9,Office Supplies,Paper,15/10/2024,David Allen,Tampa
+B-25898,7091,2317,10,Furniture,Sofas,09/06/2022,Monica Lee,San Diego
+B-26120,2101,287,8,Office Supplies,Pens,04/07/2020,Kimberly Fuller,Cleveland
+B-26120,2101,287,8,Office Supplies,Pens,09/04/2023,Erica Scott,Chicago
+B-26426,8644,1968,9,Office Supplies,Paper,24/11/2023,Melissa Mitchell,Chicago
+B-26309,6672,3319,4,Furniture,Tables,29/11/2023,Joshua Murray,Dallas
+B-26309,6672,3319,4,Furniture,Tables,20/05/2024,John Jones,San Diego
+B-26789,4699,103,12,Office Supplies,Binders,21/05/2024,Cheryl Johnson,Cincinnati
+B-26420,4897,1001,14,Furniture,Sofas,07/12/2021,Lisa Farmer,Houston
+B-26420,4897,1001,14,Furniture,Sofas,06/01/2025,Christopher Walker,Cincinnati
+B-26257,5460,2088,14,Furniture,Tables,13/07/2022,Elizabeth Coffey,Buffalo
+B-26257,5460,2088,14,Furniture,Tables,19/04/2020,Joseph Clark,Cincinnati
+B-25603,9272,1771,19,Office Supplies,Markers,14/11/2024,Jamie Brewer,Springfield
+B-25603,9272,1771,19,Office Supplies,Markers,18/04/2020,Lauren Boyer,Dallas
+B-25010,7870,1057,15,Office Supplies,Pens,18/10/2023,Howard Esparza,Houston
+B-25010,7870,1057,15,Office Supplies,Pens,21/03/2021,James Hickman,Cleveland
+B-25889,7992,893,12,Electronics,Laptops,13/09/2024,Jennifer Hernandez,Cleveland
+B-25889,7992,893,12,Electronics,Laptops,04/05/2023,Shannon Warren,New York City
+B-25889,7992,893,12,Electronics,Laptops,31/05/2023,Ashley Aguilar,Chicago
+B-26675,6499,2189,18,Electronics,Electronic Games,15/06/2024,Daniel Price,New York City
+B-26675,6499,2189,18,Electronics,Electronic Games,03/04/2021,James Perez,Orlando
+B-26168,8848,2090,9,Office Supplies,Pens,14/01/2025,Jerry Smith,San Diego
+B-25436,8044,3634,3,Office Supplies,Markers,24/12/2020,Andre Fernandez,Orlando
+B-25436,8044,3634,3,Office Supplies,Markers,07/10/2022,Anthony West,San Diego
+B-25794,7417,1334,16,Furniture,Bookcases,05/10/2021,Amber Flowers,Tampa
+B-26495,3451,658,3,Office Supplies,Markers,28/12/2024,Patricia Davis,Chicago
+B-25815,8531,2555,4,Electronics,Laptops,14/05/2022,Jasmine Gibbs,Austin
+B-25022,6646,848,15,Furniture,Sofas,19/08/2023,Nicole Dudley,New York City
+B-25022,6646,848,15,Furniture,Sofas,14/07/2023,Lori Colon,Buffalo
+B-26928,2553,907,6,Electronics,Laptops,22/06/2023,William Carr,Dallas
+B-25905,8490,3485,3,Electronics,Phones,21/03/2023,Jeffrey Dixon,New York City
+B-26739,2689,1330,3,Furniture,Tables,13/12/2020,Robert Sexton,Los Angeles
+B-26739,2689,1330,3,Furniture,Tables,29/05/2024,Brooke Gonzalez,Miami
+B-25697,815,54,14,Furniture,Tables,25/05/2021,Victoria Bryant MD,San Francisco
+B-25234,5024,379,2,Office Supplies,Paper,02/04/2024,Nancy Kennedy,Dallas
+B-25234,5024,379,2,Office Supplies,Paper,03/12/2022,Andrew Barry,Peoria
+B-25665,8962,2444,18,Electronics,Electronic Games,12/07/2021,Carlos Wheeler,Cleveland
+B-25665,8962,2444,18,Electronics,Electronic Games,22/03/2020,Isabella Roach,Peoria
+B-25028,1961,59,12,Office Supplies,Binders,09/08/2020,Samantha Williams,Orlando
+B-26659,526,83,4,Furniture,Sofas,18/02/2022,Samuel Little MD,Chicago
+B-25966,6093,3042,9,Furniture,Bookcases,14/06/2021,Paul Taylor,San Francisco
+B-25966,6093,3042,9,Furniture,Bookcases,01/03/2021,Susan Baker,San Diego
+B-25350,7699,246,5,Electronics,Electronic Games,23/09/2023,Mark Fry,Austin
+B-26370,8825,3594,15,Furniture,Tables,31/07/2024,Megan Mclean,New York City
+B-26298,2082,642,8,Electronics,Phones,02/06/2020,Caitlin Hunt,Rochester
+B-26298,2082,642,8,Electronics,Phones,15/12/2022,Jenna Holland,Austin
+B-26298,2082,642,8,Electronics,Phones,07/08/2020,Stephanie Oconnell,Buffalo
+B-25068,914,163,13,Office Supplies,Markers,26/10/2024,Andrea Hill,Chicago
