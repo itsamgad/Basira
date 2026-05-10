@@ -160,9 +160,25 @@ section { padding: 80px 6%; }
 /* ────────── Screenshots ────────── */
 .shots { background: var(--surface); border-top: 1px solid var(--border); }
 .shot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+/* Real product screenshots — primary path. */
+.shot-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid var(--border);
+  display: block;
+  object-fit: cover;
+  transition: var(--tr);
+}
+.shot-img:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+
+/* Legacy placeholder box — kept as visual fallback if any image fails to load.
+   No longer rendered by default; replaced by `.shot-img` in markup. */
 .shot {
   background: var(--s2);
-  border: 2px dashed var(--b2);
+  border: 1.5px dashed var(--b2);
   border-radius: var(--rlg);
   aspect-ratio: 16 / 10;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -171,10 +187,9 @@ section { padding: 80px 6%; }
   font-size: .82rem;
   text-align: center;
   padding: 18px;
-  transition: var(--tr);
 }
-.shot:hover { border-color: var(--accent); color: var(--accent); }
-.shot-icon { font-size: 1.8rem; }
+.shot-icon { font-size: 1.6rem; }
+
 .shot-cap { display: block; font-size: .8rem; color: var(--td); margin-top: 12px; text-align: center; font-weight: 600; }
 
 /* ────────── Download ────────── */
