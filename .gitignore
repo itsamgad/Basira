@@ -30,6 +30,11 @@ logs/
 # icon is committed inside Basira.app/Contents/Resources/AppIcon.icns).
 build/
 
+# Installer ZIPs hosted by the marketing site. Build artifacts —
+# regenerated per release with the `zip -r downloads/Basira-*.zip ...`
+# commands documented in basira-website/README.md.
+basira-website/downloads/*.zip
+
 # Scraper runtime artifacts (per-job exports + history log)
 basira-scraper/scrape_outputs/
 basira-scraper/scrape_history.json

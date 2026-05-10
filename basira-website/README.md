@@ -34,6 +34,48 @@ both work over `file://`.
 
 ---
 
+## Build the installer ZIPs (do this first)
+
+The Mac and Windows download buttons in `index.html` point at relative
+URLs — `downloads/Basira-macOS.zip` and `downloads/Basira-Windows.zip` —
+so they work locally and on every static host (Vercel, Netlify, GitHub
+Pages) with the same build artifacts. The ZIPs themselves are NOT
+checked into git (they're build outputs, regenerated per release).
+
+Build them from the workspace root **before** deploying:
+
+```bash
+cd ~/Desktop/Basira-Workspace
+
+# macOS installer — bundles the .app, .command, both Python projects
+# and docs. Excludes venvs (re-created on the user's machine), runtime
+# logs, the cache folder, scraper outputs, and git metadata.
+zip -r basira-website/downloads/Basira-macOS.zip \
+    Basira.app Basira.command \
+    basira-engine/ basira-scraper/ docs/ \
+    -x '*/.venv/*' '*/logs/*' '*/__pycache__/*' '*/.git/*' '*/scrape_outputs/*'
+
+# Windows installer — bundles the .bat scripts, both Python projects
+# and docs. Same exclusions.
+zip -r basira-website/downloads/Basira-Windows.zip \
+    Basira.bat setup.bat \
+    basira-engine/ basira-scraper/ docs/ \
+    -x '*/.venv/*' '*/logs/*' '*/__pycache__/*' '*/.git/*' '*/scrape_outputs/*'
+```
+
+The Mac ZIP excludes the `.bat` files and the Windows ZIP excludes the
+`.app`/`.command` files indirectly (they aren't listed) — each user
+gets only what they need, no platform-cross junk.
+
+**Expected size:** ~1–2 MB per ZIP. The venvs and the Playwright
+Chromium binary (~250 MB combined) are NOT in the ZIP — they're
+created on first run by `setup.bat` (Windows) or by the
+manual venv steps documented in `docs/HOW_TO_LAUNCH.md` (macOS).
+
+Re-run these commands every time you ship a new release.
+
+---
+
 ## Deploy — three free options
 
 ### Option 1 — Vercel (recommended)
@@ -59,7 +101,57 @@ You can connect a custom domain later (Vercel → Settings → Domains).
 4. Live at `https://USERNAME.github.io/basira/` after ~1 min.
 
 > GitHub Pages serves at the repo's path — links inside `index.html`
-> all use relative URLs (`assets/...`), so no rewrite is needed.
+> all use relative URLs (`assets/...`, `downloads/...`), so no rewrite
+> is needed.
+
+---
+
+## Public access — free subdomain vs custom domain
+
+### Free subdomain (recommended to start)
+
+Each of the three deploy options gives you a free, instant subdomain
+on the host's apex:
+
+| Host | Subdomain shape | Cost |
+|---|---|---|
+| Vercel  | `basira-XXX.vercel.app`           | $0 |
+| Netlify | `basira-XXX.netlify.app`          | $0 |
+| GitHub Pages | `USERNAME.github.io/basira/` | $0 |
+
+Vercel and Netlify both let you rename the random `XXX` suffix in
+their dashboard (Settings → Domains for Vercel, Domain management
+for Netlify) — you can ship as `basira-app.vercel.app` if it's
+available.
+
+### Custom domain ($10–20/year)
+
+If you want `basira.com` or similar, the workflow is the same on
+all three hosts:
+
+1. **Buy the domain** — Namecheap, Cloudflare Registrar, Porkbun, or
+   any registrar of your choice. Common annual prices: `.com` ≈ $12,
+   `.app` ≈ $14, `.io` ≈ $40, `.dev` ≈ $14.
+2. **Connect it on the host:**
+   - Vercel: Project → Settings → Domains → Add → enter the domain.
+   - Netlify: Site → Domain management → Add custom domain.
+   - GitHub Pages: Settings → Pages → Custom domain.
+3. **Point DNS:** the host gives you either a CNAME (e.g.
+   `cname.vercel-dns.com`) or A records to set at your registrar.
+   DNS propagates in 5 minutes to a few hours.
+4. **HTTPS:** all three hosts auto-provision a free Let's Encrypt
+   certificate once DNS resolves.
+
+If `basira.com` is already taken, common available alternatives to
+search for:
+
+- `basira.app`, `basira.dev`, `basira.io`
+- `getbasira.com`, `basiraml.com`, `basira-tools.com`
+- `tryba.sh`, `basira.tools`, `usebasira.com`
+- the bilingual angle: `basira.ai` or `basira-data.com`
+
+Check availability first via your registrar's search box — prices
+vary by extension and any matching trademarks.
 
 ---
 
@@ -79,13 +171,13 @@ Other one-off edits in `index.html`:
 | License (footer) | confirm or change `MIT` |
 | `assets/screenshots/upload.png` etc. | drop real PNGs into `assets/screenshots/` and replace the placeholder `<div class="shot">` with `<img>` |
 
-For real download buttons:
-
-1. On GitHub, **Releases → Draft a new release**, tag e.g. `v1.0.0`.
-2. Upload `Basira-macOS.zip` and `Basira-Windows.zip` as release assets.
-3. The placeholder URLs already point to
-   `https://github.com/USERNAME/basira/releases/latest/download/Basira-macOS.zip`
-   — just replace `USERNAME`.
+**For real download buttons:** the buttons in `index.html` already
+point at the relative paths `downloads/Basira-macOS.zip` and
+`downloads/Basira-Windows.zip`. Just run the two `zip -r` commands
+in the *Build the installer ZIPs* section above before each deploy —
+the ZIPs go into `basira-website/downloads/` and the buttons pick
+them up automatically. (The ZIPs themselves are gitignored, so
+you'll re-build them on each ship.)
 
 ---
 

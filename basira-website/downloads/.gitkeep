@@ -1,0 +1,1 @@
+ZIP installers go here. Build with: zip -r downloads/Basira-{macOS,Windows}.zip ... (see README.md)
