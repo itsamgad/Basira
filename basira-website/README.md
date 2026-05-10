@@ -121,7 +121,7 @@ on the host's apex:
 
 Vercel and Netlify both let you rename the random `XXX` suffix in
 their dashboard (Settings → Domains for Vercel, Domain management
-for Netlify) — you can ship as `basira-app.vercel.app` if it's
+for Netlify) — you can ship as `basira-three.vercel.app` if it's
 available.
 
 ### Custom domain ($10–20/year)
@@ -162,7 +162,7 @@ filled. What remains:
 
 | Where in `index.html` | What to do |
 |---|---|
-| `<meta property="og:url">` and `og:image` (lines 10–15) | Currently `https://basira-app.vercel.app` — confirm this is the actual subdomain after Vercel deploys, or update if Vercel assigns a different one. |
+| `<meta property="og:url">` and `og:image` (lines 10–15) | Currently `https://basira-three.vercel.app` — confirm this is the actual subdomain after Vercel deploys, or update if Vercel assigns a different one. |
 | `<div class="shot">` placeholders (lines ~200, 209, 218) | Drop real PNGs into `assets/screenshots/` (`upload.png`, `audit.png`, `scraper.png`) and replace the `<div class="shot">` blocks with `<img src="assets/screenshots/upload.png" alt="...">` etc. |
 | License (footer) | Currently `MIT` — confirm or change to whatever you ship under. |
 
